@@ -17,6 +17,15 @@ class UMyUserWidget : public UUserWidget
 public:
     virtual void NativeConstruct() override;
 
+    void OnListItemObjectSet(UObject* ListItemObject);
+
+    UPROPERTY(BlueprintReadOnly, Category = "Calendar Variables")
+    FString DaySelected;
+
+    UPROPERTY(BlueprintReadOnly, Category = "Calendar Variables")
+    FString StartDayOfMonth;
+
+    // Handle Day Clicks
     UFUNCTION()
     void HandleSundayClick();
 
@@ -38,11 +47,10 @@ public:
     UFUNCTION()
     void HandleSaturdayClick();
 
+    // Overridable event
     UFUNCTION(BlueprintImplementableEvent, Category = "Events")
     void OnDaySelected();
 
-    UPROPERTY(BlueprintReadOnly, Category = "Calendar Variables")
-    FString DaySelected;
 
 protected:
     UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
@@ -65,4 +73,7 @@ protected:
 
     UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
     class UButton* Saturday;
+
+private:
+    void GetStartDayOfMonth(int32 Year, int32 Month);
 };

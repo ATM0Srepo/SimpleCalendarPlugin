@@ -13,8 +13,4 @@ UCLASS()
 class UMyCalendarUIBase : public UUserWidget
 {
 	GENERATED_BODY()
-
-private:
-	int32 GetStartDayOfMonth(int32 Year, int32 Month);
-	
 };
