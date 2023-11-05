@@ -98,7 +98,7 @@ void UMyUserWidget::InitializeCalendarRow(int32 RowIndex)
 
     for (int32 DayIndex = 0; DayIndex <= 6; DayIndex++)
     {
-        if (RowIndex != 0)
+        if (!((RowIndex == 0) && (FirstDayOfWeek > DayIndex )))
         {
             SetDayText(DayIndex, Count);
         }
@@ -135,7 +135,7 @@ void UMyUserWidget::SetDayTextHelper(int32 Selection, int32& Count)
     int32 Date = Offset + Count;
     // Colors
     FLinearColor DisabledColor(0.5f, 0.5f, 0.5f, 1.0f);
-    FLinearColor SelectedColor(0.1f, 0.9f, 0.1f, 1.0f);
+    FLinearColor SelectedColor(0.25f, 0.5f, 0.25f, 1.0f);
     FLinearColor GridColor(0.15f, 0.15f, 0.7f, 0.7f);
 
     if (Selection == 0) {
