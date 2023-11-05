@@ -14,7 +14,25 @@ class UMyCalendarUIBase : public UUserWidget
 {
 	GENERATED_BODY()
 
+public:
+	virtual void NativeConstruct() override;
+
+protected:
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	class UTextBlock* year;
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	class UTextBlock* month;
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	class UTextBlock* hour;
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	class UTextBlock* minute;
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	class UListView* ListViewCalendar;
+
 private:
-	int32 GetStartDayOfMonth(int32 Year, int32 Month);
-	
+	void CreateCalendar();
 };
