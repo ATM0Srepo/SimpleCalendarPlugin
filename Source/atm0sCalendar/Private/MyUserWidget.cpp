@@ -8,7 +8,11 @@
 void UMyUserWidget::NativeConstruct()
 {
     Super::NativeConstruct();
+    HandleClickEvents();
+}
 
+void UMyUserWidget::HandleClickEvents()
+{
     // click on calendar events
     if (Sunday)
     {
@@ -138,11 +142,6 @@ void UMyUserWidget::InitializeCalendarRow(int32 RowIndex)
     }
 
     DisableGrids();
-
- /*   if (GEngine)
-    {
-        GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("The integer value is: %d"), RowIndex));
-    }*/
 }
 
 int32 UMyUserWidget::CalculateOffset(int32 RowIndex)
@@ -170,8 +169,8 @@ void UMyUserWidget::SetDayText(int32 DayIndex, int32& Count)
 void UMyUserWidget::SetDayTextHelper(int32 Selection, int32 Date)
 {
     // Colors
-    FLinearColor SelectedColor(0.25f, 0.5f, 0.25f, 1.0f);
-    FLinearColor GridColor(0.45f, 0.25f, 0.3f, 0.7f);
+    FLinearColor SelectedColor(1.0f, 1.0f, 1.0f, 0.7f);
+    FLinearColor GridColor(0.45f, 0.2f, 0.1f, 0.7f);
 
     if (Selection == 0) {
         day_0->SetText(FText::AsNumber(Date));

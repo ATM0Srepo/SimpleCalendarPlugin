@@ -13,4 +13,14 @@ UCLASS()
 class UMyCalendarUIBase : public UUserWidget
 {
 	GENERATED_BODY()
+
+public:
+	virtual void NativeConstruct() override;
+
+protected:
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	class UTextBlock* hour;
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	class UTextBlock* minute;
 };

@@ -130,4 +130,5 @@ private:
     int32 CalculateOffset(int32 Row);
     void SetDayText(int32 Selection, int32& Count);
     void SetDayTextHelper(int32 Selection, int32 Date);
+    void HandleClickEvents();
 };
