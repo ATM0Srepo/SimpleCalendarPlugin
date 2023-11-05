@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -9,6 +7,17 @@
 /**
  * 
  */
+
+USTRUCT(BlueprintType)
+struct FMyBaseSructure
+{
+    GENERATED_BODY()
+
+    UPROPERTY(BlueprintReadWrite, Category = "Structures")
+    int32 row;
+};
+
+
 UCLASS()
 class UMyUserWidget : public UUserWidget
 {
@@ -17,15 +26,19 @@ class UMyUserWidget : public UUserWidget
 public:
     virtual void NativeConstruct() override;
 
-    void OnListItemObjectSet(UObject* ListItemObject);
-
     UPROPERTY(BlueprintReadOnly, Category = "Calendar Variables")
     FString DaySelected;
 
     UPROPERTY(BlueprintReadOnly, Category = "Calendar Variables")
     FString StartDayOfMonth;
 
-    // Handle Day Clicks
+    UPROPERTY(BlueprintReadWrite, Category = "Calendar Variables")
+    int32 Offset;
+
+    UPROPERTY(BlueprintReadWrite, Category = "Calendar Variables")
+    int32 LastDayOfMonth;
+
+    // Function to Handle Day Clicks
     UFUNCTION()
     void HandleSundayClick();
 
@@ -51,6 +64,14 @@ public:
     UFUNCTION(BlueprintImplementableEvent, Category = "Events")
     void OnDaySelected();
 
+    UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
+    void InitializeCalendarRow(int32 row);
+
+    FDateTime CurrentDateTime;
+    int32 Year;  // temp
+    int32 Month;   // temp
+    int32 FirstDayOfWeek;
+
 
 protected:
     UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
@@ -74,6 +95,21 @@ protected:
     UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
     class UButton* Saturday;
 
+    UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+    class UTextBlock* day_0;
+
+    UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+    class UTextBlock* day_1;
+
+    UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+    class UTextBlock* day_2;
+
+    UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+    FMyBaseSructure structure;
+
 private:
     void GetStartDayOfMonth(int32 Year, int32 Month);
+    int32 CalculateOffset(int32 Row);
+    void SetDayText(int32 Selection, int32& Count);
+    void SetDayTextHelper(int32 Selection, int32& Count);
 };

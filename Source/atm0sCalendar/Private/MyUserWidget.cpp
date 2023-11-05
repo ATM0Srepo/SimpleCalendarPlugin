@@ -2,24 +2,12 @@
 #include "Misc/DateTime.h"
 #include "Containers/Map.h"
 #include "Components/Button.h"
+#include "Components/TextBlock.h"
 
 
 void UMyUserWidget::NativeConstruct()
 {
     Super::NativeConstruct();
-
-
-    FDateTime CurrentDateTime = FDateTime::Now();
-    int32 Year = CurrentDateTime.GetYear() ;  // temp
-    int32 Month = CurrentDateTime.GetMonth();   // temp
-    int32 Day = CurrentDateTime.GetDay();
-  
-
-    FDateTime FirstDayOfMonth(Year, Month, 1);
-    int32 DayOfWeek = static_cast<int32>(FirstDayOfMonth.GetDayOfWeek());
-    int32 LastDayOfMonth = CurrentDateTime.DaysInMonth(Year, Month);
-
-    // populate
 
     // click on calendar events
     if (Sunday)
@@ -50,29 +38,6 @@ void UMyUserWidget::NativeConstruct()
     {
         Saturday->OnClicked.AddDynamic(this, &UMyUserWidget::HandleSaturdayClick);
     }
-}
-
-void UMyUserWidget::OnListItemObjectSet(UObject* ListItemObject)
-{
-    if (GEngine)
-    {
-        GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Your message here"));
-    }
-
-    //// 2. Cast the object to ACalendarRow.
-    //ACalendarRow* CalendarRowObj = Cast<ACalendarRow>(ListItemObject);
-
-    //// Check if the cast was successful.
-    //if (CalendarRowObj)
-    //{
-    //    // 3. Break the struct and get the values.
-    //    FBaseStructure BaseStruct = CalendarRowObj->YourStructMember; // Replace 'YourStructMember' with the actual member name in `ACalendarRow`.
-
-    //    FString TextValue = BaseStruct.Text;  // Assuming Text is of type FString.
-    //    int32 Num1Value = BaseStruct.Num1;    // Assuming Num1 is of type int32.
-
-    //    // Do something with TextValue and Num1Value...
-    //}
 }
 
 void UMyUserWidget::HandleSundayClick()
@@ -118,8 +83,100 @@ void UMyUserWidget::HandleSaturdayClick()
     OnDaySelected();
 }
 
-void UMyUserWidget::GetStartDayOfMonth(int32 Year, int32 Month)
+void UMyUserWidget::InitializeCalendarRow(int32 RowIndex)
 {
-    
+    CurrentDateTime = FDateTime::Now();
+    Year = CurrentDateTime.GetYear();  // temp
+    Month = CurrentDateTime.GetMonth();   // temp
+    FDateTime FirstDayOfMonth(Year, Month, 1);
+    FirstDayOfWeek = static_cast<int32>(FirstDayOfMonth.GetDayOfWeek());
+    Offset = CalculateOffset(RowIndex);
+    int32 Day = CurrentDateTime.GetDay();
+
+    LastDayOfMonth = CurrentDateTime.DaysInMonth(Year, Month);
+
+  
+
+    for (int32 DayIndex = 0; DayIndex <= 6; DayIndex++)
+    {
+        if (GEngine)
+        {
+            GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("The day index : %d"), DayIndex));
+        }
+        if (RowIndex != 0)
+        {
+            int32 Count = 0;
+            SetDayText(DayIndex, Count);
+        }
+    }
+
+ /*   if (GEngine)
+    {
+        GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("The integer value is: %d"), RowIndex));
+    }*/
+}
+
+int32 UMyUserWidget::CalculateOffset(int32 RowIndex)
+{
+    int32 CalculatedOffset = 0;
+    if (RowIndex != 0)
+    {
+        CalculatedOffset = RowIndex * 7 - FirstDayOfWeek;
+    }
+    return CalculatedOffset;
+}
+
+void UMyUserWidget::SetDayText(int32 DayIndex, int32& Count)
+{
+    bool IsWithinMonth = (Offset + Count) <= LastDayOfMonth;
+
+    if (IsWithinMonth)
+    {
+        SetDayTextHelper(DayIndex, Count);
+    }
+}
+
+void UMyUserWidget::SetDayTextHelper(int32 Selection, int32& Count)
+{
+    int32 Date = Offset + Count;
+    // Colors
+    FLinearColor DisabledColor(0.5f, 0.5f, 0.5f, 1.0f);
+    FLinearColor SelectedColor(0.1f, 0.9f, 0.1f, 1.0f);
+    FLinearColor GridColor(0.15f, 0.15f, 0.7f, 0.7f);
+
+    if (Selection == 0) {
+        day_0->SetText(FText::AsNumber(Date));
+        if (Date == FDateTime::Now().GetDay())
+        {
+            Sunday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedColor);
+        }
+        else
+        {
+            Sunday->WidgetStyle.Normal.TintColor = FSlateColor(GridColor);
+        }
+    }
+    else if(Selection == 1){
+        day_1->SetText(FText::AsNumber(Date));
+        if (Date == FDateTime::Now().GetDay())
+        {
+            Monday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedColor);
+        }
+        else
+        {
+            Monday->WidgetStyle.Normal.TintColor = FSlateColor(GridColor);
+        }
+    }
+    else if (Selection == 2) {
+        day_2->SetText(FText::AsNumber(Date));
+        if (Date == FDateTime::Now().GetDay())
+        {
+            Tuesday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedColor);
+        }
+        else
+        {
+            Tuesday->WidgetStyle.Normal.TintColor = FSlateColor(GridColor);
+        }
+    }
+    Count += 1;
 }
 
