@@ -85,6 +85,35 @@ void UMyUserWidget::HandleSaturdayClick()
 
 void UMyUserWidget::DisableGrids()
 {
+    FLinearColor DisabledColor(0.0f, 0.0f, 0.0f, 1.0f);
+    if ((day_0->GetText()).IsEmptyOrWhitespace())
+    {       
+        Sunday->SetIsEnabled(false);
+    }
+    if ((day_1->GetText()).IsEmptyOrWhitespace())
+    {
+        Monday->SetIsEnabled(false); 
+    }
+    if ((day_2->GetText()).IsEmptyOrWhitespace())
+    {
+        Tuesday->SetIsEnabled(false);
+    }
+    if ((day_3->GetText()).IsEmptyOrWhitespace())
+    {
+        Wednesday->SetIsEnabled(false);
+    }
+    if ((day_4->GetText()).IsEmptyOrWhitespace())
+    {
+        Thursday->SetIsEnabled(false);
+    }
+    if ((day_5->GetText()).IsEmptyOrWhitespace())
+    {
+        Friday->SetIsEnabled(false);
+    }
+    if ((day_6->GetText()).IsEmptyOrWhitespace())
+    {
+        Saturday->SetIsEnabled(false);
+    }
 }
 
 void UMyUserWidget::InitializeCalendarRow(int32 RowIndex)
@@ -108,7 +137,7 @@ void UMyUserWidget::InitializeCalendarRow(int32 RowIndex)
         }
     }
 
-
+    DisableGrids();
 
  /*   if (GEngine)
     {
@@ -129,26 +158,27 @@ int32 UMyUserWidget::CalculateOffset(int32 RowIndex)
 void UMyUserWidget::SetDayText(int32 DayIndex, int32& Count)
 {
     bool IsWithinMonth = (Offset + Count) <= LastDayOfMonth;
+    int32 Date = Offset + Count;
 
-    if (IsWithinMonth)
+    if (IsWithinMonth && !(Date == 0))
     {
-        SetDayTextHelper(DayIndex, Count);
+        SetDayTextHelper(DayIndex, Date);
     }
+    Count += 1;
 }
 
-void UMyUserWidget::SetDayTextHelper(int32 Selection, int32& Count)
+void UMyUserWidget::SetDayTextHelper(int32 Selection, int32 Date)
 {
-    int32 Date = Offset + Count;
     // Colors
-    FLinearColor DisabledColor(0.5f, 0.5f, 0.5f, 1.0f);
     FLinearColor SelectedColor(0.25f, 0.5f, 0.25f, 1.0f);
-    FLinearColor GridColor(0.15f, 0.15f, 0.7f, 0.7f);
+    FLinearColor GridColor(0.45f, 0.25f, 0.3f, 0.7f);
 
     if (Selection == 0) {
         day_0->SetText(FText::AsNumber(Date));
         if (Date == FDateTime::Now().GetDay())
         {
             Sunday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedColor);
+            TodayButton = Sunday;
         }
         else
         {
@@ -221,6 +251,6 @@ void UMyUserWidget::SetDayTextHelper(int32 Selection, int32& Count)
             Saturday->WidgetStyle.Normal.TintColor = FSlateColor(GridColor);
         }
     }
-    Count += 1;
+
 }
 

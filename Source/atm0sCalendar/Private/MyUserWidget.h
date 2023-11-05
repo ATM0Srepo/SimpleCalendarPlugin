@@ -38,6 +38,9 @@ public:
     UPROPERTY(BlueprintReadWrite, Category = "Calendar Variables")
     int32 LastDayOfMonth;
 
+    UPROPERTY(BlueprintReadWrite, Category = "Calendar Variables")
+    class UButton* TodayButton;
+
     // Function to Handle Day Clicks
     UFUNCTION()
     void HandleSundayClick();
@@ -126,5 +129,5 @@ private:
     void GetStartDayOfMonth(int32 Year, int32 Month);
     int32 CalculateOffset(int32 Row);
     void SetDayText(int32 Selection, int32& Count);
-    void SetDayTextHelper(int32 Selection, int32& Count);
+    void SetDayTextHelper(int32 Selection, int32 Date);
 };
