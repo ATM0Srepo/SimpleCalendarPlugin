@@ -83,6 +83,10 @@ void UMyUserWidget::HandleSaturdayClick()
     OnDaySelected();
 }
 
+void UMyUserWidget::DisableGrids()
+{
+}
+
 void UMyUserWidget::InitializeCalendarRow(int32 RowIndex)
 {
     CurrentDateTime = FDateTime::Now();
@@ -103,6 +107,8 @@ void UMyUserWidget::InitializeCalendarRow(int32 RowIndex)
             SetDayText(DayIndex, Count);
         }
     }
+
+
 
  /*   if (GEngine)
     {

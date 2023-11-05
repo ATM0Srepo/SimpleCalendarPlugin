@@ -60,6 +60,9 @@ public:
     UFUNCTION()
     void HandleSaturdayClick();
 
+    UFUNCTION()
+    void DisableGrids();
+
     // Overridable event
     UFUNCTION(BlueprintImplementableEvent, Category = "Events")
     void OnDaySelected();
