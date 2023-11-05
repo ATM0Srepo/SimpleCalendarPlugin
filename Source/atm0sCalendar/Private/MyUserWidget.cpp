@@ -94,18 +94,12 @@ void UMyUserWidget::InitializeCalendarRow(int32 RowIndex)
     int32 Day = CurrentDateTime.GetDay();
 
     LastDayOfMonth = CurrentDateTime.DaysInMonth(Year, Month);
-
-  
+    int32 Count = 0;
 
     for (int32 DayIndex = 0; DayIndex <= 6; DayIndex++)
     {
-        if (GEngine)
-        {
-            GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("The day index : %d"), DayIndex));
-        }
         if (RowIndex != 0)
         {
-            int32 Count = 0;
             SetDayText(DayIndex, Count);
         }
     }
@@ -175,6 +169,50 @@ void UMyUserWidget::SetDayTextHelper(int32 Selection, int32& Count)
         else
         {
             Tuesday->WidgetStyle.Normal.TintColor = FSlateColor(GridColor);
+        }
+    }
+    else if (Selection == 3) {
+        day_3->SetText(FText::AsNumber(Date));
+        if (Date == FDateTime::Now().GetDay())
+        {
+            Wednesday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedColor);
+        }
+        else
+        {
+            Wednesday->WidgetStyle.Normal.TintColor = FSlateColor(GridColor);
+        }
+    }
+    else if (Selection == 4) {
+        day_4->SetText(FText::AsNumber(Date));
+        if (Date == FDateTime::Now().GetDay())
+        {
+            Thursday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedColor);
+        }
+        else
+        {
+            Thursday->WidgetStyle.Normal.TintColor = FSlateColor(GridColor);
+        }
+    }
+    else if (Selection == 5) {
+        day_5->SetText(FText::AsNumber(Date));
+        if (Date == FDateTime::Now().GetDay())
+        {
+            Friday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedColor);
+        }
+        else
+        {
+            Friday->WidgetStyle.Normal.TintColor = FSlateColor(GridColor);
+        }
+    }
+    else if (Selection == 6) {
+        day_6->SetText(FText::AsNumber(Date));
+        if (Date == FDateTime::Now().GetDay())
+        {
+            Saturday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedColor);
+        }
+        else
+        {
+            Saturday->WidgetStyle.Normal.TintColor = FSlateColor(GridColor);
         }
     }
     Count += 1;

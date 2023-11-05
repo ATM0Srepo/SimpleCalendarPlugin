@@ -105,6 +105,18 @@ protected:
     class UTextBlock* day_2;
 
     UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+    class UTextBlock* day_3;
+
+    UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+    class UTextBlock* day_4;
+
+    UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+    class UTextBlock* day_5;
+
+    UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+    class UTextBlock* day_6;
+
+    UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
     FMyBaseSructure structure;
 
 private:
