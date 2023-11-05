@@ -19,8 +19,20 @@ public:
 
 protected:
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	class UTextBlock* year;
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	class UTextBlock* month;
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
 	class UTextBlock* hour;
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
 	class UTextBlock* minute;
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	class UListView* ListViewCalendar;
+
+private:
+	void CreateCalendar();
 };
