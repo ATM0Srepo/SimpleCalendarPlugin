@@ -2,6 +2,7 @@
 #include "Misc/DateTime.h"
 #include "Components/TextBlock.h"
 #include "Containers/Map.h"
+#include "MyCalendarRow.h"
 #include "Components/ListView.h"
 
 void UMyCalendarUIBase::NativeConstruct()
@@ -42,5 +43,24 @@ void UMyCalendarUIBase::NativeConstruct()
     month->SetText(FText::FromString(*MonthMap.Find(month_now)));
     hour->SetText(FText::FromString(hour_now));
     minute->SetText(FText::FromString(minute_now));
+
+    CreateCalendar();
 }
+
+void UMyCalendarUIBase::CreateCalendar()
+{
+    for (int32 i = 0; i <= 5; ++i) // Your Blueprint has a loop with first index 0 and last index 5.
+    {
+        // Assuming CalendarRow is a UUserWidget subclass.
+        // Replace 'CreateWidget' with 'ConstructObject' or 'NewObject' depending on your version of UE.
+        UMyCalendarRow* CalendarRowInstance = NewObject<UMyCalendarRow>(this, UMyCalendarRow::StaticClass());
+        if (CalendarRowInstance != nullptr)
+        {
+            CalendarRowInstance->Init(i);
+            ListViewCalendar->AddItem(CalendarRowInstance);
+        }
+    }
+}
+
+
 

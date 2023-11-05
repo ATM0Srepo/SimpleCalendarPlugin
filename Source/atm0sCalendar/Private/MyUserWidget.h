@@ -8,16 +8,6 @@
  * 
  */
 
-USTRUCT(BlueprintType)
-struct FMyBaseSructure
-{
-    GENERATED_BODY()
-
-    UPROPERTY(BlueprintReadWrite, Category = "Structures")
-    int32 row;
-};
-
-
 UCLASS()
 class UMyUserWidget : public UUserWidget
 {
@@ -121,9 +111,6 @@ protected:
 
     UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
     class UTextBlock* day_6;
-
-    UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
-    FMyBaseSructure structure;
 
 private:
     void GetStartDayOfMonth(int32 Year, int32 Month);
