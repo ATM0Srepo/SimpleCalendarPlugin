@@ -4,27 +4,28 @@
 
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "MyCalendarRow.generated.h"
+#include "CalendarRow.generated.h"
 
 USTRUCT(BlueprintType)
 struct FMyBaseSructure
 {
     GENERATED_BODY()
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Calendar Variables")
     int32 Row;
 };
 
 UCLASS(BlueprintType)
-class UMyCalendarRow : public UObject
+class UCalendarRow : public UObject
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
 public:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
     void Init(int32 RowValue);
 
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, Category = "Calendar Variables")
     FMyBaseSructure structure;
-	
+
 };
+

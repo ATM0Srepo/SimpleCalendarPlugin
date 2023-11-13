@@ -91,12 +91,12 @@ void UMyUserWidget::DisableGrids()
 {
     FLinearColor DisabledColor(0.0f, 0.0f, 0.0f, 1.0f);
     if ((day_0->GetText()).IsEmptyOrWhitespace())
-    {       
+    {
         Sunday->SetIsEnabled(false);
     }
     if ((day_1->GetText()).IsEmptyOrWhitespace())
     {
-        Monday->SetIsEnabled(false); 
+        Monday->SetIsEnabled(false);
     }
     if ((day_2->GetText()).IsEmptyOrWhitespace())
     {
@@ -135,7 +135,7 @@ void UMyUserWidget::InitializeCalendarRow(int32 RowIndex)
 
     for (int32 DayIndex = 0; DayIndex <= 6; DayIndex++)
     {
-        if (!((RowIndex == 0) && (FirstDayOfWeek > DayIndex )))
+        if (!((RowIndex == 0) && (FirstDayOfWeek > DayIndex)))
         {
             SetDayText(DayIndex, Count);
         }
@@ -184,7 +184,7 @@ void UMyUserWidget::SetDayTextHelper(int32 Selection, int32 Date)
             Sunday->WidgetStyle.Normal.TintColor = FSlateColor(GridColor);
         }
     }
-    else if(Selection == 1){
+    else if (Selection == 1) {
         day_1->SetText(FText::AsNumber(Date));
         if (Date == FDateTime::Now().GetDay())
         {

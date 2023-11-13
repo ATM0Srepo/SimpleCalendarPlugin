@@ -7,7 +7,7 @@
 #include "MyCalendarUIBase.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class UMyCalendarUIBase : public UUserWidget
@@ -18,19 +18,19 @@ public:
 	virtual void NativeConstruct() override;
 
 protected:
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Calendar Variables")
 	class UTextBlock* year;
 
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Calendar Variables")
 	class UTextBlock* month;
 
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Calendar Variables")
 	class UTextBlock* hour;
 
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Calendar Variables")
 	class UTextBlock* minute;
 
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Calendar Variables")
 	class UListView* ListViewCalendar;
 
 private:

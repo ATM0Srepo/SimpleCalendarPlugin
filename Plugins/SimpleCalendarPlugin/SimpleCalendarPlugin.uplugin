@@ -19,7 +19,7 @@
 			"Name": "SimpleCalendarPlugin",
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
-			"WhitelistPlatforms": [ "Windows", "Android" ]
+			"WhitelistPlatforms": [ "Win64", "Android" ]
 		}
 	]
 }

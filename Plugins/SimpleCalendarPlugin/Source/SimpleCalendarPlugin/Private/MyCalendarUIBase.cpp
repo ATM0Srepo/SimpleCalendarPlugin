@@ -2,7 +2,7 @@
 #include "Misc/DateTime.h"
 #include "Components/TextBlock.h"
 #include "Containers/Map.h"
-#include "MyCalendarRow.h"
+#include "CalendarRow.h"
 #include "Components/ListView.h"
 
 void UMyCalendarUIBase::NativeConstruct()
@@ -22,7 +22,7 @@ void UMyCalendarUIBase::NativeConstruct()
     if (minute_now.Len() < 2) {
         minute_now = "0" + minute_now;
     }
-   
+
     year_now = year_now.Replace(TEXT(","), TEXT(""));
     TMap<int32, FString> MonthMap = {
     {1, TEXT("Jan")},
@@ -38,7 +38,7 @@ void UMyCalendarUIBase::NativeConstruct()
     {11, TEXT("Nov")},
     {12, TEXT("Dec")}
     };
-    
+
     year->SetText(FText::FromString(year_now));
     month->SetText(FText::FromString(*MonthMap.Find(month_now)));
     hour->SetText(FText::FromString(hour_now));
@@ -53,7 +53,7 @@ void UMyCalendarUIBase::CreateCalendar()
     {
         // Assuming CalendarRow is a UUserWidget subclass.
         // Replace 'CreateWidget' with 'ConstructObject' or 'NewObject' depending on your version of UE.
-        UMyCalendarRow* CalendarRowInstance = NewObject<UMyCalendarRow>(this, UMyCalendarRow::StaticClass());
+        UCalendarRow* CalendarRowInstance = NewObject<UCalendarRow>(this, UCalendarRow::StaticClass());
         if (CalendarRowInstance != nullptr)
         {
             CalendarRowInstance->Init(i);

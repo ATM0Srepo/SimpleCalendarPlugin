@@ -25,10 +25,14 @@ public class SimpleCalendarPlugin : ModuleRules
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Core",
+                "Core",
+				"CoreUObject", // For CoreMinimal.h
+				"Engine", // For UUserWidget
+				"UMG", 
+
 				// ... add other public dependencies that you statically link with here ...
 			}
-			);
+            );
 			
 		
 		PrivateDependencyModuleNames.AddRange(
