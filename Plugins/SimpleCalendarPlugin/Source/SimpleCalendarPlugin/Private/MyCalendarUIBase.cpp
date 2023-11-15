@@ -5,10 +5,19 @@
 #include "CalendarRow.h"
 #include "Components/ListView.h"
 
+
 void UMyCalendarUIBase::NativeConstruct()
 {
     Super::NativeConstruct();
 
+    GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UMyCalendarUIBase::SetTime, TickInterval, true); 
+
+    CreateCalendar();
+}
+
+
+void UMyCalendarUIBase::SetTime()
+{
     FDateTime CurrentDateTime = FDateTime::Now();
 
     FString year_now = FString::FormatAsNumber(CurrentDateTime.GetYear());
@@ -43,16 +52,12 @@ void UMyCalendarUIBase::NativeConstruct()
     month->SetText(FText::FromString(*MonthMap.Find(month_now)));
     hour->SetText(FText::FromString(hour_now));
     minute->SetText(FText::FromString(minute_now));
-
-    CreateCalendar();
 }
 
 void UMyCalendarUIBase::CreateCalendar()
 {
-    for (int32 i = 0; i <= 5; ++i) // Your Blueprint has a loop with first index 0 and last index 5.
+    for (int32 i = 0; i <= 5; ++i)
     {
-        // Assuming CalendarRow is a UUserWidget subclass.
-        // Replace 'CreateWidget' with 'ConstructObject' or 'NewObject' depending on your version of UE.
         UCalendarRow* CalendarRowInstance = NewObject<UCalendarRow>(this, UCalendarRow::StaticClass());
         if (CalendarRowInstance != nullptr)
         {

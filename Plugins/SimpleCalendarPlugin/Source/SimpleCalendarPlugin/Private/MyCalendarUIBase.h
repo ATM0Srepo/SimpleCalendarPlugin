@@ -15,6 +15,8 @@ class UMyCalendarUIBase : public UUserWidget
 	GENERATED_BODY()
 
 public:
+	void Start();
+	
 	virtual void NativeConstruct() override;
 
 protected:
@@ -32,6 +34,12 @@ protected:
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Calendar Variables")
 	class UListView* ListViewCalendar;
+
+	FTimerHandle TickTimerHandle;
+	void SetTime();
+
+	// Specify your tick interval here, for example, 0.1f for 10 times per second
+	const float TickInterval = 0.5f;
 
 private:
 	void CreateCalendar();
