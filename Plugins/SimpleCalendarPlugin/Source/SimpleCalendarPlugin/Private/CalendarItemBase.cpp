@@ -47,6 +47,16 @@ void UCalendarItemBase::HandleClickEvents()
 void UCalendarItemBase::HandleSundayClick()
 {
     DaySelected = "Sunday";
+    if (GEngine)
+{
+    GEngine->AddOnScreenDebugMessage(
+        -1,                 // Unique key (or -1 to overwrite previous message of the same key)
+        5.0f,               // Time the message should be displayed (in seconds)
+        FColor::Yellow,     // The color of the text
+        TEXT("Your message goes here") // The message to display
+    );
+}
+
 
     OnDaySelected();
 }
@@ -129,8 +139,6 @@ void UCalendarItemBase::InitializeCalendarRow(int32 RowIndex)
     FirstDayOfWeek = static_cast<int32>(FirstDayOfMonth.GetDayOfWeek());
     Offset = CalculateOffset(RowIndex);
     int32 Day = CurrentDateTime.GetDay();
-
-    LastDayOfMonth = CurrentDateTime.DaysInMonth(Year, Month);
     int32 Count = 0;
 
     for (int32 DayIndex = 0; DayIndex <= 6; DayIndex++)
@@ -156,7 +164,7 @@ int32 UCalendarItemBase::CalculateOffset(int32 RowIndex)
 
 void UCalendarItemBase::SetDayText(int32 DayIndex, int32& Count)
 {
-    bool IsWithinMonth = (Offset + Count) <= LastDayOfMonth;
+    bool IsWithinMonth = (Offset + Count) <= CurrentDateTime.DaysInMonth(Year, Month);
     int32 Date = Offset + Count;
 
     if (IsWithinMonth && !(Date == 0))
@@ -177,7 +185,6 @@ void UCalendarItemBase::SetDayTextHelper(int32 Selection, int32 Date)
         if (Date == FDateTime::Now().GetDay())
         {
             Sunday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedColor);
-            TodayButton = Sunday;
         }
         else
         {

@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -15,24 +13,22 @@ class UCalendarUIBase : public UUserWidget
 	GENERATED_BODY()
 
 public:
-	void Start();
-	
 	virtual void NativeConstruct() override;
 
 protected:
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Calendar Variables")
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UTextBlock* year;
 
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Calendar Variables")
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UTextBlock* month;
 
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Calendar Variables")
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UTextBlock* hour;
 
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Calendar Variables")
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UTextBlock* minute;
 
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Calendar Variables")
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UListView* ListViewCalendar;
 
 	FTimerHandle TickTimerHandle;

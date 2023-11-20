@@ -5,7 +5,7 @@
 #include "CalendarItemBase.generated.h"
 
 /**
- *
+ * 
  */
 
 UCLASS()
@@ -16,22 +16,15 @@ class UCalendarItemBase : public UUserWidget
 public:
     virtual void NativeConstruct() override;
 
-    UPROPERTY(BlueprintReadOnly, Category = "Calendar Variables")
+    /** The current selection of the day of week on Calendar (eg. "Sunday", "Monday", etc */
+    UPROPERTY(BlueprintReadOnly, Category = "Atm0s Calendar Variables")
     FString DaySelected;
 
-    UPROPERTY(BlueprintReadOnly, Category = "Calendar Variables")
-    FString StartDayOfMonth;
+    /** The day of the week that month in view begins with */
+  /*  UPROPERTY(BlueprintReadOnly, Category = "Atm0s Calendar Variables")
+    FString StartDayOfMonth;*/
 
-    UPROPERTY(BlueprintReadWrite, Category = "Calendar Variables")
-    int32 Offset;
-
-    UPROPERTY(BlueprintReadWrite, Category = "Calendar Variables")
-    int32 LastDayOfMonth;
-
-    UPROPERTY(BlueprintReadWrite, Category = "Calendar Variables")
-    class UButton* TodayButton;
-
-    // Function to Handle Day Clicks
+    // Functions to Handle Day Clicks
     UFUNCTION()
     void HandleSundayClick();
 
@@ -67,6 +60,8 @@ public:
     int32 Year;  // temp
     int32 Month;   // temp
     int32 FirstDayOfWeek;
+
+    int32 Offset;
 
 
 protected:
@@ -113,7 +108,6 @@ protected:
     class UTextBlock* day_6;
 
 private:
-    void GetStartDayOfMonth(int32 Year, int32 Month);
     int32 CalculateOffset(int32 Row);
     void SetDayText(int32 Selection, int32& Count);
     void SetDayTextHelper(int32 Selection, int32 Date);
