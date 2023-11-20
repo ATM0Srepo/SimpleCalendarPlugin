@@ -1,4 +1,4 @@
-#include "MyCalendarUIBase.h"
+#include "CalendarUIBase.h"
 #include "Misc/DateTime.h"
 #include "Components/TextBlock.h"
 #include "Containers/Map.h"
@@ -6,17 +6,17 @@
 #include "Components/ListView.h"
 
 
-void UMyCalendarUIBase::NativeConstruct()
+void UCalendarUIBase::NativeConstruct()
 {
     Super::NativeConstruct();
 
-    GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UMyCalendarUIBase::SetTime, TickInterval, true); 
+    GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UCalendarUIBase::SetTime, TickInterval, true); 
 
     CreateCalendar();
 }
 
 
-void UMyCalendarUIBase::SetTime()
+void UCalendarUIBase::SetTime()
 {
     FDateTime CurrentDateTime = FDateTime::Now();
 
@@ -54,7 +54,7 @@ void UMyCalendarUIBase::SetTime()
     minute->SetText(FText::FromString(minute_now));
 }
 
-void UMyCalendarUIBase::CreateCalendar()
+void UCalendarUIBase::CreateCalendar()
 {
     for (int32 i = 0; i <= 5; ++i)
     {

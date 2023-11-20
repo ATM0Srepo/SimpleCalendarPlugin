@@ -4,13 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
-#include "MyCalendarUIBase.generated.h"
+#include "CalendarUIBase.generated.h"
 
 /**
  *
  */
 UCLASS()
-class UMyCalendarUIBase : public UUserWidget
+class UCalendarUIBase : public UUserWidget
 {
 	GENERATED_BODY()
 

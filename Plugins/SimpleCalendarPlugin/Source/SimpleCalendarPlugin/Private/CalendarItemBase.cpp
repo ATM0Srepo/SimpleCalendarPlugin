@@ -1,93 +1,93 @@
-#include "MyUserWidget.h"
+#include "CalendarItemBase.h"
 #include "Misc/DateTime.h"
 #include "Containers/Map.h"
 #include "Components/Button.h"
 #include "Components/TextBlock.h"
 
 
-void UMyUserWidget::NativeConstruct()
+void UCalendarItemBase::NativeConstruct()
 {
     Super::NativeConstruct();
     HandleClickEvents();
 }
 
-void UMyUserWidget::HandleClickEvents()
+void UCalendarItemBase::HandleClickEvents()
 {
     // click on calendar events
     if (Sunday)
     {
-        Sunday->OnClicked.AddDynamic(this, &UMyUserWidget::HandleSundayClick);
+        Sunday->OnClicked.AddDynamic(this, &UCalendarItemBase::HandleSundayClick);
     }
     if (Monday)
     {
-        Monday->OnClicked.AddDynamic(this, &UMyUserWidget::HandleMondayClick);
+        Monday->OnClicked.AddDynamic(this, &UCalendarItemBase::HandleMondayClick);
     }
     if (Tuesday)
     {
-        Tuesday->OnClicked.AddDynamic(this, &UMyUserWidget::HandleTuesdayClick);
+        Tuesday->OnClicked.AddDynamic(this, &UCalendarItemBase::HandleTuesdayClick);
     }
     if (Wednesday)
     {
-        Wednesday->OnClicked.AddDynamic(this, &UMyUserWidget::HandleWednesdayClick);
+        Wednesday->OnClicked.AddDynamic(this, &UCalendarItemBase::HandleWednesdayClick);
     }
     if (Thursday)
     {
-        Thursday->OnClicked.AddDynamic(this, &UMyUserWidget::HandleThursdayClick);
+        Thursday->OnClicked.AddDynamic(this, &UCalendarItemBase::HandleThursdayClick);
     }
     if (Friday)
     {
-        Friday->OnClicked.AddDynamic(this, &UMyUserWidget::HandleFridayClick);
+        Friday->OnClicked.AddDynamic(this, &UCalendarItemBase::HandleFridayClick);
     }
     if (Saturday)
     {
-        Saturday->OnClicked.AddDynamic(this, &UMyUserWidget::HandleSaturdayClick);
+        Saturday->OnClicked.AddDynamic(this, &UCalendarItemBase::HandleSaturdayClick);
     }
 }
 
-void UMyUserWidget::HandleSundayClick()
+void UCalendarItemBase::HandleSundayClick()
 {
     DaySelected = "Sunday";
 
     OnDaySelected();
 }
 
-void UMyUserWidget::HandleMondayClick()
+void UCalendarItemBase::HandleMondayClick()
 {
     DaySelected = "Monday";
     OnDaySelected();
 }
 
-void UMyUserWidget::HandleTuesdayClick()
+void UCalendarItemBase::HandleTuesdayClick()
 {
     DaySelected = "Tuesday";
     OnDaySelected();
 }
 
-void UMyUserWidget::HandleWednesdayClick()
+void UCalendarItemBase::HandleWednesdayClick()
 {
     DaySelected = "Wednesday";
     OnDaySelected();
 }
 
-void UMyUserWidget::HandleThursdayClick()
+void UCalendarItemBase::HandleThursdayClick()
 {
     DaySelected = "Thursday";
     OnDaySelected();
 }
 
-void UMyUserWidget::HandleFridayClick()
+void UCalendarItemBase::HandleFridayClick()
 {
     DaySelected = "Friday";
     OnDaySelected();
 }
 
-void UMyUserWidget::HandleSaturdayClick()
+void UCalendarItemBase::HandleSaturdayClick()
 {
     DaySelected = "Saturday";
     OnDaySelected();
 }
 
-void UMyUserWidget::DisableGrids()
+void UCalendarItemBase::DisableGrids()
 {
     FLinearColor DisabledColor(0.0f, 0.0f, 0.0f, 1.0f);
     if ((day_0->GetText()).IsEmptyOrWhitespace())
@@ -120,7 +120,7 @@ void UMyUserWidget::DisableGrids()
     }
 }
 
-void UMyUserWidget::InitializeCalendarRow(int32 RowIndex)
+void UCalendarItemBase::InitializeCalendarRow(int32 RowIndex)
 {
     CurrentDateTime = FDateTime::Now();
     Year = CurrentDateTime.GetYear();  // temp
@@ -144,7 +144,7 @@ void UMyUserWidget::InitializeCalendarRow(int32 RowIndex)
     DisableGrids();
 }
 
-int32 UMyUserWidget::CalculateOffset(int32 RowIndex)
+int32 UCalendarItemBase::CalculateOffset(int32 RowIndex)
 {
     int32 CalculatedOffset = 0;
     if (RowIndex != 0)
@@ -154,7 +154,7 @@ int32 UMyUserWidget::CalculateOffset(int32 RowIndex)
     return CalculatedOffset;
 }
 
-void UMyUserWidget::SetDayText(int32 DayIndex, int32& Count)
+void UCalendarItemBase::SetDayText(int32 DayIndex, int32& Count)
 {
     bool IsWithinMonth = (Offset + Count) <= LastDayOfMonth;
     int32 Date = Offset + Count;
@@ -166,7 +166,7 @@ void UMyUserWidget::SetDayText(int32 DayIndex, int32& Count)
     Count += 1;
 }
 
-void UMyUserWidget::SetDayTextHelper(int32 Selection, int32 Date)
+void UCalendarItemBase::SetDayTextHelper(int32 Selection, int32 Date)
 {
     // Colors
     FLinearColor SelectedColor(1.0f, 1.0f, 1.0f, 0.7f);
