@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
+#include "Components/EditableTextBox.h"
 #include "CalendarUIBase.generated.h"
 
 /**
@@ -17,7 +18,7 @@ public:
 
 protected:
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
-	class UTextBlock* year;
+	class UEditableTextBox* year;
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UTextBlock* month;
