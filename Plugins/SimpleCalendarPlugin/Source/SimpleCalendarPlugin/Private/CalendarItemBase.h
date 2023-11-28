@@ -20,9 +20,13 @@ public:
     UPROPERTY(BlueprintReadOnly, Category = "Atm0s Calendar Variables")
     FString DaySelected;
 
-    /** The day of the week that month in view begins with */
-  /*  UPROPERTY(BlueprintReadOnly, Category = "Atm0s Calendar Variables")
-    FString StartDayOfMonth;*/
+    /** Highligted Grid Color */
+    UPROPERTY(BlueprintReadWrite, Category = "Atm0s Calendar Variables")
+    FLinearColor SelectedGridColor;
+
+    /** Configure Calendar Item*/
+    UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
+    void ConfigureCalendarItem(bool SelectedGrid);
 
     // Functions to Handle Day Clicks
     UFUNCTION()
@@ -49,9 +53,17 @@ public:
     UFUNCTION()
     void DisableGrids();
 
-    // Overridable event
-    UFUNCTION(BlueprintImplementableEvent, Category = "Events")
+    /** Overridable event
+        OnDaySelected is triggered when a calendar item is clicked
+    */
+    UFUNCTION(BlueprintImplementableEvent, Category = "Atm0s Calendar Events")
     void OnDaySelected();
+
+    /** Overridable event
+        OnCalendarInitializationComplete is triggered when InitializeCalendarRow has been completed for all rows
+    */
+    UFUNCTION(BlueprintImplementableEvent, Category = "Atm0s Calendar Events")
+    void OnCalendarInitializationComplete();
 
     UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
     void InitializeCalendarRow(int32 row);
@@ -109,7 +121,9 @@ protected:
 
 private:
     int32 CalculateOffset(int32 Row);
+    int32 CalendarRow;
+    int32 SelectedGridRow;
     void SetDayText(int32 Selection, int32& Count);
-    void SetDayTextHelper(int32 Selection, int32 Date);
-    void HandleClickEvents();
+    void SetCalendarItemHelper(int32 Selection, int32 Date);
+    void HandleCalendarItemClick();
 };

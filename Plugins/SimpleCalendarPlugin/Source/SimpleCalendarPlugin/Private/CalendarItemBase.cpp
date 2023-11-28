@@ -8,10 +8,11 @@
 void UCalendarItemBase::NativeConstruct()
 {
     Super::NativeConstruct();
-    HandleClickEvents();
+    HandleCalendarItemClick();
+    SelectedGridColor = FLinearColor(-1.0f, -1.0f, -1.0f, -1.0f);
 }
 
-void UCalendarItemBase::HandleClickEvents()
+void UCalendarItemBase::HandleCalendarItemClick()
 {
     // click on calendar events
     if (Sunday)
@@ -44,18 +45,19 @@ void UCalendarItemBase::HandleClickEvents()
     }
 }
 
+
 void UCalendarItemBase::HandleSundayClick()
 {
     DaySelected = "Sunday";
-    if (GEngine)
-{
-    GEngine->AddOnScreenDebugMessage(
-        -1,                 // Unique key (or -1 to overwrite previous message of the same key)
-        5.0f,               // Time the message should be displayed (in seconds)
-        FColor::Yellow,     // The color of the text
-        TEXT("Your message goes here") // The message to display
-    );
-}
+    //if (GEngine)
+    //{
+    //    GEngine->AddOnScreenDebugMessage(
+    //        -1,                 // Unique key (or -1 to overwrite previous message of the same key)
+    //        5.0f,               // Time the message should be displayed (in seconds)
+    //        FColor::Yellow,     // The color of the text
+    //        TEXT("Your message goes here") // The message to display
+    //    );
+    //}
 
 
     OnDaySelected();
@@ -132,6 +134,8 @@ void UCalendarItemBase::DisableGrids()
 
 void UCalendarItemBase::InitializeCalendarRow(int32 RowIndex)
 {
+    CalendarRow = RowIndex;
+
     CurrentDateTime = FDateTime::Now();
     Year = CurrentDateTime.GetYear();  // temp
     Month = CurrentDateTime.GetMonth();   // temp
@@ -150,6 +154,7 @@ void UCalendarItemBase::InitializeCalendarRow(int32 RowIndex)
     }
 
     DisableGrids();
+    OnCalendarInitializationComplete();
 }
 
 int32 UCalendarItemBase::CalculateOffset(int32 RowIndex)
@@ -169,88 +174,112 @@ void UCalendarItemBase::SetDayText(int32 DayIndex, int32& Count)
 
     if (IsWithinMonth && !(Date == 0))
     {
-        SetDayTextHelper(DayIndex, Date);
+        SetCalendarItemHelper(DayIndex, Date);
     }
     Count += 1;
 }
 
-void UCalendarItemBase::SetDayTextHelper(int32 Selection, int32 Date)
+/** Configure Calendar Item
+    SelectedGrid: The Selection on Calendar that shows current date.
+                  Set to true if you want to change the configuration of the SelectedGrid.
+*/
+void UCalendarItemBase::ConfigureCalendarItem(bool SelectedGrid = false)
+{
+    if ((SelectedGrid) && (CalendarRow == SelectedGridRow)) {
+        int32 Selection = static_cast<int32>(FDateTime::Now().GetDayOfWeek()) + 1;
+        if (Selection == 7) {
+            Selection = 0;
+        }
+        SetCalendarItemHelper(Selection, FDateTime::Now().GetDay());
+    }
+}
+
+void UCalendarItemBase::SetCalendarItemHelper(int32 Selection, int32 Date)
 {
     // Colors
-    FLinearColor SelectedColor(1.0f, 1.0f, 1.0f, 0.7f);
+    if (SelectedGridColor == FLinearColor(-1.0f, -1.0f, -1.0f, -1.0f)) {
+        SelectedGridColor = FLinearColor(1.0f, 1.0f, 1.0f, 0.7f);
+    }
     FLinearColor GridColor(0.45f, 0.2f, 0.1f, 0.7f);
 
-    if (Selection == 0) {
+    if (Selection == 0 && (Sunday->GetIsEnabled() != false)) {
         day_0->SetText(FText::AsNumber(Date));
         if (Date == FDateTime::Now().GetDay())
         {
-            Sunday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedColor);
+            Sunday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedGridColor);
+            SelectedGridRow = CalendarRow;
         }
         else
         {
             Sunday->WidgetStyle.Normal.TintColor = FSlateColor(GridColor);
         }
     }
-    else if (Selection == 1) {
+    else if ((Selection == 1) && (Monday->GetIsEnabled() != false)) {
         day_1->SetText(FText::AsNumber(Date));
         if (Date == FDateTime::Now().GetDay())
         {
-            Monday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedColor);
+            Monday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedGridColor);
+            SelectedGridRow = CalendarRow;
         }
         else
         {
             Monday->WidgetStyle.Normal.TintColor = FSlateColor(GridColor);
         }
     }
-    else if (Selection == 2) {
+    else if (Selection == 2 && (Tuesday->GetIsEnabled() != false)) {
         day_2->SetText(FText::AsNumber(Date));
         if (Date == FDateTime::Now().GetDay())
         {
-            Tuesday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedColor);
+            Tuesday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedGridColor);
+            SelectedGridRow = CalendarRow;
         }
         else
         {
             Tuesday->WidgetStyle.Normal.TintColor = FSlateColor(GridColor);
         }
     }
-    else if (Selection == 3) {
+    else if (Selection == 3 && (Wednesday->GetIsEnabled() != false)) {
         day_3->SetText(FText::AsNumber(Date));
         if (Date == FDateTime::Now().GetDay())
         {
-            Wednesday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedColor);
+            Wednesday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedGridColor);
+            SelectedGridRow = CalendarRow;
         }
         else
         {
             Wednesday->WidgetStyle.Normal.TintColor = FSlateColor(GridColor);
         }
     }
-    else if (Selection == 4) {
+    else if (Selection == 4 && (Thursday->GetIsEnabled() != false)) {
         day_4->SetText(FText::AsNumber(Date));
         if (Date == FDateTime::Now().GetDay())
         {
-            Thursday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedColor);
+            Thursday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedGridColor);
+            SelectedGridRow = CalendarRow;
         }
         else
         {
             Thursday->WidgetStyle.Normal.TintColor = FSlateColor(GridColor);
         }
     }
-    else if (Selection == 5) {
+    else if (Selection == 5 && (Friday->GetIsEnabled() != false)) {
         day_5->SetText(FText::AsNumber(Date));
         if (Date == FDateTime::Now().GetDay())
         {
-            Friday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedColor);
+            Friday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedGridColor);
+            SelectedGridRow = CalendarRow;
         }
         else
         {
             Friday->WidgetStyle.Normal.TintColor = FSlateColor(GridColor);
         }
     }
-    else if (Selection == 6) {
+    else if (Selection == 6 && (Saturday->GetIsEnabled() != false)) {
         day_6->SetText(FText::AsNumber(Date));
         if (Date == FDateTime::Now().GetDay())
         {
-            Saturday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedColor);
+            Saturday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedGridColor);
+            SelectedGridRow = CalendarRow;
         }
         else
         {
@@ -259,4 +288,5 @@ void UCalendarItemBase::SetDayTextHelper(int32 Selection, int32 Date)
     }
 
 }
+
 
