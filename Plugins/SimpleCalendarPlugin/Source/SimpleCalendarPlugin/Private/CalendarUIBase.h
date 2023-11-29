@@ -17,6 +17,10 @@ public:
 	virtual void NativeConstruct() override;
 
 protected:
+	/** Create Calendar */
+	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
+	void CreateCalendar();
+
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UEditableTextBox* year;
 
@@ -39,5 +43,5 @@ protected:
 	const float TickInterval = 0.5f;
 
 private:
-	void CreateCalendar();
+	
 };

@@ -12,7 +12,7 @@ void UCalendarUIBase::NativeConstruct()
 
     GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UCalendarUIBase::SetTime, TickInterval, true); 
 
-    CreateCalendar();
+    // CreateCalendar();
 }
 
 
