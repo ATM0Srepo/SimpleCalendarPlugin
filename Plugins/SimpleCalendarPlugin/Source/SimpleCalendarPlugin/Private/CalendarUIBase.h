@@ -36,12 +36,18 @@ protected:
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UListView* ListViewCalendar;
 
+	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
+	void SetYear(int y);
+
+	UFUNCTION()
+	void HandleOnTextCommitted(const FText& Text, ETextCommit::Type CommitMethod);
+
 	FTimerHandle TickTimerHandle;
 	void SetTime();
 
-	// Specify your tick interval here, for example, 0.1f for 10 times per second
+	// Specify the tick interval here, for example, 0.1f for 10 times per second
 	const float TickInterval = 0.5f;
 
 private:
-	
+	FDateTime CurrentDateTime;
 };

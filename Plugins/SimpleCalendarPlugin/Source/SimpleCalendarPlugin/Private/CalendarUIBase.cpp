@@ -9,18 +9,17 @@
 void UCalendarUIBase::NativeConstruct()
 {
     Super::NativeConstruct();
+    CurrentDateTime = FDateTime::Now();
+
+    // year
+    SetYear(CurrentDateTime.GetYear());
+    year->OnTextCommitted.AddDynamic(this, &UCalendarUIBase::HandleOnTextCommitted);
 
     GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UCalendarUIBase::SetTime, TickInterval, true); 
-
-    // CreateCalendar();
 }
-
 
 void UCalendarUIBase::SetTime()
 {
-    FDateTime CurrentDateTime = FDateTime::Now();
-
-    FString year_now = FString::FormatAsNumber(CurrentDateTime.GetYear());
     int32 month_now = CurrentDateTime.GetMonth();
     FString hour_now = FString::FormatAsNumber(CurrentDateTime.GetHour());
     FString minute_now = FString::FormatAsNumber(CurrentDateTime.GetMinute());
@@ -31,8 +30,7 @@ void UCalendarUIBase::SetTime()
     if (minute_now.Len() < 2) {
         minute_now = "0" + minute_now;
     }
-
-    year_now = year_now.Replace(TEXT(","), TEXT(""));
+    
     TMap<int32, FString> MonthMap = {
     {1, TEXT("Jan")},
     {2, TEXT("Feb")},
@@ -48,10 +46,23 @@ void UCalendarUIBase::SetTime()
     {12, TEXT("Dec")}
     };
 
-    year->SetText(FText::FromString(year_now));
     month->SetText(FText::FromString(*MonthMap.Find(month_now)));
     hour->SetText(FText::FromString(hour_now));
     minute->SetText(FText::FromString(minute_now));
+}
+
+void UCalendarUIBase::HandleOnTextCommitted(const FText& Text, ETextCommit::Type CommitMethod)
+{
+    if (CommitMethod == ETextCommit::OnEnter) {
+
+    }
+}
+
+void UCalendarUIBase::SetYear(int y)
+{
+    FString year_now = FString::FormatAsNumber(y);
+    year_now = year_now.Replace(TEXT(","), TEXT(""));
+    year->SetText(FText::FromString(year_now));
 }
 
 void UCalendarUIBase::CreateCalendar(FLinearColor SelectedGridColor)
