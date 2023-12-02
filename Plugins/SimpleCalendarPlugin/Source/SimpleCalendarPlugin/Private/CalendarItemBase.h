@@ -20,9 +20,9 @@ public:
     UPROPERTY(BlueprintReadOnly, Category = "Atm0s Calendar Variables")
     FString DaySelected;
 
-    /** Highligted Grid Color */
-    UPROPERTY(BlueprintReadWrite, Category = "Atm0s Calendar Variables")
-    FLinearColor SelectedGridColor;
+    ///** Highligted Grid Color */
+    //UPROPERTY(BlueprintReadWrite, Category = "Atm0s Calendar Variables")
+    //FLinearColor SelectedGridColor;
 
     /** Configure Calendar Item*/
     UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
@@ -66,7 +66,7 @@ public:
     void OnCalendarInitializationComplete();
 
     UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
-    void InitializeCalendarRow(int32 row);
+    void InitializeCalendarRow(int32 row, FLinearColor SelectedGridColor);
 
     FDateTime CurrentDateTime;
     int32 Year;  // temp
@@ -123,6 +123,7 @@ private:
     int32 CalculateOffset(int32 Row);
     int32 CalendarRow;
     int32 SelectedGridRow;
+    FLinearColor sgc_color;
     void SetDayText(int32 Selection, int32& Count);
     void SetCalendarItemHelper(int32 Selection, int32 Date);
     void HandleCalendarItemClick();

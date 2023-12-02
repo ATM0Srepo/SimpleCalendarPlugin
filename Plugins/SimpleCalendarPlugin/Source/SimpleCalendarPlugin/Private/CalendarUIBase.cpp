@@ -54,14 +54,14 @@ void UCalendarUIBase::SetTime()
     minute->SetText(FText::FromString(minute_now));
 }
 
-void UCalendarUIBase::CreateCalendar()
+void UCalendarUIBase::CreateCalendar(FLinearColor SelectedGridColor)
 {
     for (int32 i = 0; i <= 5; ++i)
     {
         UCalendarRow* CalendarRowInstance = NewObject<UCalendarRow>(this, UCalendarRow::StaticClass());
         if (CalendarRowInstance != nullptr)
         {
-            CalendarRowInstance->Init(i);
+            CalendarRowInstance->Init(i, SelectedGridColor);
             ListViewCalendar->AddItem(CalendarRowInstance);
         }
     }

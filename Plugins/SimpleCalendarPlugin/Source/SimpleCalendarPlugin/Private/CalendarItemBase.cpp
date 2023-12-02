@@ -9,7 +9,6 @@ void UCalendarItemBase::NativeConstruct()
 {
     Super::NativeConstruct();
     HandleCalendarItemClick();
-    SelectedGridColor = FLinearColor(-1.0f, -1.0f, -1.0f, -1.0f);
 }
 
 void UCalendarItemBase::HandleCalendarItemClick()
@@ -132,10 +131,10 @@ void UCalendarItemBase::DisableGrids()
     }
 }
 
-void UCalendarItemBase::InitializeCalendarRow(int32 RowIndex)
+void UCalendarItemBase::InitializeCalendarRow(int32 RowIndex, FLinearColor SelectedGridColor = FLinearColor(-1.0f, -1.0f, -1.0f, -1.0f))
 {
     CalendarRow = RowIndex;
-
+    sgc_color = SelectedGridColor;
     CurrentDateTime = FDateTime::Now();
     Year = CurrentDateTime.GetYear();  // temp
     Month = CurrentDateTime.GetMonth();   // temp
@@ -197,16 +196,13 @@ void UCalendarItemBase::ConfigureCalendarItem(bool SelectedGrid = false)
 void UCalendarItemBase::SetCalendarItemHelper(int32 Selection, int32 Date)
 {
     // Colors
-    if (SelectedGridColor == FLinearColor(-1.0f, -1.0f, -1.0f, -1.0f)) {
-        SelectedGridColor = FLinearColor(1.0f, 1.0f, 1.0f, 0.7f);
-    }
     FLinearColor GridColor(0.45f, 0.2f, 0.1f, 0.7f);
 
     if (Selection == 0 && (Sunday->GetIsEnabled() != false)) {
         day_0->SetText(FText::AsNumber(Date));
         if (Date == FDateTime::Now().GetDay())
         {
-            Sunday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedGridColor);
+            Sunday->WidgetStyle.Normal.TintColor = FSlateColor(sgc_color);
             SelectedGridRow = CalendarRow;
         }
         else
@@ -218,7 +214,7 @@ void UCalendarItemBase::SetCalendarItemHelper(int32 Selection, int32 Date)
         day_1->SetText(FText::AsNumber(Date));
         if (Date == FDateTime::Now().GetDay())
         {
-            Monday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedGridColor);
+            Monday->WidgetStyle.Normal.TintColor = FSlateColor(sgc_color);
             SelectedGridRow = CalendarRow;
         }
         else
@@ -230,7 +226,7 @@ void UCalendarItemBase::SetCalendarItemHelper(int32 Selection, int32 Date)
         day_2->SetText(FText::AsNumber(Date));
         if (Date == FDateTime::Now().GetDay())
         {
-            Tuesday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedGridColor);
+            Tuesday->WidgetStyle.Normal.TintColor = FSlateColor(sgc_color);
             SelectedGridRow = CalendarRow;
         }
         else
@@ -242,7 +238,7 @@ void UCalendarItemBase::SetCalendarItemHelper(int32 Selection, int32 Date)
         day_3->SetText(FText::AsNumber(Date));
         if (Date == FDateTime::Now().GetDay())
         {
-            Wednesday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedGridColor);
+            Wednesday->WidgetStyle.Normal.TintColor = FSlateColor(sgc_color);
             SelectedGridRow = CalendarRow;
         }
         else
@@ -254,7 +250,7 @@ void UCalendarItemBase::SetCalendarItemHelper(int32 Selection, int32 Date)
         day_4->SetText(FText::AsNumber(Date));
         if (Date == FDateTime::Now().GetDay())
         {
-            Thursday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedGridColor);
+            Thursday->WidgetStyle.Normal.TintColor = FSlateColor(sgc_color);
             SelectedGridRow = CalendarRow;
         }
         else
@@ -266,7 +262,7 @@ void UCalendarItemBase::SetCalendarItemHelper(int32 Selection, int32 Date)
         day_5->SetText(FText::AsNumber(Date));
         if (Date == FDateTime::Now().GetDay())
         {
-            Friday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedGridColor);
+            Friday->WidgetStyle.Normal.TintColor = FSlateColor(sgc_color);
             SelectedGridRow = CalendarRow;
         }
         else
@@ -278,7 +274,7 @@ void UCalendarItemBase::SetCalendarItemHelper(int32 Selection, int32 Date)
         day_6->SetText(FText::AsNumber(Date));
         if (Date == FDateTime::Now().GetDay())
         {
-            Saturday->WidgetStyle.Normal.TintColor = FSlateColor(SelectedGridColor);
+            Saturday->WidgetStyle.Normal.TintColor = FSlateColor(sgc_color);
             SelectedGridRow = CalendarRow;
         }
         else
