@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
+#include "CalendarUIBase.h"
 #include "CalendarItemBase.generated.h"
 
 /**
@@ -19,14 +20,6 @@ public:
     /** The current selection of the day of week on Calendar (eg. "Sunday", "Monday", etc */
     UPROPERTY(BlueprintReadOnly, Category = "Atm0s Calendar Variables")
     FString DaySelected;
-
-    ///** Highligted Grid Color */
-    //UPROPERTY(BlueprintReadWrite, Category = "Atm0s Calendar Variables")
-    //FLinearColor SelectedGridColor;
-
-    /** Configure Calendar Item*/
-    UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
-    void ConfigureCalendarItem(bool SelectedGrid);
 
     // Functions to Handle Day Clicks
     UFUNCTION()
@@ -58,12 +51,6 @@ public:
     */
     UFUNCTION(BlueprintImplementableEvent, Category = "Atm0s Calendar Events")
     void OnDaySelected();
-
-    /** Overridable event
-        OnCalendarInitializationComplete is triggered when InitializeCalendarRow has been completed for all rows
-    */
-    UFUNCTION(BlueprintImplementableEvent, Category = "Atm0s Calendar Events")
-    void OnCalendarInitializationComplete();
 
     UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
     void InitializeCalendarRow(int32 row, FLinearColor SelectedGridColor);

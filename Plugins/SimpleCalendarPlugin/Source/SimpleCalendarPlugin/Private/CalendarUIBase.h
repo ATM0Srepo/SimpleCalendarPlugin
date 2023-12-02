@@ -21,6 +21,7 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
 	void CreateCalendar(FLinearColor SelectedGridColor);
 
+	/** Calendar Year (Editable TextBox) */
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UEditableTextBox* year;
 

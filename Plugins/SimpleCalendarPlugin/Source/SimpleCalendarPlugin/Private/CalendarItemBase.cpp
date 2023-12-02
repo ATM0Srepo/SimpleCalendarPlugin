@@ -48,17 +48,6 @@ void UCalendarItemBase::HandleCalendarItemClick()
 void UCalendarItemBase::HandleSundayClick()
 {
     DaySelected = "Sunday";
-    //if (GEngine)
-    //{
-    //    GEngine->AddOnScreenDebugMessage(
-    //        -1,                 // Unique key (or -1 to overwrite previous message of the same key)
-    //        5.0f,               // Time the message should be displayed (in seconds)
-    //        FColor::Yellow,     // The color of the text
-    //        TEXT("Your message goes here") // The message to display
-    //    );
-    //}
-
-
     OnDaySelected();
 }
 
@@ -153,7 +142,6 @@ void UCalendarItemBase::InitializeCalendarRow(int32 RowIndex, FLinearColor Selec
     }
 
     DisableGrids();
-    OnCalendarInitializationComplete();
 }
 
 int32 UCalendarItemBase::CalculateOffset(int32 RowIndex)
@@ -176,21 +164,6 @@ void UCalendarItemBase::SetDayText(int32 DayIndex, int32& Count)
         SetCalendarItemHelper(DayIndex, Date);
     }
     Count += 1;
-}
-
-/** Configure Calendar Item
-    SelectedGrid: The Selection on Calendar that shows current date.
-                  Set to true if you want to change the configuration of the SelectedGrid.
-*/
-void UCalendarItemBase::ConfigureCalendarItem(bool SelectedGrid = false)
-{
-    if ((SelectedGrid) && (CalendarRow == SelectedGridRow)) {
-        int32 Selection = static_cast<int32>(FDateTime::Now().GetDayOfWeek()) + 1;
-        if (Selection == 7) {
-            Selection = 0;
-        }
-        SetCalendarItemHelper(Selection, FDateTime::Now().GetDay());
-    }
 }
 
 void UCalendarItemBase::SetCalendarItemHelper(int32 Selection, int32 Date)
