@@ -20,6 +20,9 @@ void UCalendarUIBase::NativeConstruct()
     InitializeYear(CurrentDateTime.GetYear());
     year->OnTextCommitted.AddDynamic(this, &UCalendarUIBase::HandleOnTextCommitted);
 
+    // month
+    InitializeMonth(CurrentDateTime.GetMonth());
+
     GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UCalendarUIBase::SetTime, TickInterval, true); 
 }
 
@@ -77,12 +80,7 @@ void UCalendarUIBase::PreCalendarConfig(FLinearColor SelectedGridColor)
     color1 = SelectedGridColor;
 }
 
-void UCalendarUIBase::SetYear(int y)
-{
-    InitializeYear(y);
-    ListViewCalendar->ClearListItems();
-    CreateCalendar();
-}
+
 
 void UCalendarUIBase::CreateCalendar()
 {
@@ -98,6 +96,17 @@ void UCalendarUIBase::CreateCalendar()
             ListViewCalendar->AddItem(CalendarRowInstance);
         }
     }
+}
+
+void UCalendarUIBase::SetYear(int y)
+{
+    InitializeYear(y);
+    ListViewCalendar->ClearListItems();
+    CreateCalendar();
+}
+
+void UCalendarUIBase::SetMonth(int m)
+{
 }
 
 

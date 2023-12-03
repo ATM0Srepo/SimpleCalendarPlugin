@@ -44,6 +44,12 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
 	void CreateCalendar();
 
+	/** Manipulate Calendar Month from blueprint
+	* To be called before CreateCalendar Function
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
+	void SetMonth(int m);
+
 	/** Manipulate Calendar Year from blueprint
 	* To be called before CreateCalendar Function
 	*/
@@ -56,6 +62,7 @@ protected:
 	FTimerHandle TickTimerHandle;
 	void SetTime();
 	void InitializeYear(int y); // set year from c++ code
+	void InitializeMonth(int m); // set month from c++ code
 
 	// Specify the tick interval here, for example, 0.1f for 10 times per second
 	const float TickInterval = 0.5f;

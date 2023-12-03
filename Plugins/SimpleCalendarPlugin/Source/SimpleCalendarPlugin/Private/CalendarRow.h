@@ -30,7 +30,7 @@ public:
     UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
     void Init(int32 RowValue, int32 year, FLinearColor color1);
 
-    UPROPERTY(BlueprintReadWrite, Category = "Calendar Variables")
+    UPROPERTY(BlueprintReadWrite, Category = "Atm0s Calendar Variables")
     FMyBaseSructure structure;
 
 };
