@@ -46,8 +46,8 @@ public:
     UFUNCTION()
     void DisableGrids();
 
-    /** Overridable event
-        OnDaySelected is triggered when a calendar item is clicked
+    /** Overridable event 
+    * OnDaySelected is triggered when a calendar item is clicked
     */
     UFUNCTION(BlueprintImplementableEvent, Category = "Atm0s Calendar Events")
     void OnDaySelected();

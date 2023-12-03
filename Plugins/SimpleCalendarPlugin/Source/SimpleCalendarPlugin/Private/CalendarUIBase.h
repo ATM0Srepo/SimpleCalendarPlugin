@@ -18,10 +18,6 @@ public:
 	FString year_now;
 
 protected:
-	/** Create Calendar */
-	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
-	void CreateCalendar(FLinearColor SelectedGridColor);
-
 	/** Calendar Year (Editable TextBox) */
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UEditableTextBox* year;
@@ -37,6 +33,17 @@ protected:
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UListView* ListViewCalendar;
+
+	/**
+	* Calendar style settings to be set before creating calendar
+	* This is to be called before CreateCalendar Function
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
+	void PreCalendarConfig(FLinearColor SelectedGridColor);
+
+	/** Create Calendar */
+	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
+	void CreateCalendar();
 
 	/** Manipulate Calendar Year from blueprint*/
 	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
@@ -54,4 +61,5 @@ protected:
 
 private:
 	FDateTime CurrentDateTime;
+	FLinearColor color1;
 };

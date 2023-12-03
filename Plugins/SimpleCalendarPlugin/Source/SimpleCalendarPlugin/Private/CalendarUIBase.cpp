@@ -9,6 +9,10 @@
 void UCalendarUIBase::NativeConstruct()
 {
     Super::NativeConstruct();
+    PreCalendarConfig(
+        FLinearColor(1.0f, 1.0f, 1.0f, 0.8f)
+    );
+
     CurrentDateTime = FDateTime::Now();
 
     // year
@@ -66,20 +70,25 @@ void UCalendarUIBase::HandleOnTextCommitted(const FText& Text, ETextCommit::Type
     }
 }
 
+void UCalendarUIBase::PreCalendarConfig(FLinearColor SelectedGridColor)
+{
+    color1 = SelectedGridColor;
+}
+
 void UCalendarUIBase::SetYear(int y)
 {
     InitializeYear(y);
     ListViewCalendar->ClearListItems();
 }
 
-void UCalendarUIBase::CreateCalendar(FLinearColor SelectedGridColor)
+void UCalendarUIBase::CreateCalendar()
 {
     for (int32 i = 0; i <= 5; ++i)
     {
         UCalendarRow* CalendarRowInstance = NewObject<UCalendarRow>(this, UCalendarRow::StaticClass());
         if (CalendarRowInstance != nullptr)
         {
-            CalendarRowInstance->Init(i, SelectedGridColor);
+            CalendarRowInstance->Init(i, color1);
             ListViewCalendar->AddItem(CalendarRowInstance);
         }
     }
