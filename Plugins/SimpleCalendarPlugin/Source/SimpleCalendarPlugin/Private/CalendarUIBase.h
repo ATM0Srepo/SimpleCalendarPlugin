@@ -15,7 +15,6 @@ class UCalendarUIBase : public UUserWidget
 
 public:
 	virtual void NativeConstruct() override;
-	FString year_now;
 
 protected:
 	/** Calendar Year (Editable TextBox) */
@@ -35,8 +34,8 @@ protected:
 	class UListView* ListViewCalendar;
 
 	/**
-	* Calendar style settings to be set before creating calendar
-	* This is to be called before CreateCalendar Function
+	* Manipulate Calendar style settings from blueprint
+	* To be called before CreateCalendar Function
 	*/
 	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
 	void PreCalendarConfig(FLinearColor SelectedGridColor);
@@ -45,7 +44,9 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
 	void CreateCalendar();
 
-	/** Manipulate Calendar Year from blueprint*/
+	/** Manipulate Calendar Year from blueprint
+	* To be called before CreateCalendar Function
+	*/
 	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
 	void SetYear(int y);
 
@@ -61,5 +62,6 @@ protected:
 
 private:
 	FDateTime CurrentDateTime;
+	int32 year_now;
 	FLinearColor color1;
 };

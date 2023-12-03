@@ -120,12 +120,12 @@ void UCalendarItemBase::DisableGrids()
     }
 }
 
-void UCalendarItemBase::InitializeCalendarRow(int32 RowIndex, FLinearColor SelectedGridColor = FLinearColor(-1.0f, -1.0f, -1.0f, -1.0f))
+void UCalendarItemBase::InitializeCalendarRow(int32 RowIndex, int32 year, FLinearColor SelectedGridColor)
 {
     CalendarRow = RowIndex;
     sgc_color = SelectedGridColor;
     CurrentDateTime = FDateTime::Now();
-    Year = CurrentDateTime.GetYear();  // temp
+    Year = year;
     Month = CurrentDateTime.GetMonth();   // temp
     FDateTime FirstDayOfMonth(Year, Month, 1);
     FirstDayOfWeek = static_cast<int32>(FirstDayOfMonth.GetDayOfWeek());

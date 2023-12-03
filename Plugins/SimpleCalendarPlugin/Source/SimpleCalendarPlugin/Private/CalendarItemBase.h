@@ -53,7 +53,7 @@ public:
     void OnDaySelected();
 
     UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
-    void InitializeCalendarRow(int32 row, FLinearColor SelectedGridColor);
+    void InitializeCalendarRow(int32 row, int32 year, FLinearColor SelectedGridColor);
 
     FDateTime CurrentDateTime;
     int32 Year;  // temp

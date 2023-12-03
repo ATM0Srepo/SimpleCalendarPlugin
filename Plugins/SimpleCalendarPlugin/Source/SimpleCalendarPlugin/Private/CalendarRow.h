@@ -11,8 +11,11 @@ struct FMyBaseSructure
 {
     GENERATED_BODY()
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Calendar Variables")
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
     int32 Row;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    int32 Year;
 
     UPROPERTY(BlueprintReadOnly)
     FLinearColor SelectedGridColor;
@@ -25,7 +28,7 @@ class UCalendarRow : public UObject
 
 public:
     UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
-    void Init(int32 RowValue, FLinearColor color1);
+    void Init(int32 RowValue, int32 year, FLinearColor color1);
 
     UPROPERTY(BlueprintReadWrite, Category = "Calendar Variables")
     FMyBaseSructure structure;

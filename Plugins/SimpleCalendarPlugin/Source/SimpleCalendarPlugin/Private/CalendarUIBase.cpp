@@ -9,6 +9,7 @@
 void UCalendarUIBase::NativeConstruct()
 {
     Super::NativeConstruct();
+    // style
     PreCalendarConfig(
         FLinearColor(1.0f, 1.0f, 1.0f, 0.8f)
     );
@@ -57,16 +58,17 @@ void UCalendarUIBase::SetTime()
 
 void UCalendarUIBase::InitializeYear(int y)
 {
-    year_now = FString::FormatAsNumber(y);
-    year_now = year_now.Replace(TEXT(","), TEXT(""));
-    year->SetText(FText::FromString(year_now));
+    year_now = y;
+    year->SetText(FText::FromString(FString::FormatAsNumber(y).Replace(TEXT(","), TEXT(""))));
 }
 
 void UCalendarUIBase::HandleOnTextCommitted(const FText& Text, ETextCommit::Type CommitMethod)
 {
     if (CommitMethod == ETextCommit::OnEnter) {
-        year_now = Text.ToString();
+        
+        year_now = FCString::Atoi(*Text.ToString());
         ListViewCalendar->ClearListItems();
+        CreateCalendar();
     }
 }
 
@@ -79,6 +81,7 @@ void UCalendarUIBase::SetYear(int y)
 {
     InitializeYear(y);
     ListViewCalendar->ClearListItems();
+    CreateCalendar();
 }
 
 void UCalendarUIBase::CreateCalendar()
@@ -88,7 +91,10 @@ void UCalendarUIBase::CreateCalendar()
         UCalendarRow* CalendarRowInstance = NewObject<UCalendarRow>(this, UCalendarRow::StaticClass());
         if (CalendarRowInstance != nullptr)
         {
-            CalendarRowInstance->Init(i, color1);
+            CalendarRowInstance->Init(
+                i,
+                year_now,
+                color1);
             ListViewCalendar->AddItem(CalendarRowInstance);
         }
     }
