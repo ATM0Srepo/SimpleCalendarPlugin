@@ -122,6 +122,8 @@ void UCalendarUIBase::ShowNextMonth()
         m2 = 1;
     }
     InitializeMonth(m2);
+    ListViewCalendar->ClearListItems();
+    CreateCalendar();
 }
 
 void UCalendarUIBase::ShowPrevMonth()
@@ -135,6 +137,8 @@ void UCalendarUIBase::ShowPrevMonth()
         m2 = 12;
     }
     InitializeMonth(m2);
+    ListViewCalendar->ClearListItems();
+    CreateCalendar();
 }
 
 void UCalendarUIBase::PreCalendarConfig(FLinearColor SelectedGridColor)
@@ -167,8 +171,11 @@ void UCalendarUIBase::SetYear(int y)
     CreateCalendar();
 }
 
-void UCalendarUIBase::SetMonth(int m)
+void UCalendarUIBase::SetMonth(int32 m)
 {
+    InitializeMonth(m);
+    ListViewCalendar->ClearListItems();
+    CreateCalendar();
 }
 
 

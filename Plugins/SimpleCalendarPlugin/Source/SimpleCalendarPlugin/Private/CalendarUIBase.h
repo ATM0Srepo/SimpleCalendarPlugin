@@ -53,17 +53,17 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
 	void CreateCalendar();
 
-	/** Manipulate Calendar Month from blueprint
-	* To be called before CreateCalendar Function
-	*/
-	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
-	void SetMonth(int m);
-
 	/** Manipulate Calendar Year from blueprint
 	* To be called before CreateCalendar Function
 	*/
 	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
 	void SetYear(int y);
+
+	/** Manipulate Calendar Month from blueprint
+	* To be called before CreateCalendar Function
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
+	void SetMonth(int32 m);
 
 	UFUNCTION()
 	void HandleOnYearChanged(const FText& Text, ETextCommit::Type CommitMethod);
