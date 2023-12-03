@@ -158,6 +158,7 @@ void UCalendarUIBase::CreateCalendar()
             CalendarRowInstance->Init(
                 i,
                 year_now,
+                month_now,
                 color1);
             ListViewCalendar->AddItem(CalendarRowInstance);
         }
