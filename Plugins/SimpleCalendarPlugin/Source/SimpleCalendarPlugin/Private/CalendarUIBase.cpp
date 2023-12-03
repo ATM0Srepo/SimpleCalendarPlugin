@@ -12,7 +12,7 @@ void UCalendarUIBase::NativeConstruct()
     CurrentDateTime = FDateTime::Now();
 
     // year
-    SetYear(CurrentDateTime.GetYear());
+    InitializeYear(CurrentDateTime.GetYear());
     year->OnTextCommitted.AddDynamic(this, &UCalendarUIBase::HandleOnTextCommitted);
 
     GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UCalendarUIBase::SetTime, TickInterval, true); 
@@ -51,18 +51,25 @@ void UCalendarUIBase::SetTime()
     minute->SetText(FText::FromString(minute_now));
 }
 
+void UCalendarUIBase::InitializeYear(int y)
+{
+    year_now = FString::FormatAsNumber(y);
+    year_now = year_now.Replace(TEXT(","), TEXT(""));
+    year->SetText(FText::FromString(year_now));
+}
+
 void UCalendarUIBase::HandleOnTextCommitted(const FText& Text, ETextCommit::Type CommitMethod)
 {
     if (CommitMethod == ETextCommit::OnEnter) {
-
+        year_now = Text.ToString();
+        ListViewCalendar->ClearListItems();
     }
 }
 
 void UCalendarUIBase::SetYear(int y)
 {
-    FString year_now = FString::FormatAsNumber(y);
-    year_now = year_now.Replace(TEXT(","), TEXT(""));
-    year->SetText(FText::FromString(year_now));
+    InitializeYear(y);
+    ListViewCalendar->ClearListItems();
 }
 
 void UCalendarUIBase::CreateCalendar(FLinearColor SelectedGridColor)
