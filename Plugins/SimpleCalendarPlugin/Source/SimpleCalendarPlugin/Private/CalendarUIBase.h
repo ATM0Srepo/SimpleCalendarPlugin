@@ -30,6 +30,15 @@ protected:
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UTextBlock* minute;
 
+	UPROPERTY(meta = (BindWidget))
+	class UButton* toggle_prev_month;
+
+	UPROPERTY(meta = (BindWidget))
+	class UButton* toggle_next_month;
+
+	UPROPERTY(meta = (BindWidget))
+	class UButton* MonthButton;
+
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UListView* ListViewCalendar;
 
@@ -57,7 +66,16 @@ protected:
 	void SetYear(int y);
 
 	UFUNCTION()
-	void HandleOnTextCommitted(const FText& Text, ETextCommit::Type CommitMethod);
+	void HandleOnYearChanged(const FText& Text, ETextCommit::Type CommitMethod);
+
+	UFUNCTION()
+	void HandleMonthToggleButtonClick();
+
+	UFUNCTION()
+	void ShowNextMonth();
+
+	UFUNCTION()
+	void ShowPrevMonth();
 
 	FTimerHandle TickTimerHandle;
 	void SetTime();
@@ -70,5 +88,7 @@ protected:
 private:
 	FDateTime CurrentDateTime;
 	int32 year_now;
+	int32 month_now;
 	FLinearColor color1;
+	TMap<FString, int32> MonthMap2;
 };

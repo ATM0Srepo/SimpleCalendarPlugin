@@ -1,5 +1,6 @@
 #include "CalendarUIBase.h"
 #include "Misc/DateTime.h"
+#include "Components/Button.h"
 #include "Components/TextBlock.h"
 #include "Containers/Map.h"
 #include "CalendarRow.h"
@@ -9,28 +10,46 @@
 void UCalendarUIBase::NativeConstruct()
 {
     Super::NativeConstruct();
+    MonthMap2 = {
+    {TEXT("Jan"), 1},
+    {TEXT("Feb"), 2},
+    {TEXT("Mar"), 3},
+    {TEXT("Apr"), 4},
+    {TEXT("May"), 5},
+    {TEXT("Jun"), 6},
+    {TEXT("Jul"), 7},
+    {TEXT("Aug"), 8},
+    {TEXT("Sep"), 9},
+    {TEXT("Oct"), 10},
+    {TEXT("Nov"), 11},
+    {TEXT("Dec"), 12}
+    };
+
     // style
     PreCalendarConfig(
         FLinearColor(1.0f, 1.0f, 1.0f, 0.8f)
     );
 
-    CurrentDateTime = FDateTime::Now();
+    toggle_prev_month->SetVisibility(ESlateVisibility::Collapsed);
+    toggle_prev_month->OnClicked.AddDynamic(this, &UCalendarUIBase::ShowPrevMonth);
+    toggle_next_month->SetVisibility(ESlateVisibility::Collapsed);
+    toggle_next_month->OnClicked.AddDynamic(this, &UCalendarUIBase::ShowNextMonth);
+    MonthButton->OnClicked.AddDynamic(this, &UCalendarUIBase::HandleMonthToggleButtonClick);
 
     // year
-    InitializeYear(CurrentDateTime.GetYear());
-    year->OnTextCommitted.AddDynamic(this, &UCalendarUIBase::HandleOnTextCommitted);
+    InitializeYear(FDateTime::Now().GetYear());
+    year->OnTextCommitted.AddDynamic(this, &UCalendarUIBase::HandleOnYearChanged);
 
     // month
-    InitializeMonth(CurrentDateTime.GetMonth());
+    InitializeMonth(FDateTime::Now().GetMonth());
 
     GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UCalendarUIBase::SetTime, TickInterval, true); 
 }
 
 void UCalendarUIBase::SetTime()
 {
-    int32 month_now = CurrentDateTime.GetMonth();
-    FString hour_now = FString::FormatAsNumber(CurrentDateTime.GetHour());
-    FString minute_now = FString::FormatAsNumber(CurrentDateTime.GetMinute());
+    FString hour_now = FString::FormatAsNumber(FDateTime::Now().GetHour());
+    FString minute_now = FString::FormatAsNumber(FDateTime::Now().GetMinute());
 
     if (hour_now.Len() < 2) {
         hour_now = "0" + hour_now;
@@ -38,7 +57,19 @@ void UCalendarUIBase::SetTime()
     if (minute_now.Len() < 2) {
         minute_now = "0" + minute_now;
     }
-    
+   
+    hour->SetText(FText::FromString(hour_now));
+    minute->SetText(FText::FromString(minute_now));
+}
+
+void UCalendarUIBase::InitializeYear(int y)
+{
+    year_now = y;
+    year->SetText(FText::FromString(FString::FormatAsNumber(y).Replace(TEXT(","), TEXT(""))));
+}
+
+void UCalendarUIBase::InitializeMonth(int m)
+{
     TMap<int32, FString> MonthMap = {
     {1, TEXT("Jan")},
     {2, TEXT("Feb")},
@@ -53,19 +84,11 @@ void UCalendarUIBase::SetTime()
     {11, TEXT("Nov")},
     {12, TEXT("Dec")}
     };
-
-    month->SetText(FText::FromString(*MonthMap.Find(month_now)));
-    hour->SetText(FText::FromString(hour_now));
-    minute->SetText(FText::FromString(minute_now));
+    month_now = m;
+    month->SetText(FText::FromString(*MonthMap.Find(m)));
 }
 
-void UCalendarUIBase::InitializeYear(int y)
-{
-    year_now = y;
-    year->SetText(FText::FromString(FString::FormatAsNumber(y).Replace(TEXT(","), TEXT(""))));
-}
-
-void UCalendarUIBase::HandleOnTextCommitted(const FText& Text, ETextCommit::Type CommitMethod)
+void UCalendarUIBase::HandleOnYearChanged(const FText& Text, ETextCommit::Type CommitMethod)
 {
     if (CommitMethod == ETextCommit::OnEnter) {
         
@@ -73,6 +96,45 @@ void UCalendarUIBase::HandleOnTextCommitted(const FText& Text, ETextCommit::Type
         ListViewCalendar->ClearListItems();
         CreateCalendar();
     }
+}
+
+void UCalendarUIBase::HandleMonthToggleButtonClick()
+{
+    if (toggle_prev_month->IsVisible()) {
+        toggle_prev_month->SetVisibility(ESlateVisibility::Collapsed);
+        toggle_next_month->SetVisibility(ESlateVisibility::Collapsed
+);
+    }
+    else {
+        toggle_prev_month->SetVisibility(ESlateVisibility::Visible);
+        toggle_next_month->SetVisibility(ESlateVisibility::Visible);
+    }
+}
+
+void UCalendarUIBase::ShowNextMonth()
+{
+    FText m = month->GetText();
+    int32 m2 = *MonthMap2.Find(m.ToString());
+    if (m2 < 12) {
+        m2 += 1;
+    }
+    else {
+        m2 = 1;
+    }
+    InitializeMonth(m2);
+}
+
+void UCalendarUIBase::ShowPrevMonth()
+{
+    FText m = month->GetText();
+    int32 m2 = *MonthMap2.Find(m.ToString());
+    if (m2 > 1) {
+        m2 -= 1;
+    }
+    else {
+        m2 = 12;
+    }
+    InitializeMonth(m2);
 }
 
 void UCalendarUIBase::PreCalendarConfig(FLinearColor SelectedGridColor)
