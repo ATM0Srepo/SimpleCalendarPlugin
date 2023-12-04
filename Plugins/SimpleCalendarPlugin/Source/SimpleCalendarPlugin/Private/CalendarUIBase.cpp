@@ -172,8 +172,6 @@ void UCalendarUIBase::CreateCalendar()
 void UCalendarUIBase::SetYear(int y)
 {
     InitializeYear(y);
-    ListViewCalendar->ClearListItems();
-    CreateCalendar();
 }
 
 void UCalendarUIBase::SetMonth(int32 m)
