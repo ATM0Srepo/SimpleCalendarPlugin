@@ -47,7 +47,7 @@ protected:
 	* To be called before CreateCalendar Function
 	*/
 	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
-	void PreCalendarConfig(FLinearColor SelectedGridColor);
+	void PreCalendarConfig(FLinearColor SelectedGridColor, FLinearColor EmptyGridColor);
 
 	/** Create Calendar */
 	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
@@ -90,5 +90,6 @@ private:
 	int32 year_now;
 	int32 month_now;
 	FLinearColor color1;
+	FLinearColor color2;
 	TMap<FString, int32> MonthMap2;
 };

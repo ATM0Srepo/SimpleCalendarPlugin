@@ -43,9 +43,6 @@ public:
     UFUNCTION()
     void HandleSaturdayClick();
 
-    UFUNCTION()
-    void DisableGrids();
-
     /** Overridable event 
     * OnDaySelected is triggered when a calendar item is clicked
     */
@@ -53,7 +50,7 @@ public:
     void OnDaySelected();
 
     UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
-    void InitializeCalendarRow(int32 row, int32 year, int32 month, FLinearColor SelectedGridColor);
+    void InitializeCalendarRow(int32 row, int32 year, int32 month, FLinearColor SelectedGridColor, FLinearColor EmptyGridColor);
 
     FDateTime CurrentDateTime;
     int32 Year;  // temp
@@ -111,7 +108,10 @@ private:
     int32 CalendarRow;
     int32 SelectedGridRow;
     FLinearColor sgc_color;
+    FLinearColor d_color;
     void SetDayText(int32 Selection, int32& Count);
-    void SetCalendarItemHelper(int32 Selection, int32 Date);
+    void SetCalendarItemHelper(int32 Selection, FText Date);
     void HandleCalendarItemClick();
+    void EnableGrids();
+    void DisableGrids();
 };
