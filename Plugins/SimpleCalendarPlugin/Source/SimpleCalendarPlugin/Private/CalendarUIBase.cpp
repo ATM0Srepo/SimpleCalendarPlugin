@@ -28,7 +28,8 @@ void UCalendarUIBase::NativeConstruct()
     // style
     PreCalendarConfig(
         FLinearColor(1.0f, 1.0f, 1.0f, 0.8f),
-        FLinearColor(0.0f, 0.0f, 0.0f, 1.0f)
+        FLinearColor(0.0f, 0.0f, 0.0f, 1.0f),
+        FLinearColor(0.45f, 0.2f, 0.1f, 0.7f)
     );
 
     toggle_prev_month->SetVisibility(ESlateVisibility::Collapsed);
@@ -142,10 +143,11 @@ void UCalendarUIBase::ShowPrevMonth()
     CreateCalendar();
 }
 
-void UCalendarUIBase::PreCalendarConfig(FLinearColor SelectedGridColor, FLinearColor EmptyGridColor)
+void UCalendarUIBase::PreCalendarConfig(FLinearColor SelectedGridColor , FLinearColor EmptyGridColor, FLinearColor GridColor)
 {
     color1 = SelectedGridColor;
     color2 = EmptyGridColor;
+    color3 = GridColor;
 }
 
 
@@ -162,7 +164,8 @@ void UCalendarUIBase::CreateCalendar()
                 year_now,
                 month_now,
                 color1,
-                color2
+                color2,
+                color3
                 );
             ListViewCalendar->AddItem(CalendarRowInstance);
         }

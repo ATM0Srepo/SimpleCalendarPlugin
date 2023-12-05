@@ -25,6 +25,9 @@ struct FMyBaseSructure
 
     UPROPERTY(BlueprintReadOnly)
     FLinearColor EmptyGridColor;
+
+    UPROPERTY(BlueprintReadOnly)
+    FLinearColor GridColor;
 };
 
 UCLASS(BlueprintType)
@@ -38,7 +41,8 @@ public:
         int32 year, 
         int32 month,  
         FLinearColor color1,
-        FLinearColor color2
+        FLinearColor color2,
+        FLinearColor color3
     );
 
     UPROPERTY(BlueprintReadWrite, Category = "Atm0s Calendar Variables")
