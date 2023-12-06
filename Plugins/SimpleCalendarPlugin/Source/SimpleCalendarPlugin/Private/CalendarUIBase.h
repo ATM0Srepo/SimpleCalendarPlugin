@@ -39,6 +39,14 @@ protected:
 	UPROPERTY(meta = (BindWidget))
 	class UButton* MonthButton;
 
+	UPROPERTY(meta = (BindWidget))
+	class UButton* weekdays_background;
+
+	UPROPERTY(meta = (BindWidget))
+	class UButton* calendar_background;
+
+
+
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UListView* ListViewCalendar;
 
@@ -50,6 +58,13 @@ protected:
 	void PreCalendarConfig(FLinearColor SelectedGridColor = FLinearColor(1.0f, 1.0f, 1.0f, 0.8f),
 		FLinearColor EmptyGridColor = FLinearColor(0.0f, 0.0f, 0.0f, 1.0f),
 		FLinearColor GridColor = FLinearColor(0.45f, 0.2f, 0.1f, 0.7f));
+
+	/**
+	* Manipulate Corner Radii of Calendar, Weekday Heading Bar, and Calendar Grids
+	* Can be called before or after CreateCalendar function
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
+	void SetCornerRadii(const FVector4& CalendarBorder, const FVector4& WeekdayHeaderRadii);
 
 	/** Create Calendar */
 	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")

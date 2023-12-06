@@ -90,6 +90,12 @@ void UCalendarUIBase::InitializeMonth(int m)
     month->SetText(FText::FromString(*MonthMap.Find(m)));
 }
 
+void UCalendarUIBase::SetCornerRadii(const FVector4& CalendarBorder, const FVector4& WeekdayHeaderRadii)
+{
+    calendar_background->WidgetStyle.Normal.OutlineSettings.CornerRadii = CalendarBorder;
+    weekdays_background->WidgetStyle.Normal.OutlineSettings.CornerRadii = WeekdayHeaderRadii;
+}
+
 void UCalendarUIBase::HandleOnYearChanged(const FText& Text, ETextCommit::Type CommitMethod)
 {
     if (CommitMethod == ETextCommit::OnEnter) {

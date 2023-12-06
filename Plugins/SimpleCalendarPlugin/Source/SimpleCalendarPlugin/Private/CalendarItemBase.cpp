@@ -102,40 +102,65 @@ void UCalendarItemBase::DisableGrids()
 {
     if ((day_0->GetText()).IsEmptyOrWhitespace())
     {
-        Sunday->SetIsEnabled(false);
+        Sunday->WidgetStyle.Normal.TintColor = FSlateColor(d_color);
+        Sunday->WidgetStyle.Hovered.TintColor = FSlateColor(d_color);
+        Sunday->WidgetStyle.Pressed.TintColor = FSlateColor(d_color);
         Sunday->WidgetStyle.Disabled.TintColor = FSlateColor(d_color);
+        Sunday->SetIsEnabled(false);
     }
     if ((day_1->GetText()).IsEmptyOrWhitespace())
     {
-        Monday->SetIsEnabled(false);
+        Monday->WidgetStyle.Normal.TintColor = FSlateColor(d_color);
+        Monday->WidgetStyle.Hovered.TintColor = FSlateColor(d_color);
+        Monday->WidgetStyle.Pressed.TintColor = FSlateColor(d_color);
         Monday->WidgetStyle.Disabled.TintColor = FSlateColor(d_color);
+        Monday->SetIsEnabled(false);
 
     }
     if ((day_2->GetText()).IsEmptyOrWhitespace())
     {
-        Tuesday->SetIsEnabled(false);
+        Tuesday->WidgetStyle.Normal.TintColor = FSlateColor(d_color);
+        Tuesday->WidgetStyle.Hovered.TintColor = FSlateColor(d_color);
+        Tuesday->WidgetStyle.Pressed.TintColor = FSlateColor(d_color);
         Tuesday->WidgetStyle.Disabled.TintColor = FSlateColor(d_color);
+        Tuesday->SetIsEnabled(false);
 
     }
     if ((day_3->GetText()).IsEmptyOrWhitespace())
     {
-        Wednesday->SetIsEnabled(false);
+        Wednesday->WidgetStyle.Normal.TintColor = FSlateColor(d_color);
+        Wednesday->WidgetStyle.Hovered.TintColor = FSlateColor(d_color);
+        Wednesday->WidgetStyle.Pressed.TintColor = FSlateColor(d_color);
         Wednesday->WidgetStyle.Disabled.TintColor = FSlateColor(d_color);
+        Wednesday->SetIsEnabled(false);
+
     }
     if ((day_4->GetText()).IsEmptyOrWhitespace())
     {
-        Thursday->SetIsEnabled(false);
+        Thursday->WidgetStyle.Normal.TintColor = FSlateColor(d_color);
+        Thursday->WidgetStyle.Hovered.TintColor = FSlateColor(d_color);
+        Thursday->WidgetStyle.Pressed.TintColor = FSlateColor(d_color);
         Thursday->WidgetStyle.Disabled.TintColor = FSlateColor(d_color);
+        Thursday->SetIsEnabled(false);
+
     }
     if ((day_5->GetText()).IsEmptyOrWhitespace())
     {
-        Friday->SetIsEnabled(false);
+        Friday->WidgetStyle.Normal.TintColor = FSlateColor(d_color);
+        Friday->WidgetStyle.Hovered.TintColor = FSlateColor(d_color);
+        Friday->WidgetStyle.Pressed.TintColor = FSlateColor(d_color);
         Friday->WidgetStyle.Disabled.TintColor = FSlateColor(d_color);
+        Friday->SetIsEnabled(false);
+
     }
     if ((day_6->GetText()).IsEmptyOrWhitespace())
     {
-        Saturday->SetIsEnabled(false);
+        Saturday->WidgetStyle.Normal.TintColor = FSlateColor(d_color);
+        Saturday->WidgetStyle.Hovered.TintColor = FSlateColor(d_color);
+        Saturday->WidgetStyle.Pressed.TintColor = FSlateColor(d_color);
         Saturday->WidgetStyle.Disabled.TintColor = FSlateColor(d_color);
+        Saturday->SetIsEnabled(false);
+
     }
 }
 
