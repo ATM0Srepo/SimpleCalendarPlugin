@@ -56,8 +56,12 @@ protected:
 	*/
 	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
 	void PreCalendarConfig(FLinearColor SelectedGridColor = FLinearColor(1.0f, 1.0f, 1.0f, 0.8f),
-		FLinearColor EmptyGridColor = FLinearColor(0.0f, 0.0f, 0.0f, 1.0f),
-		FLinearColor GridColor = FLinearColor(0.45f, 0.2f, 0.1f, 0.7f));
+		FLinearColor EmptyGridColor = FLinearColor(0.0f, 0.0f, 0.0f, 0.0f),
+		FLinearColor GridColor = FLinearColor(0.45f, 0.2f, 0.1f, 0.7f),
+		FLinearColor CalendarBackground = FLinearColor(0.0f, 0.0f, 0.0f, 0.0f),
+		FLinearColor CalendarBackgroundBorder = FLinearColor(0.45f, 0.2f, 0.1f, 0.7f),
+		FLinearColor WeekdayHeadingColor = FLinearColor(0.0f, 0.0f, 0.0f, 1.0f)
+	);
 
 	/**
 	* Manipulate Corner Radii of Calendar, Weekday Heading Bar, and Calendar Grids

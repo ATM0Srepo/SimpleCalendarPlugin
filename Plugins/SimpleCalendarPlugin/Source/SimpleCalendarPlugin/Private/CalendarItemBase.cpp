@@ -47,7 +47,7 @@ void UCalendarItemBase::HandleCalendarItemClick()
 
 void UCalendarItemBase::HandleSundayClick()
 {
-    DaySelected = "Sunday";
+   DaySelected = "Sunday";
     OnDaySelected();
 }
 
@@ -175,6 +175,11 @@ void UCalendarItemBase::InitializeCalendarRow(int32 RowIndex, int32 year, int32 
     Month = month;
     int32 Day = FDateTime::Now().GetDay();
     CurrentDateTime = FDateTime(Year, Month, Day);
+    RowTimeHelper(RowIndex);
+}
+
+void UCalendarItemBase::RowTimeHelper(int32 RowIndex)
+{
     FDateTime FirstDayOfMonth(Year, Month, 1);
     FirstDayOfWeek = static_cast<int32>(FirstDayOfMonth.GetDayOfWeek());
     if (FirstDayOfWeek == 6) {
@@ -185,9 +190,6 @@ void UCalendarItemBase::InitializeCalendarRow(int32 RowIndex, int32 year, int32 
     }
     Offset = CalculateOffset(RowIndex);
     int32 Count = 1;
-    UE_LOG(LogTemp, Warning, TEXT(" Month : %d"), month);
-    UE_LOG(LogTemp, Warning, TEXT(" Offest : %d"), Offset);
-    UE_LOG(LogTemp, Warning, TEXT(" Count : %d"), Count);
     for (int32 DayIndex = 0; DayIndex <= 6; DayIndex++)
     {
         if (!((RowIndex == 0) && (FirstDayOfWeek > DayIndex)))

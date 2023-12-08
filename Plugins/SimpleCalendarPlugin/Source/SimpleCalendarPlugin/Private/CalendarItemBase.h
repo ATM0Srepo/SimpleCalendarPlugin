@@ -104,6 +104,7 @@ protected:
     class UTextBlock* day_6;
 
 private:
+    void RowTimeHelper(int32 RowIndex);
     int32 CalculateOffset(int32 Row);
     int32 CalendarRow;
     int32 SelectedGridRow;

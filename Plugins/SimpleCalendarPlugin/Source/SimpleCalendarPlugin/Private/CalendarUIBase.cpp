@@ -149,11 +149,20 @@ void UCalendarUIBase::ShowPrevMonth()
     CreateCalendar();
 }
 
-void UCalendarUIBase::PreCalendarConfig(FLinearColor SelectedGridColor , FLinearColor EmptyGridColor, FLinearColor GridColor)
+void UCalendarUIBase::PreCalendarConfig(FLinearColor SelectedGridColor , FLinearColor EmptyGridColor, FLinearColor GridColor, FLinearColor CalendarBackgroundColor, FLinearColor CalendarBackgroundBorderColor, FLinearColor WeekdayHeadingColor)
 {
     color1 = SelectedGridColor;
     color2 = EmptyGridColor;
     color3 = GridColor;
+    calendar_background->WidgetStyle.Normal.TintColor = FSlateColor(CalendarBackgroundColor);
+    calendar_background->WidgetStyle.Hovered.TintColor = FSlateColor(CalendarBackgroundColor);
+    calendar_background->WidgetStyle.Pressed.TintColor = FSlateColor(CalendarBackgroundColor);
+    calendar_background->WidgetStyle.Normal.OutlineSettings.Color = FSlateColor(CalendarBackgroundBorderColor);
+    calendar_background->WidgetStyle.Hovered.OutlineSettings.Color = FSlateColor(CalendarBackgroundBorderColor);
+    calendar_background->WidgetStyle.Pressed.OutlineSettings.Color = FSlateColor(CalendarBackgroundBorderColor);
+    weekdays_background->WidgetStyle.Normal.TintColor = FSlateColor(WeekdayHeadingColor);
+    weekdays_background->WidgetStyle.Hovered.TintColor = FSlateColor(WeekdayHeadingColor);
+    weekdays_background->WidgetStyle.Pressed.TintColor = FSlateColor(WeekdayHeadingColor);
 }
 
 
