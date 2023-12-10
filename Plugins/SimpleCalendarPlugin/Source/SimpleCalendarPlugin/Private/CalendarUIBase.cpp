@@ -36,7 +36,6 @@ void UCalendarUIBase::NativeConstruct()
     toggle_prev_month->OnClicked.AddDynamic(this, &UCalendarUIBase::ShowPrevMonth);
     toggle_next_month->SetVisibility(ESlateVisibility::Collapsed);
     toggle_next_month->OnClicked.AddDynamic(this, &UCalendarUIBase::ShowNextMonth);
-    MonthButton->OnClicked.AddDynamic(this, &UCalendarUIBase::HandleMonthToggleButtonClick);
 
     // year
     InitializeYear(FDateTime::Now().GetYear());
@@ -44,11 +43,15 @@ void UCalendarUIBase::NativeConstruct()
 
     // month
     InitializeMonth(FDateTime::Now().GetMonth());
+    MonthButton->OnClicked.AddDynamic(this, &UCalendarUIBase::HandleMonthToggleButtonClick);
 
-    GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UCalendarUIBase::SetTime, TickInterval, true); 
+    // hour and minute
+    GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UCalendarUIBase::InitializeTime, TickInterval, true); 
+    HourButton->OnClicked.AddDynamic(this, &UCalendarUIBase::HandleHourButtonClick);
+
 }
 
-void UCalendarUIBase::SetTime()
+void UCalendarUIBase::InitializeTime()
 {
     FString hour_now = FString::FormatAsNumber(FDateTime::Now().GetHour());
     FString minute_now = FString::FormatAsNumber(FDateTime::Now().GetMinute());
@@ -117,6 +120,12 @@ void UCalendarUIBase::HandleMonthToggleButtonClick()
         toggle_prev_month->SetVisibility(ESlateVisibility::Visible);
         toggle_next_month->SetVisibility(ESlateVisibility::Visible);
     }
+
+    MyStupidEvent();
+}
+
+void UCalendarUIBase::HandleHourButtonClick()
+{
 }
 
 void UCalendarUIBase::ShowNextMonth()

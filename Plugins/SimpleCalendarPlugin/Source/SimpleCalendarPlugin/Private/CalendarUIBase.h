@@ -16,11 +16,8 @@ class UCalendarUIBase : public UUserWidget
 public:
 	virtual void NativeConstruct() override;
 
-	/** Overridable event
-	* OnDaySelected is triggered when a calendar item is clicked
-	*/
 	UFUNCTION(BlueprintImplementableEvent, Category = "Atm0s Calendar Events")
-	void OnDaySelected();
+	void MyStupidEvent();
 
 protected:
 	/** Calendar Year (Editable TextBox) */
@@ -30,11 +27,13 @@ protected:
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UTextBlock* month;
 
+	/** Calendar Hour (Editable TextBox) */
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
-	class UTextBlock* hour;
+	class UEditableTextBox* hour;
 
+	/** Calendar Minute (Editable TextBox) */
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
-	class UTextBlock* minute;
+	class UEditableTextBox* minute;
 
 	UPROPERTY(meta = (BindWidget))
 	class UButton* toggle_prev_month;
@@ -44,6 +43,12 @@ protected:
 
 	UPROPERTY(meta = (BindWidget))
 	class UButton* MonthButton;
+
+	UPROPERTY(meta = (BindWidget))
+	class UButton* HourButton;
+
+	UPROPERTY(meta = (BindWidget))
+	class UButton* MinuteButton;
 
 	UPROPERTY(meta = (BindWidget))
 	class UButton* weekdays_background;
@@ -101,13 +106,16 @@ protected:
 	void HandleMonthToggleButtonClick();
 
 	UFUNCTION()
+	void HandleHourButtonClick();
+
+	UFUNCTION()
 	void ShowNextMonth();
 
 	UFUNCTION()
 	void ShowPrevMonth();
 
 	FTimerHandle TickTimerHandle;
-	void SetTime();
+	void InitializeTime();
 	void InitializeYear(int y); // set year from c++ code
 	void InitializeMonth(int m); // set month from c++ code
 
