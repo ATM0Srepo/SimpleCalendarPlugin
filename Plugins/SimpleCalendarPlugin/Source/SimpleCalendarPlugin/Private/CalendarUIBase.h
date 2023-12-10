@@ -16,6 +16,12 @@ class UCalendarUIBase : public UUserWidget
 public:
 	virtual void NativeConstruct() override;
 
+	/** Overridable event
+	* OnDaySelected is triggered when a calendar item is clicked
+	*/
+	UFUNCTION(BlueprintImplementableEvent, Category = "Atm0s Calendar Events")
+	void OnDaySelected();
+
 protected:
 	/** Calendar Year (Editable TextBox) */
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
@@ -49,6 +55,8 @@ protected:
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UListView* ListViewCalendar;
+
+
 
 	/**
 	* Manipulate Calendar style settings from blueprint
