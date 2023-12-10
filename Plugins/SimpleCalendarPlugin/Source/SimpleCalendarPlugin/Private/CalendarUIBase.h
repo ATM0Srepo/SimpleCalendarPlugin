@@ -24,6 +24,7 @@ protected:
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UEditableTextBox* year;
 
+	/** Calendar Month (TextBlock) */
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UTextBlock* month;
 
@@ -106,6 +107,9 @@ protected:
 	void HandleMonthToggleButtonClick();
 
 	UFUNCTION()
+	void HandleOnHourChanged(const FText& Text, ETextCommit::Type CommitMethod);
+
+	UFUNCTION()
 	void HandleHourButtonClick();
 
 	UFUNCTION()
@@ -115,17 +119,22 @@ protected:
 	void ShowPrevMonth();
 
 	FTimerHandle TickTimerHandle;
-	void InitializeTime();
+	void InitializeHour();
+	void InitializeMinute();
 	void InitializeYear(int y); // set year from c++ code
 	void InitializeMonth(int m); // set month from c++ code
 
 	// Specify the tick interval here, for example, 0.1f for 10 times per second
-	const float TickInterval = 0.5f;
+	const float DefaultHourTickInterval = 1.0f;
+	const float DefaultMinuteTickInterval = 0.5f;
 
 private:
 	FDateTime CurrentDateTime;
 	int32 year_now;
 	int32 month_now;
+	int32 td_hour = 0;
+	int32 td_min = 0;
+	FTimespan timeDifference;
 	FLinearColor color1;
 	FLinearColor color2;
 	FLinearColor color3;
