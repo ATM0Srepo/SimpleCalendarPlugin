@@ -107,10 +107,16 @@ protected:
 	void HandleMonthToggleButtonClick();
 
 	UFUNCTION()
-	void HandleOnHourChanged(const FText& Text, ETextCommit::Type CommitMethod);
+	void HandleOnHourCommitted(const FText& Text, ETextCommit::Type CommitMethod);
 
 	UFUNCTION()
-	void HandleHourButtonClick();
+	void HandleOnHourChanged(const FText& Text);
+
+	UFUNCTION()
+	void HandleOnMinuteCommitted(const FText& Text, ETextCommit::Type CommitMethod);
+
+	UFUNCTION()
+	void HandleOnMinuteChanged(const FText& Text);
 
 	UFUNCTION()
 	void ShowNextMonth();
@@ -125,7 +131,6 @@ protected:
 	void InitializeMonth(int m); // set month from c++ code
 
 	// Specify the tick interval here, for example, 0.1f for 10 times per second
-	const float DefaultHourTickInterval = 1.0f;
 	const float DefaultMinuteTickInterval = 0.5f;
 
 private:
@@ -134,7 +139,8 @@ private:
 	int32 month_now;
 	int32 td_hour = 0;
 	int32 td_min = 0;
-	FTimespan timeDifference;
+	FTimespan hourDifference = FDateTime::Now() - FDateTime::Now();
+	FTimespan minuteDifference = FDateTime::Now() - FDateTime::Now();
 	FLinearColor color1;
 	FLinearColor color2;
 	FLinearColor color3;

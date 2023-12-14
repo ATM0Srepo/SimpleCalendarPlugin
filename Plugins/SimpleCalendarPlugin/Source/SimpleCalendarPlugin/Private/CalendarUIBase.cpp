@@ -48,15 +48,15 @@ void UCalendarUIBase::NativeConstruct()
     // hour and minute
     InitializeHour();
     GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UCalendarUIBase::InitializeMinute, DefaultMinuteTickInterval, true);
-    /*HourButton->OnClicked.AddDynamic(this, &UCalendarUIBase::HandleHourButtonClick);
-    hour->OnTextCommitted.AddDynamic(this, &UCalendarUIBase::HandleOnHourChanged);*/
-
-
+    hour->OnTextCommitted.AddDynamic(this, &UCalendarUIBase::HandleOnHourCommitted);
+    hour->OnTextChanged.AddDynamic(this, &UCalendarUIBase::HandleOnHourChanged);
+    minute->OnTextCommitted.AddDynamic(this, &UCalendarUIBase::HandleOnMinuteCommitted);
+    minute->OnTextChanged.AddDynamic(this, &UCalendarUIBase::HandleOnMinuteChanged);
 }
 
 void UCalendarUIBase::InitializeHour()
 {
-    FString hour_now = FString::FormatAsNumber((FDateTime::Now()).GetHour());
+    FString hour_now = FString::FormatAsNumber((FDateTime::Now() - hourDifference).GetHour());
 
     if (hour_now.Len() < 2) {
         hour_now = "0" + hour_now;
@@ -135,23 +135,38 @@ void UCalendarUIBase::HandleMonthToggleButtonClick()
     MyStupidEvent();
 }
 
-void UCalendarUIBase::HandleOnHourChanged(const FText& Text, ETextCommit::Type CommitMethod)
+void UCalendarUIBase::HandleOnHourCommitted(const FText& Text, ETextCommit::Type CommitMethod)
 {
     if (CommitMethod == ETextCommit::OnEnter) {
-
         FString hour_now = Text.ToString();  
         if (hour_now.Len() <= 2) {
             FDateTime new_hour = FDateTime(FDateTime::Now().GetYear(), FDateTime::Now().GetMonth(), FDateTime::Now().GetDay(), FCString::Atoi(*hour_now), 0, 0, 0);
-            timeDifference = FDateTime::Now() - new_hour;
+            hourDifference = FDateTime::Now() - new_hour;
         }
-    }
-
-    
+        GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UCalendarUIBase::InitializeMinute, DefaultMinuteTickInterval, true);
+    }  
 }
 
-void UCalendarUIBase::HandleHourButtonClick()
+void UCalendarUIBase::HandleOnHourChanged(const FText& Text)
 {
-    GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UCalendarUIBase::InitializeHour, 0, true);
+    GetWorld()->GetTimerManager().ClearTimer(TickTimerHandle);
+}
+
+void UCalendarUIBase::HandleOnMinuteCommitted(const FText& Text, ETextCommit::Type CommitMethod)
+{
+    if (CommitMethod == ETextCommit::OnEnter) {
+        FString minute_now = Text.ToString();
+        if (minute_now.Len() <= 2) {
+            FDateTime new_minute = FDateTime(FDateTime::Now().GetYear(), FDateTime::Now().GetMonth(), FDateTime::Now().GetDay(), 0, FCString::Atoi(*minute_now), 0, 0);
+            minuteDifference = FDateTime::Now() - new_minute;
+        }
+        GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UCalendarUIBase::InitializeMinute, DefaultMinuteTickInterval, true);
+    }
+}
+
+void UCalendarUIBase::HandleOnMinuteChanged(const FText& Text)
+{
+    GetWorld()->GetTimerManager().ClearTimer(TickTimerHandle);
 }
 
 void UCalendarUIBase::ShowNextMonth()
