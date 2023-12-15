@@ -164,6 +164,23 @@ void UCalendarItemBase::DisableGrids()
     }
 }
 
+void UCalendarItemBase::OnItemAdded(UObject* ListItemObjectRef)
+{
+    if (ListItemObjectRef)
+    {
+        UCalendarRow* CalendarRowInstance = Cast<UCalendarRow>(ListItemObjectRef);
+        if (CalendarRowInstance)
+        {
+            InitializeCalendarRow(CalendarRowInstance->structure.Row, 
+                CalendarRowInstance->structure.Year, 
+                CalendarRowInstance->structure.Month, 
+                CalendarRowInstance->structure.SelectedGridColor, 
+                CalendarRowInstance->structure.EmptyGridColor, 
+                CalendarRowInstance->structure.GridColor);
+        }
+    }
+}
+
 void UCalendarItemBase::InitializeCalendarRow(int32 RowIndex, int32 year, int32 month, FLinearColor SelectedGridColor, FLinearColor EmptyGridColor, FLinearColor GridColor)
 {
     EnableGrids();

@@ -16,9 +16,6 @@ class UCalendarUIBase : public UUserWidget
 public:
 	virtual void NativeConstruct() override;
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "Atm0s Calendar Events")
-	void MyStupidEvent();
-
 protected:
 	/** Calendar Year (Editable TextBox) */
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")

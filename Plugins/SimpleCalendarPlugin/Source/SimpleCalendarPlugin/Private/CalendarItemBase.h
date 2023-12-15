@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CalendarRow.h"
 #include "Blueprint/UserWidget.h"
 #include "CalendarUIBase.h"
 #include "CalendarItemBase.generated.h"
@@ -50,7 +51,8 @@ public:
     void OnDaySelected();
 
     UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
-    void InitializeCalendarRow(int32 row, int32 year, int32 month, FLinearColor SelectedGridColor, FLinearColor EmptyGridColor, FLinearColor GridColor);
+    void OnItemAdded(UObject* ListItemObjectRef);
+
 
     FDateTime CurrentDateTime;
     int32 Year;  // temp
@@ -116,4 +118,5 @@ private:
     void HandleCalendarItemClick();
     void EnableGrids();
     void DisableGrids();
+    void InitializeCalendarRow(int32 row, int32 year, int32 month, FLinearColor SelectedGridColor, FLinearColor EmptyGridColor, FLinearColor GridColor);
 };

@@ -134,7 +134,6 @@ void UCalendarUIBase::HandleMonthToggleButtonClick()
         toggle_next_month->SetVisibility(ESlateVisibility::Visible);
     }
 
-    MyStupidEvent();
 }
 
 void UCalendarUIBase::HandleOnHourCommitted(const FText& Text, ETextCommit::Type CommitMethod)
