@@ -130,8 +130,7 @@ protected:
 	void InitializeYear(int y); // set year from c++ code
 	void InitializeMonth(int m); // set month from c++ code
 
-	// Specify the tick interval here, for example, 0.1f for 10 times per second
-	const float DefaultMinuteTickInterval = 0.5f;
+	float DefaultMinuteTickInterval = 0.01f;
 
 private:
 	FDateTime CurrentDateTime;
@@ -139,8 +138,8 @@ private:
 	int32 month_now;
 	int32 td_hour = 0;
 	int32 td_min = 0;
-	FTimespan hourDifference = FDateTime::Now() - FDateTime::Now();
-	FTimespan minuteDifference = FDateTime::Now() - FDateTime::Now();
+	FTimespan hourDifference;
+	FTimespan minuteDifference;
 	FLinearColor color1;
 	FLinearColor color2;
 	FLinearColor color3;

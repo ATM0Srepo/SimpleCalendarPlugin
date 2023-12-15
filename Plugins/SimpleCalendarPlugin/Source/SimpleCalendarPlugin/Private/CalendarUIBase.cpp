@@ -46,6 +46,8 @@ void UCalendarUIBase::NativeConstruct()
     MonthButton->OnClicked.AddDynamic(this, &UCalendarUIBase::HandleMonthToggleButtonClick);
 
     // hour and minute
+    hourDifference = FDateTime::Now() - FDateTime::Now();
+    minuteDifference = FDateTime::Now() - FDateTime::Now();
     InitializeHour();
     GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UCalendarUIBase::InitializeMinute, DefaultMinuteTickInterval, true);
     hour->OnTextCommitted.AddDynamic(this, &UCalendarUIBase::HandleOnHourCommitted);
@@ -67,7 +69,7 @@ void UCalendarUIBase::InitializeHour()
 
 void UCalendarUIBase::InitializeMinute()
 {
-    FString minute_now = FString::FormatAsNumber(FDateTime::Now().GetMinute());
+    FString minute_now = FString::FormatAsNumber((FDateTime::Now() - minuteDifference).GetMinute());
 
     if (minute_now.Len() < 2) {
         minute_now = "0" + minute_now;
@@ -159,6 +161,9 @@ void UCalendarUIBase::HandleOnMinuteCommitted(const FText& Text, ETextCommit::Ty
         if (minute_now.Len() <= 2) {
             FDateTime new_minute = FDateTime(FDateTime::Now().GetYear(), FDateTime::Now().GetMonth(), FDateTime::Now().GetDay(), 0, FCString::Atoi(*minute_now), 0, 0);
             minuteDifference = FDateTime::Now() - new_minute;
+        }
+        if (GEngine) {
+            GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Value: %f"), DefaultMinuteTickInterval));
         }
         GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UCalendarUIBase::InitializeMinute, DefaultMinuteTickInterval, true);
     }
