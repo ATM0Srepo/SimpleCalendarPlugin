@@ -157,12 +157,13 @@ void UCalendarUIBase::HandleOnMinuteCommitted(const FText& Text, ETextCommit::Ty
 {
     if (CommitMethod == ETextCommit::OnEnter) {
         FString minute_now = Text.ToString();
-        if (minute_now.Len() <= 2) {
-            FDateTime new_minute = FDateTime(FDateTime::Now().GetYear(), FDateTime::Now().GetMonth(), FDateTime::Now().GetDay(), 0, FCString::Atoi(*minute_now), 0, 0);
+        if (minute_now == "60") {
+            FDateTime new_minute = FDateTime(FDateTime::Now().GetYear(), FDateTime::Now().GetMonth(), FDateTime::Now().GetDay(), 1, 0, 0, 0);
             minuteDifference = FDateTime::Now() - new_minute;
         }
-        if (GEngine) {
-            GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Value: %f"), DefaultMinuteTickInterval));
+        else if (minute_now.Len() <= 2) {
+            FDateTime new_minute = FDateTime(FDateTime::Now().GetYear(), FDateTime::Now().GetMonth(), FDateTime::Now().GetDay(), 0, FCString::Atoi(*minute_now), 0, 0);
+            minuteDifference = FDateTime::Now() - new_minute;
         }
         GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UCalendarUIBase::InitializeMinute, DefaultMinuteTickInterval, true);
     }
