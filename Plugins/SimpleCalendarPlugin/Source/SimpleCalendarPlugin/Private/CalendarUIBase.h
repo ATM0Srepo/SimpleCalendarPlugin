@@ -54,7 +54,8 @@ protected:
 	UPROPERTY(meta = (BindWidget))
 	class UButton* calendar_background;
 
-
+	UPROPERTY(BlueprintReadWrite, meta= (BindWidget))
+	class UHorizontalBox* AddTaskButtonSlot;
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UListView* ListViewCalendar;
@@ -97,6 +98,12 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
 	void SetMonth(int32 m);
 
+	/** 
+	* Retrieve DateTime set on Calendar
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
+	FDateTime GetTime();
+
 	UFUNCTION()
 	void HandleOnYearChanged(const FText& Text, ETextCommit::Type CommitMethod);
 
@@ -133,6 +140,8 @@ private:
 	FDateTime CurrentDateTime;
 	int32 year_now;
 	int32 month_now;
+	FString hour_now;
+	FString minute_now;
 	int32 td_hour = 0;
 	int32 td_min = 0;
 	FTimespan hourDifference;

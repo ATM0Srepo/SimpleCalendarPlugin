@@ -58,7 +58,7 @@ void UCalendarUIBase::NativeConstruct()
 
 void UCalendarUIBase::InitializeHour()
 {
-    FString hour_now = FString::FormatAsNumber((FDateTime::Now() - hourDifference).GetHour());
+    hour_now = FString::FormatAsNumber((FDateTime::Now() - hourDifference).GetHour());
 
     if (hour_now.Len() < 2) {
         hour_now = "0" + hour_now;
@@ -69,7 +69,7 @@ void UCalendarUIBase::InitializeHour()
 
 void UCalendarUIBase::InitializeMinute()
 {
-    FString minute_now = FString::FormatAsNumber((FDateTime::Now() - minuteDifference).GetMinute());
+    minute_now = FString::FormatAsNumber((FDateTime::Now() - minuteDifference).GetMinute());
 
     if (minute_now.Len() < 2) {
         minute_now = "0" + minute_now;
@@ -112,6 +112,11 @@ void UCalendarUIBase::SetCornerRadii(const FVector4& CalendarBorder, const FVect
     weekdays_background->WidgetStyle.Normal.OutlineSettings.CornerRadii = WeekdayHeaderRadii;
 }
 
+FDateTime UCalendarUIBase::GetTime()
+{
+    return FDateTime(year_now, month_now, FDateTime::Now().GetDay(), FCString::Atoi(*hour_now), FCString::Atoi(*minute_now), 0, 0);
+}
+
 void UCalendarUIBase::HandleOnYearChanged(const FText& Text, ETextCommit::Type CommitMethod)
 {
     if (CommitMethod == ETextCommit::OnEnter) {
@@ -139,7 +144,7 @@ void UCalendarUIBase::HandleMonthToggleButtonClick()
 void UCalendarUIBase::HandleOnHourCommitted(const FText& Text, ETextCommit::Type CommitMethod)
 {
     if (CommitMethod == ETextCommit::OnEnter) {
-        FString hour_now = Text.ToString();  
+        hour_now = Text.ToString();  
         if (hour_now.Len() <= 2) {
             FDateTime new_hour = FDateTime(FDateTime::Now().GetYear(), FDateTime::Now().GetMonth(), FDateTime::Now().GetDay(), FCString::Atoi(*hour_now), 0, 0, 0);
             hourDifference = FDateTime::Now() - new_hour;
@@ -156,7 +161,7 @@ void UCalendarUIBase::HandleOnHourChanged(const FText& Text)
 void UCalendarUIBase::HandleOnMinuteCommitted(const FText& Text, ETextCommit::Type CommitMethod)
 {
     if (CommitMethod == ETextCommit::OnEnter) {
-        FString minute_now = Text.ToString();
+        minute_now = Text.ToString();
         if (minute_now == "60") {
             FDateTime new_minute = FDateTime(FDateTime::Now().GetYear(), FDateTime::Now().GetMonth(), FDateTime::Now().GetDay(), 1, 0, 0, 0);
             minuteDifference = FDateTime::Now() - new_minute;
