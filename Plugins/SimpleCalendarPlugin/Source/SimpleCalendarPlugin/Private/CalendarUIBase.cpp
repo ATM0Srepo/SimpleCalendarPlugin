@@ -54,6 +54,7 @@ void UCalendarUIBase::NativeConstruct()
     hour->OnTextChanged.AddDynamic(this, &UCalendarUIBase::HandleOnHourChanged);
     minute->OnTextCommitted.AddDynamic(this, &UCalendarUIBase::HandleOnMinuteCommitted);
     minute->OnTextChanged.AddDynamic(this, &UCalendarUIBase::HandleOnMinuteChanged);
+    minute->OnTextChanged.AddDynamic(this, &UCalendarUIBase::HandleOnMinuteChanged);
 }
 
 void UCalendarUIBase::InitializeHour()
@@ -240,7 +241,8 @@ void UCalendarUIBase::CreateCalendar()
                 month_now,
                 color1,
                 color2,
-                color3
+                color3,
+                this
                 );
             ListViewCalendar->AddItem(CalendarRowInstance);
         }
@@ -258,6 +260,3 @@ void UCalendarUIBase::SetMonth(int32 m)
     ListViewCalendar->ClearListItems();
     CreateCalendar();
 }
-
-
-

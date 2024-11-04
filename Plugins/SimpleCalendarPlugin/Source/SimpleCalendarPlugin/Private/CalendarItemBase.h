@@ -20,7 +20,7 @@ public:
 
     /** The current selection of the day of week on Calendar (eg. "Sunday", "Monday", etc */
     UPROPERTY(BlueprintReadOnly, Category = "Atm0s Calendar Variables")
-    FString DaySelected;
+    UTextBlock* DaySelected;
 
     // Functions to Handle Day Clicks
     UFUNCTION()
@@ -118,5 +118,7 @@ private:
     void HandleCalendarItemClick();
     void EnableGrids();
     void DisableGrids();
-    void InitializeCalendarRow(int32 row, int32 year, int32 month, FLinearColor SelectedGridColor, FLinearColor EmptyGridColor, FLinearColor GridColor);
+    void InitializeCalendarRow(int32 row, int32 year, int32 month, FLinearColor SelectedGridColor, FLinearColor EmptyGridColor, FLinearColor GridColor, UCalendarUIBase* InOwner);
+    UCalendarUIBase* Owner;
+    FDateTime ClickedTime;
 };

@@ -16,6 +16,12 @@ class UCalendarUIBase : public UUserWidget
 public:
 	virtual void NativeConstruct() override;
 
+	/**
+	* Retrieve DateTime set on Calendar
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
+	FDateTime GetTime();
+
 protected:
 	/** Calendar Year (Editable TextBox) */
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
@@ -53,9 +59,6 @@ protected:
 
 	UPROPERTY(meta = (BindWidget))
 	class UButton* calendar_background;
-
-	UPROPERTY(BlueprintReadWrite, meta= (BindWidget))
-	class UHorizontalBox* AddTaskButtonSlot;
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Atm0s Calendar Variables")
 	class UListView* ListViewCalendar;
@@ -97,12 +100,6 @@ protected:
 	*/
 	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
 	void SetMonth(int32 m);
-
-	/** 
-	* Retrieve DateTime set on Calendar
-	*/
-	UFUNCTION(BlueprintCallable, Category = "Calendar Functions")
-	FDateTime GetTime();
 
 	UFUNCTION()
 	void HandleOnYearChanged(const FText& Text, ETextCommit::Type CommitMethod);

@@ -8,7 +8,8 @@ void UCalendarRow::Init(
 						int32 year, int32 month, 
 						FLinearColor color1,
 						FLinearColor color2,
-						FLinearColor color3)
+						FLinearColor color3,
+						UCalendarUIBase* InOwner)
 {
 	structure.Row = RowValue;
 	structure.Year = year;
@@ -16,4 +17,5 @@ void UCalendarRow::Init(
 	structure.SelectedGridColor = color1;
 	structure.EmptyGridColor = color2;
 	structure.GridColor = color3;
+	Owner = InOwner;
 }

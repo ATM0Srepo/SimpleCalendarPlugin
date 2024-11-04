@@ -47,43 +47,86 @@ void UCalendarItemBase::HandleCalendarItemClick()
 
 void UCalendarItemBase::HandleSundayClick()
 {
-   DaySelected = "Sunday";
+   DaySelected = day_0;
+   ClickedTime = Owner->GetTime();
+
+   FString DayText = DaySelected->GetText().ToString();
+   int32 DayValue = FCString::Atoi(*DayText);
+
+   ClickedTime = FDateTime(ClickedTime.GetYear(), ClickedTime.GetMonth(), DayValue, ClickedTime.GetHour(), ClickedTime.GetMinute(), ClickedTime.GetSecond());
+
     OnDaySelected();
 }
 
 void UCalendarItemBase::HandleMondayClick()
 {
-    DaySelected = "Monday";
+    DaySelected = day_1;
+    ClickedTime = Owner->GetTime();
+
+    FString DayText = DaySelected->GetText().ToString();
+    int32 DayValue = FCString::Atoi(*DayText);
+
+    ClickedTime = FDateTime(ClickedTime.GetYear(), ClickedTime.GetMonth(), DayValue, ClickedTime.GetHour(), ClickedTime.GetMinute(), ClickedTime.GetSecond());
     OnDaySelected();
 }
 
 void UCalendarItemBase::HandleTuesdayClick()
 {
-    DaySelected = "Tuesday";
+    DaySelected = day_2;
+    ClickedTime = Owner->GetTime();
+
+    FString DayText = DaySelected->GetText().ToString();
+    int32 DayValue = FCString::Atoi(*DayText);
+
+    ClickedTime = FDateTime(ClickedTime.GetYear(), ClickedTime.GetMonth(), DayValue, ClickedTime.GetHour(), ClickedTime.GetMinute(), ClickedTime.GetSecond());
     OnDaySelected();
 }
 
 void UCalendarItemBase::HandleWednesdayClick()
 {
-    DaySelected = "Wednesday";
+    DaySelected = day_3;
+    ClickedTime = Owner->GetTime();
+
+    FString DayText = DaySelected->GetText().ToString();
+    int32 DayValue = FCString::Atoi(*DayText);
+
+    ClickedTime = FDateTime(ClickedTime.GetYear(), ClickedTime.GetMonth(), DayValue, ClickedTime.GetHour(), ClickedTime.GetMinute(), ClickedTime.GetSecond());
     OnDaySelected();
 }
 
 void UCalendarItemBase::HandleThursdayClick()
 {
-    DaySelected = "Thursday";
+    DaySelected = day_4;
+    ClickedTime = Owner->GetTime();
+
+    FString DayText = DaySelected->GetText().ToString();
+    int32 DayValue = FCString::Atoi(*DayText);
+
+    ClickedTime = FDateTime(ClickedTime.GetYear(), ClickedTime.GetMonth(), DayValue, ClickedTime.GetHour(), ClickedTime.GetMinute(), ClickedTime.GetSecond());
     OnDaySelected();
 }
 
 void UCalendarItemBase::HandleFridayClick()
 {
-    DaySelected = "Friday";
+    DaySelected = day_5;
+    ClickedTime = Owner->GetTime();
+
+    FString DayText = DaySelected->GetText().ToString();
+    int32 DayValue = FCString::Atoi(*DayText);
+
+    ClickedTime = FDateTime(ClickedTime.GetYear(), ClickedTime.GetMonth(), DayValue, ClickedTime.GetHour(), ClickedTime.GetMinute(), ClickedTime.GetSecond());
     OnDaySelected();
 }
 
 void UCalendarItemBase::HandleSaturdayClick()
 {
-    DaySelected = "Saturday";
+    DaySelected = day_6;
+    ClickedTime = Owner->GetTime();
+
+    FString DayText = DaySelected->GetText().ToString();
+    int32 DayValue = FCString::Atoi(*DayText);
+
+    ClickedTime = FDateTime(ClickedTime.GetYear(), ClickedTime.GetMonth(), DayValue, ClickedTime.GetHour(), ClickedTime.GetMinute(), ClickedTime.GetSecond());
     OnDaySelected();
 }
 
@@ -176,12 +219,13 @@ void UCalendarItemBase::OnItemAdded(UObject* ListItemObjectRef)
                 CalendarRowInstance->structure.Month, 
                 CalendarRowInstance->structure.SelectedGridColor, 
                 CalendarRowInstance->structure.EmptyGridColor, 
-                CalendarRowInstance->structure.GridColor);
+                CalendarRowInstance->structure.GridColor,
+                CalendarRowInstance->Owner);
         }
     }
 }
 
-void UCalendarItemBase::InitializeCalendarRow(int32 RowIndex, int32 year, int32 month, FLinearColor SelectedGridColor, FLinearColor EmptyGridColor, FLinearColor GridColor)
+void UCalendarItemBase::InitializeCalendarRow(int32 RowIndex, int32 year, int32 month, FLinearColor SelectedGridColor, FLinearColor EmptyGridColor, FLinearColor GridColor, UCalendarUIBase* InOwner)
 {
     EnableGrids();
     CalendarRow = RowIndex;
@@ -193,6 +237,7 @@ void UCalendarItemBase::InitializeCalendarRow(int32 RowIndex, int32 year, int32 
     int32 Day = FDateTime::Now().GetDay();
     CurrentDateTime = FDateTime(Year, Month, Day);
     RowTimeHelper(RowIndex);
+    Owner = InOwner;
 }
 
 void UCalendarItemBase::RowTimeHelper(int32 RowIndex)

@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "CalendarUIBase.h"
 #include "CalendarRow.generated.h"
 
 USTRUCT(BlueprintType)
@@ -42,11 +43,15 @@ public:
         int32 month,  
         FLinearColor color1,
         FLinearColor color2,
-        FLinearColor color3
+        FLinearColor color3,
+        UCalendarUIBase* InOwner
     );
 
     UPROPERTY(BlueprintReadWrite, Category = "Atm0s Calendar Variables")
     FMyBaseSructure structure;
+
+    UPROPERTY(BlueprintReadOnly, Category = "Owner")
+    UCalendarUIBase* Owner;
 
 };
 

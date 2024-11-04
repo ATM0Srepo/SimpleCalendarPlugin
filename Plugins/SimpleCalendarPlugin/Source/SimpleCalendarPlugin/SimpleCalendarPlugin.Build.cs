@@ -28,8 +28,8 @@ public class SimpleCalendarPlugin : ModuleRules
                 "Core",
 				"CoreUObject", // For CoreMinimal.h
 				"Engine", // For UUserWidget
-				"UMG", 
-
+				"UMG",
+                "WebBrowserWidget",
 				// ... add other public dependencies that you statically link with here ...
 			}
             );
@@ -42,9 +42,10 @@ public class SimpleCalendarPlugin : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+                "WebBrowserWidget",
 				// ... add private dependencies that you statically link with here ...	
 			}
-			);
+            );
 		
 		
 		DynamicallyLoadedModuleNames.AddRange(
