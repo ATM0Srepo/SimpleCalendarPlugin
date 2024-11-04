@@ -21,5 +21,11 @@
 			"LoadingPhase": "Default",
 			"WhitelistPlatforms": [ "Win64", "Android" ]
 		}
+	],
+	"Plugins": [
+		{
+			"Name": "WebBrowserWidget",
+			"Enabled": true
+		}
 	]
 }
