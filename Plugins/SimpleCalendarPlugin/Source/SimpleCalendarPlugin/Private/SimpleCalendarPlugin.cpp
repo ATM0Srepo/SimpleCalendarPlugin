@@ -1,33 +1,21 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "SimpleCalendarPlugin.h"
+#include "Interfaces/IPluginManager.h"
 
 #define LOCTEXT_NAMESPACE "FSimpleCalendarPluginModule"
 
 void FSimpleCalendarPluginModule::StartupModule()
 {
-    // Define the path to the flag file
     FString FlagFilePath = FPaths::Combine(FPaths::ProjectSavedDir(), TEXT("CalendarTaskAPI_Ran.txt"));
 
-    // Check if the flag file already exists
     if (!FPlatformFileManager::Get().GetPlatformFile().FileExists(*FlagFilePath))
     {
-        // Path to the executable
-        FString ExePath = FPaths::Combine(FPaths::ProjectPluginsDir(), TEXT("SimpleCalendarPlugin/ThirdParty/CalendarTaskAPI/Binaries/api.exe"));
+        FString PluginDir = IPluginManager::Get().FindPlugin(TEXT("SimpleCalendarPlugin"))->GetBaseDir();
+        FString BinariesPath = FPaths::Combine(*PluginDir, TEXT("ThirdParty/CalendarTaskAPI/Binaries/app.exe"));
+        FPlatformProcess::CreateProc(*BinariesPath, nullptr, true, true, true, nullptr, 0, nullptr, nullptr);
+        FFileHelper::SaveStringToFile(TEXT("Ran"), *FlagFilePath);
 
-        // Check if the executable exists before running it
-        if (FPaths::FileExists(ExePath))
-        {
-            // Launch the executable
-            FPlatformProcess::CreateProc(*ExePath, nullptr, true, false, false, nullptr, 0, nullptr, nullptr);
-
-            // Create the flag file to indicate the executable has run
-            FFileHelper::SaveStringToFile(TEXT("Ran"), *FlagFilePath);
-        }
-        else
-        {
-            UE_LOG(LogTemp, Warning, TEXT("Executable not found at %s"), *ExePath);
-        }
     }
     else
     {

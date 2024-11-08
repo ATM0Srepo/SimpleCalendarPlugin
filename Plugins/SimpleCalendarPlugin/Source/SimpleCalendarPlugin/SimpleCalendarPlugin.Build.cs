@@ -30,6 +30,7 @@ public class SimpleCalendarPlugin : ModuleRules
 				"Engine", // For UUserWidget
 				"UMG",
                 "WebBrowserWidget",
+                "Projects",
 				// ... add other public dependencies that you statically link with here ...
 			}
             );
@@ -43,6 +44,7 @@ public class SimpleCalendarPlugin : ModuleRules
 				"Slate",
 				"SlateCore",
                 "WebBrowserWidget",
+                "Projects",
 				// ... add private dependencies that you statically link with here ...	
 			}
             );
