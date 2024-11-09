@@ -2,6 +2,10 @@
 
 #include "SimpleCalendarPlugin.h"
 #include "Interfaces/IPluginManager.h"
+#include "Misc/Paths.h"                 
+#include "HAL/PlatformFilemanager.h" 
+#include "HAL/PlatformProcess.h"  
+#include "Misc/FileHelper.h"
 
 #define LOCTEXT_NAMESPACE "FSimpleCalendarPluginModule"
 
@@ -15,7 +19,6 @@ void FSimpleCalendarPluginModule::StartupModule()
         FString BinariesPath = FPaths::Combine(*PluginDir, TEXT("ThirdParty/CalendarTaskAPI/Binaries/app.exe"));
         FPlatformProcess::CreateProc(*BinariesPath, nullptr, true, true, true, nullptr, 0, nullptr, nullptr);
         FFileHelper::SaveStringToFile(TEXT("Ran"), *FlagFilePath);
-
     }
     else
     {
@@ -25,10 +28,8 @@ void FSimpleCalendarPluginModule::StartupModule()
 
 void FSimpleCalendarPluginModule::ShutdownModule()
 {
-	// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
-	// we call this function before unloading the module.
 }
 
 #undef LOCTEXT_NAMESPACE
-	
+
 IMPLEMENT_MODULE(FSimpleCalendarPluginModule, SimpleCalendarPlugin)

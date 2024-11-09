@@ -4,14 +4,14 @@
 	"VersionName": "1.0",
 	"FriendlyName": "SimpleCalendarPlugin",
 	"Description": "",
-	"Category": "ArcadianMind",
+	"Category": "ATM0S RESEARCH & DEVELOPMENT",
 	"CreatedBy": "",
-	"CreatedByURL": "",
+	"CreatedByURL": "https://github.com/ShaliniR8",
 	"DocsURL": "",
 	"MarketplaceURL": "",
-	"SupportURL": "",
+	"SupportURL": "https://www.atm0srnd.com/contact",
 	"CanContainContent": true,
-	"IsBetaVersion": true,
+	"IsBetaVersion": false,
 	"IsExperimentalVersion": true,
 	"Installed": false,
 	"Modules": [
@@ -19,7 +19,10 @@
 			"Name": "SimpleCalendarPlugin",
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
-			"WhitelistPlatforms": [ "Win64", "Android" ]
+			"PlatformAllowList": [
+				"Win64",
+				"Android"
+			]
 		}
 	],
 	"Plugins": [

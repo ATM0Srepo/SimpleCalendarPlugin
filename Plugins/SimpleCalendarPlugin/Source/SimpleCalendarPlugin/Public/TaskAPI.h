@@ -20,7 +20,7 @@ public:
 	void SetBrowserURL(const FString& Endpoint);
 
 	// Pointer to the Web Browser widget
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget), Category = "Calendar Properties")
 	UWebBrowser* WebBrowserWidget;
 	
 };
