@@ -1,0 +1,149 @@
+\doxysection{Calendar\+UIBase.\+h}
+\hypertarget{_calendar_u_i_base_8h_source}{}\label{_calendar_u_i_base_8h_source}\index{Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarUIBase.h@{Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarUIBase.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Blueprint/UserWidget.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Components/EditableTextBox.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}TimerManager.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Engine/World.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}CalendarUIBase.generated.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00017\ UCLASS()}
+\DoxyCodeLine{00018\ class\ \mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}}\ :\ public\ UUserWidget}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ NativeConstruct()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Calendar\ Functions"{}})}
+\DoxyCodeLine{00035\ \ \ \ \ FDateTime\ GetTime();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00039\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ \textcolor{stringliteral}{"{}Atm0s\ Calendar\ Variables"{}})}
+\DoxyCodeLine{00040\ \ \ \ \ class\ UEditableTextBox*\ year;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00044\ \ \ \ \ class\ UTextBlock*\ month;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00048\ \ \ \ \ class\ UEditableTextBox*\ hour;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00052\ \ \ \ \ class\ UEditableTextBox*\ minute;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00055\ \ \ \ \ UPROPERTY(meta\ =\ (BindWidget))}
+\DoxyCodeLine{00056\ \ \ \ \ class\ UButton*\ toggle\_prev\_month;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \ \ \ \ UPROPERTY(meta\ =\ (BindWidget))}
+\DoxyCodeLine{00060\ \ \ \ \ class\ UButton*\ toggle\_next\_month;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00063\ \ \ \ \ UPROPERTY(meta\ =\ (BindWidget))}
+\DoxyCodeLine{00064\ \ \ \ \ class\ UButton*\ MonthButton;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00067\ \ \ \ \ UPROPERTY(meta\ =\ (BindWidget))}
+\DoxyCodeLine{00068\ \ \ \ \ class\ UButton*\ HourButton;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00071\ \ \ \ \ UPROPERTY(meta\ =\ (BindWidget))}
+\DoxyCodeLine{00072\ \ \ \ \ class\ UButton*\ MinuteButton;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00075\ \ \ \ \ UPROPERTY(meta\ =\ (BindWidget))}
+\DoxyCodeLine{00076\ \ \ \ \ class\ UButton*\ weekdays\_background;}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00079\ \ \ \ \ UPROPERTY(meta\ =\ (BindWidget))}
+\DoxyCodeLine{00080\ \ \ \ \ class\ UButton*\ calendar\_background;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00083\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00084\ \ \ \ \ class\ UListView*\ ListViewCalendar;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00098\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ "{}Calendar\ Functions"{})}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ PreCalendarConfig(}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ FLinearColor\ SelectedGridColor\ =\ FLinearColor(1.0f,\ 1.0f,\ 1.0f,\ 0.8f),}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ FLinearColor\ EmptyGridColor\ =\ FLinearColor(0.0f,\ 0.0f,\ 0.0f,\ 0.0f),}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ FLinearColor\ GridColor\ =\ FLinearColor(0.45f,\ 0.2f,\ 0.1f,\ 0.7f),}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ FLinearColor\ CalendarBackground\ =\ FLinearColor(0.0f,\ 0.0f,\ 0.0f,\ 0.0f),}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ FLinearColor\ CalendarBackgroundBorder\ =\ FLinearColor(0.45f,\ 0.2f,\ 0.1f,\ 0.7f),}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ FLinearColor\ WeekdayHeadingColor\ =\ FLinearColor(0.0f,\ 0.0f,\ 0.0f,\ 1.0f)}
+\DoxyCodeLine{00106\ \ \ \ \ );}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00116\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ "{}Calendar\ Functions"{})}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ SetCornerRadii(const\ FVector4\&\ CalendarBorder,\ const\ FVector4\&\ WeekdayHeaderRadii);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00122\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ "{}Calendar\ Functions"{})}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ CreateCalendar();}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00132\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ "{}Calendar\ Functions"{})}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ SetYear(\textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00142\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ "{}Calendar\ Functions"{})}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ SetMonth(int32\ m);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{comment}{//\ Event\ handlers\ for\ year,\ month,\ hour,\ and\ minute\ changes}}
+\DoxyCodeLine{00146\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleOnYearChanged(const\ FText\&\ Text,\ ETextCommit::Type\ CommitMethod);}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleMonthToggleButtonClick();}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleOnHourCommitted(const\ FText\&\ Text,\ ETextCommit::Type\ CommitMethod);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleOnHourChanged(const\ FText\&\ Text);}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleOnMinuteCommitted(const\ FText\&\ Text,\ ETextCommit::Type\ CommitMethod);}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleOnMinuteChanged(const\ FText\&\ Text);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00167\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ ShowNextMonth();}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00173\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ ShowPrevMonth();}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00177\ \ \ \ \ FTimerHandle\ TickTimerHandle;}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ InitializeHour();}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{void}\ InitializeMinute();}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{void}\ InitializeYear(\textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ InitializeMonth(\textcolor{keywordtype}{int}\ m);}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{float}\ DefaultMinuteTickInterval\ =\ 0.01f;}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ private:}
+\DoxyCodeLine{00196\ \ \ \ \ FDateTime\ CurrentDateTime;}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00199\ \ \ \ \ int32\ year\_now;}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00202\ \ \ \ \ int32\ month\_now;}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00205\ \ \ \ \ FString\ hour\_now;}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00208\ \ \ \ \ FString\ minute\_now;}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00211\ \ \ \ \ int32\ td\_hour\ =\ 0;}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00214\ \ \ \ \ int32\ td\_min\ =\ 0;}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00217\ \ \ \ \ FTimespan\ hourDifference;}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00220\ \ \ \ \ FTimespan\ minuteDifference;}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00223\ \ \ \ \ FLinearColor\ color1;}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00226\ \ \ \ \ FLinearColor\ color2;}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00229\ \ \ \ \ FLinearColor\ color3;}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00232\ \ \ \ \ TMap<FString,\ int32>\ MonthMap2;}
+\DoxyCodeLine{00233\ \};}
+
+\end{DoxyCode}

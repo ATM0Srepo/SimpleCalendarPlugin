@@ -128,12 +128,15 @@
     <xi:include href="_unreal_editor_2_development_2_simple_calendar_plugin_2_definitions_8_simple_calendar_plugin_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_unreal_game_2_development_2_simple_calendar_plugin_2_definitions_8_simple_calendar_plugin_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_unreal_game_2_shipping_2_simple_calendar_plugin_2_definitions_8_simple_calendar_plugin_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_intermediate_2_build_2_win64_2x64_2_unreal_editor_2_development_2_simple_calendar_plugin_2_single_file_2_calendar_item_base_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_source_2_simple_calendar_plugin_2_private_2_calendar_item_base_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_intermediate_2_build_2_win64_2x64_2_unreal_editor_2_development_2_simple_calendar_plugin_2_single_file_2_calendar_row_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_source_2_simple_calendar_plugin_2_private_2_calendar_row_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_intermediate_2_build_2_win64_2x64_2_unreal_editor_2_development_2_simple_calendar_plugin_2_single_file_2_calendar_u_i_base_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_source_2_simple_calendar_plugin_2_private_2_calendar_u_i_base_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_calendar_item_base_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_calendar_item_base_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_calendar_row_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_calendar_row_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_calendar_u_i_base_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_calendar_u_i_base_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_simple_calendar_plugin_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_task_a_p_i_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_simple_calendar_plugin_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>

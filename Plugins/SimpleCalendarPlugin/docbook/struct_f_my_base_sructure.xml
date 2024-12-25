@@ -2,23 +2,85 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_f_my_base_sructure" xml:lang="en-US">
 <title>FMyBaseSructure Struct Reference</title>
 <indexterm><primary>FMyBaseSructure</primary></indexterm>
+<para>
+
+<para>A structure containing properties of a calendar row. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;CalendarRow.h&gt;</computeroutput>
+</para>
 <simplesect>
     <title>Public Attributes    </title>
         <itemizedlist>
-            <listitem><para><anchor xml:id="_struct_f_my_base_sructure_1a21e70b15f24048512c40cad89f49f513"/>int32 <emphasis role="strong">Row</emphasis></para>
+            <listitem><para>int32 <link linkend="_struct_f_my_base_sructure_1a21e70b15f24048512c40cad89f49f513">Row</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_struct_f_my_base_sructure_1a88cf99ae5dba836107a35b871e753435"/>int32 <emphasis role="strong">Year</emphasis></para>
+            <listitem><para>int32 <link linkend="_struct_f_my_base_sructure_1a88cf99ae5dba836107a35b871e753435">Year</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_struct_f_my_base_sructure_1af878ef2fb9f635bcd61d1b30c130558f"/>int32 <emphasis role="strong">Month</emphasis></para>
+            <listitem><para>int32 <link linkend="_struct_f_my_base_sructure_1af878ef2fb9f635bcd61d1b30c130558f">Month</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_struct_f_my_base_sructure_1a72efcefac992cb40bcf703e50a3dc753"/>FLinearColor <emphasis role="strong">SelectedGridColor</emphasis></para>
+            <listitem><para>FLinearColor <link linkend="_struct_f_my_base_sructure_1a72efcefac992cb40bcf703e50a3dc753">SelectedGridColor</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_struct_f_my_base_sructure_1ab78f5c8f80b82c9ab5c28573c7581175"/>FLinearColor <emphasis role="strong">EmptyGridColor</emphasis></para>
+            <listitem><para>FLinearColor <link linkend="_struct_f_my_base_sructure_1ab78f5c8f80b82c9ab5c28573c7581175">EmptyGridColor</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_struct_f_my_base_sructure_1a7513c53fd1fcf0f4f89a79331d54098a"/>FLinearColor <emphasis role="strong">GridColor</emphasis></para>
+            <listitem><para>FLinearColor <link linkend="_struct_f_my_base_sructure_1a7513c53fd1fcf0f4f89a79331d54098a">GridColor</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A structure containing properties of a calendar row. </para>
+
+
+
+<para>This structure holds data such as row index, year, month, and colors for different grid states in the calendar. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_f_my_base_sructure_1ab78f5c8f80b82c9ab5c28573c7581175"/><section>
+    <title>EmptyGridColor</title>
+<indexterm><primary>EmptyGridColor</primary><secondary>FMyBaseSructure</secondary></indexterm>
+<indexterm><primary>FMyBaseSructure</primary><secondary>EmptyGridColor</secondary></indexterm>
+<para><computeroutput>FLinearColor FMyBaseSructure::EmptyGridColor</computeroutput></para>
+<para>The color used for empty grids in the calendar. </para>
+</section>
+<anchor xml:id="_struct_f_my_base_sructure_1a7513c53fd1fcf0f4f89a79331d54098a"/><section>
+    <title>GridColor</title>
+<indexterm><primary>GridColor</primary><secondary>FMyBaseSructure</secondary></indexterm>
+<indexterm><primary>FMyBaseSructure</primary><secondary>GridColor</secondary></indexterm>
+<para><computeroutput>FLinearColor FMyBaseSructure::GridColor</computeroutput></para>
+<para>The default color used for calendar grids. </para>
+</section>
+<anchor xml:id="_struct_f_my_base_sructure_1af878ef2fb9f635bcd61d1b30c130558f"/><section>
+    <title>Month</title>
+<indexterm><primary>Month</primary><secondary>FMyBaseSructure</secondary></indexterm>
+<indexterm><primary>FMyBaseSructure</primary><secondary>Month</secondary></indexterm>
+<para><computeroutput>int32 FMyBaseSructure::Month</computeroutput></para>
+<para>The month associated with this calendar row. </para>
+</section>
+<anchor xml:id="_struct_f_my_base_sructure_1a21e70b15f24048512c40cad89f49f513"/><section>
+    <title>Row</title>
+<indexterm><primary>Row</primary><secondary>FMyBaseSructure</secondary></indexterm>
+<indexterm><primary>FMyBaseSructure</primary><secondary>Row</secondary></indexterm>
+<para><computeroutput>int32 FMyBaseSructure::Row</computeroutput></para>
+<para>The row index in the calendar. </para>
+</section>
+<anchor xml:id="_struct_f_my_base_sructure_1a72efcefac992cb40bcf703e50a3dc753"/><section>
+    <title>SelectedGridColor</title>
+<indexterm><primary>SelectedGridColor</primary><secondary>FMyBaseSructure</secondary></indexterm>
+<indexterm><primary>FMyBaseSructure</primary><secondary>SelectedGridColor</secondary></indexterm>
+<para><computeroutput>FLinearColor FMyBaseSructure::SelectedGridColor</computeroutput></para>
+<para>The color used for selected grids in the calendar. </para>
+</section>
+<anchor xml:id="_struct_f_my_base_sructure_1a88cf99ae5dba836107a35b871e753435"/><section>
+    <title>Year</title>
+<indexterm><primary>Year</primary><secondary>FMyBaseSructure</secondary></indexterm>
+<indexterm><primary>FMyBaseSructure</primary><secondary>Year</secondary></indexterm>
+<para><computeroutput>int32 FMyBaseSructure::Year</computeroutput></para>
+<para>The year associated with this calendar row. </para>
+</section>
 <para>
 The documentation for this struct was generated from the following file:</para>
 Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarRow.h</section>
+</section>

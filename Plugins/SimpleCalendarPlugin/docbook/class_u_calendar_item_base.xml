@@ -2,6 +2,14 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_u_calendar_item_base" xml:lang="en-US">
 <title>UCalendarItemBase Class Reference</title>
 <indexterm><primary>UCalendarItemBase</primary></indexterm>
+<para>
+
+<para>A user interface widget for displaying and managing calendar items. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;CalendarItemBase.h&gt;</computeroutput>
+</para>
 <para>Inheritance diagram for UCalendarItemBase:    <informalfigure>
         <mediaobject>
             <imageobject>
@@ -13,96 +21,295 @@
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a2e5e363c03c1d236d31e8f3c8c77a7d9"/>virtual void <emphasis role="strong">NativeConstruct</emphasis> () override</para>
+            <listitem><para>virtual void <link linkend="_class_u_calendar_item_base_1a2e5e363c03c1d236d31e8f3c8c77a7d9">NativeConstruct</link> () override</para>
+
+<para>Constructs the calendar item and binds UI events. </para>
 </listitem>
             <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a7e38a0ae2b37b890c7eb9afa3b70cad1"/>void <emphasis role="strong">HandleSundayClick</emphasis> ()</para>
+
+<para>Handles click events for Sunday. </para>
 </listitem>
             <listitem><para><anchor xml:id="_class_u_calendar_item_base_1aaaf340062ca07df32ad0f6b8d2894e48"/>void <emphasis role="strong">HandleMondayClick</emphasis> ()</para>
+
+<para>Handles click events for Monday. </para>
 </listitem>
             <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a8d704e73b2d673ec1b535f1bdd976955"/>void <emphasis role="strong">HandleTuesdayClick</emphasis> ()</para>
+
+<para>Handles click events for Tuesday. </para>
 </listitem>
             <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a2a49ac513c1295746b2bcd9fd2d9f55c"/>void <emphasis role="strong">HandleWednesdayClick</emphasis> ()</para>
+
+<para>Handles click events for Wednesday. </para>
 </listitem>
             <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a6366c06e4147d5058ddd67b292dfb5cd"/>void <emphasis role="strong">HandleThursdayClick</emphasis> ()</para>
+
+<para>Handles click events for Thursday. </para>
 </listitem>
             <listitem><para><anchor xml:id="_class_u_calendar_item_base_1aeec69fb35b9cbc68970234d8f8ff5eb1"/>void <emphasis role="strong">HandleFridayClick</emphasis> ()</para>
+
+<para>Handles click events for Friday. </para>
 </listitem>
             <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a2269523095c1a9b62d9de1b451b0f61a"/>void <emphasis role="strong">HandleSaturdayClick</emphasis> ()</para>
+
+<para>Handles click events for Saturday. </para>
 </listitem>
-            <listitem><para>void <link linkend="_class_u_calendar_item_base_1af64e9515cc04e43f581550c928f4a05e">OnDaySelected</link> ()</para>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1af64e9515cc04e43f581550c928f4a05e"/>void <emphasis role="strong">OnDaySelected</emphasis> ()</para>
+
+<para>Event triggered when a calendar day is selected. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a1bd9503bf38d2ebe5688350c66e4027a"/>void <emphasis role="strong">OnItemAdded</emphasis> (UObject *ListItemObjectRef)</para>
+            <listitem><para>void <link linkend="_class_u_calendar_item_base_1a1bd9503bf38d2ebe5688350c66e4027a">OnItemAdded</link> (UObject *ListItemObjectRef)</para>
+
+<para>Called when a calendar item is added. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <simplesect>
     <title>Public Attributes    </title>
         <itemizedlist>
-            <listitem><para>UTextBlock * <link linkend="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1">DaySelected</link></para>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1"/>UTextBlock * <emphasis role="strong">DaySelected</emphasis></para>
+
+<para>The currently selected day of the week (e.g., &quot;Sunday&quot;, &quot;Monday&quot;). </para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1add4bbf263d92569a5c2cba4ba7aa3e96"/>FDateTime <emphasis role="strong">CurrentDateTime</emphasis></para>
+            <listitem><para>FDateTime <link linkend="_class_u_calendar_item_base_1add4bbf263d92569a5c2cba4ba7aa3e96">CurrentDateTime</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1ae2e79b4f9d65468adebde9089418723e"/>int32 <emphasis role="strong">Year</emphasis></para>
+            <listitem><para>int32 <link linkend="_class_u_calendar_item_base_1ae2e79b4f9d65468adebde9089418723e">Year</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1acb07bcb5ab3626343126d95354bc9bc1"/>int32 <emphasis role="strong">Month</emphasis></para>
+            <listitem><para>int32 <link linkend="_class_u_calendar_item_base_1acb07bcb5ab3626343126d95354bc9bc1">Month</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a386cf185aa65d24707151d6250c6b6f5"/>int32 <emphasis role="strong">FirstDayOfWeek</emphasis></para>
+            <listitem><para>int32 <link linkend="_class_u_calendar_item_base_1a386cf185aa65d24707151d6250c6b6f5">FirstDayOfWeek</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1af0b086b55b338f74d0f6b56997b8c3e8"/>int32 <emphasis role="strong">Offset</emphasis></para>
+            <listitem><para>int32 <link linkend="_class_u_calendar_item_base_1af0b086b55b338f74d0f6b56997b8c3e8">Offset</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <simplesect>
     <title>Protected Attributes    </title>
         <itemizedlist>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1aeb3c7e30b61d0f309f420983d6ecf713"/>class UButton * <emphasis role="strong">Sunday</emphasis></para>
+            <listitem><para>class UButton * <link linkend="_class_u_calendar_item_base_1aeb3c7e30b61d0f309f420983d6ecf713">Sunday</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a106794cbe31501255173a7b319143bf3"/>class UButton * <emphasis role="strong">Monday</emphasis></para>
+            <listitem><para>class UButton * <link linkend="_class_u_calendar_item_base_1a106794cbe31501255173a7b319143bf3">Monday</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a6c50c0182c98c960db7ec7f3c704a1d5"/>class UButton * <emphasis role="strong">Tuesday</emphasis></para>
+            <listitem><para>class UButton * <link linkend="_class_u_calendar_item_base_1a6c50c0182c98c960db7ec7f3c704a1d5">Tuesday</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1ab5c23e8f8d1f1d5acbfd3883d5586a8b"/>class UButton * <emphasis role="strong">Wednesday</emphasis></para>
+            <listitem><para>class UButton * <link linkend="_class_u_calendar_item_base_1ab5c23e8f8d1f1d5acbfd3883d5586a8b">Wednesday</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a11065e413f4dd6ad3546cfae2e3126b6"/>class UButton * <emphasis role="strong">Thursday</emphasis></para>
+            <listitem><para>class UButton * <link linkend="_class_u_calendar_item_base_1a11065e413f4dd6ad3546cfae2e3126b6">Thursday</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a69289647f1b394b5f4402f21c7c20eaa"/>class UButton * <emphasis role="strong">Friday</emphasis></para>
+            <listitem><para>class UButton * <link linkend="_class_u_calendar_item_base_1a69289647f1b394b5f4402f21c7c20eaa">Friday</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a28db8bd64cc05be54005e47e3479bd7d"/>class UButton * <emphasis role="strong">Saturday</emphasis></para>
+            <listitem><para>class UButton * <link linkend="_class_u_calendar_item_base_1a28db8bd64cc05be54005e47e3479bd7d">Saturday</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a3a221e5ffbff8d466b0092009b263f62"/>class UTextBlock * <emphasis role="strong">day_0</emphasis></para>
+            <listitem><para>class UTextBlock * <link linkend="_class_u_calendar_item_base_1a3a221e5ffbff8d466b0092009b263f62">day_0</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1ae4ff832ef13e388b3b2949574017601c"/>class UTextBlock * <emphasis role="strong">day_1</emphasis></para>
+            <listitem><para>class UTextBlock * <link linkend="_class_u_calendar_item_base_1ae4ff832ef13e388b3b2949574017601c">day_1</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a98d8fcac9d7dee19c3e05e002bb790bb"/>class UTextBlock * <emphasis role="strong">day_2</emphasis></para>
+            <listitem><para>class UTextBlock * <link linkend="_class_u_calendar_item_base_1a98d8fcac9d7dee19c3e05e002bb790bb">day_2</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a3ed4f3d7e26947a8a0cefc150ed6df4a"/>class UTextBlock * <emphasis role="strong">day_3</emphasis></para>
+            <listitem><para>class UTextBlock * <link linkend="_class_u_calendar_item_base_1a3ed4f3d7e26947a8a0cefc150ed6df4a">day_3</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a67fe58fba4bb1040ec06223308676c51"/>class UTextBlock * <emphasis role="strong">day_4</emphasis></para>
+            <listitem><para>class UTextBlock * <link linkend="_class_u_calendar_item_base_1a67fe58fba4bb1040ec06223308676c51">day_4</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a3234a419d933f9ee937d4055870ece2b"/>class UTextBlock * <emphasis role="strong">day_5</emphasis></para>
+            <listitem><para>class UTextBlock * <link linkend="_class_u_calendar_item_base_1a3234a419d933f9ee937d4055870ece2b">day_5</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a90e2edf57f809814281d116f6ef847d2"/>class UTextBlock * <emphasis role="strong">day_6</emphasis></para>
+            <listitem><para>class UTextBlock * <link linkend="_class_u_calendar_item_base_1a90e2edf57f809814281d116f6ef847d2">day_6</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <section>
+<title>Detailed Description</title>
+
+<para>A user interface widget for displaying and managing calendar items. </para>
+
+
+
+<para>This class handles user interactions with calendar items, such as selecting days of the week, and manages the display of calendar data. </para>
+</section>
+<section>
 <title>Member Function Documentation</title>
-<anchor xml:id="_class_u_calendar_item_base_1af64e9515cc04e43f581550c928f4a05e"/><section>
-    <title>OnDaySelected()</title>
-<indexterm><primary>OnDaySelected</primary><secondary>UCalendarItemBase</secondary></indexterm>
-<indexterm><primary>UCalendarItemBase</primary><secondary>OnDaySelected</secondary></indexterm>
-<para><computeroutput>void UCalendarItemBase::OnDaySelected ( )</computeroutput></para>
-<para>Overridable event OnDaySelected is triggered when a calendar item is clicked </para>
+<anchor xml:id="_class_u_calendar_item_base_1a2e5e363c03c1d236d31e8f3c8c77a7d9"/><section>
+    <title>NativeConstruct()</title>
+<indexterm><primary>NativeConstruct</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>NativeConstruct</secondary></indexterm>
+<para><computeroutput>void UCalendarItemBase::NativeConstruct ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Constructs the calendar item and binds UI events. </para>
+</para>
+
+<para>Initializes the calendar item and binds UI events. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1a1bd9503bf38d2ebe5688350c66e4027a"/><section>
+    <title>OnItemAdded()</title>
+<indexterm><primary>OnItemAdded</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>OnItemAdded</secondary></indexterm>
+<para><computeroutput>void UCalendarItemBase::OnItemAdded (UObject * ListItemObjectRef)</computeroutput></para><para>
+
+<para>Called when a calendar item is added. </para>
+</para>
+
+<para>Adds a calendar item to the UI.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ListItemObjectRef</entry><entry>
+<para>A reference to the list item object being added.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>ListItemObjectRef</entry><entry>
+<para>A reference to the list item object. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
 </section>
 </section>
 <section>
 <title>Member Data Documentation</title>
-<anchor xml:id="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1"/><section>
-    <title>DaySelected</title>
-<indexterm><primary>DaySelected</primary><secondary>UCalendarItemBase</secondary></indexterm>
-<indexterm><primary>UCalendarItemBase</primary><secondary>DaySelected</secondary></indexterm>
-<para><computeroutput>UTextBlock* UCalendarItemBase::DaySelected</computeroutput></para>
-<para>The current selection of the day of week on Calendar (eg. &quot;Sunday&quot;, &quot;Monday&quot;, etc </para>
+<anchor xml:id="_class_u_calendar_item_base_1add4bbf263d92569a5c2cba4ba7aa3e96"/><section>
+    <title>CurrentDateTime</title>
+<indexterm><primary>CurrentDateTime</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>CurrentDateTime</secondary></indexterm>
+<para><computeroutput>FDateTime UCalendarItemBase::CurrentDateTime</computeroutput></para>
+<para>The current date and time being managed by the calendar. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1a3a221e5ffbff8d466b0092009b263f62"/><section>
+    <title>day_0</title>
+<indexterm><primary>day_0</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>day_0</secondary></indexterm>
+<para><computeroutput>class UTextBlock* UCalendarItemBase::day_0<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Text block for Sunday. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1ae4ff832ef13e388b3b2949574017601c"/><section>
+    <title>day_1</title>
+<indexterm><primary>day_1</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>day_1</secondary></indexterm>
+<para><computeroutput>class UTextBlock* UCalendarItemBase::day_1<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Text block for Monday. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1a98d8fcac9d7dee19c3e05e002bb790bb"/><section>
+    <title>day_2</title>
+<indexterm><primary>day_2</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>day_2</secondary></indexterm>
+<para><computeroutput>class UTextBlock* UCalendarItemBase::day_2<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Text block for Tuesday. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1a3ed4f3d7e26947a8a0cefc150ed6df4a"/><section>
+    <title>day_3</title>
+<indexterm><primary>day_3</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>day_3</secondary></indexterm>
+<para><computeroutput>class UTextBlock* UCalendarItemBase::day_3<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Text block for Wednesday. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1a67fe58fba4bb1040ec06223308676c51"/><section>
+    <title>day_4</title>
+<indexterm><primary>day_4</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>day_4</secondary></indexterm>
+<para><computeroutput>class UTextBlock* UCalendarItemBase::day_4<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Text block for Thursday. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1a3234a419d933f9ee937d4055870ece2b"/><section>
+    <title>day_5</title>
+<indexterm><primary>day_5</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>day_5</secondary></indexterm>
+<para><computeroutput>class UTextBlock* UCalendarItemBase::day_5<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Text block for Friday. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1a90e2edf57f809814281d116f6ef847d2"/><section>
+    <title>day_6</title>
+<indexterm><primary>day_6</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>day_6</secondary></indexterm>
+<para><computeroutput>class UTextBlock* UCalendarItemBase::day_6<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Text block for Saturday. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1a386cf185aa65d24707151d6250c6b6f5"/><section>
+    <title>FirstDayOfWeek</title>
+<indexterm><primary>FirstDayOfWeek</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>FirstDayOfWeek</secondary></indexterm>
+<para><computeroutput>int32 UCalendarItemBase::FirstDayOfWeek</computeroutput></para>
+<para>The first day of the week for the current month. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1a69289647f1b394b5f4402f21c7c20eaa"/><section>
+    <title>Friday</title>
+<indexterm><primary>Friday</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>Friday</secondary></indexterm>
+<para><computeroutput>class UButton* UCalendarItemBase::Friday<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Button for selecting Friday. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1a106794cbe31501255173a7b319143bf3"/><section>
+    <title>Monday</title>
+<indexterm><primary>Monday</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>Monday</secondary></indexterm>
+<para><computeroutput>class UButton* UCalendarItemBase::Monday<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Button for selecting Monday. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1acb07bcb5ab3626343126d95354bc9bc1"/><section>
+    <title>Month</title>
+<indexterm><primary>Month</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>Month</secondary></indexterm>
+<para><computeroutput>int32 UCalendarItemBase::Month</computeroutput></para>
+<para>The current month displayed in the calendar. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1af0b086b55b338f74d0f6b56997b8c3e8"/><section>
+    <title>Offset</title>
+<indexterm><primary>Offset</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>Offset</secondary></indexterm>
+<para><computeroutput>int32 UCalendarItemBase::Offset</computeroutput></para>
+<para>Offset used for calculating grid positions in the calendar. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1a28db8bd64cc05be54005e47e3479bd7d"/><section>
+    <title>Saturday</title>
+<indexterm><primary>Saturday</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>Saturday</secondary></indexterm>
+<para><computeroutput>class UButton* UCalendarItemBase::Saturday<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Button for selecting Saturday. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1aeb3c7e30b61d0f309f420983d6ecf713"/><section>
+    <title>Sunday</title>
+<indexterm><primary>Sunday</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>Sunday</secondary></indexterm>
+<para><computeroutput>class UButton* UCalendarItemBase::Sunday<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Button for selecting Sunday. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1a11065e413f4dd6ad3546cfae2e3126b6"/><section>
+    <title>Thursday</title>
+<indexterm><primary>Thursday</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>Thursday</secondary></indexterm>
+<para><computeroutput>class UButton* UCalendarItemBase::Thursday<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Button for selecting Thursday. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1a6c50c0182c98c960db7ec7f3c704a1d5"/><section>
+    <title>Tuesday</title>
+<indexterm><primary>Tuesday</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>Tuesday</secondary></indexterm>
+<para><computeroutput>class UButton* UCalendarItemBase::Tuesday<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Button for selecting Tuesday. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1ab5c23e8f8d1f1d5acbfd3883d5586a8b"/><section>
+    <title>Wednesday</title>
+<indexterm><primary>Wednesday</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>Wednesday</secondary></indexterm>
+<para><computeroutput>class UButton* UCalendarItemBase::Wednesday<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Button for selecting Wednesday. </para>
+</section>
+<anchor xml:id="_class_u_calendar_item_base_1ae2e79b4f9d65468adebde9089418723e"/><section>
+    <title>Year</title>
+<indexterm><primary>Year</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>Year</secondary></indexterm>
+<para><computeroutput>int32 UCalendarItemBase::Year</computeroutput></para>
+<para>The current year displayed in the calendar. </para>
 </section>
 <para>
 The documentation for this class was generated from the following files:</para>

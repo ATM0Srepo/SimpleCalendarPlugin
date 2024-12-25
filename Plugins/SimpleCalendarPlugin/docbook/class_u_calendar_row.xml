@@ -2,6 +2,14 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_u_calendar_row" xml:lang="en-US">
 <title>UCalendarRow Class Reference</title>
 <indexterm><primary>UCalendarRow</primary></indexterm>
+<para>
+
+<para>Represents a row in the calendar with associated properties and functionality. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;CalendarRow.h&gt;</computeroutput>
+</para>
 <para>Inheritance diagram for UCalendarRow:    <informalfigure>
         <mediaobject>
             <imageobject>
@@ -13,19 +21,111 @@
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
-            <listitem><para><anchor xml:id="_class_u_calendar_row_1a120b529bd6e963cde26937a84fc8ebbe"/>void <emphasis role="strong">Init</emphasis> (int32 RowValue, int32 year, int32 month, FLinearColor color1, FLinearColor color2, FLinearColor color3, <link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link> *InOwner)</para>
+            <listitem><para>void <link linkend="_class_u_calendar_row_1a120b529bd6e963cde26937a84fc8ebbe">Init</link> (int32 RowValue, int32 year, int32 month, FLinearColor color1, FLinearColor color2, FLinearColor color3, <link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link> *InOwner)</para>
+
+<para>Initializes a calendar row with the specified parameters. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <simplesect>
     <title>Public Attributes    </title>
         <itemizedlist>
-            <listitem><para><anchor xml:id="_class_u_calendar_row_1ac877eba41da23e2c3009e1836256f6d7"/><link linkend="_struct_f_my_base_sructure">FMyBaseSructure</link> <emphasis role="strong">structure</emphasis></para>
+            <listitem><para><link linkend="_struct_f_my_base_sructure">FMyBaseSructure</link> <link linkend="_class_u_calendar_row_1ac877eba41da23e2c3009e1836256f6d7">structure</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_row_1a0c389bb5ebb05235a1566990b49d0e8b"/><link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link> * <emphasis role="strong">Owner</emphasis></para>
+            <listitem><para><link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link> * <link linkend="_class_u_calendar_row_1a0c389bb5ebb05235a1566990b49d0e8b">Owner</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a row in the calendar with associated properties and functionality. </para>
+
+
+
+<para>This class defines a calendar row, its initialization logic, and its owner widget. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_u_calendar_row_1a120b529bd6e963cde26937a84fc8ebbe"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>UCalendarRow</secondary></indexterm>
+<indexterm><primary>UCalendarRow</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void UCalendarRow::Init (int32 RowValue, int32 year, int32 month, FLinearColor color1, FLinearColor color2, FLinearColor color3, <link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link> * InOwner)</computeroutput></para><para>
+
+<para>Initializes a calendar row with the specified parameters. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>RowValue</entry><entry>
+<para>The row index to initialize. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>year</entry><entry>
+<para>The year associated with the row. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>month</entry><entry>
+<para>The month associated with the row. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>color1</entry><entry>
+<para>The primary color for selected calendar grids. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>color2</entry><entry>
+<para>The secondary color for empty calendar grids. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>color3</entry><entry>
+<para>The default color for calendar grids. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>InOwner</entry><entry>
+<para>A reference to the owning <computeroutput><link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link></computeroutput> object. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_u_calendar_row_1a0c389bb5ebb05235a1566990b49d0e8b"/><section>
+    <title>Owner</title>
+<indexterm><primary>Owner</primary><secondary>UCalendarRow</secondary></indexterm>
+<indexterm><primary>UCalendarRow</primary><secondary>Owner</secondary></indexterm>
+<para><computeroutput><link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>* UCalendarRow::Owner</computeroutput></para>
+<para>A reference to the owner of this calendar row. </para>
+</section>
+<anchor xml:id="_class_u_calendar_row_1ac877eba41da23e2c3009e1836256f6d7"/><section>
+    <title>structure</title>
+<indexterm><primary>structure</primary><secondary>UCalendarRow</secondary></indexterm>
+<indexterm><primary>UCalendarRow</primary><secondary>structure</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_f_my_base_sructure">FMyBaseSructure</link> UCalendarRow::structure</computeroutput></para>
+<para>The structure containing properties for the calendar row. </para>
+</section>
 <para>
 The documentation for this class was generated from the following files:</para>
 Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarRow.hPlugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarRow.cpp</section>
+</section>

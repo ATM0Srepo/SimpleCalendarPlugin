@@ -8,7 +8,9 @@
 #include "TimerManager.h" 
 #include "Engine/World.h"
 
-
+/**
+ * @brief Initializes the calendar widget and binds UI events.
+ */
 void UCalendarUIBase::NativeConstruct()
 {
     Super::NativeConstruct();
@@ -18,7 +20,6 @@ void UCalendarUIBase::NativeConstruct()
         {TEXT("Sep"), 9}, {TEXT("Oct"), 10}, {TEXT("Nov"), 11}, {TEXT("Dec"), 12}
     };
 
-    // style
     PreCalendarConfig(
         FLinearColor(1.0f, 1.0f, 1.0f, 0.8f),
         FLinearColor(0.0f, 0.0f, 0.0f, 1.0f),
@@ -30,25 +31,21 @@ void UCalendarUIBase::NativeConstruct()
     toggle_next_month->SetVisibility(ESlateVisibility::Collapsed);
     toggle_next_month->OnClicked.AddDynamic(this, &UCalendarUIBase::ShowNextMonth);
 
-    // year
     InitializeYear(FDateTime::Now().GetYear());
     year->OnTextCommitted.AddDynamic(this, &UCalendarUIBase::HandleOnYearChanged);
 
-    // month
     InitializeMonth(FDateTime::Now().GetMonth());
     MonthButton->OnClicked.AddDynamic(this, &UCalendarUIBase::HandleMonthToggleButtonClick);
 
-    // hour and minute
     hourDifference = FDateTime::Now() - FDateTime::Now();
     minuteDifference = FDateTime::Now() - FDateTime::Now();
     InitializeHour();
     GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UCalendarUIBase::InitializeMinute, DefaultMinuteTickInterval, true);
-    //hour->OnTextCommitted.AddDynamic(this, &UCalendarUIBase::HandleOnHourCommitted);
-    //hour->OnTextChanged.AddDynamic(this, &UCalendarUIBase::HandleOnHourChanged);
-    //minute->OnTextCommitted.AddDynamic(this, &UCalendarUIBase::HandleOnMinuteCommitted);
-    //minute->OnTextChanged.AddDynamic(this, &UCalendarUIBase::HandleOnMinuteChanged);
 }
 
+/**
+ * @brief Initializes the hour text box with the current hour.
+ */
 void UCalendarUIBase::InitializeHour()
 {
     hour_now = FString::FormatAsNumber((FDateTime::Now() - hourDifference).GetHour());
@@ -60,6 +57,9 @@ void UCalendarUIBase::InitializeHour()
     hour->SetText(FText::FromString(hour_now));
 }
 
+/**
+ * @brief Initializes the minute text box with the current minute.
+ */
 void UCalendarUIBase::InitializeMinute()
 {
     minute_now = FString::FormatAsNumber((FDateTime::Now() - minuteDifference).GetMinute());
@@ -73,12 +73,20 @@ void UCalendarUIBase::InitializeMinute()
     }
 }
 
+/**
+ * @brief Sets the calendar year.
+ * @param y The year to set.
+ */
 void UCalendarUIBase::InitializeYear(int y)
 {
     year_now = y;
     year->SetText(FText::FromString(FString::FormatAsNumber(y).Replace(TEXT(","), TEXT(""))));
 }
 
+/**
+ * @brief Sets the calendar month.
+ * @param m The month to set (1-12).
+ */
 void UCalendarUIBase::InitializeMonth(int m)
 {
     TMap<int32, FString> MonthMap = {
@@ -90,9 +98,14 @@ void UCalendarUIBase::InitializeMonth(int m)
     month->SetText(FText::FromString(*MonthMap.Find(m)));
 }
 
+/**
+ * @brief Configures corner radii for the calendar and weekday headers.
+ *
+ * @param CalendarBorder Corner radii for the calendar border.
+ * @param WeekdayHeaderRadii Corner radii for the weekday headers.
+ */
 void UCalendarUIBase::SetCornerRadii(const FVector4& CalendarBorder, const FVector4& WeekdayHeaderRadii)
 {
-    // Modify the corner radii of the button's style directly
     FButtonStyle CalendarStyle = calendar_background->WidgetStyle;
     CalendarStyle.Normal.OutlineSettings.CornerRadii = CalendarBorder;
     CalendarStyle.Hovered.OutlineSettings.CornerRadii = CalendarBorder;
@@ -106,21 +119,33 @@ void UCalendarUIBase::SetCornerRadii(const FVector4& CalendarBorder, const FVect
     weekdays_background->SetStyle(WeekdayStyle);
 }
 
+/**
+ * @brief Retrieves the current DateTime set in the calendar.
+ * @return The current DateTime object.
+ */
 FDateTime UCalendarUIBase::GetTime()
 {
     return FDateTime(year_now, month_now, FDateTime::Now().GetDay(), FCString::Atoi(*hour_now), FCString::Atoi(*minute_now), 0, 0);
 }
 
+/**
+ * @brief Handles changes to the year text box.
+ *
+ * @param Text The new year value.
+ * @param CommitMethod The method of text commit.
+ */
 void UCalendarUIBase::HandleOnYearChanged(const FText& Text, ETextCommit::Type CommitMethod)
 {
     if (CommitMethod == ETextCommit::OnEnter) {
-
         year_now = FCString::Atoi(*Text.ToString());
         ListViewCalendar->ClearListItems();
         CreateCalendar();
     }
 }
 
+/**
+ * @brief Toggles the visibility of month navigation buttons.
+ */
 void UCalendarUIBase::HandleMonthToggleButtonClick()
 {
     if (toggle_prev_month->IsVisible()) {
@@ -131,9 +156,80 @@ void UCalendarUIBase::HandleMonthToggleButtonClick()
         toggle_prev_month->SetVisibility(ESlateVisibility::Visible);
         toggle_next_month->SetVisibility(ESlateVisibility::Visible);
     }
-
 }
 
+/**
+ * @brief Configures calendar style settings.
+ *
+ * @param SelectedGridColor Color for selected grids.
+ * @param EmptyGridColor Color for empty grids.
+ * @param GridColor Default grid color.
+ * @param CalendarBackground Background color for the calendar.
+ * @param CalendarBackgroundBorder Border color for the calendar background.
+ * @param WeekdayHeadingColor Color for weekday headers.
+ */
+void UCalendarUIBase::PreCalendarConfig(FLinearColor SelectedGridColor, FLinearColor EmptyGridColor, FLinearColor GridColor, FLinearColor CalendarBackgroundColor, FLinearColor CalendarBackgroundBorderColor, FLinearColor WeekdayHeadingColor)
+{
+    color1 = SelectedGridColor;
+    color2 = EmptyGridColor;
+    color3 = GridColor;
+
+    FButtonStyle CalendarStyle = calendar_background->WidgetStyle;
+    CalendarStyle.Normal.TintColor = FSlateColor(CalendarBackgroundColor);
+    CalendarStyle.Hovered.TintColor = FSlateColor(CalendarBackgroundColor);
+    CalendarStyle.Pressed.TintColor = FSlateColor(CalendarBackgroundColor);
+    CalendarStyle.Normal.OutlineSettings.Color = FSlateColor(CalendarBackgroundBorderColor);
+    CalendarStyle.Hovered.OutlineSettings.Color = FSlateColor(CalendarBackgroundBorderColor);
+    CalendarStyle.Pressed.OutlineSettings.Color = FSlateColor(CalendarBackgroundBorderColor);
+    calendar_background->SetStyle(CalendarStyle);
+
+    FButtonStyle WeekdayStyle = weekdays_background->WidgetStyle;
+    WeekdayStyle.Normal.TintColor = FSlateColor(WeekdayHeadingColor);
+    WeekdayStyle.Hovered.TintColor = FSlateColor(WeekdayHeadingColor);
+    WeekdayStyle.Pressed.TintColor = FSlateColor(WeekdayHeadingColor);
+    weekdays_background->SetStyle(WeekdayStyle);
+}
+
+/**
+ * @brief Creates the calendar UI by populating rows.
+ */
+void UCalendarUIBase::CreateCalendar()
+{
+    for (int32 i = 0; i <= 5; ++i) {
+        UCalendarRow* CalendarRowInstance = NewObject<UCalendarRow>(this, UCalendarRow::StaticClass());
+        if (CalendarRowInstance != nullptr) {
+            CalendarRowInstance->Init(i, year_now, month_now, color1, color2, color3, this);
+            ListViewCalendar->AddItem(CalendarRowInstance);
+        }
+    }
+}
+
+/**
+ * @brief Updates the year and refreshes the calendar.
+ * @param y The new year.
+ */
+void UCalendarUIBase::SetYear(int y)
+{
+    InitializeYear(y);
+}
+
+/**
+ * @brief Updates the month and refreshes the calendar.
+ * @param m The new month (1-12).
+ */
+void UCalendarUIBase::SetMonth(int32 m)
+{
+    InitializeMonth(m);
+    ListViewCalendar->ClearListItems();
+    CreateCalendar();
+}
+
+/**
+ * @brief Handles the event when the hour is committed (e.g., user presses Enter).
+ *
+ * @param Text The new hour value entered.
+ * @param CommitMethod The method of text commit (e.g., OnEnter).
+ */
 void UCalendarUIBase::HandleOnHourCommitted(const FText& Text, ETextCommit::Type CommitMethod)
 {
     if (CommitMethod == ETextCommit::OnEnter) {
@@ -145,12 +241,21 @@ void UCalendarUIBase::HandleOnHourCommitted(const FText& Text, ETextCommit::Type
         GetWorld()->GetTimerManager().SetTimer(TickTimerHandle, this, &UCalendarUIBase::InitializeMinute, DefaultMinuteTickInterval, true);
     }
 }
-
+/**
+ * @brief Handles changes to the hour text box.
+ *
+ * @param Text The new hour value entered by the user.
+ */
 void UCalendarUIBase::HandleOnHourChanged(const FText& Text)
 {
     GetWorld()->GetTimerManager().ClearTimer(TickTimerHandle);
 }
-
+/**
+ * @brief Handles the event when the minute is committed (e.g., user presses Enter).
+ *
+ * @param Text The new minute value entered by the user.
+ * @param CommitMethod The method of text commit (e.g., OnEnter).
+ */
 void UCalendarUIBase::HandleOnMinuteCommitted(const FText& Text, ETextCommit::Type CommitMethod)
 {
     if (CommitMethod == ETextCommit::OnEnter) {
@@ -167,11 +272,19 @@ void UCalendarUIBase::HandleOnMinuteCommitted(const FText& Text, ETextCommit::Ty
     }
 }
 
+/**
+ * @brief Handles changes to the minute text box.
+ *
+ * @param Text The new minute value entered by the user.
+ */
 void UCalendarUIBase::HandleOnMinuteChanged(const FText& Text)
 {
     GetWorld()->GetTimerManager().ClearTimer(TickTimerHandle);
 }
 
+/**
+ * @brief Advances the calendar to the next month.
+ */
 void UCalendarUIBase::ShowNextMonth()
 {
     FText m = month->GetText();
@@ -187,6 +300,9 @@ void UCalendarUIBase::ShowNextMonth()
     CreateCalendar();
 }
 
+/**
+ * @brief Moves the calendar to the previous month.
+ */
 void UCalendarUIBase::ShowPrevMonth()
 {
     FText m = month->GetText();
@@ -198,53 +314,6 @@ void UCalendarUIBase::ShowPrevMonth()
         m2 = 12;
     }
     InitializeMonth(m2);
-    ListViewCalendar->ClearListItems();
-    CreateCalendar();
-}
-
-void UCalendarUIBase::PreCalendarConfig(FLinearColor SelectedGridColor, FLinearColor EmptyGridColor, FLinearColor GridColor, FLinearColor CalendarBackgroundColor, FLinearColor CalendarBackgroundBorderColor, FLinearColor WeekdayHeadingColor)
-{
-    color1 = SelectedGridColor;
-    color2 = EmptyGridColor;
-    color3 = GridColor;
-
-    // Modify the style of the calendar background button
-    FButtonStyle CalendarStyle = calendar_background->WidgetStyle;
-    CalendarStyle.Normal.TintColor = FSlateColor(CalendarBackgroundColor);
-    CalendarStyle.Hovered.TintColor = FSlateColor(CalendarBackgroundColor);
-    CalendarStyle.Pressed.TintColor = FSlateColor(CalendarBackgroundColor);
-    CalendarStyle.Normal.OutlineSettings.Color = FSlateColor(CalendarBackgroundBorderColor);
-    CalendarStyle.Hovered.OutlineSettings.Color = FSlateColor(CalendarBackgroundBorderColor);
-    CalendarStyle.Pressed.OutlineSettings.Color = FSlateColor(CalendarBackgroundBorderColor);
-    calendar_background->SetStyle(CalendarStyle);
-
-    // Modify the style of the weekdays background button
-    FButtonStyle WeekdayStyle = weekdays_background->WidgetStyle;
-    WeekdayStyle.Normal.TintColor = FSlateColor(WeekdayHeadingColor);
-    WeekdayStyle.Hovered.TintColor = FSlateColor(WeekdayHeadingColor);
-    WeekdayStyle.Pressed.TintColor = FSlateColor(WeekdayHeadingColor);
-    weekdays_background->SetStyle(WeekdayStyle);
-}
-
-void UCalendarUIBase::CreateCalendar()
-{
-    for (int32 i = 0; i <= 5; ++i) {
-        UCalendarRow* CalendarRowInstance = NewObject<UCalendarRow>(this, UCalendarRow::StaticClass());
-        if (CalendarRowInstance != nullptr) {
-            CalendarRowInstance->Init(i, year_now, month_now, color1, color2, color3, this);
-            ListViewCalendar->AddItem(CalendarRowInstance);
-        }
-    }
-}
-
-void UCalendarUIBase::SetYear(int y)
-{
-    InitializeYear(y);
-}
-
-void UCalendarUIBase::SetMonth(int32 m)
-{
-    InitializeMonth(m);
     ListViewCalendar->ClearListItems();
     CreateCalendar();
 }

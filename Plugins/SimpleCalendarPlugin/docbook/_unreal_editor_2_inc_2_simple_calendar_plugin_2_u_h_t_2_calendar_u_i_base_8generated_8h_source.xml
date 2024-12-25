@@ -20,7 +20,7 @@
 16 <emphasis role="preprocessor">#endif</emphasis>
 17 <emphasis role="preprocessor">#define&#32;SIMPLECALENDARPLUGIN_CalendarUIBase_generated_h</emphasis>
 18 
-19 <emphasis role="preprocessor">#define&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarUIBase_h_16_RPC_WRAPPERS_NO_PURE_DECLS&#32;\</emphasis>
+19 <emphasis role="preprocessor">#define&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarUIBase_h_20_RPC_WRAPPERS_NO_PURE_DECLS&#32;\</emphasis>
 20 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;DECLARE_FUNCTION(execShowPrevMonth);&#32;\</emphasis>
 21 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;DECLARE_FUNCTION(execShowNextMonth);&#32;\</emphasis>
 22 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;DECLARE_FUNCTION(execHandleOnMinuteChanged);&#32;\</emphasis>
@@ -37,7 +37,7 @@
 33 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;DECLARE_FUNCTION(execGetTime);</emphasis>
 34 
 35 
-36 <emphasis role="preprocessor">#define&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarUIBase_h_16_INCLASS_NO_PURE_DECLS&#32;\</emphasis>
+36 <emphasis role="preprocessor">#define&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarUIBase_h_20_INCLASS_NO_PURE_DECLS&#32;\</emphasis>
 37 <emphasis role="preprocessor">private:&#32;\</emphasis>
 38 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;static&#32;void&#32;StaticRegisterNativesUCalendarUIBase();&#32;\</emphasis>
 39 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;friend&#32;struct&#32;Z_Construct_UClass_UCalendarUIBase_Statics;&#32;\</emphasis>
@@ -46,7 +46,7 @@
 42 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;DECLARE_SERIALIZER(UCalendarUIBase)</emphasis>
 43 
 44 
-45 <emphasis role="preprocessor">#define&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarUIBase_h_16_ENHANCED_CONSTRUCTORS&#32;\</emphasis>
+45 <emphasis role="preprocessor">#define&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarUIBase_h_20_ENHANCED_CONSTRUCTORS&#32;\</emphasis>
 46 <emphasis role="preprocessor">&#32;\</emphasis>
 47 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;NO_API&#32;UCalendarUIBase(const&#32;FObjectInitializer&amp;&#32;ObjectInitializer&#32;=&#32;FObjectInitializer::Get());&#32;\</emphasis>
 48 <emphasis role="preprocessor">private:&#32;\</emphasis>
@@ -60,13 +60,13 @@
 56 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;NO_API&#32;virtual&#32;~UCalendarUIBase();</emphasis>
 57 
 58 
-59 <emphasis role="preprocessor">#define&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarUIBase_h_13_PROLOG</emphasis>
-60 <emphasis role="preprocessor">#define&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarUIBase_h_16_GENERATED_BODY&#32;\</emphasis>
+59 <emphasis role="preprocessor">#define&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarUIBase_h_17_PROLOG</emphasis>
+60 <emphasis role="preprocessor">#define&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarUIBase_h_20_GENERATED_BODY&#32;\</emphasis>
 61 <emphasis role="preprocessor">PRAGMA_DISABLE_DEPRECATION_WARNINGS&#32;\</emphasis>
 62 <emphasis role="preprocessor">public:&#32;\</emphasis>
-63 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarUIBase_h_16_RPC_WRAPPERS_NO_PURE_DECLS&#32;\</emphasis>
-64 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarUIBase_h_16_INCLASS_NO_PURE_DECLS&#32;\</emphasis>
-65 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarUIBase_h_16_ENHANCED_CONSTRUCTORS&#32;\</emphasis>
+63 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarUIBase_h_20_RPC_WRAPPERS_NO_PURE_DECLS&#32;\</emphasis>
+64 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarUIBase_h_20_INCLASS_NO_PURE_DECLS&#32;\</emphasis>
+65 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarUIBase_h_20_ENHANCED_CONSTRUCTORS&#32;\</emphasis>
 66 <emphasis role="preprocessor">private:&#32;\</emphasis>
 67 <emphasis role="preprocessor">PRAGMA_ENABLE_DEPRECATION_WARNINGS</emphasis>
 68 

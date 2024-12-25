@@ -1,0 +1,990 @@
+\doxysection{Calendar\+UIBase.\+gen.\+cpp}
+\hypertarget{_unreal_editor_2_inc_2_simple_calendar_plugin_2_u_h_t_2_calendar_u_i_base_8gen_8cpp_source}{}\label{_unreal_editor_2_inc_2_simple_calendar_plugin_2_u_h_t_2_calendar_u_i_base_8gen_8cpp_source}\index{Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cpp@{Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Epic\ Games,\ Inc.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ \textcolor{comment}{/*===========================================================================}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ Generated\ code\ exported\ from\ UnrealHeaderTool.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ DO\ NOT\ modify\ this\ manually!\ Edit\ the\ corresponding\ .h\ files\ instead!}}
+\DoxyCodeLine{00005\ \textcolor{comment}{===========================================================================*/}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}UObject/GeneratedCppIncludes.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}SimpleCalendarPlugin/Private/CalendarUIBase.h"{}}}
+\DoxyCodeLine{00009\ PRAGMA\_DISABLE\_DEPRECATION\_WARNINGS}
+\DoxyCodeLine{00010\ \textcolor{keywordtype}{void}\ EmptyLinkFunctionForGeneratedCodeCalendarUIBase()\ \{\}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ Begin\ Cross\ Module\ References}}
+\DoxyCodeLine{00013\ COREUOBJECT\_API\ UScriptStruct*\ Z\_Construct\_UScriptStruct\_FDateTime();}
+\DoxyCodeLine{00014\ COREUOBJECT\_API\ UScriptStruct*\ Z\_Construct\_UScriptStruct\_FLinearColor();}
+\DoxyCodeLine{00015\ COREUOBJECT\_API\ UScriptStruct*\ Z\_Construct\_UScriptStruct\_FVector4();}
+\DoxyCodeLine{00016\ SIMPLECALENDARPLUGIN\_API\ UClass*\ Z\_Construct\_UClass\_UCalendarUIBase();}
+\DoxyCodeLine{00017\ SIMPLECALENDARPLUGIN\_API\ UClass*\ Z\_Construct\_UClass\_UCalendarUIBase\_NoRegister();}
+\DoxyCodeLine{00018\ SLATECORE\_API\ UEnum*\ Z\_Construct\_UEnum\_SlateCore\_ETextCommit();}
+\DoxyCodeLine{00019\ UMG\_API\ UClass*\ Z\_Construct\_UClass\_UButton\_NoRegister();}
+\DoxyCodeLine{00020\ UMG\_API\ UClass*\ Z\_Construct\_UClass\_UEditableTextBox\_NoRegister();}
+\DoxyCodeLine{00021\ UMG\_API\ UClass*\ Z\_Construct\_UClass\_UListView\_NoRegister();}
+\DoxyCodeLine{00022\ UMG\_API\ UClass*\ Z\_Construct\_UClass\_UTextBlock\_NoRegister();}
+\DoxyCodeLine{00023\ UMG\_API\ UClass*\ Z\_Construct\_UClass\_UUserWidget();}
+\DoxyCodeLine{00024\ UPackage*\ Z\_Construct\_UPackage\_\_Script\_SimpleCalendarPlugin();}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ End\ Cross\ Module\ References}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ Begin\ Class\ UCalendarUIBase\ Function\ CreateCalendar}}
+\DoxyCodeLine{00028\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___create_calendar___statics}{Z\_Construct\_UFunction\_UCalendarUIBase\_CreateCalendar\_Statics}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#if\ WITH\_METADATA}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ Function\_MetaDataParams[]\ =\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Category"{}},\ \textcolor{stringliteral}{"{}Calendar\ Functions"{}}\ \},}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\(\backslash\)n\ \ \ \ \ *\ @brief\ Creates\ the\ calendar\ UI.\(\backslash\)n\ \ \ \ \ */"{}}\ \},}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}@brief\ Creates\ the\ calendar\ UI."{}}\ \},}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00040\ \ \ \ \ \};}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WITH\_METADATA}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ FuncParams;}
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_CreateCalendar\_Statics::FuncParams\ =\ \{\ (UObject*(*)())Z\_Construct\_UClass\_UCalendarUIBase,\ \textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}CreateCalendar"{}},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 0,\ 0,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ (EFunctionFlags)0x04080401,\ 0,\ 0,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_CreateCalendar\_Statics::Function\_MetaDataParams),\ Z\_Construct\_UFunction\_UCalendarUIBase\_CreateCalendar\_Statics::Function\_MetaDataParams)\ \};}
+\DoxyCodeLine{00045\ UFunction*\ Z\_Construct\_UFunction\_UCalendarUIBase\_CreateCalendar()}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{static}\ UFunction*\ ReturnFunction\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{if}\ (!ReturnFunction)}
+\DoxyCodeLine{00049\ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ UECodeGen\_Private::ConstructUFunction(\&ReturnFunction,\ Z\_Construct\_UFunction\_UCalendarUIBase\_CreateCalendar\_Statics::FuncParams);}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{return}\ ReturnFunction;}
+\DoxyCodeLine{00053\ \}}
+\DoxyCodeLine{00054\ DEFINE\_FUNCTION(UCalendarUIBase::execCreateCalendar)}
+\DoxyCodeLine{00055\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ P\_FINISH;}
+\DoxyCodeLine{00057\ \ \ \ \ P\_NATIVE\_BEGIN;}
+\DoxyCodeLine{00058\ \ \ \ \ P\_THIS-\/>CreateCalendar();}
+\DoxyCodeLine{00059\ \ \ \ \ P\_NATIVE\_END;}
+\DoxyCodeLine{00060\ \}}
+\DoxyCodeLine{00061\ \textcolor{comment}{//\ End\ Class\ UCalendarUIBase\ Function\ CreateCalendar}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{comment}{//\ Begin\ Class\ UCalendarUIBase\ Function\ GetTime}}
+\DoxyCodeLine{00064\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___get_time___statics}{Z\_Construct\_UFunction\_UCalendarUIBase\_GetTime\_Statics}}}
+\DoxyCodeLine{00065\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___get_time___statics_1_1_calendar_u_i_base__event_get_time___parms}{CalendarUIBase\_eventGetTime\_Parms}}}
+\DoxyCodeLine{00067\ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ FDateTime\ ReturnValue;}
+\DoxyCodeLine{00069\ \ \ \ \ \};}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#if\ WITH\_METADATA}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ Function\_MetaDataParams[]\ =\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Category"{}},\ \textcolor{stringliteral}{"{}Calendar\ Functions"{}}\ \},}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\(\backslash\)n\ \ \ \ \ *\ @brief\ Retrieves\ the\ current\ DateTime\ set\ on\ the\ calendar.\(\backslash\)n\ \ \ \ \ *\ @return\ The\ current\ DateTime\ object.\(\backslash\)n\ \ \ \ \ */"{}}\ \},}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}@brief\ Retrieves\ the\ current\ DateTime\ set\ on\ the\ calendar.\(\backslash\)n@return\ The\ current\ DateTime\ object."{}}\ \},}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00080\ \ \ \ \ \};}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WITH\_METADATA}}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ NewProp\_ReturnValue;}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ PropPointers[];}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ FuncParams;}
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_GetTime\_Statics::NewProp\_ReturnValue\ =\ \{\ \textcolor{stringliteral}{"{}ReturnValue"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000000000580,\ UECodeGen\_Private::EPropertyGenFlags::Struct,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventGetTime\_Parms,\ ReturnValue),\ Z\_Construct\_UScriptStruct\_FDateTime,\ METADATA\_PARAMS(0,\ \textcolor{keyword}{nullptr})\ \};}
+\DoxyCodeLine{00087\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ Z\_Construct\_UFunction\_UCalendarUIBase\_GetTime\_Statics::PropPointers[]\ =\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_GetTime\_Statics::NewProp\_ReturnValue,}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ \textcolor{keyword}{static\_assert}(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_GetTime\_Statics::PropPointers)\ <\ 2048);}
+\DoxyCodeLine{00091\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_GetTime\_Statics::FuncParams\ =\ \{\ (UObject*(*)())Z\_Construct\_UClass\_UCalendarUIBase,\ \textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}GetTime"{}},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ Z\_Construct\_UFunction\_UCalendarUIBase\_GetTime\_Statics::PropPointers,\ UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_GetTime\_Statics::PropPointers),\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___get_time___statics_1_1_calendar_u_i_base__event_get_time___parms}{Z\_Construct\_UFunction\_UCalendarUIBase\_GetTime\_Statics::CalendarUIBase\_eventGetTime\_Parms}}),\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ (EFunctionFlags)0x04820401,\ 0,\ 0,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_GetTime\_Statics::Function\_MetaDataParams),\ Z\_Construct\_UFunction\_UCalendarUIBase\_GetTime\_Statics::Function\_MetaDataParams)\ \};}
+\DoxyCodeLine{00092\ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___get_time___statics_1_1_calendar_u_i_base__event_get_time___parms}{Z\_Construct\_UFunction\_UCalendarUIBase\_GetTime\_Statics::CalendarUIBase\_eventGetTime\_Parms}})\ <\ MAX\_uint16);}
+\DoxyCodeLine{00093\ UFunction*\ Z\_Construct\_UFunction\_UCalendarUIBase\_GetTime()}
+\DoxyCodeLine{00094\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{static}\ UFunction*\ ReturnFunction\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordflow}{if}\ (!ReturnFunction)}
+\DoxyCodeLine{00097\ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ UECodeGen\_Private::ConstructUFunction(\&ReturnFunction,\ Z\_Construct\_UFunction\_UCalendarUIBase\_GetTime\_Statics::FuncParams);}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordflow}{return}\ ReturnFunction;}
+\DoxyCodeLine{00101\ \}}
+\DoxyCodeLine{00102\ DEFINE\_FUNCTION(UCalendarUIBase::execGetTime)}
+\DoxyCodeLine{00103\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ P\_FINISH;}
+\DoxyCodeLine{00105\ \ \ \ \ P\_NATIVE\_BEGIN;}
+\DoxyCodeLine{00106\ \ \ \ \ *(FDateTime*)Z\_Param\_\_Result=P\_THIS-\/>GetTime();}
+\DoxyCodeLine{00107\ \ \ \ \ P\_NATIVE\_END;}
+\DoxyCodeLine{00108\ \}}
+\DoxyCodeLine{00109\ \textcolor{comment}{//\ End\ Class\ UCalendarUIBase\ Function\ GetTime}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{comment}{//\ Begin\ Class\ UCalendarUIBase\ Function\ HandleMonthToggleButtonClick}}
+\DoxyCodeLine{00112\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_month_toggle_button_click___statics}{Z\_Construct\_UFunction\_UCalendarUIBase\_HandleMonthToggleButtonClick\_Statics}}}
+\DoxyCodeLine{00113\ \{}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#if\ WITH\_METADATA}}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ Function\_MetaDataParams[]\ =\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00117\ \ \ \ \ \};}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WITH\_METADATA}}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ FuncParams;}
+\DoxyCodeLine{00120\ \};}
+\DoxyCodeLine{00121\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleMonthToggleButtonClick\_Statics::FuncParams\ =\ \{\ (UObject*(*)())Z\_Construct\_UClass\_UCalendarUIBase,\ \textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}HandleMonthToggleButtonClick"{}},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 0,\ 0,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ (EFunctionFlags)0x00080401,\ 0,\ 0,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_HandleMonthToggleButtonClick\_Statics::Function\_MetaDataParams),\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleMonthToggleButtonClick\_Statics::Function\_MetaDataParams)\ \};}
+\DoxyCodeLine{00122\ UFunction*\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleMonthToggleButtonClick()}
+\DoxyCodeLine{00123\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keyword}{static}\ UFunction*\ ReturnFunction\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordflow}{if}\ (!ReturnFunction)}
+\DoxyCodeLine{00126\ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ UECodeGen\_Private::ConstructUFunction(\&ReturnFunction,\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleMonthToggleButtonClick\_Statics::FuncParams);}
+\DoxyCodeLine{00128\ \ \ \ \ \}}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordflow}{return}\ ReturnFunction;}
+\DoxyCodeLine{00130\ \}}
+\DoxyCodeLine{00131\ DEFINE\_FUNCTION(UCalendarUIBase::execHandleMonthToggleButtonClick)}
+\DoxyCodeLine{00132\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ P\_FINISH;}
+\DoxyCodeLine{00134\ \ \ \ \ P\_NATIVE\_BEGIN;}
+\DoxyCodeLine{00135\ \ \ \ \ P\_THIS-\/>HandleMonthToggleButtonClick();}
+\DoxyCodeLine{00136\ \ \ \ \ P\_NATIVE\_END;}
+\DoxyCodeLine{00137\ \}}
+\DoxyCodeLine{00138\ \textcolor{comment}{//\ End\ Class\ UCalendarUIBase\ Function\ HandleMonthToggleButtonClick}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \textcolor{comment}{//\ Begin\ Class\ UCalendarUIBase\ Function\ HandleOnHourChanged}}
+\DoxyCodeLine{00141\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_changed___statics}{Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourChanged\_Statics}}}
+\DoxyCodeLine{00142\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_changed___statics_1_1_c8a889d393e0c467abb4b1986346a0fec}{CalendarUIBase\_eventHandleOnHourChanged\_Parms}}}
+\DoxyCodeLine{00144\ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ FText\ Text;}
+\DoxyCodeLine{00146\ \ \ \ \ \};}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#if\ WITH\_METADATA}}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ Function\_MetaDataParams[]\ =\ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00150\ \ \ \ \ \};}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_Text\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}NativeConst"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00153\ \ \ \ \ \};}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WITH\_METADATA}}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FTextPropertyParams\ NewProp\_Text;}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ PropPointers[];}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ FuncParams;}
+\DoxyCodeLine{00158\ \};}
+\DoxyCodeLine{00159\ \textcolor{keyword}{const}\ UECodeGen\_Private::FTextPropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourChanged\_Statics::NewProp\_Text\ =\ \{\ \textcolor{stringliteral}{"{}Text"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000008000182,\ UECodeGen\_Private::EPropertyGenFlags::Text,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventHandleOnHourChanged\_Parms,\ Text),\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_Text\_MetaData),\ NewProp\_Text\_MetaData)\ \};}
+\DoxyCodeLine{00160\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourChanged\_Statics::PropPointers[]\ =\ \{}
+\DoxyCodeLine{00161\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourChanged\_Statics::NewProp\_Text,}
+\DoxyCodeLine{00162\ \};}
+\DoxyCodeLine{00163\ \textcolor{keyword}{static\_assert}(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourChanged\_Statics::PropPointers)\ <\ 2048);}
+\DoxyCodeLine{00164\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourChanged\_Statics::FuncParams\ =\ \{\ (UObject*(*)())Z\_Construct\_UClass\_UCalendarUIBase,\ \textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}HandleOnHourChanged"{}},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourChanged\_Statics::PropPointers,\ UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourChanged\_Statics::PropPointers),\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_changed___statics_1_1_c8a889d393e0c467abb4b1986346a0fec}{Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourChanged\_Statics::CalendarUIBase\_eventHandleOnHourChanged\_Parms}}),\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ (EFunctionFlags)0x00480401,\ 0,\ 0,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourChanged\_Statics::Function\_MetaDataParams),\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourChanged\_Statics::Function\_MetaDataParams)\ \};}
+\DoxyCodeLine{00165\ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_changed___statics_1_1_c8a889d393e0c467abb4b1986346a0fec}{Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourChanged\_Statics::CalendarUIBase\_eventHandleOnHourChanged\_Parms}})\ <\ MAX\_uint16);}
+\DoxyCodeLine{00166\ UFunction*\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourChanged()}
+\DoxyCodeLine{00167\ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keyword}{static}\ UFunction*\ ReturnFunction\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordflow}{if}\ (!ReturnFunction)}
+\DoxyCodeLine{00170\ \ \ \ \ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ UECodeGen\_Private::ConstructUFunction(\&ReturnFunction,\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourChanged\_Statics::FuncParams);}
+\DoxyCodeLine{00172\ \ \ \ \ \}}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordflow}{return}\ ReturnFunction;}
+\DoxyCodeLine{00174\ \}}
+\DoxyCodeLine{00175\ DEFINE\_FUNCTION(UCalendarUIBase::execHandleOnHourChanged)}
+\DoxyCodeLine{00176\ \{}
+\DoxyCodeLine{00177\ \ \ \ \ P\_GET\_PROPERTY\_REF(FTextProperty,Z\_Param\_Out\_Text);}
+\DoxyCodeLine{00178\ \ \ \ \ P\_FINISH;}
+\DoxyCodeLine{00179\ \ \ \ \ P\_NATIVE\_BEGIN;}
+\DoxyCodeLine{00180\ \ \ \ \ P\_THIS-\/>HandleOnHourChanged(Z\_Param\_Out\_Text);}
+\DoxyCodeLine{00181\ \ \ \ \ P\_NATIVE\_END;}
+\DoxyCodeLine{00182\ \}}
+\DoxyCodeLine{00183\ \textcolor{comment}{//\ End\ Class\ UCalendarUIBase\ Function\ HandleOnHourChanged}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \textcolor{comment}{//\ Begin\ Class\ UCalendarUIBase\ Function\ HandleOnHourCommitted}}
+\DoxyCodeLine{00186\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_committed___statics}{Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourCommitted\_Statics}}}
+\DoxyCodeLine{00187\ \{}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_committed___statics_1_1ce0b7c7f19a60c29d1677a79cbb6e177}{CalendarUIBase\_eventHandleOnHourCommitted\_Parms}}}
+\DoxyCodeLine{00189\ \ \ \ \ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ FText\ Text;}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ TEnumAsByte<ETextCommit::Type>\ CommitMethod;}
+\DoxyCodeLine{00192\ \ \ \ \ \};}
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\#if\ WITH\_METADATA}}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ Function\_MetaDataParams[]\ =\ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00196\ \ \ \ \ \};}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_Text\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}NativeConst"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00199\ \ \ \ \ \};}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WITH\_METADATA}}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FTextPropertyParams\ NewProp\_Text;}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FBytePropertyParams\ NewProp\_CommitMethod;}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ PropPointers[];}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ FuncParams;}
+\DoxyCodeLine{00205\ \};}
+\DoxyCodeLine{00206\ \textcolor{keyword}{const}\ UECodeGen\_Private::FTextPropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourCommitted\_Statics::NewProp\_Text\ =\ \{\ \textcolor{stringliteral}{"{}Text"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000008000182,\ UECodeGen\_Private::EPropertyGenFlags::Text,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventHandleOnHourCommitted\_Parms,\ Text),\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_Text\_MetaData),\ NewProp\_Text\_MetaData)\ \};}
+\DoxyCodeLine{00207\ \textcolor{keyword}{const}\ UECodeGen\_Private::FBytePropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourCommitted\_Statics::NewProp\_CommitMethod\ =\ \{\ \textcolor{stringliteral}{"{}CommitMethod"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000000000080,\ UECodeGen\_Private::EPropertyGenFlags::Byte,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventHandleOnHourCommitted\_Parms,\ CommitMethod),\ Z\_Construct\_UEnum\_SlateCore\_ETextCommit,\ METADATA\_PARAMS(0,\ \textcolor{keyword}{nullptr})\ \};\ \textcolor{comment}{//\ 1817921380}}
+\DoxyCodeLine{00208\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourCommitted\_Statics::PropPointers[]\ =\ \{}
+\DoxyCodeLine{00209\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourCommitted\_Statics::NewProp\_Text,}
+\DoxyCodeLine{00210\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourCommitted\_Statics::NewProp\_CommitMethod,}
+\DoxyCodeLine{00211\ \};}
+\DoxyCodeLine{00212\ \textcolor{keyword}{static\_assert}(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourCommitted\_Statics::PropPointers)\ <\ 2048);}
+\DoxyCodeLine{00213\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourCommitted\_Statics::FuncParams\ =\ \{\ (UObject*(*)())Z\_Construct\_UClass\_UCalendarUIBase,\ \textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}HandleOnHourCommitted"{}},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourCommitted\_Statics::PropPointers,\ UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourCommitted\_Statics::PropPointers),\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_committed___statics_1_1ce0b7c7f19a60c29d1677a79cbb6e177}{Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourCommitted\_Statics::CalendarUIBase\_eventHandleOnHourCommitted\_Parms}}),\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ (EFunctionFlags)0x00480401,\ 0,\ 0,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourCommitted\_Statics::Function\_MetaDataParams),\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourCommitted\_Statics::Function\_MetaDataParams)\ \};}
+\DoxyCodeLine{00214\ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_committed___statics_1_1ce0b7c7f19a60c29d1677a79cbb6e177}{Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourCommitted\_Statics::CalendarUIBase\_eventHandleOnHourCommitted\_Parms}})\ <\ MAX\_uint16);}
+\DoxyCodeLine{00215\ UFunction*\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourCommitted()}
+\DoxyCodeLine{00216\ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keyword}{static}\ UFunction*\ ReturnFunction\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordflow}{if}\ (!ReturnFunction)}
+\DoxyCodeLine{00219\ \ \ \ \ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ UECodeGen\_Private::ConstructUFunction(\&ReturnFunction,\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourCommitted\_Statics::FuncParams);}
+\DoxyCodeLine{00221\ \ \ \ \ \}}
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordflow}{return}\ ReturnFunction;}
+\DoxyCodeLine{00223\ \}}
+\DoxyCodeLine{00224\ DEFINE\_FUNCTION(UCalendarUIBase::execHandleOnHourCommitted)}
+\DoxyCodeLine{00225\ \{}
+\DoxyCodeLine{00226\ \ \ \ \ P\_GET\_PROPERTY\_REF(FTextProperty,Z\_Param\_Out\_Text);}
+\DoxyCodeLine{00227\ \ \ \ \ P\_GET\_PROPERTY(FByteProperty,Z\_Param\_CommitMethod);}
+\DoxyCodeLine{00228\ \ \ \ \ P\_FINISH;}
+\DoxyCodeLine{00229\ \ \ \ \ P\_NATIVE\_BEGIN;}
+\DoxyCodeLine{00230\ \ \ \ \ P\_THIS-\/>HandleOnHourCommitted(Z\_Param\_Out\_Text,ETextCommit::Type(Z\_Param\_CommitMethod));}
+\DoxyCodeLine{00231\ \ \ \ \ P\_NATIVE\_END;}
+\DoxyCodeLine{00232\ \}}
+\DoxyCodeLine{00233\ \textcolor{comment}{//\ End\ Class\ UCalendarUIBase\ Function\ HandleOnHourCommitted}}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \textcolor{comment}{//\ Begin\ Class\ UCalendarUIBase\ Function\ HandleOnMinuteChanged}}
+\DoxyCodeLine{00236\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_minute_changed___statics}{Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteChanged\_Statics}}}
+\DoxyCodeLine{00237\ \{}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_minute_changed___statics_1_11f8f0590ecbd77ea08e6d3fec1c3fc0a}{CalendarUIBase\_eventHandleOnMinuteChanged\_Parms}}}
+\DoxyCodeLine{00239\ \ \ \ \ \{}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ FText\ Text;}
+\DoxyCodeLine{00241\ \ \ \ \ \};}
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\#if\ WITH\_METADATA}}
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ Function\_MetaDataParams[]\ =\ \{}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00245\ \ \ \ \ \};}
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_Text\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}NativeConst"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00248\ \ \ \ \ \};}
+\DoxyCodeLine{00249\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WITH\_METADATA}}
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FTextPropertyParams\ NewProp\_Text;}
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ PropPointers[];}
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ FuncParams;}
+\DoxyCodeLine{00253\ \};}
+\DoxyCodeLine{00254\ \textcolor{keyword}{const}\ UECodeGen\_Private::FTextPropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteChanged\_Statics::NewProp\_Text\ =\ \{\ \textcolor{stringliteral}{"{}Text"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000008000182,\ UECodeGen\_Private::EPropertyGenFlags::Text,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventHandleOnMinuteChanged\_Parms,\ Text),\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_Text\_MetaData),\ NewProp\_Text\_MetaData)\ \};}
+\DoxyCodeLine{00255\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteChanged\_Statics::PropPointers[]\ =\ \{}
+\DoxyCodeLine{00256\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteChanged\_Statics::NewProp\_Text,}
+\DoxyCodeLine{00257\ \};}
+\DoxyCodeLine{00258\ \textcolor{keyword}{static\_assert}(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteChanged\_Statics::PropPointers)\ <\ 2048);}
+\DoxyCodeLine{00259\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteChanged\_Statics::FuncParams\ =\ \{\ (UObject*(*)())Z\_Construct\_UClass\_UCalendarUIBase,\ \textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}HandleOnMinuteChanged"{}},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteChanged\_Statics::PropPointers,\ UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteChanged\_Statics::PropPointers),\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_minute_changed___statics_1_11f8f0590ecbd77ea08e6d3fec1c3fc0a}{Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteChanged\_Statics::CalendarUIBase\_eventHandleOnMinuteChanged\_Parms}}),\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ (EFunctionFlags)0x00480401,\ 0,\ 0,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteChanged\_Statics::Function\_MetaDataParams),\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteChanged\_Statics::Function\_MetaDataParams)\ \};}
+\DoxyCodeLine{00260\ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_minute_changed___statics_1_11f8f0590ecbd77ea08e6d3fec1c3fc0a}{Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteChanged\_Statics::CalendarUIBase\_eventHandleOnMinuteChanged\_Parms}})\ <\ MAX\_uint16);}
+\DoxyCodeLine{00261\ UFunction*\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteChanged()}
+\DoxyCodeLine{00262\ \{}
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keyword}{static}\ UFunction*\ ReturnFunction\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00264\ \ \ \ \ \textcolor{keywordflow}{if}\ (!ReturnFunction)}
+\DoxyCodeLine{00265\ \ \ \ \ \{}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ UECodeGen\_Private::ConstructUFunction(\&ReturnFunction,\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteChanged\_Statics::FuncParams);}
+\DoxyCodeLine{00267\ \ \ \ \ \}}
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{keywordflow}{return}\ ReturnFunction;}
+\DoxyCodeLine{00269\ \}}
+\DoxyCodeLine{00270\ DEFINE\_FUNCTION(UCalendarUIBase::execHandleOnMinuteChanged)}
+\DoxyCodeLine{00271\ \{}
+\DoxyCodeLine{00272\ \ \ \ \ P\_GET\_PROPERTY\_REF(FTextProperty,Z\_Param\_Out\_Text);}
+\DoxyCodeLine{00273\ \ \ \ \ P\_FINISH;}
+\DoxyCodeLine{00274\ \ \ \ \ P\_NATIVE\_BEGIN;}
+\DoxyCodeLine{00275\ \ \ \ \ P\_THIS-\/>HandleOnMinuteChanged(Z\_Param\_Out\_Text);}
+\DoxyCodeLine{00276\ \ \ \ \ P\_NATIVE\_END;}
+\DoxyCodeLine{00277\ \}}
+\DoxyCodeLine{00278\ \textcolor{comment}{//\ End\ Class\ UCalendarUIBase\ Function\ HandleOnMinuteChanged}}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \textcolor{comment}{//\ Begin\ Class\ UCalendarUIBase\ Function\ HandleOnMinuteCommitted}}
+\DoxyCodeLine{00281\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_minute_committed___statics}{Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteCommitted\_Statics}}}
+\DoxyCodeLine{00282\ \{}
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_minute_committed___statics_17ce296ccaa322448e463ef7895071e13}{CalendarUIBase\_eventHandleOnMinuteCommitted\_Parms}}}
+\DoxyCodeLine{00284\ \ \ \ \ \{}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ FText\ Text;}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ TEnumAsByte<ETextCommit::Type>\ CommitMethod;}
+\DoxyCodeLine{00287\ \ \ \ \ \};}
+\DoxyCodeLine{00288\ \textcolor{preprocessor}{\#if\ WITH\_METADATA}}
+\DoxyCodeLine{00289\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ Function\_MetaDataParams[]\ =\ \{}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00291\ \ \ \ \ \};}
+\DoxyCodeLine{00292\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_Text\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}NativeConst"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00294\ \ \ \ \ \};}
+\DoxyCodeLine{00295\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WITH\_METADATA}}
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FTextPropertyParams\ NewProp\_Text;}
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FBytePropertyParams\ NewProp\_CommitMethod;}
+\DoxyCodeLine{00298\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ PropPointers[];}
+\DoxyCodeLine{00299\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ FuncParams;}
+\DoxyCodeLine{00300\ \};}
+\DoxyCodeLine{00301\ \textcolor{keyword}{const}\ UECodeGen\_Private::FTextPropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteCommitted\_Statics::NewProp\_Text\ =\ \{\ \textcolor{stringliteral}{"{}Text"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000008000182,\ UECodeGen\_Private::EPropertyGenFlags::Text,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventHandleOnMinuteCommitted\_Parms,\ Text),\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_Text\_MetaData),\ NewProp\_Text\_MetaData)\ \};}
+\DoxyCodeLine{00302\ \textcolor{keyword}{const}\ UECodeGen\_Private::FBytePropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteCommitted\_Statics::NewProp\_CommitMethod\ =\ \{\ \textcolor{stringliteral}{"{}CommitMethod"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000000000080,\ UECodeGen\_Private::EPropertyGenFlags::Byte,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventHandleOnMinuteCommitted\_Parms,\ CommitMethod),\ Z\_Construct\_UEnum\_SlateCore\_ETextCommit,\ METADATA\_PARAMS(0,\ \textcolor{keyword}{nullptr})\ \};\ \textcolor{comment}{//\ 1817921380}}
+\DoxyCodeLine{00303\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteCommitted\_Statics::PropPointers[]\ =\ \{}
+\DoxyCodeLine{00304\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteCommitted\_Statics::NewProp\_Text,}
+\DoxyCodeLine{00305\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteCommitted\_Statics::NewProp\_CommitMethod,}
+\DoxyCodeLine{00306\ \};}
+\DoxyCodeLine{00307\ \textcolor{keyword}{static\_assert}(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteCommitted\_Statics::PropPointers)\ <\ 2048);}
+\DoxyCodeLine{00308\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteCommitted\_Statics::FuncParams\ =\ \{\ (UObject*(*)())Z\_Construct\_UClass\_UCalendarUIBase,\ \textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}HandleOnMinuteCommitted"{}},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteCommitted\_Statics::PropPointers,\ UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteCommitted\_Statics::PropPointers),\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_minute_committed___statics_17ce296ccaa322448e463ef7895071e13}{Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteCommitted\_Statics::CalendarUIBase\_eventHandleOnMinuteCommitted\_Parms}}),\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ (EFunctionFlags)0x00480401,\ 0,\ 0,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteCommitted\_Statics::Function\_MetaDataParams),\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteCommitted\_Statics::Function\_MetaDataParams)\ \};}
+\DoxyCodeLine{00309\ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_minute_committed___statics_17ce296ccaa322448e463ef7895071e13}{Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteCommitted\_Statics::CalendarUIBase\_eventHandleOnMinuteCommitted\_Parms}})\ <\ MAX\_uint16);}
+\DoxyCodeLine{00310\ UFunction*\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteCommitted()}
+\DoxyCodeLine{00311\ \{}
+\DoxyCodeLine{00312\ \ \ \ \ \textcolor{keyword}{static}\ UFunction*\ ReturnFunction\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00313\ \ \ \ \ \textcolor{keywordflow}{if}\ (!ReturnFunction)}
+\DoxyCodeLine{00314\ \ \ \ \ \{}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ UECodeGen\_Private::ConstructUFunction(\&ReturnFunction,\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteCommitted\_Statics::FuncParams);}
+\DoxyCodeLine{00316\ \ \ \ \ \}}
+\DoxyCodeLine{00317\ \ \ \ \ \textcolor{keywordflow}{return}\ ReturnFunction;}
+\DoxyCodeLine{00318\ \}}
+\DoxyCodeLine{00319\ DEFINE\_FUNCTION(UCalendarUIBase::execHandleOnMinuteCommitted)}
+\DoxyCodeLine{00320\ \{}
+\DoxyCodeLine{00321\ \ \ \ \ P\_GET\_PROPERTY\_REF(FTextProperty,Z\_Param\_Out\_Text);}
+\DoxyCodeLine{00322\ \ \ \ \ P\_GET\_PROPERTY(FByteProperty,Z\_Param\_CommitMethod);}
+\DoxyCodeLine{00323\ \ \ \ \ P\_FINISH;}
+\DoxyCodeLine{00324\ \ \ \ \ P\_NATIVE\_BEGIN;}
+\DoxyCodeLine{00325\ \ \ \ \ P\_THIS-\/>HandleOnMinuteCommitted(Z\_Param\_Out\_Text,ETextCommit::Type(Z\_Param\_CommitMethod));}
+\DoxyCodeLine{00326\ \ \ \ \ P\_NATIVE\_END;}
+\DoxyCodeLine{00327\ \}}
+\DoxyCodeLine{00328\ \textcolor{comment}{//\ End\ Class\ UCalendarUIBase\ Function\ HandleOnMinuteCommitted}}
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00330\ \textcolor{comment}{//\ Begin\ Class\ UCalendarUIBase\ Function\ HandleOnYearChanged}}
+\DoxyCodeLine{00331\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_year_changed___statics}{Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnYearChanged\_Statics}}}
+\DoxyCodeLine{00332\ \{}
+\DoxyCodeLine{00333\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_year_changed___statics_1_1_c76be8ac4c44aa748afd5c84399dbe43c}{CalendarUIBase\_eventHandleOnYearChanged\_Parms}}}
+\DoxyCodeLine{00334\ \ \ \ \ \{}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ FText\ Text;}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ TEnumAsByte<ETextCommit::Type>\ CommitMethod;}
+\DoxyCodeLine{00337\ \ \ \ \ \};}
+\DoxyCodeLine{00338\ \textcolor{preprocessor}{\#if\ WITH\_METADATA}}
+\DoxyCodeLine{00339\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ Function\_MetaDataParams[]\ =\ \{}
+\DoxyCodeLine{00340\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}//\ Event\ handlers\ for\ year,\ month,\ hour,\ and\ minute\ changes\(\backslash\)n"{}}\ \},}
+\DoxyCodeLine{00342\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00344\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}Event\ handlers\ for\ year,\ month,\ hour,\ and\ minute\ changes"{}}\ \},}
+\DoxyCodeLine{00346\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00347\ \ \ \ \ \};}
+\DoxyCodeLine{00348\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_Text\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}NativeConst"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00350\ \ \ \ \ \};}
+\DoxyCodeLine{00351\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WITH\_METADATA}}
+\DoxyCodeLine{00352\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FTextPropertyParams\ NewProp\_Text;}
+\DoxyCodeLine{00353\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FBytePropertyParams\ NewProp\_CommitMethod;}
+\DoxyCodeLine{00354\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ PropPointers[];}
+\DoxyCodeLine{00355\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ FuncParams;}
+\DoxyCodeLine{00356\ \};}
+\DoxyCodeLine{00357\ \textcolor{keyword}{const}\ UECodeGen\_Private::FTextPropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnYearChanged\_Statics::NewProp\_Text\ =\ \{\ \textcolor{stringliteral}{"{}Text"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000008000182,\ UECodeGen\_Private::EPropertyGenFlags::Text,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventHandleOnYearChanged\_Parms,\ Text),\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_Text\_MetaData),\ NewProp\_Text\_MetaData)\ \};}
+\DoxyCodeLine{00358\ \textcolor{keyword}{const}\ UECodeGen\_Private::FBytePropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnYearChanged\_Statics::NewProp\_CommitMethod\ =\ \{\ \textcolor{stringliteral}{"{}CommitMethod"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000000000080,\ UECodeGen\_Private::EPropertyGenFlags::Byte,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventHandleOnYearChanged\_Parms,\ CommitMethod),\ Z\_Construct\_UEnum\_SlateCore\_ETextCommit,\ METADATA\_PARAMS(0,\ \textcolor{keyword}{nullptr})\ \};\ \textcolor{comment}{//\ 1817921380}}
+\DoxyCodeLine{00359\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnYearChanged\_Statics::PropPointers[]\ =\ \{}
+\DoxyCodeLine{00360\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnYearChanged\_Statics::NewProp\_Text,}
+\DoxyCodeLine{00361\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnYearChanged\_Statics::NewProp\_CommitMethod,}
+\DoxyCodeLine{00362\ \};}
+\DoxyCodeLine{00363\ \textcolor{keyword}{static\_assert}(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnYearChanged\_Statics::PropPointers)\ <\ 2048);}
+\DoxyCodeLine{00364\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnYearChanged\_Statics::FuncParams\ =\ \{\ (UObject*(*)())Z\_Construct\_UClass\_UCalendarUIBase,\ \textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}HandleOnYearChanged"{}},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnYearChanged\_Statics::PropPointers,\ UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnYearChanged\_Statics::PropPointers),\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_year_changed___statics_1_1_c76be8ac4c44aa748afd5c84399dbe43c}{Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnYearChanged\_Statics::CalendarUIBase\_eventHandleOnYearChanged\_Parms}}),\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ (EFunctionFlags)0x00480401,\ 0,\ 0,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnYearChanged\_Statics::Function\_MetaDataParams),\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnYearChanged\_Statics::Function\_MetaDataParams)\ \};}
+\DoxyCodeLine{00365\ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___handle_on_year_changed___statics_1_1_c76be8ac4c44aa748afd5c84399dbe43c}{Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnYearChanged\_Statics::CalendarUIBase\_eventHandleOnYearChanged\_Parms}})\ <\ MAX\_uint16);}
+\DoxyCodeLine{00366\ UFunction*\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnYearChanged()}
+\DoxyCodeLine{00367\ \{}
+\DoxyCodeLine{00368\ \ \ \ \ \textcolor{keyword}{static}\ UFunction*\ ReturnFunction\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00369\ \ \ \ \ \textcolor{keywordflow}{if}\ (!ReturnFunction)}
+\DoxyCodeLine{00370\ \ \ \ \ \{}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ UECodeGen\_Private::ConstructUFunction(\&ReturnFunction,\ Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnYearChanged\_Statics::FuncParams);}
+\DoxyCodeLine{00372\ \ \ \ \ \}}
+\DoxyCodeLine{00373\ \ \ \ \ \textcolor{keywordflow}{return}\ ReturnFunction;}
+\DoxyCodeLine{00374\ \}}
+\DoxyCodeLine{00375\ DEFINE\_FUNCTION(UCalendarUIBase::execHandleOnYearChanged)}
+\DoxyCodeLine{00376\ \{}
+\DoxyCodeLine{00377\ \ \ \ \ P\_GET\_PROPERTY\_REF(FTextProperty,Z\_Param\_Out\_Text);}
+\DoxyCodeLine{00378\ \ \ \ \ P\_GET\_PROPERTY(FByteProperty,Z\_Param\_CommitMethod);}
+\DoxyCodeLine{00379\ \ \ \ \ P\_FINISH;}
+\DoxyCodeLine{00380\ \ \ \ \ P\_NATIVE\_BEGIN;}
+\DoxyCodeLine{00381\ \ \ \ \ P\_THIS-\/>HandleOnYearChanged(Z\_Param\_Out\_Text,ETextCommit::Type(Z\_Param\_CommitMethod));}
+\DoxyCodeLine{00382\ \ \ \ \ P\_NATIVE\_END;}
+\DoxyCodeLine{00383\ \}}
+\DoxyCodeLine{00384\ \textcolor{comment}{//\ End\ Class\ UCalendarUIBase\ Function\ HandleOnYearChanged}}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00386\ \textcolor{comment}{//\ Begin\ Class\ UCalendarUIBase\ Function\ PreCalendarConfig}}
+\DoxyCodeLine{00387\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics}{Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics}}}
+\DoxyCodeLine{00388\ \{}
+\DoxyCodeLine{00389\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311}{CalendarUIBase\_eventPreCalendarConfig\_Parms}}}
+\DoxyCodeLine{00390\ \ \ \ \ \{}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ FLinearColor\ SelectedGridColor;}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ FLinearColor\ EmptyGridColor;}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ FLinearColor\ GridColor;}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ FLinearColor\ CalendarBackground;}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ FLinearColor\ CalendarBackgroundBorder;}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ FLinearColor\ WeekdayHeadingColor;}
+\DoxyCodeLine{00397\ \ \ \ \ \};}
+\DoxyCodeLine{00398\ \textcolor{preprocessor}{\#if\ WITH\_METADATA}}
+\DoxyCodeLine{00399\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ Function\_MetaDataParams[]\ =\ \{}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Category"{}},\ \textcolor{stringliteral}{"{}Calendar\ Functions"{}}\ \},}
+\DoxyCodeLine{00401\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\(\backslash\)n\ \ \ \ \ *\ @brief\ Configures\ the\ calendar's\ style\ settings.\(\backslash\)n\ \ \ \ \ *\(\backslash\)n\ \ \ \ \ *\ This\ function\ should\ be\ called\ before\ creating\ the\ calendar.\(\backslash\)n\ \ \ \ \ *\(\backslash\)n\ \ \ \ \ *\ @param\ SelectedGridColor\ Color\ for\ selected\ calendar\ grid.\(\backslash\)n\ \ \ \ \ *\ @param\ EmptyGridColor\ Color\ for\ empty\ calendar\ grid.\(\backslash\)n\ \ \ \ \ *\ @param\ GridColor\ Default\ grid\ color.\(\backslash\)n\ \ \ \ \ *\ @param\ CalendarBackground\ Background\ color\ for\ the\ calendar.\(\backslash\)n\ \ \ \ \ *\ @param\ CalendarBackgroundBorder\ Border\ color\ for\ the\ calendar\ background.\(\backslash\)n\ \ \ \ \ *\ @param\ WeekdayHeadingColor\ Color\ for\ weekday\ headers.\(\backslash\)n\ \ \ \ \ */"{}}\ \},}
+\DoxyCodeLine{00403\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}CPP\_Default\_CalendarBackground"{}},\ \textcolor{stringliteral}{"{}(R=0.000000,G=0.000000,B=0.000000,A=0.000000)"{}}\ \},}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}CPP\_Default\_CalendarBackgroundBorder"{}},\ \textcolor{stringliteral}{"{}(R=0.450000,G=0.200000,B=0.100000,A=0.700000)"{}}\ \},}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}CPP\_Default\_EmptyGridColor"{}},\ \textcolor{stringliteral}{"{}(R=0.000000,G=0.000000,B=0.000000,A=0.000000)"{}}\ \},}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}CPP\_Default\_GridColor"{}},\ \textcolor{stringliteral}{"{}(R=0.450000,G=0.200000,B=0.100000,A=0.700000)"{}}\ \},}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}CPP\_Default\_SelectedGridColor"{}},\ \textcolor{stringliteral}{"{}(R=1.000000,G=1.000000,B=1.000000,A=0.800000)"{}}\ \},}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}CPP\_Default\_WeekdayHeadingColor"{}},\ \textcolor{stringliteral}{"{}(R=0.000000,G=0.000000,B=0.000000,A=1.000000)"{}}\ \},}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00411\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}@brief\ Configures\ the\ calendar's\ style\ settings.\(\backslash\)n\(\backslash\)nThis\ function\ should\ be\ called\ before\ creating\ the\ calendar.\(\backslash\)n\(\backslash\)n@param\ SelectedGridColor\ Color\ for\ selected\ calendar\ grid.\(\backslash\)n@param\ EmptyGridColor\ Color\ for\ empty\ calendar\ grid.\(\backslash\)n@param\ GridColor\ Default\ grid\ color.\(\backslash\)n@param\ CalendarBackground\ Background\ color\ for\ the\ calendar.\(\backslash\)n@param\ CalendarBackgroundBorder\ Border\ color\ for\ the\ calendar\ background.\(\backslash\)n@param\ WeekdayHeadingColor\ Color\ for\ weekday\ headers."{}}\ \},}
+\DoxyCodeLine{00413\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00414\ \ \ \ \ \};}
+\DoxyCodeLine{00415\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WITH\_METADATA}}
+\DoxyCodeLine{00416\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ NewProp\_SelectedGridColor;}
+\DoxyCodeLine{00417\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ NewProp\_EmptyGridColor;}
+\DoxyCodeLine{00418\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ NewProp\_GridColor;}
+\DoxyCodeLine{00419\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ NewProp\_CalendarBackground;}
+\DoxyCodeLine{00420\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ NewProp\_CalendarBackgroundBorder;}
+\DoxyCodeLine{00421\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ NewProp\_WeekdayHeadingColor;}
+\DoxyCodeLine{00422\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ PropPointers[];}
+\DoxyCodeLine{00423\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ FuncParams;}
+\DoxyCodeLine{00424\ \};}
+\DoxyCodeLine{00425\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::NewProp\_SelectedGridColor\ =\ \{\ \textcolor{stringliteral}{"{}SelectedGridColor"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000000000080,\ UECodeGen\_Private::EPropertyGenFlags::Struct,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventPreCalendarConfig\_Parms,\ SelectedGridColor),\ Z\_Construct\_UScriptStruct\_FLinearColor,\ METADATA\_PARAMS(0,\ \textcolor{keyword}{nullptr})\ \};}
+\DoxyCodeLine{00426\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::NewProp\_EmptyGridColor\ =\ \{\ \textcolor{stringliteral}{"{}EmptyGridColor"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000000000080,\ UECodeGen\_Private::EPropertyGenFlags::Struct,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventPreCalendarConfig\_Parms,\ EmptyGridColor),\ Z\_Construct\_UScriptStruct\_FLinearColor,\ METADATA\_PARAMS(0,\ \textcolor{keyword}{nullptr})\ \};}
+\DoxyCodeLine{00427\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::NewProp\_GridColor\ =\ \{\ \textcolor{stringliteral}{"{}GridColor"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000000000080,\ UECodeGen\_Private::EPropertyGenFlags::Struct,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventPreCalendarConfig\_Parms,\ GridColor),\ Z\_Construct\_UScriptStruct\_FLinearColor,\ METADATA\_PARAMS(0,\ \textcolor{keyword}{nullptr})\ \};}
+\DoxyCodeLine{00428\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::NewProp\_CalendarBackground\ =\ \{\ \textcolor{stringliteral}{"{}CalendarBackground"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000000000080,\ UECodeGen\_Private::EPropertyGenFlags::Struct,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventPreCalendarConfig\_Parms,\ CalendarBackground),\ Z\_Construct\_UScriptStruct\_FLinearColor,\ METADATA\_PARAMS(0,\ \textcolor{keyword}{nullptr})\ \};}
+\DoxyCodeLine{00429\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::NewProp\_CalendarBackgroundBorder\ =\ \{\ \textcolor{stringliteral}{"{}CalendarBackgroundBorder"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000000000080,\ UECodeGen\_Private::EPropertyGenFlags::Struct,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventPreCalendarConfig\_Parms,\ CalendarBackgroundBorder),\ Z\_Construct\_UScriptStruct\_FLinearColor,\ METADATA\_PARAMS(0,\ \textcolor{keyword}{nullptr})\ \};}
+\DoxyCodeLine{00430\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::NewProp\_WeekdayHeadingColor\ =\ \{\ \textcolor{stringliteral}{"{}WeekdayHeadingColor"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000000000080,\ UECodeGen\_Private::EPropertyGenFlags::Struct,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventPreCalendarConfig\_Parms,\ WeekdayHeadingColor),\ Z\_Construct\_UScriptStruct\_FLinearColor,\ METADATA\_PARAMS(0,\ \textcolor{keyword}{nullptr})\ \};}
+\DoxyCodeLine{00431\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::PropPointers[]\ =\ \{}
+\DoxyCodeLine{00432\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::NewProp\_SelectedGridColor,}
+\DoxyCodeLine{00433\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::NewProp\_EmptyGridColor,}
+\DoxyCodeLine{00434\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::NewProp\_GridColor,}
+\DoxyCodeLine{00435\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::NewProp\_CalendarBackground,}
+\DoxyCodeLine{00436\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::NewProp\_CalendarBackgroundBorder,}
+\DoxyCodeLine{00437\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::NewProp\_WeekdayHeadingColor,}
+\DoxyCodeLine{00438\ \};}
+\DoxyCodeLine{00439\ \textcolor{keyword}{static\_assert}(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::PropPointers)\ <\ 2048);}
+\DoxyCodeLine{00440\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::FuncParams\ =\ \{\ (UObject*(*)())Z\_Construct\_UClass\_UCalendarUIBase,\ \textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}PreCalendarConfig"{}},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::PropPointers,\ UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::PropPointers),\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311}{Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::CalendarUIBase\_eventPreCalendarConfig\_Parms}}),\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ (EFunctionFlags)0x04880401,\ 0,\ 0,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::Function\_MetaDataParams),\ Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::Function\_MetaDataParams)\ \};}
+\DoxyCodeLine{00441\ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311}{Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::CalendarUIBase\_eventPreCalendarConfig\_Parms}})\ <\ MAX\_uint16);}
+\DoxyCodeLine{00442\ UFunction*\ Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig()}
+\DoxyCodeLine{00443\ \{}
+\DoxyCodeLine{00444\ \ \ \ \ \textcolor{keyword}{static}\ UFunction*\ ReturnFunction\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00445\ \ \ \ \ \textcolor{keywordflow}{if}\ (!ReturnFunction)}
+\DoxyCodeLine{00446\ \ \ \ \ \{}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ UECodeGen\_Private::ConstructUFunction(\&ReturnFunction,\ Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig\_Statics::FuncParams);}
+\DoxyCodeLine{00448\ \ \ \ \ \}}
+\DoxyCodeLine{00449\ \ \ \ \ \textcolor{keywordflow}{return}\ ReturnFunction;}
+\DoxyCodeLine{00450\ \}}
+\DoxyCodeLine{00451\ DEFINE\_FUNCTION(UCalendarUIBase::execPreCalendarConfig)}
+\DoxyCodeLine{00452\ \{}
+\DoxyCodeLine{00453\ \ \ \ \ P\_GET\_STRUCT(FLinearColor,Z\_Param\_SelectedGridColor);}
+\DoxyCodeLine{00454\ \ \ \ \ P\_GET\_STRUCT(FLinearColor,Z\_Param\_EmptyGridColor);}
+\DoxyCodeLine{00455\ \ \ \ \ P\_GET\_STRUCT(FLinearColor,Z\_Param\_GridColor);}
+\DoxyCodeLine{00456\ \ \ \ \ P\_GET\_STRUCT(FLinearColor,Z\_Param\_CalendarBackground);}
+\DoxyCodeLine{00457\ \ \ \ \ P\_GET\_STRUCT(FLinearColor,Z\_Param\_CalendarBackgroundBorder);}
+\DoxyCodeLine{00458\ \ \ \ \ P\_GET\_STRUCT(FLinearColor,Z\_Param\_WeekdayHeadingColor);}
+\DoxyCodeLine{00459\ \ \ \ \ P\_FINISH;}
+\DoxyCodeLine{00460\ \ \ \ \ P\_NATIVE\_BEGIN;}
+\DoxyCodeLine{00461\ \ \ \ \ P\_THIS-\/>PreCalendarConfig(Z\_Param\_SelectedGridColor,Z\_Param\_EmptyGridColor,Z\_Param\_GridColor,Z\_Param\_CalendarBackground,Z\_Param\_CalendarBackgroundBorder,Z\_Param\_WeekdayHeadingColor);}
+\DoxyCodeLine{00462\ \ \ \ \ P\_NATIVE\_END;}
+\DoxyCodeLine{00463\ \}}
+\DoxyCodeLine{00464\ \textcolor{comment}{//\ End\ Class\ UCalendarUIBase\ Function\ PreCalendarConfig}}
+\DoxyCodeLine{00465\ }
+\DoxyCodeLine{00466\ \textcolor{comment}{//\ Begin\ Class\ UCalendarUIBase\ Function\ SetCornerRadii}}
+\DoxyCodeLine{00467\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___set_corner_radii___statics}{Z\_Construct\_UFunction\_UCalendarUIBase\_SetCornerRadii\_Statics}}}
+\DoxyCodeLine{00468\ \{}
+\DoxyCodeLine{00469\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___set_corner_radii___statics_1_1_calenda4ac6e54514f53dfa87ab07cc7ff136a4}{CalendarUIBase\_eventSetCornerRadii\_Parms}}}
+\DoxyCodeLine{00470\ \ \ \ \ \{}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ FVector4\ CalendarBorder;}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ FVector4\ WeekdayHeaderRadii;}
+\DoxyCodeLine{00473\ \ \ \ \ \};}
+\DoxyCodeLine{00474\ \textcolor{preprocessor}{\#if\ WITH\_METADATA}}
+\DoxyCodeLine{00475\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ Function\_MetaDataParams[]\ =\ \{}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Category"{}},\ \textcolor{stringliteral}{"{}Calendar\ Functions"{}}\ \},}
+\DoxyCodeLine{00477\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\(\backslash\)n\ \ \ \ \ *\ @brief\ Sets\ corner\ radii\ for\ calendar\ and\ weekday\ headers.\(\backslash\)n\ \ \ \ \ *\(\backslash\)n\ \ \ \ \ *\ This\ function\ can\ be\ called\ before\ or\ after\ creating\ the\ calendar.\(\backslash\)n\ \ \ \ \ *\(\backslash\)n\ \ \ \ \ *\ @param\ CalendarBorder\ Corner\ radii\ for\ the\ calendar\ border.\(\backslash\)n\ \ \ \ \ *\ @param\ WeekdayHeaderRadii\ Corner\ radii\ for\ the\ weekday\ header.\(\backslash\)n\ \ \ \ \ */"{}}\ \},}
+\DoxyCodeLine{00479\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00481\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}@brief\ Sets\ corner\ radii\ for\ calendar\ and\ weekday\ headers.\(\backslash\)n\(\backslash\)nThis\ function\ can\ be\ called\ before\ or\ after\ creating\ the\ calendar.\(\backslash\)n\(\backslash\)n@param\ CalendarBorder\ Corner\ radii\ for\ the\ calendar\ border.\(\backslash\)n@param\ WeekdayHeaderRadii\ Corner\ radii\ for\ the\ weekday\ header."{}}\ \},}
+\DoxyCodeLine{00483\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00484\ \ \ \ \ \};}
+\DoxyCodeLine{00485\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_CalendarBorder\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}NativeConst"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00487\ \ \ \ \ \};}
+\DoxyCodeLine{00488\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_WeekdayHeaderRadii\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}NativeConst"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00490\ \ \ \ \ \};}
+\DoxyCodeLine{00491\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WITH\_METADATA}}
+\DoxyCodeLine{00492\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ NewProp\_CalendarBorder;}
+\DoxyCodeLine{00493\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ NewProp\_WeekdayHeaderRadii;}
+\DoxyCodeLine{00494\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ PropPointers[];}
+\DoxyCodeLine{00495\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ FuncParams;}
+\DoxyCodeLine{00496\ \};}
+\DoxyCodeLine{00497\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetCornerRadii\_Statics::NewProp\_CalendarBorder\ =\ \{\ \textcolor{stringliteral}{"{}CalendarBorder"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000008000182,\ UECodeGen\_Private::EPropertyGenFlags::Struct,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventSetCornerRadii\_Parms,\ CalendarBorder),\ Z\_Construct\_UScriptStruct\_FVector4,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_CalendarBorder\_MetaData),\ NewProp\_CalendarBorder\_MetaData)\ \};}
+\DoxyCodeLine{00498\ \textcolor{keyword}{const}\ UECodeGen\_Private::FStructPropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetCornerRadii\_Statics::NewProp\_WeekdayHeaderRadii\ =\ \{\ \textcolor{stringliteral}{"{}WeekdayHeaderRadii"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000008000182,\ UECodeGen\_Private::EPropertyGenFlags::Struct,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventSetCornerRadii\_Parms,\ WeekdayHeaderRadii),\ Z\_Construct\_UScriptStruct\_FVector4,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_WeekdayHeaderRadii\_MetaData),\ NewProp\_WeekdayHeaderRadii\_MetaData)\ \};}
+\DoxyCodeLine{00499\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetCornerRadii\_Statics::PropPointers[]\ =\ \{}
+\DoxyCodeLine{00500\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_SetCornerRadii\_Statics::NewProp\_CalendarBorder,}
+\DoxyCodeLine{00501\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_SetCornerRadii\_Statics::NewProp\_WeekdayHeaderRadii,}
+\DoxyCodeLine{00502\ \};}
+\DoxyCodeLine{00503\ \textcolor{keyword}{static\_assert}(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_SetCornerRadii\_Statics::PropPointers)\ <\ 2048);}
+\DoxyCodeLine{00504\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetCornerRadii\_Statics::FuncParams\ =\ \{\ (UObject*(*)())Z\_Construct\_UClass\_UCalendarUIBase,\ \textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}SetCornerRadii"{}},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetCornerRadii\_Statics::PropPointers,\ UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_SetCornerRadii\_Statics::PropPointers),\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___set_corner_radii___statics_1_1_calenda4ac6e54514f53dfa87ab07cc7ff136a4}{Z\_Construct\_UFunction\_UCalendarUIBase\_SetCornerRadii\_Statics::CalendarUIBase\_eventSetCornerRadii\_Parms}}),\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ (EFunctionFlags)0x04C80401,\ 0,\ 0,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_SetCornerRadii\_Statics::Function\_MetaDataParams),\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetCornerRadii\_Statics::Function\_MetaDataParams)\ \};}
+\DoxyCodeLine{00505\ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___set_corner_radii___statics_1_1_calenda4ac6e54514f53dfa87ab07cc7ff136a4}{Z\_Construct\_UFunction\_UCalendarUIBase\_SetCornerRadii\_Statics::CalendarUIBase\_eventSetCornerRadii\_Parms}})\ <\ MAX\_uint16);}
+\DoxyCodeLine{00506\ UFunction*\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetCornerRadii()}
+\DoxyCodeLine{00507\ \{}
+\DoxyCodeLine{00508\ \ \ \ \ \textcolor{keyword}{static}\ UFunction*\ ReturnFunction\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00509\ \ \ \ \ \textcolor{keywordflow}{if}\ (!ReturnFunction)}
+\DoxyCodeLine{00510\ \ \ \ \ \{}
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \ \ UECodeGen\_Private::ConstructUFunction(\&ReturnFunction,\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetCornerRadii\_Statics::FuncParams);}
+\DoxyCodeLine{00512\ \ \ \ \ \}}
+\DoxyCodeLine{00513\ \ \ \ \ \textcolor{keywordflow}{return}\ ReturnFunction;}
+\DoxyCodeLine{00514\ \}}
+\DoxyCodeLine{00515\ DEFINE\_FUNCTION(UCalendarUIBase::execSetCornerRadii)}
+\DoxyCodeLine{00516\ \{}
+\DoxyCodeLine{00517\ \ \ \ \ P\_GET\_STRUCT\_REF(FVector4,Z\_Param\_Out\_CalendarBorder);}
+\DoxyCodeLine{00518\ \ \ \ \ P\_GET\_STRUCT\_REF(FVector4,Z\_Param\_Out\_WeekdayHeaderRadii);}
+\DoxyCodeLine{00519\ \ \ \ \ P\_FINISH;}
+\DoxyCodeLine{00520\ \ \ \ \ P\_NATIVE\_BEGIN;}
+\DoxyCodeLine{00521\ \ \ \ \ P\_THIS-\/>SetCornerRadii(Z\_Param\_Out\_CalendarBorder,Z\_Param\_Out\_WeekdayHeaderRadii);}
+\DoxyCodeLine{00522\ \ \ \ \ P\_NATIVE\_END;}
+\DoxyCodeLine{00523\ \}}
+\DoxyCodeLine{00524\ \textcolor{comment}{//\ End\ Class\ UCalendarUIBase\ Function\ SetCornerRadii}}
+\DoxyCodeLine{00525\ }
+\DoxyCodeLine{00526\ \textcolor{comment}{//\ Begin\ Class\ UCalendarUIBase\ Function\ SetMonth}}
+\DoxyCodeLine{00527\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___set_month___statics}{Z\_Construct\_UFunction\_UCalendarUIBase\_SetMonth\_Statics}}}
+\DoxyCodeLine{00528\ \{}
+\DoxyCodeLine{00529\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___set_month___statics_1_1_calendar_u_i_base__event_set_month___parms}{CalendarUIBase\_eventSetMonth\_Parms}}}
+\DoxyCodeLine{00530\ \ \ \ \ \{}
+\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ int32\ m;}
+\DoxyCodeLine{00532\ \ \ \ \ \};}
+\DoxyCodeLine{00533\ \textcolor{preprocessor}{\#if\ WITH\_METADATA}}
+\DoxyCodeLine{00534\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ Function\_MetaDataParams[]\ =\ \{}
+\DoxyCodeLine{00535\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Category"{}},\ \textcolor{stringliteral}{"{}Calendar\ Functions"{}}\ \},}
+\DoxyCodeLine{00536\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\(\backslash\)n\ \ \ \ \ *\ @brief\ Sets\ the\ calendar\ month.\(\backslash\)n\ \ \ \ \ *\(\backslash\)n\ \ \ \ \ *\ This\ function\ should\ be\ called\ before\ creating\ the\ calendar.\(\backslash\)n\ \ \ \ \ *\(\backslash\)n\ \ \ \ \ *\ @param\ m\ The\ month\ to\ set\ (1-\/12).\(\backslash\)n\ \ \ \ \ */"{}}\ \},}
+\DoxyCodeLine{00538\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00539\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00540\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}@brief\ Sets\ the\ calendar\ month.\(\backslash\)n\(\backslash\)nThis\ function\ should\ be\ called\ before\ creating\ the\ calendar.\(\backslash\)n\(\backslash\)n@param\ m\ The\ month\ to\ set\ (1-\/12)."{}}\ \},}
+\DoxyCodeLine{00542\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00543\ \ \ \ \ \};}
+\DoxyCodeLine{00544\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WITH\_METADATA}}
+\DoxyCodeLine{00545\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FIntPropertyParams\ NewProp\_m;}
+\DoxyCodeLine{00546\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ PropPointers[];}
+\DoxyCodeLine{00547\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ FuncParams;}
+\DoxyCodeLine{00548\ \};}
+\DoxyCodeLine{00549\ \textcolor{keyword}{const}\ UECodeGen\_Private::FIntPropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetMonth\_Statics::NewProp\_m\ =\ \{\ \textcolor{stringliteral}{"{}m"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000000000080,\ UECodeGen\_Private::EPropertyGenFlags::Int,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventSetMonth\_Parms,\ m),\ METADATA\_PARAMS(0,\ \textcolor{keyword}{nullptr})\ \};}
+\DoxyCodeLine{00550\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetMonth\_Statics::PropPointers[]\ =\ \{}
+\DoxyCodeLine{00551\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_SetMonth\_Statics::NewProp\_m,}
+\DoxyCodeLine{00552\ \};}
+\DoxyCodeLine{00553\ \textcolor{keyword}{static\_assert}(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_SetMonth\_Statics::PropPointers)\ <\ 2048);}
+\DoxyCodeLine{00554\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetMonth\_Statics::FuncParams\ =\ \{\ (UObject*(*)())Z\_Construct\_UClass\_UCalendarUIBase,\ \textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}SetMonth"{}},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetMonth\_Statics::PropPointers,\ UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_SetMonth\_Statics::PropPointers),\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___set_month___statics_1_1_calendar_u_i_base__event_set_month___parms}{Z\_Construct\_UFunction\_UCalendarUIBase\_SetMonth\_Statics::CalendarUIBase\_eventSetMonth\_Parms}}),\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ (EFunctionFlags)0x04080401,\ 0,\ 0,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_SetMonth\_Statics::Function\_MetaDataParams),\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetMonth\_Statics::Function\_MetaDataParams)\ \};}
+\DoxyCodeLine{00555\ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___set_month___statics_1_1_calendar_u_i_base__event_set_month___parms}{Z\_Construct\_UFunction\_UCalendarUIBase\_SetMonth\_Statics::CalendarUIBase\_eventSetMonth\_Parms}})\ <\ MAX\_uint16);}
+\DoxyCodeLine{00556\ UFunction*\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetMonth()}
+\DoxyCodeLine{00557\ \{}
+\DoxyCodeLine{00558\ \ \ \ \ \textcolor{keyword}{static}\ UFunction*\ ReturnFunction\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00559\ \ \ \ \ \textcolor{keywordflow}{if}\ (!ReturnFunction)}
+\DoxyCodeLine{00560\ \ \ \ \ \{}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ UECodeGen\_Private::ConstructUFunction(\&ReturnFunction,\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetMonth\_Statics::FuncParams);}
+\DoxyCodeLine{00562\ \ \ \ \ \}}
+\DoxyCodeLine{00563\ \ \ \ \ \textcolor{keywordflow}{return}\ ReturnFunction;}
+\DoxyCodeLine{00564\ \}}
+\DoxyCodeLine{00565\ DEFINE\_FUNCTION(UCalendarUIBase::execSetMonth)}
+\DoxyCodeLine{00566\ \{}
+\DoxyCodeLine{00567\ \ \ \ \ P\_GET\_PROPERTY(FIntProperty,Z\_Param\_m);}
+\DoxyCodeLine{00568\ \ \ \ \ P\_FINISH;}
+\DoxyCodeLine{00569\ \ \ \ \ P\_NATIVE\_BEGIN;}
+\DoxyCodeLine{00570\ \ \ \ \ P\_THIS-\/>SetMonth(Z\_Param\_m);}
+\DoxyCodeLine{00571\ \ \ \ \ P\_NATIVE\_END;}
+\DoxyCodeLine{00572\ \}}
+\DoxyCodeLine{00573\ \textcolor{comment}{//\ End\ Class\ UCalendarUIBase\ Function\ SetMonth}}
+\DoxyCodeLine{00574\ }
+\DoxyCodeLine{00575\ \textcolor{comment}{//\ Begin\ Class\ UCalendarUIBase\ Function\ SetYear}}
+\DoxyCodeLine{00576\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___set_year___statics}{Z\_Construct\_UFunction\_UCalendarUIBase\_SetYear\_Statics}}}
+\DoxyCodeLine{00577\ \{}
+\DoxyCodeLine{00578\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___set_year___statics_1_1_calendar_u_i_base__event_set_year___parms}{CalendarUIBase\_eventSetYear\_Parms}}}
+\DoxyCodeLine{00579\ \ \ \ \ \{}
+\DoxyCodeLine{00580\ \ \ \ \ \ \ \ \ int32\ y;}
+\DoxyCodeLine{00581\ \ \ \ \ \};}
+\DoxyCodeLine{00582\ \textcolor{preprocessor}{\#if\ WITH\_METADATA}}
+\DoxyCodeLine{00583\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ Function\_MetaDataParams[]\ =\ \{}
+\DoxyCodeLine{00584\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Category"{}},\ \textcolor{stringliteral}{"{}Calendar\ Functions"{}}\ \},}
+\DoxyCodeLine{00585\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00586\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\(\backslash\)n\ \ \ \ \ *\ @brief\ Sets\ the\ calendar\ year.\(\backslash\)n\ \ \ \ \ *\(\backslash\)n\ \ \ \ \ *\ This\ function\ should\ be\ called\ before\ creating\ the\ calendar.\(\backslash\)n\ \ \ \ \ *\(\backslash\)n\ \ \ \ \ *\ @param\ y\ The\ year\ to\ set.\(\backslash\)n\ \ \ \ \ */"{}}\ \},}
+\DoxyCodeLine{00587\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00588\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00589\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00590\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}@brief\ Sets\ the\ calendar\ year.\(\backslash\)n\(\backslash\)nThis\ function\ should\ be\ called\ before\ creating\ the\ calendar.\(\backslash\)n\(\backslash\)n@param\ y\ The\ year\ to\ set."{}}\ \},}
+\DoxyCodeLine{00591\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00592\ \ \ \ \ \};}
+\DoxyCodeLine{00593\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WITH\_METADATA}}
+\DoxyCodeLine{00594\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FIntPropertyParams\ NewProp\_y;}
+\DoxyCodeLine{00595\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ PropPointers[];}
+\DoxyCodeLine{00596\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ FuncParams;}
+\DoxyCodeLine{00597\ \};}
+\DoxyCodeLine{00598\ \textcolor{keyword}{const}\ UECodeGen\_Private::FIntPropertyParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetYear\_Statics::NewProp\_y\ =\ \{\ \textcolor{stringliteral}{"{}y"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0010000000000080,\ UECodeGen\_Private::EPropertyGenFlags::Int,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(CalendarUIBase\_eventSetYear\_Parms,\ y),\ METADATA\_PARAMS(0,\ \textcolor{keyword}{nullptr})\ \};}
+\DoxyCodeLine{00599\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetYear\_Statics::PropPointers[]\ =\ \{}
+\DoxyCodeLine{00600\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UFunction\_UCalendarUIBase\_SetYear\_Statics::NewProp\_y,}
+\DoxyCodeLine{00601\ \};}
+\DoxyCodeLine{00602\ \textcolor{keyword}{static\_assert}(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_SetYear\_Statics::PropPointers)\ <\ 2048);}
+\DoxyCodeLine{00603\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetYear\_Statics::FuncParams\ =\ \{\ (UObject*(*)())Z\_Construct\_UClass\_UCalendarUIBase,\ \textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}SetYear"{}},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetYear\_Statics::PropPointers,\ UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_SetYear\_Statics::PropPointers),\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___set_year___statics_1_1_calendar_u_i_base__event_set_year___parms}{Z\_Construct\_UFunction\_UCalendarUIBase\_SetYear\_Statics::CalendarUIBase\_eventSetYear\_Parms}}),\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ (EFunctionFlags)0x04080401,\ 0,\ 0,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_SetYear\_Statics::Function\_MetaDataParams),\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetYear\_Statics::Function\_MetaDataParams)\ \};}
+\DoxyCodeLine{00604\ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___set_year___statics_1_1_calendar_u_i_base__event_set_year___parms}{Z\_Construct\_UFunction\_UCalendarUIBase\_SetYear\_Statics::CalendarUIBase\_eventSetYear\_Parms}})\ <\ MAX\_uint16);}
+\DoxyCodeLine{00605\ UFunction*\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetYear()}
+\DoxyCodeLine{00606\ \{}
+\DoxyCodeLine{00607\ \ \ \ \ \textcolor{keyword}{static}\ UFunction*\ ReturnFunction\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00608\ \ \ \ \ \textcolor{keywordflow}{if}\ (!ReturnFunction)}
+\DoxyCodeLine{00609\ \ \ \ \ \{}
+\DoxyCodeLine{00610\ \ \ \ \ \ \ \ \ UECodeGen\_Private::ConstructUFunction(\&ReturnFunction,\ Z\_Construct\_UFunction\_UCalendarUIBase\_SetYear\_Statics::FuncParams);}
+\DoxyCodeLine{00611\ \ \ \ \ \}}
+\DoxyCodeLine{00612\ \ \ \ \ \textcolor{keywordflow}{return}\ ReturnFunction;}
+\DoxyCodeLine{00613\ \}}
+\DoxyCodeLine{00614\ DEFINE\_FUNCTION(UCalendarUIBase::execSetYear)}
+\DoxyCodeLine{00615\ \{}
+\DoxyCodeLine{00616\ \ \ \ \ P\_GET\_PROPERTY(FIntProperty,Z\_Param\_y);}
+\DoxyCodeLine{00617\ \ \ \ \ P\_FINISH;}
+\DoxyCodeLine{00618\ \ \ \ \ P\_NATIVE\_BEGIN;}
+\DoxyCodeLine{00619\ \ \ \ \ P\_THIS-\/>SetYear(Z\_Param\_y);}
+\DoxyCodeLine{00620\ \ \ \ \ P\_NATIVE\_END;}
+\DoxyCodeLine{00621\ \}}
+\DoxyCodeLine{00622\ \textcolor{comment}{//\ End\ Class\ UCalendarUIBase\ Function\ SetYear}}
+\DoxyCodeLine{00623\ }
+\DoxyCodeLine{00624\ \textcolor{comment}{//\ Begin\ Class\ UCalendarUIBase\ Function\ ShowNextMonth}}
+\DoxyCodeLine{00625\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___show_next_month___statics}{Z\_Construct\_UFunction\_UCalendarUIBase\_ShowNextMonth\_Statics}}}
+\DoxyCodeLine{00626\ \{}
+\DoxyCodeLine{00627\ \textcolor{preprocessor}{\#if\ WITH\_METADATA}}
+\DoxyCodeLine{00628\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ Function\_MetaDataParams[]\ =\ \{}
+\DoxyCodeLine{00629\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00630\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\(\backslash\)n\ \ \ \ \ *\ @brief\ Shows\ the\ next\ month\ in\ the\ calendar.\(\backslash\)n\ \ \ \ \ */"{}}\ \},}
+\DoxyCodeLine{00631\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00632\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00633\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00634\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}@brief\ Shows\ the\ next\ month\ in\ the\ calendar."{}}\ \},}
+\DoxyCodeLine{00635\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00636\ \ \ \ \ \};}
+\DoxyCodeLine{00637\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WITH\_METADATA}}
+\DoxyCodeLine{00638\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ FuncParams;}
+\DoxyCodeLine{00639\ \};}
+\DoxyCodeLine{00640\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_ShowNextMonth\_Statics::FuncParams\ =\ \{\ (UObject*(*)())Z\_Construct\_UClass\_UCalendarUIBase,\ \textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}ShowNextMonth"{}},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 0,\ 0,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ (EFunctionFlags)0x00080401,\ 0,\ 0,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_ShowNextMonth\_Statics::Function\_MetaDataParams),\ Z\_Construct\_UFunction\_UCalendarUIBase\_ShowNextMonth\_Statics::Function\_MetaDataParams)\ \};}
+\DoxyCodeLine{00641\ UFunction*\ Z\_Construct\_UFunction\_UCalendarUIBase\_ShowNextMonth()}
+\DoxyCodeLine{00642\ \{}
+\DoxyCodeLine{00643\ \ \ \ \ \textcolor{keyword}{static}\ UFunction*\ ReturnFunction\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00644\ \ \ \ \ \textcolor{keywordflow}{if}\ (!ReturnFunction)}
+\DoxyCodeLine{00645\ \ \ \ \ \{}
+\DoxyCodeLine{00646\ \ \ \ \ \ \ \ \ UECodeGen\_Private::ConstructUFunction(\&ReturnFunction,\ Z\_Construct\_UFunction\_UCalendarUIBase\_ShowNextMonth\_Statics::FuncParams);}
+\DoxyCodeLine{00647\ \ \ \ \ \}}
+\DoxyCodeLine{00648\ \ \ \ \ \textcolor{keywordflow}{return}\ ReturnFunction;}
+\DoxyCodeLine{00649\ \}}
+\DoxyCodeLine{00650\ DEFINE\_FUNCTION(UCalendarUIBase::execShowNextMonth)}
+\DoxyCodeLine{00651\ \{}
+\DoxyCodeLine{00652\ \ \ \ \ P\_FINISH;}
+\DoxyCodeLine{00653\ \ \ \ \ P\_NATIVE\_BEGIN;}
+\DoxyCodeLine{00654\ \ \ \ \ P\_THIS-\/>ShowNextMonth();}
+\DoxyCodeLine{00655\ \ \ \ \ P\_NATIVE\_END;}
+\DoxyCodeLine{00656\ \}}
+\DoxyCodeLine{00657\ \textcolor{comment}{//\ End\ Class\ UCalendarUIBase\ Function\ ShowNextMonth}}
+\DoxyCodeLine{00658\ }
+\DoxyCodeLine{00659\ \textcolor{comment}{//\ Begin\ Class\ UCalendarUIBase\ Function\ ShowPrevMonth}}
+\DoxyCodeLine{00660\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_function___u_calendar_u_i_base___show_prev_month___statics}{Z\_Construct\_UFunction\_UCalendarUIBase\_ShowPrevMonth\_Statics}}}
+\DoxyCodeLine{00661\ \{}
+\DoxyCodeLine{00662\ \textcolor{preprocessor}{\#if\ WITH\_METADATA}}
+\DoxyCodeLine{00663\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ Function\_MetaDataParams[]\ =\ \{}
+\DoxyCodeLine{00664\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00665\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\(\backslash\)n\ \ \ \ \ *\ @brief\ Shows\ the\ previous\ month\ in\ the\ calendar.\(\backslash\)n\ \ \ \ \ */"{}}\ \},}
+\DoxyCodeLine{00666\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00667\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00668\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00669\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}@brief\ Shows\ the\ previous\ month\ in\ the\ calendar."{}}\ \},}
+\DoxyCodeLine{00670\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00671\ \ \ \ \ \};}
+\DoxyCodeLine{00672\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WITH\_METADATA}}
+\DoxyCodeLine{00673\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ FuncParams;}
+\DoxyCodeLine{00674\ \};}
+\DoxyCodeLine{00675\ \textcolor{keyword}{const}\ UECodeGen\_Private::FFunctionParams\ Z\_Construct\_UFunction\_UCalendarUIBase\_ShowPrevMonth\_Statics::FuncParams\ =\ \{\ (UObject*(*)())Z\_Construct\_UClass\_UCalendarUIBase,\ \textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}ShowPrevMonth"{}},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 0,\ 0,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ (EFunctionFlags)0x00080401,\ 0,\ 0,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(Z\_Construct\_UFunction\_UCalendarUIBase\_ShowPrevMonth\_Statics::Function\_MetaDataParams),\ Z\_Construct\_UFunction\_UCalendarUIBase\_ShowPrevMonth\_Statics::Function\_MetaDataParams)\ \};}
+\DoxyCodeLine{00676\ UFunction*\ Z\_Construct\_UFunction\_UCalendarUIBase\_ShowPrevMonth()}
+\DoxyCodeLine{00677\ \{}
+\DoxyCodeLine{00678\ \ \ \ \ \textcolor{keyword}{static}\ UFunction*\ ReturnFunction\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00679\ \ \ \ \ \textcolor{keywordflow}{if}\ (!ReturnFunction)}
+\DoxyCodeLine{00680\ \ \ \ \ \{}
+\DoxyCodeLine{00681\ \ \ \ \ \ \ \ \ UECodeGen\_Private::ConstructUFunction(\&ReturnFunction,\ Z\_Construct\_UFunction\_UCalendarUIBase\_ShowPrevMonth\_Statics::FuncParams);}
+\DoxyCodeLine{00682\ \ \ \ \ \}}
+\DoxyCodeLine{00683\ \ \ \ \ \textcolor{keywordflow}{return}\ ReturnFunction;}
+\DoxyCodeLine{00684\ \}}
+\DoxyCodeLine{00685\ DEFINE\_FUNCTION(UCalendarUIBase::execShowPrevMonth)}
+\DoxyCodeLine{00686\ \{}
+\DoxyCodeLine{00687\ \ \ \ \ P\_FINISH;}
+\DoxyCodeLine{00688\ \ \ \ \ P\_NATIVE\_BEGIN;}
+\DoxyCodeLine{00689\ \ \ \ \ P\_THIS-\/>ShowPrevMonth();}
+\DoxyCodeLine{00690\ \ \ \ \ P\_NATIVE\_END;}
+\DoxyCodeLine{00691\ \}}
+\DoxyCodeLine{00692\ \textcolor{comment}{//\ End\ Class\ UCalendarUIBase\ Function\ ShowPrevMonth}}
+\DoxyCodeLine{00693\ }
+\DoxyCodeLine{00694\ \textcolor{comment}{//\ Begin\ Class\ UCalendarUIBase}}
+\DoxyCodeLine{00695\ \textcolor{keywordtype}{void}\ UCalendarUIBase::StaticRegisterNativesUCalendarUIBase()}
+\DoxyCodeLine{00696\ \{}
+\DoxyCodeLine{00697\ \ \ \ \ UClass*\ Class\ =\ UCalendarUIBase::StaticClass();}
+\DoxyCodeLine{00698\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ FNameNativePtrPair\ Funcs[]\ =\ \{}
+\DoxyCodeLine{00699\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}CreateCalendar"{}},\ \&UCalendarUIBase::execCreateCalendar\ \},}
+\DoxyCodeLine{00700\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}GetTime"{}},\ \&UCalendarUIBase::execGetTime\ \},}
+\DoxyCodeLine{00701\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}HandleMonthToggleButtonClick"{}},\ \&UCalendarUIBase::execHandleMonthToggleButtonClick\ \},}
+\DoxyCodeLine{00702\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}HandleOnHourChanged"{}},\ \&UCalendarUIBase::execHandleOnHourChanged\ \},}
+\DoxyCodeLine{00703\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}HandleOnHourCommitted"{}},\ \&UCalendarUIBase::execHandleOnHourCommitted\ \},}
+\DoxyCodeLine{00704\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}HandleOnMinuteChanged"{}},\ \&UCalendarUIBase::execHandleOnMinuteChanged\ \},}
+\DoxyCodeLine{00705\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}HandleOnMinuteCommitted"{}},\ \&UCalendarUIBase::execHandleOnMinuteCommitted\ \},}
+\DoxyCodeLine{00706\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}HandleOnYearChanged"{}},\ \&UCalendarUIBase::execHandleOnYearChanged\ \},}
+\DoxyCodeLine{00707\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}PreCalendarConfig"{}},\ \&UCalendarUIBase::execPreCalendarConfig\ \},}
+\DoxyCodeLine{00708\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}SetCornerRadii"{}},\ \&UCalendarUIBase::execSetCornerRadii\ \},}
+\DoxyCodeLine{00709\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}SetMonth"{}},\ \&UCalendarUIBase::execSetMonth\ \},}
+\DoxyCodeLine{00710\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}SetYear"{}},\ \&UCalendarUIBase::execSetYear\ \},}
+\DoxyCodeLine{00711\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ShowNextMonth"{}},\ \&UCalendarUIBase::execShowNextMonth\ \},}
+\DoxyCodeLine{00712\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ShowPrevMonth"{}},\ \&UCalendarUIBase::execShowPrevMonth\ \},}
+\DoxyCodeLine{00713\ \ \ \ \ \};}
+\DoxyCodeLine{00714\ \ \ \ \ FNativeFunctionRegistrar::RegisterFunctions(Class,\ Funcs,\ UE\_ARRAY\_COUNT(Funcs));}
+\DoxyCodeLine{00715\ \}}
+\DoxyCodeLine{00716\ IMPLEMENT\_CLASS\_NO\_AUTO\_REGISTRATION(\mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}});}
+\DoxyCodeLine{00717\ UClass*\ Z\_Construct\_UClass\_UCalendarUIBase\_NoRegister()}
+\DoxyCodeLine{00718\ \{}
+\DoxyCodeLine{00719\ \ \ \ \ \textcolor{keywordflow}{return}\ UCalendarUIBase::StaticClass();}
+\DoxyCodeLine{00720\ \}}
+\DoxyCodeLine{00721\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___construct___u_class___u_calendar_u_i_base___statics}{Z\_Construct\_UClass\_UCalendarUIBase\_Statics}}}
+\DoxyCodeLine{00722\ \{}
+\DoxyCodeLine{00723\ \textcolor{preprocessor}{\#if\ WITH\_METADATA}}
+\DoxyCodeLine{00724\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ Class\_MetaDataParams[]\ =\ \{}
+\DoxyCodeLine{00725\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00726\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\(\backslash\)n\ *\ @class\ UCalendarUIBase\(\backslash\)n\ *\ @brief\ A\ user\ interface\ class\ for\ managing\ calendar\ functionality.\(\backslash\)n\ *\(\backslash\)n\ *\ This\ class\ provides\ various\ functions\ and\ properties\ for\ configuring,\(\backslash\)n\ *\ displaying,\ and\ interacting\ with\ a\ calendar\ in\ Unreal\ Engine.\(\backslash\)n\ */"{}}\ \},}
+\DoxyCodeLine{00727\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00728\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}IncludePath"{}},\ \textcolor{stringliteral}{"{}CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00729\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00730\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00731\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}@class\ UCalendarUIBase\(\backslash\)n@brief\ A\ user\ interface\ class\ for\ managing\ calendar\ functionality.\(\backslash\)n\(\backslash\)nThis\ class\ provides\ various\ functions\ and\ properties\ for\ configuring,\(\backslash\)ndisplaying,\ and\ interacting\ with\ a\ calendar\ in\ Unreal\ Engine."{}}\ \},}
+\DoxyCodeLine{00732\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00733\ \ \ \ \ \};}
+\DoxyCodeLine{00734\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_year\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00735\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}BindWidget"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00736\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Category"{}},\ \textcolor{stringliteral}{"{}Atm0s\ Calendar\ Variables"{}}\ \},}
+\DoxyCodeLine{00737\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00738\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\ Editable\ text\ box\ for\ the\ calendar\ year.\ */"{}}\ \},}
+\DoxyCodeLine{00739\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00740\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}EditInline"{}},\ \textcolor{stringliteral}{"{}true"{}}\ \},}
+\DoxyCodeLine{00741\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00742\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00743\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}Editable\ text\ box\ for\ the\ calendar\ year."{}}\ \},}
+\DoxyCodeLine{00744\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00745\ \ \ \ \ \};}
+\DoxyCodeLine{00746\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_month\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00747\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}BindWidget"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00748\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Category"{}},\ \textcolor{stringliteral}{"{}Atm0s\ Calendar\ Variables"{}}\ \},}
+\DoxyCodeLine{00749\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00750\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\ Text\ block\ for\ displaying\ the\ calendar\ month.\ */"{}}\ \},}
+\DoxyCodeLine{00751\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00752\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}EditInline"{}},\ \textcolor{stringliteral}{"{}true"{}}\ \},}
+\DoxyCodeLine{00753\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00754\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00755\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}Text\ block\ for\ displaying\ the\ calendar\ month."{}}\ \},}
+\DoxyCodeLine{00756\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00757\ \ \ \ \ \};}
+\DoxyCodeLine{00758\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_hour\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00759\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}BindWidget"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00760\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Category"{}},\ \textcolor{stringliteral}{"{}Atm0s\ Calendar\ Variables"{}}\ \},}
+\DoxyCodeLine{00761\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00762\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\ Editable\ text\ box\ for\ the\ calendar\ hour.\ */"{}}\ \},}
+\DoxyCodeLine{00763\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00764\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}EditInline"{}},\ \textcolor{stringliteral}{"{}true"{}}\ \},}
+\DoxyCodeLine{00765\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00766\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00767\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}Editable\ text\ box\ for\ the\ calendar\ hour."{}}\ \},}
+\DoxyCodeLine{00768\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00769\ \ \ \ \ \};}
+\DoxyCodeLine{00770\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_minute\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00771\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}BindWidget"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00772\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Category"{}},\ \textcolor{stringliteral}{"{}Atm0s\ Calendar\ Variables"{}}\ \},}
+\DoxyCodeLine{00773\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00774\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\ Editable\ text\ box\ for\ the\ calendar\ minute.\ */"{}}\ \},}
+\DoxyCodeLine{00775\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00776\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}EditInline"{}},\ \textcolor{stringliteral}{"{}true"{}}\ \},}
+\DoxyCodeLine{00777\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00778\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00779\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}Editable\ text\ box\ for\ the\ calendar\ minute."{}}\ \},}
+\DoxyCodeLine{00780\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00781\ \ \ \ \ \};}
+\DoxyCodeLine{00782\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_toggle\_prev\_month\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00783\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}BindWidget"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00784\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00785\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\ Button\ to\ toggle\ to\ the\ previous\ month.\ */"{}}\ \},}
+\DoxyCodeLine{00786\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00787\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}EditInline"{}},\ \textcolor{stringliteral}{"{}true"{}}\ \},}
+\DoxyCodeLine{00788\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00789\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00790\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}Button\ to\ toggle\ to\ the\ previous\ month."{}}\ \},}
+\DoxyCodeLine{00791\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00792\ \ \ \ \ \};}
+\DoxyCodeLine{00793\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_toggle\_next\_month\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00794\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}BindWidget"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00795\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00796\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\ Button\ to\ toggle\ to\ the\ next\ month.\ */"{}}\ \},}
+\DoxyCodeLine{00797\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00798\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}EditInline"{}},\ \textcolor{stringliteral}{"{}true"{}}\ \},}
+\DoxyCodeLine{00799\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00800\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00801\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}Button\ to\ toggle\ to\ the\ next\ month."{}}\ \},}
+\DoxyCodeLine{00802\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00803\ \ \ \ \ \};}
+\DoxyCodeLine{00804\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_MonthButton\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00805\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}BindWidget"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00806\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00807\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\ Button\ for\ selecting\ a\ month.\ */"{}}\ \},}
+\DoxyCodeLine{00808\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00809\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}EditInline"{}},\ \textcolor{stringliteral}{"{}true"{}}\ \},}
+\DoxyCodeLine{00810\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00811\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00812\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}Button\ for\ selecting\ a\ month."{}}\ \},}
+\DoxyCodeLine{00813\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00814\ \ \ \ \ \};}
+\DoxyCodeLine{00815\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_HourButton\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00816\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}BindWidget"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00817\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00818\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\ Button\ for\ selecting\ an\ hour.\ */"{}}\ \},}
+\DoxyCodeLine{00819\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00820\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}EditInline"{}},\ \textcolor{stringliteral}{"{}true"{}}\ \},}
+\DoxyCodeLine{00821\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00822\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00823\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}Button\ for\ selecting\ an\ hour."{}}\ \},}
+\DoxyCodeLine{00824\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00825\ \ \ \ \ \};}
+\DoxyCodeLine{00826\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_MinuteButton\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00827\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}BindWidget"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00828\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00829\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\ Button\ for\ selecting\ a\ minute.\ */"{}}\ \},}
+\DoxyCodeLine{00830\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00831\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}EditInline"{}},\ \textcolor{stringliteral}{"{}true"{}}\ \},}
+\DoxyCodeLine{00832\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00833\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00834\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}Button\ for\ selecting\ a\ minute."{}}\ \},}
+\DoxyCodeLine{00835\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00836\ \ \ \ \ \};}
+\DoxyCodeLine{00837\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_weekdays\_background\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00838\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}BindWidget"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00839\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00840\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\ Background\ for\ weekday\ headers.\ */"{}}\ \},}
+\DoxyCodeLine{00841\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00842\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}EditInline"{}},\ \textcolor{stringliteral}{"{}true"{}}\ \},}
+\DoxyCodeLine{00843\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00844\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00845\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}Background\ for\ weekday\ headers."{}}\ \},}
+\DoxyCodeLine{00846\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00847\ \ \ \ \ \};}
+\DoxyCodeLine{00848\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_calendar\_background\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00849\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}BindWidget"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00850\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00851\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\ Background\ for\ the\ calendar.\ */"{}}\ \},}
+\DoxyCodeLine{00852\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00853\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}EditInline"{}},\ \textcolor{stringliteral}{"{}true"{}}\ \},}
+\DoxyCodeLine{00854\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00855\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00856\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}Background\ for\ the\ calendar."{}}\ \},}
+\DoxyCodeLine{00857\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00858\ \ \ \ \ \};}
+\DoxyCodeLine{00859\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ UECodeGen\_Private::FMetaDataPairParam\ NewProp\_ListViewCalendar\_MetaData[]\ =\ \{}
+\DoxyCodeLine{00860\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}BindWidget"{}},\ \textcolor{stringliteral}{"{}"{}}\ \},}
+\DoxyCodeLine{00861\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Category"{}},\ \textcolor{stringliteral}{"{}Atm0s\ Calendar\ Variables"{}}\ \},}
+\DoxyCodeLine{00862\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00863\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Comment"{}},\ \textcolor{stringliteral}{"{}/**\ List\ view\ for\ displaying\ calendar\ items.\ */"{}}\ \},}
+\DoxyCodeLine{00864\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00865\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}EditInline"{}},\ \textcolor{stringliteral}{"{}true"{}}\ \},}
+\DoxyCodeLine{00866\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ModuleRelativePath"{}},\ \textcolor{stringliteral}{"{}Private/CalendarUIBase.h"{}}\ \},}
+\DoxyCodeLine{00867\ \textcolor{preprocessor}{\#if\ !UE\_BUILD\_SHIPPING}}
+\DoxyCodeLine{00868\ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}ToolTip"{}},\ \textcolor{stringliteral}{"{}List\ view\ for\ displaying\ calendar\ items."{}}\ \},}
+\DoxyCodeLine{00869\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00870\ \ \ \ \ \};}
+\DoxyCodeLine{00871\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WITH\_METADATA}}
+\DoxyCodeLine{00872\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ NewProp\_year;}
+\DoxyCodeLine{00873\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ NewProp\_month;}
+\DoxyCodeLine{00874\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ NewProp\_hour;}
+\DoxyCodeLine{00875\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ NewProp\_minute;}
+\DoxyCodeLine{00876\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ NewProp\_toggle\_prev\_month;}
+\DoxyCodeLine{00877\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ NewProp\_toggle\_next\_month;}
+\DoxyCodeLine{00878\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ NewProp\_MonthButton;}
+\DoxyCodeLine{00879\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ NewProp\_HourButton;}
+\DoxyCodeLine{00880\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ NewProp\_MinuteButton;}
+\DoxyCodeLine{00881\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ NewProp\_weekdays\_background;}
+\DoxyCodeLine{00882\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ NewProp\_calendar\_background;}
+\DoxyCodeLine{00883\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ NewProp\_ListViewCalendar;}
+\DoxyCodeLine{00884\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ PropPointers[];}
+\DoxyCodeLine{00885\ \ \ \ \ \textcolor{keyword}{static}\ UObject*\ (*\textcolor{keyword}{const}\ DependentSingletons[])();}
+\DoxyCodeLine{00886\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ FClassFunctionLinkInfo\ FuncInfo[]\ =\ \{}
+\DoxyCodeLine{00887\ \ \ \ \ \ \ \ \ \{\ \&Z\_Construct\_UFunction\_UCalendarUIBase\_CreateCalendar,\ \textcolor{stringliteral}{"{}CreateCalendar"{}}\ \},\ \textcolor{comment}{//\ 56358406}}
+\DoxyCodeLine{00888\ \ \ \ \ \ \ \ \ \{\ \&Z\_Construct\_UFunction\_UCalendarUIBase\_GetTime,\ \textcolor{stringliteral}{"{}GetTime"{}}\ \},\ \textcolor{comment}{//\ 2744452660}}
+\DoxyCodeLine{00889\ \ \ \ \ \ \ \ \ \{\ \&Z\_Construct\_UFunction\_UCalendarUIBase\_HandleMonthToggleButtonClick,\ \textcolor{stringliteral}{"{}HandleMonthToggleButtonClick"{}}\ \},\ \textcolor{comment}{//\ 1455908422}}
+\DoxyCodeLine{00890\ \ \ \ \ \ \ \ \ \{\ \&Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourChanged,\ \textcolor{stringliteral}{"{}HandleOnHourChanged"{}}\ \},\ \textcolor{comment}{//\ 1149182185}}
+\DoxyCodeLine{00891\ \ \ \ \ \ \ \ \ \{\ \&Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnHourCommitted,\ \textcolor{stringliteral}{"{}HandleOnHourCommitted"{}}\ \},\ \textcolor{comment}{//\ 2832525184}}
+\DoxyCodeLine{00892\ \ \ \ \ \ \ \ \ \{\ \&Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteChanged,\ \textcolor{stringliteral}{"{}HandleOnMinuteChanged"{}}\ \},\ \textcolor{comment}{//\ 2498193931}}
+\DoxyCodeLine{00893\ \ \ \ \ \ \ \ \ \{\ \&Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnMinuteCommitted,\ \textcolor{stringliteral}{"{}HandleOnMinuteCommitted"{}}\ \},\ \textcolor{comment}{//\ 566144284}}
+\DoxyCodeLine{00894\ \ \ \ \ \ \ \ \ \{\ \&Z\_Construct\_UFunction\_UCalendarUIBase\_HandleOnYearChanged,\ \textcolor{stringliteral}{"{}HandleOnYearChanged"{}}\ \},\ \textcolor{comment}{//\ 857625169}}
+\DoxyCodeLine{00895\ \ \ \ \ \ \ \ \ \{\ \&Z\_Construct\_UFunction\_UCalendarUIBase\_PreCalendarConfig,\ \textcolor{stringliteral}{"{}PreCalendarConfig"{}}\ \},\ \textcolor{comment}{//\ 176445715}}
+\DoxyCodeLine{00896\ \ \ \ \ \ \ \ \ \{\ \&Z\_Construct\_UFunction\_UCalendarUIBase\_SetCornerRadii,\ \textcolor{stringliteral}{"{}SetCornerRadii"{}}\ \},\ \textcolor{comment}{//\ 3160265752}}
+\DoxyCodeLine{00897\ \ \ \ \ \ \ \ \ \{\ \&Z\_Construct\_UFunction\_UCalendarUIBase\_SetMonth,\ \textcolor{stringliteral}{"{}SetMonth"{}}\ \},\ \textcolor{comment}{//\ 3996482367}}
+\DoxyCodeLine{00898\ \ \ \ \ \ \ \ \ \{\ \&Z\_Construct\_UFunction\_UCalendarUIBase\_SetYear,\ \textcolor{stringliteral}{"{}SetYear"{}}\ \},\ \textcolor{comment}{//\ 3969347070}}
+\DoxyCodeLine{00899\ \ \ \ \ \ \ \ \ \{\ \&Z\_Construct\_UFunction\_UCalendarUIBase\_ShowNextMonth,\ \textcolor{stringliteral}{"{}ShowNextMonth"{}}\ \},\ \textcolor{comment}{//\ 1095342872}}
+\DoxyCodeLine{00900\ \ \ \ \ \ \ \ \ \{\ \&Z\_Construct\_UFunction\_UCalendarUIBase\_ShowPrevMonth,\ \textcolor{stringliteral}{"{}ShowPrevMonth"{}}\ \},\ \textcolor{comment}{//\ 3422495640}}
+\DoxyCodeLine{00901\ \ \ \ \ \};}
+\DoxyCodeLine{00902\ \ \ \ \ \textcolor{keyword}{static\_assert}(UE\_ARRAY\_COUNT(FuncInfo)\ <\ 2048);}
+\DoxyCodeLine{00903\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ FCppClassTypeInfoStatic\ StaticCppClassTypeInfo\ =\ \{}
+\DoxyCodeLine{00904\ \ \ \ \ \ \ \ \ TCppClassTypeTraits<UCalendarUIBase>::IsAbstract,}
+\DoxyCodeLine{00905\ \ \ \ \ \};}
+\DoxyCodeLine{00906\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ UECodeGen\_Private::FClassParams\ ClassParams;}
+\DoxyCodeLine{00907\ \};}
+\DoxyCodeLine{00908\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_year\ =\ \{\ \textcolor{stringliteral}{"{}year"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x002008000008000c,\ UECodeGen\_Private::EPropertyGenFlags::Object,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(\mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}},\ year),\ Z\_Construct\_UClass\_UEditableTextBox\_NoRegister,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_year\_MetaData),\ NewProp\_year\_MetaData)\ \};}
+\DoxyCodeLine{00909\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_month\ =\ \{\ \textcolor{stringliteral}{"{}month"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x002008000008000c,\ UECodeGen\_Private::EPropertyGenFlags::Object,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(\mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}},\ month),\ Z\_Construct\_UClass\_UTextBlock\_NoRegister,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_month\_MetaData),\ NewProp\_month\_MetaData)\ \};}
+\DoxyCodeLine{00910\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_hour\ =\ \{\ \textcolor{stringliteral}{"{}hour"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x002008000008000c,\ UECodeGen\_Private::EPropertyGenFlags::Object,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(\mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}},\ hour),\ Z\_Construct\_UClass\_UEditableTextBox\_NoRegister,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_hour\_MetaData),\ NewProp\_hour\_MetaData)\ \};}
+\DoxyCodeLine{00911\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_minute\ =\ \{\ \textcolor{stringliteral}{"{}minute"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x002008000008000c,\ UECodeGen\_Private::EPropertyGenFlags::Object,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(\mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}},\ minute),\ Z\_Construct\_UClass\_UEditableTextBox\_NoRegister,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_minute\_MetaData),\ NewProp\_minute\_MetaData)\ \};}
+\DoxyCodeLine{00912\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_toggle\_prev\_month\ =\ \{\ \textcolor{stringliteral}{"{}toggle\_prev\_month"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0020080000080008,\ UECodeGen\_Private::EPropertyGenFlags::Object,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(\mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}},\ toggle\_prev\_month),\ Z\_Construct\_UClass\_UButton\_NoRegister,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_toggle\_prev\_month\_MetaData),\ NewProp\_toggle\_prev\_month\_MetaData)\ \};}
+\DoxyCodeLine{00913\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_toggle\_next\_month\ =\ \{\ \textcolor{stringliteral}{"{}toggle\_next\_month"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0020080000080008,\ UECodeGen\_Private::EPropertyGenFlags::Object,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(\mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}},\ toggle\_next\_month),\ Z\_Construct\_UClass\_UButton\_NoRegister,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_toggle\_next\_month\_MetaData),\ NewProp\_toggle\_next\_month\_MetaData)\ \};}
+\DoxyCodeLine{00914\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_MonthButton\ =\ \{\ \textcolor{stringliteral}{"{}MonthButton"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0020080000080008,\ UECodeGen\_Private::EPropertyGenFlags::Object,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(\mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}},\ MonthButton),\ Z\_Construct\_UClass\_UButton\_NoRegister,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_MonthButton\_MetaData),\ NewProp\_MonthButton\_MetaData)\ \};}
+\DoxyCodeLine{00915\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_HourButton\ =\ \{\ \textcolor{stringliteral}{"{}HourButton"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0020080000080008,\ UECodeGen\_Private::EPropertyGenFlags::Object,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(\mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}},\ HourButton),\ Z\_Construct\_UClass\_UButton\_NoRegister,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_HourButton\_MetaData),\ NewProp\_HourButton\_MetaData)\ \};}
+\DoxyCodeLine{00916\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_MinuteButton\ =\ \{\ \textcolor{stringliteral}{"{}MinuteButton"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0020080000080008,\ UECodeGen\_Private::EPropertyGenFlags::Object,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(\mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}},\ MinuteButton),\ Z\_Construct\_UClass\_UButton\_NoRegister,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_MinuteButton\_MetaData),\ NewProp\_MinuteButton\_MetaData)\ \};}
+\DoxyCodeLine{00917\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_weekdays\_background\ =\ \{\ \textcolor{stringliteral}{"{}weekdays\_background"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0020080000080008,\ UECodeGen\_Private::EPropertyGenFlags::Object,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(\mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}},\ weekdays\_background),\ Z\_Construct\_UClass\_UButton\_NoRegister,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_weekdays\_background\_MetaData),\ NewProp\_weekdays\_background\_MetaData)\ \};}
+\DoxyCodeLine{00918\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_calendar\_background\ =\ \{\ \textcolor{stringliteral}{"{}calendar\_background"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x0020080000080008,\ UECodeGen\_Private::EPropertyGenFlags::Object,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(\mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}},\ calendar\_background),\ Z\_Construct\_UClass\_UButton\_NoRegister,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_calendar\_background\_MetaData),\ NewProp\_calendar\_background\_MetaData)\ \};}
+\DoxyCodeLine{00919\ \textcolor{keyword}{const}\ UECodeGen\_Private::FObjectPropertyParams\ Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_ListViewCalendar\ =\ \{\ \textcolor{stringliteral}{"{}ListViewCalendar"{}},\ \textcolor{keyword}{nullptr},\ (EPropertyFlags)0x002008000008000c,\ UECodeGen\_Private::EPropertyGenFlags::Object,\ RF\_Public|RF\_Transient|RF\_MarkAsNative,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ 1,\ STRUCT\_OFFSET(\mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}},\ ListViewCalendar),\ Z\_Construct\_UClass\_UListView\_NoRegister,\ METADATA\_PARAMS(UE\_ARRAY\_COUNT(NewProp\_ListViewCalendar\_MetaData),\ NewProp\_ListViewCalendar\_MetaData)\ \};}
+\DoxyCodeLine{00920\ \textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*\ \textcolor{keyword}{const}\ Z\_Construct\_UClass\_UCalendarUIBase\_Statics::PropPointers[]\ =\ \{}
+\DoxyCodeLine{00921\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_year,}
+\DoxyCodeLine{00922\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_month,}
+\DoxyCodeLine{00923\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_hour,}
+\DoxyCodeLine{00924\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_minute,}
+\DoxyCodeLine{00925\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_toggle\_prev\_month,}
+\DoxyCodeLine{00926\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_toggle\_next\_month,}
+\DoxyCodeLine{00927\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_MonthButton,}
+\DoxyCodeLine{00928\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_HourButton,}
+\DoxyCodeLine{00929\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_MinuteButton,}
+\DoxyCodeLine{00930\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_weekdays\_background,}
+\DoxyCodeLine{00931\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_calendar\_background,}
+\DoxyCodeLine{00932\ \ \ \ \ (\textcolor{keyword}{const}\ UECodeGen\_Private::FPropertyParamsBase*)\&Z\_Construct\_UClass\_UCalendarUIBase\_Statics::NewProp\_ListViewCalendar,}
+\DoxyCodeLine{00933\ \};}
+\DoxyCodeLine{00934\ \textcolor{keyword}{static\_assert}(UE\_ARRAY\_COUNT(Z\_Construct\_UClass\_UCalendarUIBase\_Statics::PropPointers)\ <\ 2048);}
+\DoxyCodeLine{00935\ UObject*\ (*\textcolor{keyword}{const}\ Z\_Construct\_UClass\_UCalendarUIBase\_Statics::DependentSingletons[])()\ =\ \{}
+\DoxyCodeLine{00936\ \ \ \ \ (UObject*\ (*)())Z\_Construct\_UClass\_UUserWidget,}
+\DoxyCodeLine{00937\ \ \ \ \ (UObject*\ (*)())Z\_Construct\_UPackage\_\_Script\_SimpleCalendarPlugin,}
+\DoxyCodeLine{00938\ \};}
+\DoxyCodeLine{00939\ static\_assert(UE\_ARRAY\_COUNT(\mbox{\hyperlink{struct_z___construct___u_class___u_calendar_u_i_base___statics}{Z\_Construct\_UClass\_UCalendarUIBase\_Statics}}::DependentSingletons)\ <\ 16);}
+\DoxyCodeLine{00940\ const\ UECodeGen\_Private::FClassParams\ \mbox{\hyperlink{struct_z___construct___u_class___u_calendar_u_i_base___statics}{Z\_Construct\_UClass\_UCalendarUIBase\_Statics}}::ClassParams\ =\ \{}
+\DoxyCodeLine{00941\ \ \ \ \ \&UCalendarUIBase::StaticClass,}
+\DoxyCodeLine{00942\ \ \ \ \ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00943\ \ \ \ \ \&StaticCppClassTypeInfo,}
+\DoxyCodeLine{00944\ \ \ \ \ DependentSingletons,}
+\DoxyCodeLine{00945\ \ \ \ \ FuncInfo,}
+\DoxyCodeLine{00946\ \ \ \ \ Z\_Construct\_UClass\_UCalendarUIBase\_Statics::PropPointers,}
+\DoxyCodeLine{00947\ \ \ \ \ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00948\ \ \ \ \ UE\_ARRAY\_COUNT(DependentSingletons),}
+\DoxyCodeLine{00949\ \ \ \ \ UE\_ARRAY\_COUNT(FuncInfo),}
+\DoxyCodeLine{00950\ \ \ \ \ UE\_ARRAY\_COUNT(Z\_Construct\_UClass\_UCalendarUIBase\_Statics::PropPointers),}
+\DoxyCodeLine{00951\ \ \ \ \ 0,}
+\DoxyCodeLine{00952\ \ \ \ \ 0x00A010A0u,}
+\DoxyCodeLine{00953\ \ \ \ \ METADATA\_PARAMS(UE\_ARRAY\_COUNT(Z\_Construct\_UClass\_UCalendarUIBase\_Statics::Class\_MetaDataParams),\ Z\_Construct\_UClass\_UCalendarUIBase\_Statics::Class\_MetaDataParams)}
+\DoxyCodeLine{00954\ \};}
+\DoxyCodeLine{00955\ UClass*\ Z\_Construct\_UClass\_UCalendarUIBase()}
+\DoxyCodeLine{00956\ \{}
+\DoxyCodeLine{00957\ \ \ \ \ \textcolor{keywordflow}{if}\ (!Z\_Registration\_Info\_UClass\_UCalendarUIBase.OuterSingleton)}
+\DoxyCodeLine{00958\ \ \ \ \ \{}
+\DoxyCodeLine{00959\ \ \ \ \ \ \ \ \ UECodeGen\_Private::ConstructUClass(Z\_Registration\_Info\_UClass\_UCalendarUIBase.OuterSingleton,\ Z\_Construct\_UClass\_UCalendarUIBase\_Statics::ClassParams);}
+\DoxyCodeLine{00960\ \ \ \ \ \}}
+\DoxyCodeLine{00961\ \ \ \ \ \textcolor{keywordflow}{return}\ Z\_Registration\_Info\_UClass\_UCalendarUIBase.OuterSingleton;}
+\DoxyCodeLine{00962\ \}}
+\DoxyCodeLine{00963\ \textcolor{keyword}{template}<>\ SIMPLECALENDARPLUGIN\_API\ UClass*\ StaticClass<UCalendarUIBase>()}
+\DoxyCodeLine{00964\ \{}
+\DoxyCodeLine{00965\ \ \ \ \ \textcolor{keywordflow}{return}\ UCalendarUIBase::StaticClass();}
+\DoxyCodeLine{00966\ \}}
+\DoxyCodeLine{00967\ UCalendarUIBase::UCalendarUIBase(\textcolor{keyword}{const}\ FObjectInitializer\&\ ObjectInitializer)\ :\ Super(ObjectInitializer)\ \{\}}
+\DoxyCodeLine{00968\ DEFINE\_VTABLE\_PTR\_HELPER\_CTOR(\mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}});}
+\DoxyCodeLine{00969\ UCalendarUIBase::\string~UCalendarUIBase()\ \{\}}
+\DoxyCodeLine{00970\ \textcolor{comment}{//\ End\ Class\ UCalendarUIBase}}
+\DoxyCodeLine{00971\ }
+\DoxyCodeLine{00972\ \textcolor{comment}{//\ Begin\ Registration}}
+\DoxyCodeLine{00973\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_z___compiled_in_defer_file___f_i_d___users__atm0s___documents___unreal___projects__atm0s_58880afd9753f8909f5e3eee4d21cc1b}{Z\_CompiledInDeferFile\_FID\_Users\_atm0s\_Documents\_Unreal\_Projects\_atm0sCalendar\_Plugins\_SimpleCalendarPlugin\_Source\_SimpleCalendarPlugin\_Private\_CalendarUIBase\_h\_Statics}}}
+\DoxyCodeLine{00974\ \{}
+\DoxyCodeLine{00975\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ FClassRegisterCompiledInInfo\ ClassInfo[]\ =\ \{}
+\DoxyCodeLine{00976\ \ \ \ \ \ \ \ \ \{\ Z\_Construct\_UClass\_UCalendarUIBase,\ UCalendarUIBase::StaticClass,\ TEXT(\textcolor{stringliteral}{"{}UCalendarUIBase"{}}),\ \&Z\_Registration\_Info\_UClass\_UCalendarUIBase,\ CONSTRUCT\_RELOAD\_VERSION\_INFO(FClassReloadVersionInfo,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}}),\ 3512661227U)\ \},}
+\DoxyCodeLine{00977\ \ \ \ \ \};}
+\DoxyCodeLine{00978\ \};}
+\DoxyCodeLine{00979\ \textcolor{keyword}{static}\ FRegisterCompiledInInfo\ Z\_CompiledInDeferFile\_FID\_Users\_atm0s\_Documents\_Unreal\_Projects\_atm0sCalendar\_Plugins\_SimpleCalendarPlugin\_Source\_SimpleCalendarPlugin\_Private\_CalendarUIBase\_h\_39029821(TEXT(\textcolor{stringliteral}{"{}/Script/SimpleCalendarPlugin"{}}),}
+\DoxyCodeLine{00980\ \ \ \ \ Z\_CompiledInDeferFile\_FID\_Users\_atm0s\_Documents\_Unreal\_Projects\_atm0sCalendar\_Plugins\_SimpleCalendarPlugin\_Source\_SimpleCalendarPlugin\_Private\_CalendarUIBase\_h\_Statics::ClassInfo,\ UE\_ARRAY\_COUNT(Z\_CompiledInDeferFile\_FID\_Users\_atm0s\_Documents\_Unreal\_Projects\_atm0sCalendar\_Plugins\_SimpleCalendarPlugin\_Source\_SimpleCalendarPlugin\_Private\_CalendarUIBase\_h\_Statics::ClassInfo),}
+\DoxyCodeLine{00981\ \ \ \ \ \textcolor{keyword}{nullptr},\ 0,}
+\DoxyCodeLine{00982\ \ \ \ \ \textcolor{keyword}{nullptr},\ 0);}
+\DoxyCodeLine{00983\ \textcolor{comment}{//\ End\ Registration}}
+\DoxyCodeLine{00984\ PRAGMA\_ENABLE\_DEPRECATION\_WARNINGS}
+
+\end{DoxyCode}

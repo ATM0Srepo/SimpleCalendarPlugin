@@ -1,0 +1,444 @@
+\doxysection{UCalendar\+UIBase Class Reference}
+\hypertarget{class_u_calendar_u_i_base}{}\label{class_u_calendar_u_i_base}\index{UCalendarUIBase@{UCalendarUIBase}}
+
+
+A user interface class for managing calendar functionality.  
+
+
+
+
+{\ttfamily \#include $<$Calendar\+UIBase.\+h$>$}
+
+Inheritance diagram for UCalendar\+UIBase\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_calendar_u_i_base}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_u_calendar_u_i_base_a1e58af927352001447b95687fcd425a6}{Native\+Construct}} () override
+\begin{DoxyCompactList}\small\item\em Called after the widget is constructed. \end{DoxyCompactList}\item 
+FDate\+Time \mbox{\hyperlink{class_u_calendar_u_i_base_a0949b977c36bc9f85fab70bd1658db22}{Get\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current Date\+Time set on the calendar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_calendar_u_i_base_ae1a2bb611d86bf021b6594a84e0b0083}{Pre\+Calendar\+Config}} (FLinear\+Color Selected\+Grid\+Color=FLinear\+Color(1.\+0f, 1.\+0f, 1.\+0f, 0.\+8f), FLinear\+Color Empty\+Grid\+Color=FLinear\+Color(0.\+0f, 0.\+0f, 0.\+0f, 0.\+0f), FLinear\+Color Grid\+Color=FLinear\+Color(0.\+45f, 0.\+2f, 0.\+1f, 0.\+7f), FLinear\+Color Calendar\+Background=FLinear\+Color(0.\+0f, 0.\+0f, 0.\+0f, 0.\+0f), FLinear\+Color Calendar\+Background\+Border=FLinear\+Color(0.\+45f, 0.\+2f, 0.\+1f, 0.\+7f), FLinear\+Color Weekday\+Heading\+Color=FLinear\+Color(0.\+0f, 0.\+0f, 0.\+0f, 1.\+0f))
+\begin{DoxyCompactList}\small\item\em Configures the calendar\textquotesingle{}s style settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_calendar_u_i_base_a16365e3ed853935d5bd5b926f2a5e400}{Set\+Corner\+Radii}} (const FVector4 \&Calendar\+Border, const FVector4 \&Weekday\+Header\+Radii)
+\begin{DoxyCompactList}\small\item\em Sets corner radii for calendar and weekday headers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_calendar_u_i_base_a11312e51d4b570c9594b442ec9566a1a}{Create\+Calendar}} ()
+\begin{DoxyCompactList}\small\item\em Creates the calendar UI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_calendar_u_i_base_a1b09e1b357642378fdc3dc4e6d186183}{Set\+Year}} (int y)
+\begin{DoxyCompactList}\small\item\em Sets the calendar year. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_calendar_u_i_base_af0682c27359998782d29358d53bac2a0}{Set\+Month}} (int32 m)
+\begin{DoxyCompactList}\small\item\em Sets the calendar month. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_calendar_u_i_base_ac89681dc011ade93852f9ed478503b46}{Handle\+On\+Year\+Changed}} (const FText \&Text, EText\+Commit\+::\+Type Commit\+Method)
+\begin{DoxyCompactList}\small\item\em Handles the event when the year text is changed. \end{DoxyCompactList}\item 
+\Hypertarget{class_u_calendar_u_i_base_a6ec447a30d5ea1cfd6a36dfc5ec00583}\label{class_u_calendar_u_i_base_a6ec447a30d5ea1cfd6a36dfc5ec00583} 
+void {\bfseries Handle\+Month\+Toggle\+Button\+Click} ()
+\begin{DoxyCompactList}\small\item\em Toggles the visibility of month navigation buttons. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_calendar_u_i_base_a3b2917fd71339eac0cfdd50f62a679b7}{Handle\+On\+Hour\+Committed}} (const FText \&Text, EText\+Commit\+::\+Type Commit\+Method)
+\begin{DoxyCompactList}\small\item\em Handles the event when the hour text is committed. \end{DoxyCompactList}\item 
+\Hypertarget{class_u_calendar_u_i_base_adbc121a4e1f92087805b0ebe4b12547a}\label{class_u_calendar_u_i_base_adbc121a4e1f92087805b0ebe4b12547a} 
+void {\bfseries Handle\+On\+Hour\+Changed} (const FText \&Text)
+\item 
+void \mbox{\hyperlink{class_u_calendar_u_i_base_aba90f4a23ad0120fc4ee510b91d59678}{Handle\+On\+Minute\+Committed}} (const FText \&Text, EText\+Commit\+::\+Type Commit\+Method)
+\begin{DoxyCompactList}\small\item\em Handles the event when the minute text is committed. \end{DoxyCompactList}\item 
+\Hypertarget{class_u_calendar_u_i_base_a2fd0e81a9e6ef6e5166d5300ccfea751}\label{class_u_calendar_u_i_base_a2fd0e81a9e6ef6e5166d5300ccfea751} 
+void {\bfseries Handle\+On\+Minute\+Changed} (const FText \&Text)
+\item 
+\Hypertarget{class_u_calendar_u_i_base_aaabd8f8b87a5bd74c2428bff88ca9eda}\label{class_u_calendar_u_i_base_aaabd8f8b87a5bd74c2428bff88ca9eda} 
+void {\bfseries Show\+Next\+Month} ()
+\begin{DoxyCompactList}\small\item\em Shows the next month in the calendar. \end{DoxyCompactList}\item 
+\Hypertarget{class_u_calendar_u_i_base_a70908db1ad03af94622e83f086574f19}\label{class_u_calendar_u_i_base_a70908db1ad03af94622e83f086574f19} 
+void {\bfseries Show\+Prev\+Month} ()
+\begin{DoxyCompactList}\small\item\em Shows the previous month in the calendar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_calendar_u_i_base_ac963cdd07a261492b68710883c1f5cc9}{Initialize\+Hour}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the hour text box with the current hour. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_calendar_u_i_base_a76eee495d3d41ed988f0ea24859012b2}{Initialize\+Minute}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the minute text box with the current minute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_calendar_u_i_base_af20668b08bbd9c1faf012d43c09cf375}{Initialize\+Year}} (int y)
+\begin{DoxyCompactList}\small\item\em Sets the calendar year. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_calendar_u_i_base_a0a185b91f2f826a535e5b03e57266149}{Initialize\+Month}} (int m)
+\begin{DoxyCompactList}\small\item\em Sets the calendar month. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+class UEditable\+Text\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_calendar_u_i_base_a02dca1d5100c33f359a8b357670612f4}{year}}
+\item 
+class UText\+Block \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_calendar_u_i_base_a3a174b5e9fd5c372db9fc56d6e5a41e4}{month}}
+\item 
+class UEditable\+Text\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_calendar_u_i_base_ade010f768f21cf37892f5cc37742c164}{hour}}
+\item 
+class UEditable\+Text\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_calendar_u_i_base_aae2c741ddfd4dfd23c54379fe3c8a496}{minute}}
+\item 
+class UButton \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_calendar_u_i_base_a48c507302566eea8fed95e8a7d5d7983}{toggle\+\_\+prev\+\_\+month}}
+\item 
+class UButton \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_calendar_u_i_base_a5a692f2c28fbca9c2718313eec70d1d7}{toggle\+\_\+next\+\_\+month}}
+\item 
+class UButton \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_calendar_u_i_base_a8d166abd11adf560f1d3b8b1a48d3df8}{Month\+Button}}
+\item 
+class UButton \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_calendar_u_i_base_a4d9afa3618516bbad2169319ea01c4ad}{Hour\+Button}}
+\item 
+class UButton \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_calendar_u_i_base_a3e1b4e19014b4ab2c552b16ab3948531}{Minute\+Button}}
+\item 
+class UButton \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_calendar_u_i_base_a3dabcd7a7aa98f743a48659b9affb5da}{weekdays\+\_\+background}}
+\item 
+class UButton \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_calendar_u_i_base_a26f4d36b170dc86db5dec24425315c09}{calendar\+\_\+background}}
+\item 
+class UList\+View \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_calendar_u_i_base_a3e817349a70c2facd1f0a5cade0b16d9}{List\+View\+Calendar}}
+\item 
+FTimer\+Handle \mbox{\hyperlink{class_u_calendar_u_i_base_a00f1bbb4c462c529a3d633c90a22534c}{Tick\+Timer\+Handle}}
+\item 
+float \mbox{\hyperlink{class_u_calendar_u_i_base_a49b0b02cef6baf80fd5c1408999a3d9d}{Default\+Minute\+Tick\+Interval}} = 0.\+01f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A user interface class for managing calendar functionality. 
+
+This class provides various functions and properties for configuring, displaying, and interacting with a calendar in Unreal Engine. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_calendar_u_i_base_a11312e51d4b570c9594b442ec9566a1a}\index{UCalendarUIBase@{UCalendarUIBase}!CreateCalendar@{CreateCalendar}}
+\index{CreateCalendar@{CreateCalendar}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{CreateCalendar()}{CreateCalendar()}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a11312e51d4b570c9594b442ec9566a1a} 
+void UCalendar\+UIBase\+::\+Create\+Calendar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Creates the calendar UI. 
+
+Creates the calendar UI by adding rows of calendar items. \Hypertarget{class_u_calendar_u_i_base_a0949b977c36bc9f85fab70bd1658db22}\index{UCalendarUIBase@{UCalendarUIBase}!GetTime@{GetTime}}
+\index{GetTime@{GetTime}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{GetTime()}{GetTime()}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a0949b977c36bc9f85fab70bd1658db22} 
+FDate\+Time UCalendar\+UIBase\+::\+Get\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the current Date\+Time set on the calendar. 
+
+\begin{DoxyReturn}{Returns}
+The current Date\+Time object. 
+\end{DoxyReturn}
+\Hypertarget{class_u_calendar_u_i_base_a3b2917fd71339eac0cfdd50f62a679b7}\index{UCalendarUIBase@{UCalendarUIBase}!HandleOnHourCommitted@{HandleOnHourCommitted}}
+\index{HandleOnHourCommitted@{HandleOnHourCommitted}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{HandleOnHourCommitted()}{HandleOnHourCommitted()}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a3b2917fd71339eac0cfdd50f62a679b7} 
+void UCalendar\+UIBase\+::\+Handle\+On\+Hour\+Committed (\begin{DoxyParamCaption}\item[{const FText \&}]{Text}{, }\item[{EText\+Commit\+::\+Type}]{Commit\+Method}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles the event when the hour text is committed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Text} & The new text entered in the hour text box. \\
+\hline
+{\em Commit\+Method} & The method of text commit (e.\+g., On\+Enter). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_calendar_u_i_base_aba90f4a23ad0120fc4ee510b91d59678}\index{UCalendarUIBase@{UCalendarUIBase}!HandleOnMinuteCommitted@{HandleOnMinuteCommitted}}
+\index{HandleOnMinuteCommitted@{HandleOnMinuteCommitted}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{HandleOnMinuteCommitted()}{HandleOnMinuteCommitted()}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_aba90f4a23ad0120fc4ee510b91d59678} 
+void UCalendar\+UIBase\+::\+Handle\+On\+Minute\+Committed (\begin{DoxyParamCaption}\item[{const FText \&}]{Text}{, }\item[{EText\+Commit\+::\+Type}]{Commit\+Method}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles the event when the minute text is committed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Text} & The new text entered in the minute text box. \\
+\hline
+{\em Commit\+Method} & The method of text commit (e.\+g., On\+Enter). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_calendar_u_i_base_ac89681dc011ade93852f9ed478503b46}\index{UCalendarUIBase@{UCalendarUIBase}!HandleOnYearChanged@{HandleOnYearChanged}}
+\index{HandleOnYearChanged@{HandleOnYearChanged}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{HandleOnYearChanged()}{HandleOnYearChanged()}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_ac89681dc011ade93852f9ed478503b46} 
+void UCalendar\+UIBase\+::\+Handle\+On\+Year\+Changed (\begin{DoxyParamCaption}\item[{const FText \&}]{Text}{, }\item[{EText\+Commit\+::\+Type}]{Commit\+Method}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles the event when the year text is changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Text} & The new text entered in the year text box. \\
+\hline
+{\em Commit\+Method} & The method of text commit (e.\+g., On\+Enter). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_calendar_u_i_base_ac963cdd07a261492b68710883c1f5cc9}\index{UCalendarUIBase@{UCalendarUIBase}!InitializeHour@{InitializeHour}}
+\index{InitializeHour@{InitializeHour}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{InitializeHour()}{InitializeHour()}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_ac963cdd07a261492b68710883c1f5cc9} 
+void UCalendar\+UIBase\+::\+Initialize\+Hour (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Initializes the hour text box with the current hour. 
+
+Initializes the hour text box. \Hypertarget{class_u_calendar_u_i_base_a76eee495d3d41ed988f0ea24859012b2}\index{UCalendarUIBase@{UCalendarUIBase}!InitializeMinute@{InitializeMinute}}
+\index{InitializeMinute@{InitializeMinute}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{InitializeMinute()}{InitializeMinute()}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a76eee495d3d41ed988f0ea24859012b2} 
+void UCalendar\+UIBase\+::\+Initialize\+Minute (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Initializes the minute text box with the current minute. 
+
+Initializes the minute text box. \Hypertarget{class_u_calendar_u_i_base_a0a185b91f2f826a535e5b03e57266149}\index{UCalendarUIBase@{UCalendarUIBase}!InitializeMonth@{InitializeMonth}}
+\index{InitializeMonth@{InitializeMonth}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{InitializeMonth()}{InitializeMonth()}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a0a185b91f2f826a535e5b03e57266149} 
+void UCalendar\+UIBase\+::\+Initialize\+Month (\begin{DoxyParamCaption}\item[{int}]{m}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Sets the calendar month. 
+
+Sets the month from code.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & The month to set (1-\/12). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_calendar_u_i_base_af20668b08bbd9c1faf012d43c09cf375}\index{UCalendarUIBase@{UCalendarUIBase}!InitializeYear@{InitializeYear}}
+\index{InitializeYear@{InitializeYear}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{InitializeYear()}{InitializeYear()}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_af20668b08bbd9c1faf012d43c09cf375} 
+void UCalendar\+UIBase\+::\+Initialize\+Year (\begin{DoxyParamCaption}\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Sets the calendar year. 
+
+Sets the year from code.
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & The year to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_calendar_u_i_base_a1e58af927352001447b95687fcd425a6}\index{UCalendarUIBase@{UCalendarUIBase}!NativeConstruct@{NativeConstruct}}
+\index{NativeConstruct@{NativeConstruct}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{NativeConstruct()}{NativeConstruct()}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a1e58af927352001447b95687fcd425a6} 
+void UCalendar\+UIBase\+::\+Native\+Construct (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called after the widget is constructed. 
+
+Initializes the calendar widget and binds UI events.
+
+Initializes calendar properties and binds events to UI elements. \Hypertarget{class_u_calendar_u_i_base_ae1a2bb611d86bf021b6594a84e0b0083}\index{UCalendarUIBase@{UCalendarUIBase}!PreCalendarConfig@{PreCalendarConfig}}
+\index{PreCalendarConfig@{PreCalendarConfig}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{PreCalendarConfig()}{PreCalendarConfig()}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_ae1a2bb611d86bf021b6594a84e0b0083} 
+void UCalendar\+UIBase\+::\+Pre\+Calendar\+Config (\begin{DoxyParamCaption}\item[{FLinear\+Color}]{Selected\+Grid\+Color}{ = {\ttfamily FLinearColor(1.0f,~1.0f,~1.0f,~0.8f)}, }\item[{FLinear\+Color}]{Empty\+Grid\+Color}{ = {\ttfamily FLinearColor(0.0f,~0.0f,~0.0f,~0.0f)}, }\item[{FLinear\+Color}]{Grid\+Color}{ = {\ttfamily FLinearColor(0.45f,~0.2f,~0.1f,~0.7f)}, }\item[{FLinear\+Color}]{Calendar\+Background\+Color}{ = {\ttfamily FLinearColor(0.0f,~0.0f,~0.0f,~0.0f)}, }\item[{FLinear\+Color}]{Calendar\+Background\+Border\+Color}{ = {\ttfamily FLinearColor(0.45f,~0.2f,~0.1f,~0.7f)}, }\item[{FLinear\+Color}]{Weekday\+Heading\+Color}{ = {\ttfamily FLinearColor(0.0f,~0.0f,~0.0f,~1.0f)}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Configures the calendar\textquotesingle{}s style settings. 
+
+This function should be called before creating the calendar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Selected\+Grid\+Color} & Color for selected calendar grid. \\
+\hline
+{\em Empty\+Grid\+Color} & Color for empty calendar grid. \\
+\hline
+{\em Grid\+Color} & Default grid color. \\
+\hline
+{\em Calendar\+Background} & Background color for the calendar. \\
+\hline
+{\em Calendar\+Background\+Border} & Border color for the calendar background. \\
+\hline
+{\em Weekday\+Heading\+Color} & Color for weekday headers.\\
+\hline
+{\em Selected\+Grid\+Color} & Color for selected calendar grid. \\
+\hline
+{\em Empty\+Grid\+Color} & Color for empty calendar grid. \\
+\hline
+{\em Grid\+Color} & Default grid color. \\
+\hline
+{\em Calendar\+Background} & Background color for the calendar. \\
+\hline
+{\em Calendar\+Background\+Border} & Border color for the calendar background. \\
+\hline
+{\em Weekday\+Heading\+Color} & Color for weekday headers. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_calendar_u_i_base_a16365e3ed853935d5bd5b926f2a5e400}\index{UCalendarUIBase@{UCalendarUIBase}!SetCornerRadii@{SetCornerRadii}}
+\index{SetCornerRadii@{SetCornerRadii}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{SetCornerRadii()}{SetCornerRadii()}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a16365e3ed853935d5bd5b926f2a5e400} 
+void UCalendar\+UIBase\+::\+Set\+Corner\+Radii (\begin{DoxyParamCaption}\item[{const FVector4 \&}]{Calendar\+Border}{, }\item[{const FVector4 \&}]{Weekday\+Header\+Radii}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Sets corner radii for calendar and weekday headers. 
+
+Sets corner radii for the calendar and weekday headers.
+
+This function can be called before or after creating the calendar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Calendar\+Border} & Corner radii for the calendar border. \\
+\hline
+{\em Weekday\+Header\+Radii} & Corner radii for the weekday header.\\
+\hline
+{\em Calendar\+Border} & Corner radii for the calendar border. \\
+\hline
+{\em Weekday\+Header\+Radii} & Corner radii for the weekday header. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_calendar_u_i_base_af0682c27359998782d29358d53bac2a0}\index{UCalendarUIBase@{UCalendarUIBase}!SetMonth@{SetMonth}}
+\index{SetMonth@{SetMonth}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{SetMonth()}{SetMonth()}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_af0682c27359998782d29358d53bac2a0} 
+void UCalendar\+UIBase\+::\+Set\+Month (\begin{DoxyParamCaption}\item[{int32}]{m}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Sets the calendar month. 
+
+Updates the calendar with the specified month.
+
+This function should be called before creating the calendar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & The month to set (1-\/12).\\
+\hline
+{\em m} & The month to set (1-\/12). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_calendar_u_i_base_a1b09e1b357642378fdc3dc4e6d186183}\index{UCalendarUIBase@{UCalendarUIBase}!SetYear@{SetYear}}
+\index{SetYear@{SetYear}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{SetYear()}{SetYear()}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a1b09e1b357642378fdc3dc4e6d186183} 
+void UCalendar\+UIBase\+::\+Set\+Year (\begin{DoxyParamCaption}\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Sets the calendar year. 
+
+Updates the calendar with the specified year.
+
+This function should be called before creating the calendar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & The year to set.\\
+\hline
+{\em y} & The year to set. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_u_calendar_u_i_base_a26f4d36b170dc86db5dec24425315c09}\index{UCalendarUIBase@{UCalendarUIBase}!calendar\_background@{calendar\_background}}
+\index{calendar\_background@{calendar\_background}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{calendar\_background}{calendar\_background}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a26f4d36b170dc86db5dec24425315c09} 
+class UButton\texorpdfstring{$\ast$}{*} UCalendar\+UIBase\+::calendar\+\_\+background\hspace{0.3cm}{\ttfamily [protected]}}
+
+Background for the calendar. \Hypertarget{class_u_calendar_u_i_base_a49b0b02cef6baf80fd5c1408999a3d9d}\index{UCalendarUIBase@{UCalendarUIBase}!DefaultMinuteTickInterval@{DefaultMinuteTickInterval}}
+\index{DefaultMinuteTickInterval@{DefaultMinuteTickInterval}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{DefaultMinuteTickInterval}{DefaultMinuteTickInterval}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a49b0b02cef6baf80fd5c1408999a3d9d} 
+float UCalendar\+UIBase\+::\+Default\+Minute\+Tick\+Interval = 0.\+01f\hspace{0.3cm}{\ttfamily [protected]}}
+
+Default interval for minute ticks. \Hypertarget{class_u_calendar_u_i_base_ade010f768f21cf37892f5cc37742c164}\index{UCalendarUIBase@{UCalendarUIBase}!hour@{hour}}
+\index{hour@{hour}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{hour}{hour}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_ade010f768f21cf37892f5cc37742c164} 
+class UEditable\+Text\+Box\texorpdfstring{$\ast$}{*} UCalendar\+UIBase\+::hour\hspace{0.3cm}{\ttfamily [protected]}}
+
+Editable text box for the calendar hour. \Hypertarget{class_u_calendar_u_i_base_a4d9afa3618516bbad2169319ea01c4ad}\index{UCalendarUIBase@{UCalendarUIBase}!HourButton@{HourButton}}
+\index{HourButton@{HourButton}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{HourButton}{HourButton}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a4d9afa3618516bbad2169319ea01c4ad} 
+class UButton\texorpdfstring{$\ast$}{*} UCalendar\+UIBase\+::\+Hour\+Button\hspace{0.3cm}{\ttfamily [protected]}}
+
+Button for selecting an hour. \Hypertarget{class_u_calendar_u_i_base_a3e817349a70c2facd1f0a5cade0b16d9}\index{UCalendarUIBase@{UCalendarUIBase}!ListViewCalendar@{ListViewCalendar}}
+\index{ListViewCalendar@{ListViewCalendar}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{ListViewCalendar}{ListViewCalendar}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a3e817349a70c2facd1f0a5cade0b16d9} 
+class UList\+View\texorpdfstring{$\ast$}{*} UCalendar\+UIBase\+::\+List\+View\+Calendar\hspace{0.3cm}{\ttfamily [protected]}}
+
+List view for displaying calendar items. \Hypertarget{class_u_calendar_u_i_base_aae2c741ddfd4dfd23c54379fe3c8a496}\index{UCalendarUIBase@{UCalendarUIBase}!minute@{minute}}
+\index{minute@{minute}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{minute}{minute}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_aae2c741ddfd4dfd23c54379fe3c8a496} 
+class UEditable\+Text\+Box\texorpdfstring{$\ast$}{*} UCalendar\+UIBase\+::minute\hspace{0.3cm}{\ttfamily [protected]}}
+
+Editable text box for the calendar minute. \Hypertarget{class_u_calendar_u_i_base_a3e1b4e19014b4ab2c552b16ab3948531}\index{UCalendarUIBase@{UCalendarUIBase}!MinuteButton@{MinuteButton}}
+\index{MinuteButton@{MinuteButton}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{MinuteButton}{MinuteButton}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a3e1b4e19014b4ab2c552b16ab3948531} 
+class UButton\texorpdfstring{$\ast$}{*} UCalendar\+UIBase\+::\+Minute\+Button\hspace{0.3cm}{\ttfamily [protected]}}
+
+Button for selecting a minute. \Hypertarget{class_u_calendar_u_i_base_a3a174b5e9fd5c372db9fc56d6e5a41e4}\index{UCalendarUIBase@{UCalendarUIBase}!month@{month}}
+\index{month@{month}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{month}{month}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a3a174b5e9fd5c372db9fc56d6e5a41e4} 
+class UText\+Block\texorpdfstring{$\ast$}{*} UCalendar\+UIBase\+::month\hspace{0.3cm}{\ttfamily [protected]}}
+
+Text block for displaying the calendar month. \Hypertarget{class_u_calendar_u_i_base_a8d166abd11adf560f1d3b8b1a48d3df8}\index{UCalendarUIBase@{UCalendarUIBase}!MonthButton@{MonthButton}}
+\index{MonthButton@{MonthButton}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{MonthButton}{MonthButton}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a8d166abd11adf560f1d3b8b1a48d3df8} 
+class UButton\texorpdfstring{$\ast$}{*} UCalendar\+UIBase\+::\+Month\+Button\hspace{0.3cm}{\ttfamily [protected]}}
+
+Button for selecting a month. \Hypertarget{class_u_calendar_u_i_base_a00f1bbb4c462c529a3d633c90a22534c}\index{UCalendarUIBase@{UCalendarUIBase}!TickTimerHandle@{TickTimerHandle}}
+\index{TickTimerHandle@{TickTimerHandle}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{TickTimerHandle}{TickTimerHandle}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a00f1bbb4c462c529a3d633c90a22534c} 
+FTimer\+Handle UCalendar\+UIBase\+::\+Tick\+Timer\+Handle\hspace{0.3cm}{\ttfamily [protected]}}
+
+Timer handle for ticking events. \Hypertarget{class_u_calendar_u_i_base_a5a692f2c28fbca9c2718313eec70d1d7}\index{UCalendarUIBase@{UCalendarUIBase}!toggle\_next\_month@{toggle\_next\_month}}
+\index{toggle\_next\_month@{toggle\_next\_month}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{toggle\_next\_month}{toggle\_next\_month}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a5a692f2c28fbca9c2718313eec70d1d7} 
+class UButton\texorpdfstring{$\ast$}{*} UCalendar\+UIBase\+::toggle\+\_\+next\+\_\+month\hspace{0.3cm}{\ttfamily [protected]}}
+
+Button to toggle to the next month. \Hypertarget{class_u_calendar_u_i_base_a48c507302566eea8fed95e8a7d5d7983}\index{UCalendarUIBase@{UCalendarUIBase}!toggle\_prev\_month@{toggle\_prev\_month}}
+\index{toggle\_prev\_month@{toggle\_prev\_month}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{toggle\_prev\_month}{toggle\_prev\_month}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a48c507302566eea8fed95e8a7d5d7983} 
+class UButton\texorpdfstring{$\ast$}{*} UCalendar\+UIBase\+::toggle\+\_\+prev\+\_\+month\hspace{0.3cm}{\ttfamily [protected]}}
+
+Button to toggle to the previous month. \Hypertarget{class_u_calendar_u_i_base_a3dabcd7a7aa98f743a48659b9affb5da}\index{UCalendarUIBase@{UCalendarUIBase}!weekdays\_background@{weekdays\_background}}
+\index{weekdays\_background@{weekdays\_background}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{weekdays\_background}{weekdays\_background}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a3dabcd7a7aa98f743a48659b9affb5da} 
+class UButton\texorpdfstring{$\ast$}{*} UCalendar\+UIBase\+::weekdays\+\_\+background\hspace{0.3cm}{\ttfamily [protected]}}
+
+Background for weekday headers. \Hypertarget{class_u_calendar_u_i_base_a02dca1d5100c33f359a8b357670612f4}\index{UCalendarUIBase@{UCalendarUIBase}!year@{year}}
+\index{year@{year}!UCalendarUIBase@{UCalendarUIBase}}
+\doxysubsubsection{\texorpdfstring{year}{year}}
+{\footnotesize\ttfamily \label{class_u_calendar_u_i_base_a02dca1d5100c33f359a8b357670612f4} 
+class UEditable\+Text\+Box\texorpdfstring{$\ast$}{*} UCalendar\+UIBase\+::year\hspace{0.3cm}{\ttfamily [protected]}}
+
+Editable text box for the calendar year. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Plugins/\+Simple\+Calendar\+Plugin/\+Source/\+Simple\+Calendar\+Plugin/\+Private/Calendar\+UIBase.\+h\item 
+Plugins/\+Simple\+Calendar\+Plugin/\+Source/\+Simple\+Calendar\+Plugin/\+Private/Calendar\+UIBase.\+cpp\end{DoxyCompactItemize}

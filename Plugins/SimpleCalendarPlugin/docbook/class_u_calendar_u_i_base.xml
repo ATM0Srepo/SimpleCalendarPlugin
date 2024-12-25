@@ -2,6 +2,14 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_u_calendar_u_i_base" xml:lang="en-US">
 <title>UCalendarUIBase Class Reference</title>
 <indexterm><primary>UCalendarUIBase</primary></indexterm>
+<para>
+
+<para>A user interface class for managing calendar functionality. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;CalendarUIBase.h&gt;</computeroutput>
+</para>
 <para>Inheritance diagram for UCalendarUIBase:    <informalfigure>
         <mediaobject>
             <imageobject>
@@ -13,9 +21,13 @@
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1a1e58af927352001447b95687fcd425a6"/>virtual void <emphasis role="strong">NativeConstruct</emphasis> () override</para>
+            <listitem><para>virtual void <link linkend="_class_u_calendar_u_i_base_1a1e58af927352001447b95687fcd425a6">NativeConstruct</link> () override</para>
+
+<para>Called after the widget is constructed. </para>
 </listitem>
             <listitem><para>FDateTime <link linkend="_class_u_calendar_u_i_base_1a0949b977c36bc9f85fab70bd1658db22">GetTime</link> ()</para>
+
+<para>Retrieves the current DateTime set on the calendar. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -23,38 +35,72 @@
     <title>Protected Member Functions    </title>
         <itemizedlist>
             <listitem><para>void <link linkend="_class_u_calendar_u_i_base_1ae1a2bb611d86bf021b6594a84e0b0083">PreCalendarConfig</link> (FLinearColor SelectedGridColor=FLinearColor(1.0f, 1.0f, 1.0f, 0.8f), FLinearColor EmptyGridColor=FLinearColor(0.0f, 0.0f, 0.0f, 0.0f), FLinearColor GridColor=FLinearColor(0.45f, 0.2f, 0.1f, 0.7f), FLinearColor CalendarBackground=FLinearColor(0.0f, 0.0f, 0.0f, 0.0f), FLinearColor CalendarBackgroundBorder=FLinearColor(0.45f, 0.2f, 0.1f, 0.7f), FLinearColor WeekdayHeadingColor=FLinearColor(0.0f, 0.0f, 0.0f, 1.0f))</para>
+
+<para>Configures the calendar&apos;s style settings. </para>
 </listitem>
             <listitem><para>void <link linkend="_class_u_calendar_u_i_base_1a16365e3ed853935d5bd5b926f2a5e400">SetCornerRadii</link> (const FVector4 &amp;CalendarBorder, const FVector4 &amp;WeekdayHeaderRadii)</para>
+
+<para>Sets corner radii for calendar and weekday headers. </para>
 </listitem>
             <listitem><para>void <link linkend="_class_u_calendar_u_i_base_1a11312e51d4b570c9594b442ec9566a1a">CreateCalendar</link> ()</para>
+
+<para>Creates the calendar UI. </para>
 </listitem>
             <listitem><para>void <link linkend="_class_u_calendar_u_i_base_1a1b09e1b357642378fdc3dc4e6d186183">SetYear</link> (int y)</para>
+
+<para>Sets the calendar year. </para>
 </listitem>
             <listitem><para>void <link linkend="_class_u_calendar_u_i_base_1af0682c27359998782d29358d53bac2a0">SetMonth</link> (int32 m)</para>
+
+<para>Sets the calendar month. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1ac89681dc011ade93852f9ed478503b46"/>void <emphasis role="strong">HandleOnYearChanged</emphasis> (const FText &amp;Text, ETextCommit::Type CommitMethod)</para>
+            <listitem><para>void <link linkend="_class_u_calendar_u_i_base_1ac89681dc011ade93852f9ed478503b46">HandleOnYearChanged</link> (const FText &amp;Text, ETextCommit::Type CommitMethod)</para>
+
+<para>Handles changes to the year text box. </para>
 </listitem>
             <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1a6ec447a30d5ea1cfd6a36dfc5ec00583"/>void <emphasis role="strong">HandleMonthToggleButtonClick</emphasis> ()</para>
+
+<para>Toggles the visibility of month navigation buttons. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1a3b2917fd71339eac0cfdd50f62a679b7"/>void <emphasis role="strong">HandleOnHourCommitted</emphasis> (const FText &amp;Text, ETextCommit::Type CommitMethod)</para>
+            <listitem><para>void <link linkend="_class_u_calendar_u_i_base_1a3b2917fd71339eac0cfdd50f62a679b7">HandleOnHourCommitted</link> (const FText &amp;Text, ETextCommit::Type CommitMethod)</para>
+
+<para>Handles the event when the hour is committed (e.g., user presses Enter). </para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1adbc121a4e1f92087805b0ebe4b12547a"/>void <emphasis role="strong">HandleOnHourChanged</emphasis> (const FText &amp;Text)</para>
+            <listitem><para>void <link linkend="_class_u_calendar_u_i_base_1adbc121a4e1f92087805b0ebe4b12547a">HandleOnHourChanged</link> (const FText &amp;Text)</para>
+
+<para>Handles changes to the hour text box. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1aba90f4a23ad0120fc4ee510b91d59678"/>void <emphasis role="strong">HandleOnMinuteCommitted</emphasis> (const FText &amp;Text, ETextCommit::Type CommitMethod)</para>
+            <listitem><para>void <link linkend="_class_u_calendar_u_i_base_1aba90f4a23ad0120fc4ee510b91d59678">HandleOnMinuteCommitted</link> (const FText &amp;Text, ETextCommit::Type CommitMethod)</para>
+
+<para>Handles the event when the minute is committed (e.g., user presses Enter). </para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1a2fd0e81a9e6ef6e5166d5300ccfea751"/>void <emphasis role="strong">HandleOnMinuteChanged</emphasis> (const FText &amp;Text)</para>
+            <listitem><para>void <link linkend="_class_u_calendar_u_i_base_1a2fd0e81a9e6ef6e5166d5300ccfea751">HandleOnMinuteChanged</link> (const FText &amp;Text)</para>
+
+<para>Handles changes to the minute text box. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1aaabd8f8b87a5bd74c2428bff88ca9eda"/>void <emphasis role="strong">ShowNextMonth</emphasis> ()</para>
+            <listitem><para>void <link linkend="_class_u_calendar_u_i_base_1aaabd8f8b87a5bd74c2428bff88ca9eda">ShowNextMonth</link> ()</para>
+
+<para>Shows the next month in the calendar. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1a70908db1ad03af94622e83f086574f19"/>void <emphasis role="strong">ShowPrevMonth</emphasis> ()</para>
+            <listitem><para>void <link linkend="_class_u_calendar_u_i_base_1a70908db1ad03af94622e83f086574f19">ShowPrevMonth</link> ()</para>
+
+<para>Shows the previous month in the calendar. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1ac963cdd07a261492b68710883c1f5cc9"/>void <emphasis role="strong">InitializeHour</emphasis> ()</para>
+            <listitem><para>void <link linkend="_class_u_calendar_u_i_base_1ac963cdd07a261492b68710883c1f5cc9">InitializeHour</link> ()</para>
+
+<para>Initializes the hour text box with the current hour. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1a76eee495d3d41ed988f0ea24859012b2"/>void <emphasis role="strong">InitializeMinute</emphasis> ()</para>
+            <listitem><para>void <link linkend="_class_u_calendar_u_i_base_1a76eee495d3d41ed988f0ea24859012b2">InitializeMinute</link> ()</para>
+
+<para>Initializes the minute text box with the current minute. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1af20668b08bbd9c1faf012d43c09cf375"/>void <emphasis role="strong">InitializeYear</emphasis> (int y)</para>
+            <listitem><para>void <link linkend="_class_u_calendar_u_i_base_1af20668b08bbd9c1faf012d43c09cf375">InitializeYear</link> (int y)</para>
+
+<para>Sets the calendar year. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1a0a185b91f2f826a535e5b03e57266149"/>void <emphasis role="strong">InitializeMonth</emphasis> (int m)</para>
+            <listitem><para>void <link linkend="_class_u_calendar_u_i_base_1a0a185b91f2f826a535e5b03e57266149">InitializeMonth</link> (int m)</para>
+
+<para>Sets the calendar month. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -69,43 +115,337 @@
 </listitem>
             <listitem><para>class UEditableTextBox * <link linkend="_class_u_calendar_u_i_base_1aae2c741ddfd4dfd23c54379fe3c8a496">minute</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1a48c507302566eea8fed95e8a7d5d7983"/>class UButton * <emphasis role="strong">toggle_prev_month</emphasis></para>
+            <listitem><para>class UButton * <link linkend="_class_u_calendar_u_i_base_1a48c507302566eea8fed95e8a7d5d7983">toggle_prev_month</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1a5a692f2c28fbca9c2718313eec70d1d7"/>class UButton * <emphasis role="strong">toggle_next_month</emphasis></para>
+            <listitem><para>class UButton * <link linkend="_class_u_calendar_u_i_base_1a5a692f2c28fbca9c2718313eec70d1d7">toggle_next_month</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1a8d166abd11adf560f1d3b8b1a48d3df8"/>class UButton * <emphasis role="strong">MonthButton</emphasis></para>
+            <listitem><para>class UButton * <link linkend="_class_u_calendar_u_i_base_1a8d166abd11adf560f1d3b8b1a48d3df8">MonthButton</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1a4d9afa3618516bbad2169319ea01c4ad"/>class UButton * <emphasis role="strong">HourButton</emphasis></para>
+            <listitem><para>class UButton * <link linkend="_class_u_calendar_u_i_base_1a4d9afa3618516bbad2169319ea01c4ad">HourButton</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1a3e1b4e19014b4ab2c552b16ab3948531"/>class UButton * <emphasis role="strong">MinuteButton</emphasis></para>
+            <listitem><para>class UButton * <link linkend="_class_u_calendar_u_i_base_1a3e1b4e19014b4ab2c552b16ab3948531">MinuteButton</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1a3dabcd7a7aa98f743a48659b9affb5da"/>class UButton * <emphasis role="strong">weekdays_background</emphasis></para>
+            <listitem><para>class UButton * <link linkend="_class_u_calendar_u_i_base_1a3dabcd7a7aa98f743a48659b9affb5da">weekdays_background</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1a26f4d36b170dc86db5dec24425315c09"/>class UButton * <emphasis role="strong">calendar_background</emphasis></para>
+            <listitem><para>class UButton * <link linkend="_class_u_calendar_u_i_base_1a26f4d36b170dc86db5dec24425315c09">calendar_background</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1a3e817349a70c2facd1f0a5cade0b16d9"/>class UListView * <emphasis role="strong">ListViewCalendar</emphasis></para>
+            <listitem><para>class UListView * <link linkend="_class_u_calendar_u_i_base_1a3e817349a70c2facd1f0a5cade0b16d9">ListViewCalendar</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1a00f1bbb4c462c529a3d633c90a22534c"/>FTimerHandle <emphasis role="strong">TickTimerHandle</emphasis></para>
+            <listitem><para>FTimerHandle <link linkend="_class_u_calendar_u_i_base_1a00f1bbb4c462c529a3d633c90a22534c">TickTimerHandle</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_u_calendar_u_i_base_1a49b0b02cef6baf80fd5c1408999a3d9d"/>float <emphasis role="strong">DefaultMinuteTickInterval</emphasis> = 0.01f</para>
+            <listitem><para>float <link linkend="_class_u_calendar_u_i_base_1a49b0b02cef6baf80fd5c1408999a3d9d">DefaultMinuteTickInterval</link> = 0.01f</para>
 </listitem>
         </itemizedlist>
 </simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A user interface class for managing calendar functionality. </para>
+
+
+
+<para>This class provides various functions and properties for configuring, displaying, and interacting with a calendar in Unreal Engine. </para>
+</section>
 <section>
 <title>Member Function Documentation</title>
 <anchor xml:id="_class_u_calendar_u_i_base_1a11312e51d4b570c9594b442ec9566a1a"/><section>
     <title>CreateCalendar()</title>
 <indexterm><primary>CreateCalendar</primary><secondary>UCalendarUIBase</secondary></indexterm>
 <indexterm><primary>UCalendarUIBase</primary><secondary>CreateCalendar</secondary></indexterm>
-<para><computeroutput>void UCalendarUIBase::CreateCalendar ( )<computeroutput>[protected]</computeroutput></computeroutput></para>
-<para>Create Calendar </para>
+<para><computeroutput>void UCalendarUIBase::CreateCalendar ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Creates the calendar UI. </para>
+</para>
+
+<para>Creates the calendar UI by populating rows. </para>
 </section>
 <anchor xml:id="_class_u_calendar_u_i_base_1a0949b977c36bc9f85fab70bd1658db22"/><section>
     <title>GetTime()</title>
 <indexterm><primary>GetTime</primary><secondary>UCalendarUIBase</secondary></indexterm>
 <indexterm><primary>UCalendarUIBase</primary><secondary>GetTime</secondary></indexterm>
-<para><computeroutput>FDateTime UCalendarUIBase::GetTime ( )</computeroutput></para>
-<para>Retrieve DateTime set on Calendar </para>
+<para><computeroutput>FDateTime UCalendarUIBase::GetTime ( )</computeroutput></para><para>
+
+<para>Retrieves the current DateTime set on the calendar. </para>
+</para>
+
+<para>Retrieves the current DateTime set in the calendar.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The current DateTime object. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1adbc121a4e1f92087805b0ebe4b12547a"/><section>
+    <title>HandleOnHourChanged()</title>
+<indexterm><primary>HandleOnHourChanged</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>HandleOnHourChanged</secondary></indexterm>
+<para><computeroutput>void UCalendarUIBase::HandleOnHourChanged (const FText &amp; Text)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Handles changes to the hour text box. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Text</entry><entry>
+<para>The new hour value entered by the user. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1a3b2917fd71339eac0cfdd50f62a679b7"/><section>
+    <title>HandleOnHourCommitted()</title>
+<indexterm><primary>HandleOnHourCommitted</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>HandleOnHourCommitted</secondary></indexterm>
+<para><computeroutput>void UCalendarUIBase::HandleOnHourCommitted (const FText &amp; Text, ETextCommit::Type CommitMethod)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Handles the event when the hour is committed (e.g., user presses Enter). </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Text</entry><entry>
+<para>The new hour value entered. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>CommitMethod</entry><entry>
+<para>The method of text commit (e.g., OnEnter). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1a2fd0e81a9e6ef6e5166d5300ccfea751"/><section>
+    <title>HandleOnMinuteChanged()</title>
+<indexterm><primary>HandleOnMinuteChanged</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>HandleOnMinuteChanged</secondary></indexterm>
+<para><computeroutput>void UCalendarUIBase::HandleOnMinuteChanged (const FText &amp; Text)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Handles changes to the minute text box. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Text</entry><entry>
+<para>The new minute value entered by the user. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1aba90f4a23ad0120fc4ee510b91d59678"/><section>
+    <title>HandleOnMinuteCommitted()</title>
+<indexterm><primary>HandleOnMinuteCommitted</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>HandleOnMinuteCommitted</secondary></indexterm>
+<para><computeroutput>void UCalendarUIBase::HandleOnMinuteCommitted (const FText &amp; Text, ETextCommit::Type CommitMethod)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Handles the event when the minute is committed (e.g., user presses Enter). </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Text</entry><entry>
+<para>The new minute value entered by the user. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>CommitMethod</entry><entry>
+<para>The method of text commit (e.g., OnEnter). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1ac89681dc011ade93852f9ed478503b46"/><section>
+    <title>HandleOnYearChanged()</title>
+<indexterm><primary>HandleOnYearChanged</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>HandleOnYearChanged</secondary></indexterm>
+<para><computeroutput>void UCalendarUIBase::HandleOnYearChanged (const FText &amp; Text, ETextCommit::Type CommitMethod)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Handles changes to the year text box. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Text</entry><entry>
+<para>The new year value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>CommitMethod</entry><entry>
+<para>The method of text commit. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1ac963cdd07a261492b68710883c1f5cc9"/><section>
+    <title>InitializeHour()</title>
+<indexterm><primary>InitializeHour</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>InitializeHour</secondary></indexterm>
+<para><computeroutput>void UCalendarUIBase::InitializeHour ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Initializes the hour text box with the current hour. </para>
+</para>
+
+<para>Initializes the hour text box. </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1a76eee495d3d41ed988f0ea24859012b2"/><section>
+    <title>InitializeMinute()</title>
+<indexterm><primary>InitializeMinute</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>InitializeMinute</secondary></indexterm>
+<para><computeroutput>void UCalendarUIBase::InitializeMinute ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Initializes the minute text box with the current minute. </para>
+</para>
+
+<para>Initializes the minute text box. </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1a0a185b91f2f826a535e5b03e57266149"/><section>
+    <title>InitializeMonth()</title>
+<indexterm><primary>InitializeMonth</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>InitializeMonth</secondary></indexterm>
+<para><computeroutput>void UCalendarUIBase::InitializeMonth (int m)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Sets the calendar month. </para>
+</para>
+
+<para>Sets the month from code.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>m</entry><entry>
+<para>The month to set (1-12). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1af20668b08bbd9c1faf012d43c09cf375"/><section>
+    <title>InitializeYear()</title>
+<indexterm><primary>InitializeYear</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>InitializeYear</secondary></indexterm>
+<para><computeroutput>void UCalendarUIBase::InitializeYear (int y)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Sets the calendar year. </para>
+</para>
+
+<para>Sets the year from code.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>y</entry><entry>
+<para>The year to set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1a1e58af927352001447b95687fcd425a6"/><section>
+    <title>NativeConstruct()</title>
+<indexterm><primary>NativeConstruct</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>NativeConstruct</secondary></indexterm>
+<para><computeroutput>void UCalendarUIBase::NativeConstruct ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Called after the widget is constructed. </para>
+</para>
+
+<para>Initializes the calendar widget and binds UI events.</para>
+
+<para>Initializes calendar properties and binds events to UI elements. </para>
 </section>
 <anchor xml:id="_class_u_calendar_u_i_base_1ae1a2bb611d86bf021b6594a84e0b0083"/><section>
     <title>PreCalendarConfig()</title>
@@ -114,63 +454,347 @@
 <para><computeroutput>void UCalendarUIBase::PreCalendarConfig (FLinearColor SelectedGridColor = <computeroutput>FLinearColor(1.0f,&#160;1.0f,&#160;1.0f,&#160;0.8f)</computeroutput>
 , FLinearColor EmptyGridColor = <computeroutput>FLinearColor(0.0f,&#160;0.0f,&#160;0.0f,&#160;0.0f)</computeroutput>
 , FLinearColor GridColor = <computeroutput>FLinearColor(0.45f,&#160;0.2f,&#160;0.1f,&#160;0.7f)</computeroutput>
-, FLinearColor CalendarBackground = <computeroutput>FLinearColor(0.0f,&#160;0.0f,&#160;0.0f,&#160;0.0f)</computeroutput>
-, FLinearColor CalendarBackgroundBorder = <computeroutput>FLinearColor(0.45f,&#160;0.2f,&#160;0.1f,&#160;0.7f)</computeroutput>
+, FLinearColor CalendarBackgroundColor = <computeroutput>FLinearColor(0.0f,&#160;0.0f,&#160;0.0f,&#160;0.0f)</computeroutput>
+, FLinearColor CalendarBackgroundBorderColor = <computeroutput>FLinearColor(0.45f,&#160;0.2f,&#160;0.1f,&#160;0.7f)</computeroutput>
 , FLinearColor WeekdayHeadingColor = <computeroutput>FLinearColor(0.0f,&#160;0.0f,&#160;0.0f,&#160;1.0f)</computeroutput>
-)<computeroutput>[protected]</computeroutput></computeroutput></para>
-<para>Manipulate Calendar style settings from blueprint To be called before CreateCalendar Function </para>
+)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Configures the calendar&apos;s style settings. </para>
+</para>
+
+<para>Configures calendar style settings.</para>
+
+<para>This function should be called before creating the calendar.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>SelectedGridColor</entry><entry>
+<para>Color for selected calendar grid. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>EmptyGridColor</entry><entry>
+<para>Color for empty calendar grid. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>GridColor</entry><entry>
+<para>Default grid color. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>CalendarBackground</entry><entry>
+<para>Background color for the calendar. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>CalendarBackgroundBorder</entry><entry>
+<para>Border color for the calendar background. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>WeekdayHeadingColor</entry><entry>
+<para>Color for weekday headers.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>SelectedGridColor</entry><entry>
+<para>Color for selected grids. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>EmptyGridColor</entry><entry>
+<para>Color for empty grids. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>GridColor</entry><entry>
+<para>Default grid color. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>CalendarBackground</entry><entry>
+<para>Background color for the calendar. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>CalendarBackgroundBorder</entry><entry>
+<para>Border color for the calendar background. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>WeekdayHeadingColor</entry><entry>
+<para>Color for weekday headers. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
 </section>
 <anchor xml:id="_class_u_calendar_u_i_base_1a16365e3ed853935d5bd5b926f2a5e400"/><section>
     <title>SetCornerRadii()</title>
 <indexterm><primary>SetCornerRadii</primary><secondary>UCalendarUIBase</secondary></indexterm>
 <indexterm><primary>UCalendarUIBase</primary><secondary>SetCornerRadii</secondary></indexterm>
-<para><computeroutput>void UCalendarUIBase::SetCornerRadii (const FVector4 &amp; CalendarBorder, const FVector4 &amp; WeekdayHeaderRadii)<computeroutput>[protected]</computeroutput></computeroutput></para>
-<para>Manipulate Corner Radii of Calendar, Weekday Heading Bar, and Calendar Grids Can be called before or after CreateCalendar function </para>
+<para><computeroutput>void UCalendarUIBase::SetCornerRadii (const FVector4 &amp; CalendarBorder, const FVector4 &amp; WeekdayHeaderRadii)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Sets corner radii for calendar and weekday headers. </para>
+</para>
+
+<para>Configures corner radii for the calendar and weekday headers.</para>
+
+<para>This function can be called before or after creating the calendar.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>CalendarBorder</entry><entry>
+<para>Corner radii for the calendar border. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>WeekdayHeaderRadii</entry><entry>
+<para>Corner radii for the weekday header.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>CalendarBorder</entry><entry>
+<para>Corner radii for the calendar border. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>WeekdayHeaderRadii</entry><entry>
+<para>Corner radii for the weekday headers. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
 </section>
 <anchor xml:id="_class_u_calendar_u_i_base_1af0682c27359998782d29358d53bac2a0"/><section>
     <title>SetMonth()</title>
 <indexterm><primary>SetMonth</primary><secondary>UCalendarUIBase</secondary></indexterm>
 <indexterm><primary>UCalendarUIBase</primary><secondary>SetMonth</secondary></indexterm>
-<para><computeroutput>void UCalendarUIBase::SetMonth (int32 m)<computeroutput>[protected]</computeroutput></computeroutput></para>
-<para>Manipulate Calendar Month from blueprint To be called before CreateCalendar Function </para>
+<para><computeroutput>void UCalendarUIBase::SetMonth (int32 m)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Sets the calendar month. </para>
+</para>
+
+<para>Updates the month and refreshes the calendar.</para>
+
+<para>This function should be called before creating the calendar.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>m</entry><entry>
+<para>The month to set (1-12).</para>
+</entry>
+                            </row>
+                            <row>
+<entry>m</entry><entry>
+<para>The new month (1-12). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
 </section>
 <anchor xml:id="_class_u_calendar_u_i_base_1a1b09e1b357642378fdc3dc4e6d186183"/><section>
     <title>SetYear()</title>
 <indexterm><primary>SetYear</primary><secondary>UCalendarUIBase</secondary></indexterm>
 <indexterm><primary>UCalendarUIBase</primary><secondary>SetYear</secondary></indexterm>
-<para><computeroutput>void UCalendarUIBase::SetYear (int y)<computeroutput>[protected]</computeroutput></computeroutput></para>
-<para>Manipulate Calendar Year from blueprint To be called before CreateCalendar Function </para>
+<para><computeroutput>void UCalendarUIBase::SetYear (int y)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Sets the calendar year. </para>
+</para>
+
+<para>Updates the year and refreshes the calendar.</para>
+
+<para>This function should be called before creating the calendar.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>y</entry><entry>
+<para>The year to set.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>y</entry><entry>
+<para>The new year. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1aaabd8f8b87a5bd74c2428bff88ca9eda"/><section>
+    <title>ShowNextMonth()</title>
+<indexterm><primary>ShowNextMonth</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>ShowNextMonth</secondary></indexterm>
+<para><computeroutput>void UCalendarUIBase::ShowNextMonth ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Shows the next month in the calendar. </para>
+</para>
+
+<para>Advances the calendar to the next month. </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1a70908db1ad03af94622e83f086574f19"/><section>
+    <title>ShowPrevMonth()</title>
+<indexterm><primary>ShowPrevMonth</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>ShowPrevMonth</secondary></indexterm>
+<para><computeroutput>void UCalendarUIBase::ShowPrevMonth ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Shows the previous month in the calendar. </para>
+</para>
+
+<para>Moves the calendar to the previous month. </para>
 </section>
 </section>
 <section>
 <title>Member Data Documentation</title>
+<anchor xml:id="_class_u_calendar_u_i_base_1a26f4d36b170dc86db5dec24425315c09"/><section>
+    <title>calendar_background</title>
+<indexterm><primary>calendar_background</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>calendar_background</secondary></indexterm>
+<para><computeroutput>class UButton* UCalendarUIBase::calendar_background<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Background for the calendar. </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1a49b0b02cef6baf80fd5c1408999a3d9d"/><section>
+    <title>DefaultMinuteTickInterval</title>
+<indexterm><primary>DefaultMinuteTickInterval</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>DefaultMinuteTickInterval</secondary></indexterm>
+<para><computeroutput>float UCalendarUIBase::DefaultMinuteTickInterval = 0.01f<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Default interval for minute ticks. </para>
+</section>
 <anchor xml:id="_class_u_calendar_u_i_base_1ade010f768f21cf37892f5cc37742c164"/><section>
     <title>hour</title>
 <indexterm><primary>hour</primary><secondary>UCalendarUIBase</secondary></indexterm>
 <indexterm><primary>UCalendarUIBase</primary><secondary>hour</secondary></indexterm>
 <para><computeroutput>class UEditableTextBox* UCalendarUIBase::hour<computeroutput>[protected]</computeroutput></computeroutput></para>
-<para>Calendar Hour (Editable TextBox) </para>
+<para>Editable text box for the calendar hour. </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1a4d9afa3618516bbad2169319ea01c4ad"/><section>
+    <title>HourButton</title>
+<indexterm><primary>HourButton</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>HourButton</secondary></indexterm>
+<para><computeroutput>class UButton* UCalendarUIBase::HourButton<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Button for selecting an hour. </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1a3e817349a70c2facd1f0a5cade0b16d9"/><section>
+    <title>ListViewCalendar</title>
+<indexterm><primary>ListViewCalendar</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>ListViewCalendar</secondary></indexterm>
+<para><computeroutput>class UListView* UCalendarUIBase::ListViewCalendar<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>List view for displaying calendar items. </para>
 </section>
 <anchor xml:id="_class_u_calendar_u_i_base_1aae2c741ddfd4dfd23c54379fe3c8a496"/><section>
     <title>minute</title>
 <indexterm><primary>minute</primary><secondary>UCalendarUIBase</secondary></indexterm>
 <indexterm><primary>UCalendarUIBase</primary><secondary>minute</secondary></indexterm>
 <para><computeroutput>class UEditableTextBox* UCalendarUIBase::minute<computeroutput>[protected]</computeroutput></computeroutput></para>
-<para>Calendar Minute (Editable TextBox) </para>
+<para>Editable text box for the calendar minute. </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1a3e1b4e19014b4ab2c552b16ab3948531"/><section>
+    <title>MinuteButton</title>
+<indexterm><primary>MinuteButton</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>MinuteButton</secondary></indexterm>
+<para><computeroutput>class UButton* UCalendarUIBase::MinuteButton<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Button for selecting a minute. </para>
 </section>
 <anchor xml:id="_class_u_calendar_u_i_base_1a3a174b5e9fd5c372db9fc56d6e5a41e4"/><section>
     <title>month</title>
 <indexterm><primary>month</primary><secondary>UCalendarUIBase</secondary></indexterm>
 <indexterm><primary>UCalendarUIBase</primary><secondary>month</secondary></indexterm>
 <para><computeroutput>class UTextBlock* UCalendarUIBase::month<computeroutput>[protected]</computeroutput></computeroutput></para>
-<para>Calendar Month (TextBlock) </para>
+<para>Text block for displaying the calendar month. </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1a8d166abd11adf560f1d3b8b1a48d3df8"/><section>
+    <title>MonthButton</title>
+<indexterm><primary>MonthButton</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>MonthButton</secondary></indexterm>
+<para><computeroutput>class UButton* UCalendarUIBase::MonthButton<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Button for selecting a month. </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1a00f1bbb4c462c529a3d633c90a22534c"/><section>
+    <title>TickTimerHandle</title>
+<indexterm><primary>TickTimerHandle</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>TickTimerHandle</secondary></indexterm>
+<para><computeroutput>FTimerHandle UCalendarUIBase::TickTimerHandle<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Timer handle for ticking events. </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1a5a692f2c28fbca9c2718313eec70d1d7"/><section>
+    <title>toggle_next_month</title>
+<indexterm><primary>toggle_next_month</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>toggle_next_month</secondary></indexterm>
+<para><computeroutput>class UButton* UCalendarUIBase::toggle_next_month<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Button to toggle to the next month. </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1a48c507302566eea8fed95e8a7d5d7983"/><section>
+    <title>toggle_prev_month</title>
+<indexterm><primary>toggle_prev_month</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>toggle_prev_month</secondary></indexterm>
+<para><computeroutput>class UButton* UCalendarUIBase::toggle_prev_month<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Button to toggle to the previous month. </para>
+</section>
+<anchor xml:id="_class_u_calendar_u_i_base_1a3dabcd7a7aa98f743a48659b9affb5da"/><section>
+    <title>weekdays_background</title>
+<indexterm><primary>weekdays_background</primary><secondary>UCalendarUIBase</secondary></indexterm>
+<indexterm><primary>UCalendarUIBase</primary><secondary>weekdays_background</secondary></indexterm>
+<para><computeroutput>class UButton* UCalendarUIBase::weekdays_background<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Background for weekday headers. </para>
 </section>
 <anchor xml:id="_class_u_calendar_u_i_base_1a02dca1d5100c33f359a8b357670612f4"/><section>
     <title>year</title>
 <indexterm><primary>year</primary><secondary>UCalendarUIBase</secondary></indexterm>
 <indexterm><primary>UCalendarUIBase</primary><secondary>year</secondary></indexterm>
 <para><computeroutput>class UEditableTextBox* UCalendarUIBase::year<computeroutput>[protected]</computeroutput></computeroutput></para>
-<para>Calendar Year (Editable TextBox) </para>
+<para>Editable text box for the calendar year. </para>
 </section>
 <para>
 The documentation for this class was generated from the following files:</para>

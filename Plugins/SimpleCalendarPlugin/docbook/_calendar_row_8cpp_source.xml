@@ -4,23 +4,22 @@
 <indexterm><primary>Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarRow.cpp</primary></indexterm>
 <programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Fill&#32;out&#32;your&#32;copyright&#32;notice&#32;in&#32;the&#32;Description&#32;page&#32;of&#32;Project&#32;Settings.</emphasis>
 2 
-3 
-4 <emphasis role="preprocessor">#include&#32;&quot;CalendarRow.h&quot;</emphasis>
-5 
-6 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarRow::Init(
-7 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;int32&#32;RowValue,&#32;
-8 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;int32&#32;year,&#32;int32&#32;month,&#32;
-9 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor&#32;color1,
-10 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor&#32;color2,
-11 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor&#32;color3,
-12 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>*&#32;InOwner)
-13 {
-14 &#32;&#32;&#32;&#32;structure.Row&#32;=&#32;RowValue;
-15 &#32;&#32;&#32;&#32;structure.Year&#32;=&#32;year;
-16 &#32;&#32;&#32;&#32;structure.Month&#32;=&#32;month;
-17 &#32;&#32;&#32;&#32;structure.SelectedGridColor&#32;=&#32;color1;
-18 &#32;&#32;&#32;&#32;structure.EmptyGridColor&#32;=&#32;color2;
-19 &#32;&#32;&#32;&#32;structure.GridColor&#32;=&#32;color3;
-20 &#32;&#32;&#32;&#32;Owner&#32;=&#32;InOwner;
-21 }
+3 <emphasis role="preprocessor">#include&#32;&quot;CalendarRow.h&quot;</emphasis>
+4 
+16 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_row_1a120b529bd6e963cde26937a84fc8ebbe">UCalendarRow::Init</link>(
+17 &#32;&#32;&#32;&#32;int32&#32;RowValue,
+18 &#32;&#32;&#32;&#32;int32&#32;year,&#32;int32&#32;month,
+19 &#32;&#32;&#32;&#32;FLinearColor&#32;color1,
+20 &#32;&#32;&#32;&#32;FLinearColor&#32;color2,
+21 &#32;&#32;&#32;&#32;FLinearColor&#32;color3,
+22 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>*&#32;InOwner)
+23 {
+24 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_row_1ac877eba41da23e2c3009e1836256f6d7">structure</link>.<link linkend="_struct_f_my_base_sructure_1a21e70b15f24048512c40cad89f49f513">Row</link>&#32;=&#32;RowValue;
+25 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_row_1ac877eba41da23e2c3009e1836256f6d7">structure</link>.<link linkend="_struct_f_my_base_sructure_1a88cf99ae5dba836107a35b871e753435">Year</link>&#32;=&#32;year;
+26 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_row_1ac877eba41da23e2c3009e1836256f6d7">structure</link>.<link linkend="_struct_f_my_base_sructure_1af878ef2fb9f635bcd61d1b30c130558f">Month</link>&#32;=&#32;month;
+27 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_row_1ac877eba41da23e2c3009e1836256f6d7">structure</link>.<link linkend="_struct_f_my_base_sructure_1a72efcefac992cb40bcf703e50a3dc753">SelectedGridColor</link>&#32;=&#32;color1;
+28 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_row_1ac877eba41da23e2c3009e1836256f6d7">structure</link>.<link linkend="_struct_f_my_base_sructure_1ab78f5c8f80b82c9ab5c28573c7581175">EmptyGridColor</link>&#32;=&#32;color2;
+29 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_row_1ac877eba41da23e2c3009e1836256f6d7">structure</link>.<link linkend="_struct_f_my_base_sructure_1a7513c53fd1fcf0f4f89a79331d54098a">GridColor</link>&#32;=&#32;color3;
+30 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_row_1a0c389bb5ebb05235a1566990b49d0e8b">Owner</link>&#32;=&#32;InOwner;
+31 }
 </programlisting></section>

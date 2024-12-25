@@ -1,0 +1,24 @@
+\doxysection{Task\+API.\+h}
+\hypertarget{_task_a_p_i_8h_source}{}\label{_task_a_p_i_8h_source}\index{Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Public/TaskAPI.h@{Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Public/TaskAPI.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Blueprint/UserWidget.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}WebBrowser.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}TaskAPI.generated.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00017\ UCLASS()}
+\DoxyCodeLine{00018\ class\ \mbox{\hyperlink{class_u_task_a_p_i}{UTaskAPI}}\ :\ public\ UUserWidget}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ \textcolor{stringliteral}{"{}Calendar\ Properties"{}})}
+\DoxyCodeLine{00029\ \ \ \ \ UWebBrowser*\ WebBrowserWidget;}
+\DoxyCodeLine{00030\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__intermediate_2_build_2_win64_2x64_2_unreal_editor_2_development_2_simple_calendar_plugin_2_single_file_2_calendar_row_8h_source" xml:lang="en-US">
+<title>CalendarRow.h</title>
+<indexterm><primary>Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/SimpleCalendarPlugin/SingleFile/CalendarRow.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#include&#32;&quot;C:/Users/atm0s/Documents/Unreal&#32;Projects/atm0sCalendar/Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarRow.h&quot;</emphasis>
+</programlisting></section>

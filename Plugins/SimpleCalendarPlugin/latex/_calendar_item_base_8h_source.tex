@@ -1,0 +1,122 @@
+\doxysection{Calendar\+Item\+Base.\+h}
+\hypertarget{_calendar_item_base_8h_source}{}\label{_calendar_item_base_8h_source}\index{Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarItemBase.h@{Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarItemBase.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}CalendarRow.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Blueprint/UserWidget.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}CalendarUIBase.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}CalendarItemBase.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ UCLASS()}
+\DoxyCodeLine{00014\ class\ \mbox{\hyperlink{class_u_calendar_item_base}{UCalendarItemBase}}\ :\ public\ UUserWidget}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ NativeConstruct()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \ \ \ \ UPROPERTY(BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Atm0s\ Calendar\ Variables"{}})}
+\DoxyCodeLine{00023\ \ \ \ \ UTextBlock*\ DaySelected;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ Functions\ to\ Handle\ Day\ Clicks}}
+\DoxyCodeLine{00026\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleSundayClick();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleMondayClick();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleTuesdayClick();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleWednesdayClick();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleThursdayClick();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleFridayClick();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleSaturdayClick();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ UFUNCTION(BlueprintImplementableEvent,\ Category\ =\ "{}Atm0s\ Calendar\ Events"{})}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ OnDaySelected();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ "{}Calendar\ Functions"{})}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ OnItemAdded(UObject*\ ListItemObjectRef);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ FDateTime\ CurrentDateTime;}
+\DoxyCodeLine{00058\ \ \ \ \ int32\ Year;\ \ \textcolor{comment}{//\ temp}}
+\DoxyCodeLine{00059\ \ \ \ \ int32\ Month;\ \ \ \textcolor{comment}{//\ temp}}
+\DoxyCodeLine{00060\ \ \ \ \ int32\ FirstDayOfWeek;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ int32\ Offset;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ protected:}
+\DoxyCodeLine{00066\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00067\ \ \ \ \ class\ UButton*\ Sunday;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00070\ \ \ \ \ class\ UButton*\ Monday;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00073\ \ \ \ \ class\ UButton*\ Tuesday;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00076\ \ \ \ \ class\ UButton*\ Wednesday;}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00079\ \ \ \ \ class\ UButton*\ Thursday;}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00082\ \ \ \ \ class\ UButton*\ Friday;}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00085\ \ \ \ \ class\ UButton*\ Saturday;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00088\ \ \ \ \ class\ UTextBlock*\ day\_0;}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00091\ \ \ \ \ class\ UTextBlock*\ day\_1;}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00094\ \ \ \ \ class\ UTextBlock*\ day\_2;}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00097\ \ \ \ \ class\ UTextBlock*\ day\_3;}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00100\ \ \ \ \ class\ UTextBlock*\ day\_4;}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00103\ \ \ \ \ class\ UTextBlock*\ day\_5;}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (BindWidget),\ Category\ =\ "{}Atm0s\ Calendar\ Variables"{})}
+\DoxyCodeLine{00106\ \ \ \ \ class\ UTextBlock*\ day\_6;}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ private:}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ RowTimeHelper(int32\ RowIndex);}
+\DoxyCodeLine{00110\ \ \ \ \ int32\ CalculateOffset(int32\ Row);}
+\DoxyCodeLine{00111\ \ \ \ \ int32\ CalendarRow;}
+\DoxyCodeLine{00112\ \ \ \ \ int32\ SelectedGridRow;}
+\DoxyCodeLine{00113\ \ \ \ \ FLinearColor\ sgc\_color;}
+\DoxyCodeLine{00114\ \ \ \ \ FLinearColor\ d\_color;}
+\DoxyCodeLine{00115\ \ \ \ \ FLinearColor\ g\_color;}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ SetDayText(int32\ Selection,\ int32\&\ Count);}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ SetCalendarItemHelper(int32\ Selection,\ FText\ Date);}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ HandleCalendarItemClick();}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ EnableGrids();}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ DisableGrids();}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ InitializeCalendarRow(int32\ row,\ int32\ year,\ int32\ month,\ FLinearColor\ SelectedGridColor,\ FLinearColor\ EmptyGridColor,\ FLinearColor\ GridColor,\ \mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}}*\ InOwner);}
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}}*\ Owner;}
+\DoxyCodeLine{00123\ \ \ \ \ FDateTime\ ClickedTime;}
+\DoxyCodeLine{00124\ \};}
+
+\end{DoxyCode}

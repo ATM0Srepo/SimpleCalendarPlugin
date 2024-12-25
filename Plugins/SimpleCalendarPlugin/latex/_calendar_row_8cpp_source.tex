@@ -1,0 +1,27 @@
+\doxysection{Calendar\+Row.\+cpp}
+\hypertarget{_calendar_row_8cpp_source}{}\label{_calendar_row_8cpp_source}\index{Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarRow.cpp@{Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarRow.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}CalendarRow.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keywordtype}{void}\ UCalendarRow::Init(}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int32\ RowValue,\ }
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int32\ year,\ int32\ month,\ }
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FLinearColor\ color1,}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FLinearColor\ color2,}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FLinearColor\ color3,}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}}*\ InOwner)}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ structure.Row\ =\ RowValue;}
+\DoxyCodeLine{00015\ \ \ \ \ structure.Year\ =\ year;}
+\DoxyCodeLine{00016\ \ \ \ \ structure.Month\ =\ month;}
+\DoxyCodeLine{00017\ \ \ \ \ structure.SelectedGridColor\ =\ color1;}
+\DoxyCodeLine{00018\ \ \ \ \ structure.EmptyGridColor\ =\ color2;}
+\DoxyCodeLine{00019\ \ \ \ \ structure.GridColor\ =\ color3;}
+\DoxyCodeLine{00020\ \ \ \ \ Owner\ =\ InOwner;}
+\DoxyCodeLine{00021\ \}}
+
+\end{DoxyCode}

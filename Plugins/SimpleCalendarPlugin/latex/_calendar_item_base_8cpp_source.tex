@@ -1,0 +1,392 @@
+\doxysection{Calendar\+Item\+Base.\+cpp}
+\hypertarget{_calendar_item_base_8cpp_source}{}\label{_calendar_item_base_8cpp_source}\index{Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarItemBase.cpp@{Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarItemBase.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}CalendarItemBase.h"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Misc/DateTime.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Containers/Map.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Components/Button.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Components/TextBlock.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keywordtype}{void}\ UCalendarItemBase::NativeConstruct()}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ Super::NativeConstruct();}
+\DoxyCodeLine{00011\ \ \ \ \ HandleCalendarItemClick();}
+\DoxyCodeLine{00012\ \}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{void}\ UCalendarItemBase::HandleCalendarItemClick()}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ click\ on\ calendar\ events}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{if}\ (Sunday)}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ Sunday-\/>OnClicked.AddDynamic(\textcolor{keyword}{this},\ \&UCalendarItemBase::HandleSundayClick);}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{if}\ (Monday)}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ Monday-\/>OnClicked.AddDynamic(\textcolor{keyword}{this},\ \&UCalendarItemBase::HandleMondayClick);}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{if}\ (Tuesday)}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ Tuesday-\/>OnClicked.AddDynamic(\textcolor{keyword}{this},\ \&UCalendarItemBase::HandleTuesdayClick);}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (Wednesday)}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ Wednesday-\/>OnClicked.AddDynamic(\textcolor{keyword}{this},\ \&UCalendarItemBase::HandleWednesdayClick);}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{if}\ (Thursday)}
+\DoxyCodeLine{00034\ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ Thursday-\/>OnClicked.AddDynamic(\textcolor{keyword}{this},\ \&UCalendarItemBase::HandleThursdayClick);}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{if}\ (Friday)}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ Friday-\/>OnClicked.AddDynamic(\textcolor{keyword}{this},\ \&UCalendarItemBase::HandleFridayClick);}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (Saturday)}
+\DoxyCodeLine{00042\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ Saturday-\/>OnClicked.AddDynamic(\textcolor{keyword}{this},\ \&UCalendarItemBase::HandleSaturdayClick);}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ UCalendarItemBase::HandleSundayClick()}
+\DoxyCodeLine{00049\ \{}
+\DoxyCodeLine{00050\ \ \ \ \mbox{\hyperlink{class_u_calendar_item_base_a34e33d39907baaadc67ea70e0c73d9e1}{DaySelected}}\ =\ day\_0;}
+\DoxyCodeLine{00051\ \ \ \ ClickedTime\ =\ Owner-\/>\mbox{\hyperlink{class_u_calendar_u_i_base_a0949b977c36bc9f85fab70bd1658db22}{GetTime}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ FString\ DayText\ =\ \mbox{\hyperlink{class_u_calendar_item_base_a34e33d39907baaadc67ea70e0c73d9e1}{DaySelected}}-\/>GetText().ToString();}
+\DoxyCodeLine{00054\ \ \ \ int32\ DayValue\ =\ FCString::Atoi(*DayText);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ ClickedTime\ =\ FDateTime(ClickedTime.GetYear(),\ ClickedTime.GetMonth(),\ DayValue,\ ClickedTime.GetHour(),\ ClickedTime.GetMinute(),\ ClickedTime.GetSecond());}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_item_base_af64e9515cc04e43f581550c928f4a05e}{OnDaySelected}}();}
+\DoxyCodeLine{00059\ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ UCalendarItemBase::HandleMondayClick()}
+\DoxyCodeLine{00062\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_item_base_a34e33d39907baaadc67ea70e0c73d9e1}{DaySelected}}\ =\ day\_1;}
+\DoxyCodeLine{00064\ \ \ \ \ ClickedTime\ =\ Owner-\/>\mbox{\hyperlink{class_u_calendar_u_i_base_a0949b977c36bc9f85fab70bd1658db22}{GetTime}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ FString\ DayText\ =\ \mbox{\hyperlink{class_u_calendar_item_base_a34e33d39907baaadc67ea70e0c73d9e1}{DaySelected}}-\/>GetText().ToString();}
+\DoxyCodeLine{00067\ \ \ \ \ int32\ DayValue\ =\ FCString::Atoi(*DayText);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ ClickedTime\ =\ FDateTime(ClickedTime.GetYear(),\ ClickedTime.GetMonth(),\ DayValue,\ ClickedTime.GetHour(),\ ClickedTime.GetMinute(),\ ClickedTime.GetSecond());}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_item_base_af64e9515cc04e43f581550c928f4a05e}{OnDaySelected}}();}
+\DoxyCodeLine{00071\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{keywordtype}{void}\ UCalendarItemBase::HandleTuesdayClick()}
+\DoxyCodeLine{00074\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_item_base_a34e33d39907baaadc67ea70e0c73d9e1}{DaySelected}}\ =\ day\_2;}
+\DoxyCodeLine{00076\ \ \ \ \ ClickedTime\ =\ Owner-\/>\mbox{\hyperlink{class_u_calendar_u_i_base_a0949b977c36bc9f85fab70bd1658db22}{GetTime}}();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ FString\ DayText\ =\ \mbox{\hyperlink{class_u_calendar_item_base_a34e33d39907baaadc67ea70e0c73d9e1}{DaySelected}}-\/>GetText().ToString();}
+\DoxyCodeLine{00079\ \ \ \ \ int32\ DayValue\ =\ FCString::Atoi(*DayText);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ ClickedTime\ =\ FDateTime(ClickedTime.GetYear(),\ ClickedTime.GetMonth(),\ DayValue,\ ClickedTime.GetHour(),\ ClickedTime.GetMinute(),\ ClickedTime.GetSecond());}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_item_base_af64e9515cc04e43f581550c928f4a05e}{OnDaySelected}}();}
+\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keywordtype}{void}\ UCalendarItemBase::HandleWednesdayClick()}
+\DoxyCodeLine{00086\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_item_base_a34e33d39907baaadc67ea70e0c73d9e1}{DaySelected}}\ =\ day\_3;}
+\DoxyCodeLine{00088\ \ \ \ \ ClickedTime\ =\ Owner-\/>\mbox{\hyperlink{class_u_calendar_u_i_base_a0949b977c36bc9f85fab70bd1658db22}{GetTime}}();}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ FString\ DayText\ =\ \mbox{\hyperlink{class_u_calendar_item_base_a34e33d39907baaadc67ea70e0c73d9e1}{DaySelected}}-\/>GetText().ToString();}
+\DoxyCodeLine{00091\ \ \ \ \ int32\ DayValue\ =\ FCString::Atoi(*DayText);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ ClickedTime\ =\ FDateTime(ClickedTime.GetYear(),\ ClickedTime.GetMonth(),\ DayValue,\ ClickedTime.GetHour(),\ ClickedTime.GetMinute(),\ ClickedTime.GetSecond());}
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_item_base_af64e9515cc04e43f581550c928f4a05e}{OnDaySelected}}();}
+\DoxyCodeLine{00095\ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{keywordtype}{void}\ UCalendarItemBase::HandleThursdayClick()}
+\DoxyCodeLine{00098\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_item_base_a34e33d39907baaadc67ea70e0c73d9e1}{DaySelected}}\ =\ day\_4;}
+\DoxyCodeLine{00100\ \ \ \ \ ClickedTime\ =\ Owner-\/>\mbox{\hyperlink{class_u_calendar_u_i_base_a0949b977c36bc9f85fab70bd1658db22}{GetTime}}();}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ FString\ DayText\ =\ \mbox{\hyperlink{class_u_calendar_item_base_a34e33d39907baaadc67ea70e0c73d9e1}{DaySelected}}-\/>GetText().ToString();}
+\DoxyCodeLine{00103\ \ \ \ \ int32\ DayValue\ =\ FCString::Atoi(*DayText);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ ClickedTime\ =\ FDateTime(ClickedTime.GetYear(),\ ClickedTime.GetMonth(),\ DayValue,\ ClickedTime.GetHour(),\ ClickedTime.GetMinute(),\ ClickedTime.GetSecond());}
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_item_base_af64e9515cc04e43f581550c928f4a05e}{OnDaySelected}}();}
+\DoxyCodeLine{00107\ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{keywordtype}{void}\ UCalendarItemBase::HandleFridayClick()}
+\DoxyCodeLine{00110\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_item_base_a34e33d39907baaadc67ea70e0c73d9e1}{DaySelected}}\ =\ day\_5;}
+\DoxyCodeLine{00112\ \ \ \ \ ClickedTime\ =\ Owner-\/>\mbox{\hyperlink{class_u_calendar_u_i_base_a0949b977c36bc9f85fab70bd1658db22}{GetTime}}();}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ FString\ DayText\ =\ \mbox{\hyperlink{class_u_calendar_item_base_a34e33d39907baaadc67ea70e0c73d9e1}{DaySelected}}-\/>GetText().ToString();}
+\DoxyCodeLine{00115\ \ \ \ \ int32\ DayValue\ =\ FCString::Atoi(*DayText);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ ClickedTime\ =\ FDateTime(ClickedTime.GetYear(),\ ClickedTime.GetMonth(),\ DayValue,\ ClickedTime.GetHour(),\ ClickedTime.GetMinute(),\ ClickedTime.GetSecond());}
+\DoxyCodeLine{00118\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_item_base_af64e9515cc04e43f581550c928f4a05e}{OnDaySelected}}();}
+\DoxyCodeLine{00119\ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \textcolor{keywordtype}{void}\ UCalendarItemBase::HandleSaturdayClick()}
+\DoxyCodeLine{00122\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_item_base_a34e33d39907baaadc67ea70e0c73d9e1}{DaySelected}}\ =\ day\_6;}
+\DoxyCodeLine{00124\ \ \ \ \ ClickedTime\ =\ Owner-\/>\mbox{\hyperlink{class_u_calendar_u_i_base_a0949b977c36bc9f85fab70bd1658db22}{GetTime}}();}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ FString\ DayText\ =\ \mbox{\hyperlink{class_u_calendar_item_base_a34e33d39907baaadc67ea70e0c73d9e1}{DaySelected}}-\/>GetText().ToString();}
+\DoxyCodeLine{00127\ \ \ \ \ int32\ DayValue\ =\ FCString::Atoi(*DayText);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ ClickedTime\ =\ FDateTime(ClickedTime.GetYear(),\ ClickedTime.GetMonth(),\ DayValue,\ ClickedTime.GetHour(),\ ClickedTime.GetMinute(),\ ClickedTime.GetSecond());}
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_item_base_af64e9515cc04e43f581550c928f4a05e}{OnDaySelected}}();}
+\DoxyCodeLine{00131\ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{keywordtype}{void}\ UCalendarItemBase::EnableGrids()}
+\DoxyCodeLine{00134\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ Sunday-\/>SetIsEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{00136\ \ \ \ \ Monday-\/>SetIsEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{00137\ \ \ \ \ Tuesday-\/>SetIsEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{00138\ \ \ \ \ Wednesday-\/>SetIsEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{00139\ \ \ \ \ Thursday-\/>SetIsEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{00140\ \ \ \ \ Friday-\/>SetIsEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{00141\ \ \ \ \ Saturday-\/>SetIsEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{00142\ \}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \textcolor{keywordtype}{void}\ UCalendarItemBase::DisableGrids()}
+\DoxyCodeLine{00145\ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{if}\ ((day\_0-\/>GetText()).IsEmptyOrWhitespace())}
+\DoxyCodeLine{00147\ \ \ \ \ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ Sunday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ Sunday-\/>WidgetStyle.Hovered.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ Sunday-\/>WidgetStyle.Pressed.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ Sunday-\/>WidgetStyle.Disabled.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ Sunday-\/>SetIsEnabled(\textcolor{keyword}{false});}
+\DoxyCodeLine{00153\ \ \ \ \ \}}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{if}\ ((day\_1-\/>GetText()).IsEmptyOrWhitespace())}
+\DoxyCodeLine{00155\ \ \ \ \ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ Monday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ Monday-\/>WidgetStyle.Hovered.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ Monday-\/>WidgetStyle.Pressed.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ Monday-\/>WidgetStyle.Disabled.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ Monday-\/>SetIsEnabled(\textcolor{keyword}{false});}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \}}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordflow}{if}\ ((day\_2-\/>GetText()).IsEmptyOrWhitespace())}
+\DoxyCodeLine{00164\ \ \ \ \ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ Tuesday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ Tuesday-\/>WidgetStyle.Hovered.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ Tuesday-\/>WidgetStyle.Pressed.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ Tuesday-\/>WidgetStyle.Disabled.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ Tuesday-\/>SetIsEnabled(\textcolor{keyword}{false});}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \ \ \ \ \}}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{if}\ ((day\_3-\/>GetText()).IsEmptyOrWhitespace())}
+\DoxyCodeLine{00173\ \ \ \ \ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ Wednesday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ Wednesday-\/>WidgetStyle.Hovered.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ Wednesday-\/>WidgetStyle.Pressed.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ Wednesday-\/>WidgetStyle.Disabled.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ Wednesday-\/>SetIsEnabled(\textcolor{keyword}{false});}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \}}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordflow}{if}\ ((day\_4-\/>GetText()).IsEmptyOrWhitespace())}
+\DoxyCodeLine{00182\ \ \ \ \ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ Thursday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ Thursday-\/>WidgetStyle.Hovered.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ Thursday-\/>WidgetStyle.Pressed.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ Thursday-\/>WidgetStyle.Disabled.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ Thursday-\/>SetIsEnabled(\textcolor{keyword}{false});}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \}}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordflow}{if}\ ((day\_5-\/>GetText()).IsEmptyOrWhitespace())}
+\DoxyCodeLine{00191\ \ \ \ \ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ Friday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ Friday-\/>WidgetStyle.Hovered.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ Friday-\/>WidgetStyle.Pressed.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ Friday-\/>WidgetStyle.Disabled.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ Friday-\/>SetIsEnabled(\textcolor{keyword}{false});}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordflow}{if}\ ((day\_6-\/>GetText()).IsEmptyOrWhitespace())}
+\DoxyCodeLine{00200\ \ \ \ \ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ Saturday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ Saturday-\/>WidgetStyle.Hovered.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ Saturday-\/>WidgetStyle.Pressed.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ Saturday-\/>WidgetStyle.Disabled.TintColor\ =\ FSlateColor(d\_color);}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ Saturday-\/>SetIsEnabled(\textcolor{keyword}{false});}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \}}
+\DoxyCodeLine{00208\ \}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \textcolor{keywordtype}{void}\ UCalendarItemBase::OnItemAdded(UObject*\ ListItemObjectRef)}
+\DoxyCodeLine{00211\ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordflow}{if}\ (ListItemObjectRef)}
+\DoxyCodeLine{00213\ \ \ \ \ \{}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_calendar_row}{UCalendarRow}}*\ CalendarRowInstance\ =\ Cast<UCalendarRow>(ListItemObjectRef);}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (CalendarRowInstance)}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeCalendarRow(CalendarRowInstance-\/>structure.Row,\ }
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CalendarRowInstance-\/>structure.Year,\ }
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CalendarRowInstance-\/>structure.Month,\ }
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CalendarRowInstance-\/>structure.SelectedGridColor,\ }
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CalendarRowInstance-\/>structure.EmptyGridColor,\ }
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CalendarRowInstance-\/>structure.GridColor,}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CalendarRowInstance-\/>Owner);}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00225\ \ \ \ \ \}}
+\DoxyCodeLine{00226\ \}}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \textcolor{keywordtype}{void}\ UCalendarItemBase::InitializeCalendarRow(int32\ RowIndex,\ int32\ year,\ int32\ month,\ FLinearColor\ SelectedGridColor,\ FLinearColor\ EmptyGridColor,\ FLinearColor\ GridColor,\ \mbox{\hyperlink{class_u_calendar_u_i_base}{UCalendarUIBase}}*\ InOwner)}
+\DoxyCodeLine{00229\ \{}
+\DoxyCodeLine{00230\ \ \ \ \ EnableGrids();}
+\DoxyCodeLine{00231\ \ \ \ \ CalendarRow\ =\ RowIndex;}
+\DoxyCodeLine{00232\ \ \ \ \ sgc\_color\ =\ SelectedGridColor;}
+\DoxyCodeLine{00233\ \ \ \ \ d\_color\ =\ EmptyGridColor;}
+\DoxyCodeLine{00234\ \ \ \ \ g\_color\ =\ GridColor;}
+\DoxyCodeLine{00235\ \ \ \ \ Year\ =\ year;}
+\DoxyCodeLine{00236\ \ \ \ \ Month\ =\ month;}
+\DoxyCodeLine{00237\ \ \ \ \ int32\ Day\ =\ FDateTime::Now().GetDay();}
+\DoxyCodeLine{00238\ \ \ \ \ CurrentDateTime\ =\ FDateTime(Year,\ Month,\ Day);}
+\DoxyCodeLine{00239\ \ \ \ \ RowTimeHelper(RowIndex);}
+\DoxyCodeLine{00240\ \ \ \ \ Owner\ =\ InOwner;}
+\DoxyCodeLine{00241\ \}}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \textcolor{keywordtype}{void}\ UCalendarItemBase::RowTimeHelper(int32\ RowIndex)}
+\DoxyCodeLine{00244\ \{}
+\DoxyCodeLine{00245\ \ \ \ \ FDateTime\ FirstDayOfMonth(Year,\ Month,\ 1);}
+\DoxyCodeLine{00246\ \ \ \ \ FirstDayOfWeek\ =\ \textcolor{keyword}{static\_cast<}int32\textcolor{keyword}{>}(FirstDayOfMonth.GetDayOfWeek());}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordflow}{if}\ (FirstDayOfWeek\ ==\ 6)\ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ FirstDayOfWeek\ =\ 0;}
+\DoxyCodeLine{00249\ \ \ \ \ \}}
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ FirstDayOfWeek\ +=\ 1;}
+\DoxyCodeLine{00252\ \ \ \ \ \}}
+\DoxyCodeLine{00253\ \ \ \ \ Offset\ =\ CalculateOffset(RowIndex);}
+\DoxyCodeLine{00254\ \ \ \ \ int32\ Count\ =\ 1;}
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordflow}{for}\ (int32\ DayIndex\ =\ 0;\ DayIndex\ <=\ 6;\ DayIndex++)}
+\DoxyCodeLine{00256\ \ \ \ \ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!((RowIndex\ ==\ 0)\ \&\&\ (FirstDayOfWeek\ >\ DayIndex)))}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ SetDayText(DayIndex,\ Count);}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ SetCalendarItemHelper(DayIndex,\ FText::FromString(TEXT(\textcolor{stringliteral}{"{}"{}})));}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00264\ \ \ \ \ \}}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \ \ \ \ DisableGrids();}
+\DoxyCodeLine{00267\ \}}
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00269\ int32\ UCalendarItemBase::CalculateOffset(int32\ RowIndex)}
+\DoxyCodeLine{00270\ \{}
+\DoxyCodeLine{00271\ \ \ \ \ int32\ CalculatedOffset\ =\ 0;}
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordflow}{if}\ (RowIndex\ !=\ 0)}
+\DoxyCodeLine{00273\ \ \ \ \ \{}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ CalculatedOffset\ =\ RowIndex\ *\ 7\ -\/\ FirstDayOfWeek;}
+\DoxyCodeLine{00275\ \ \ \ \ \}}
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{keywordflow}{return}\ CalculatedOffset;}
+\DoxyCodeLine{00277\ \}}
+\DoxyCodeLine{00278\ }
+\DoxyCodeLine{00279\ \textcolor{keywordtype}{void}\ UCalendarItemBase::SetDayText(int32\ DayIndex,\ int32\&\ Count)}
+\DoxyCodeLine{00280\ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsWithinMonth\ =\ (Offset\ +\ Count)\ <=\ CurrentDateTime.DaysInMonth(Year,\ Month);}
+\DoxyCodeLine{00282\ \ \ \ \ int32\ Date\ =\ Offset\ +\ Count;}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keywordflow}{if}\ (IsWithinMonth\ \&\&\ !(Date\ ==\ 0))}
+\DoxyCodeLine{00285\ \ \ \ \ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ SetCalendarItemHelper(DayIndex,\ FText::AsNumber(Date));}
+\DoxyCodeLine{00287\ \ \ \ \ \}}
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ SetCalendarItemHelper(DayIndex,\ FText::FromString(TEXT(\textcolor{stringliteral}{"{}"{}})));}
+\DoxyCodeLine{00290\ \ \ \ \ \}}
+\DoxyCodeLine{00291\ \ \ \ \ Count\ +=\ 1;}
+\DoxyCodeLine{00292\ \}}
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00294\ \textcolor{keywordtype}{void}\ UCalendarItemBase::SetCalendarItemHelper(int32\ Selection,\ FText\ Date)}
+\DoxyCodeLine{00295\ \{}
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{comment}{//\ Colors}}
+\DoxyCodeLine{00297\ \ \ \ \ FLinearColor\ GridColor(0.45f,\ 0.2f,\ 0.1f,\ 0.7f);}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00299\ \ \ \ \ \textcolor{keywordflow}{if}\ (Selection\ ==\ 0)\ \{}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ day\_0-\/>SetText(Date);}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Date.ToString()\ ==\ FText::AsNumber(FDateTime::Now().GetDay()).ToString())}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ Sunday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(sgc\_color);}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ SelectedGridRow\ =\ CalendarRow;}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ Sunday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(g\_color);}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00310\ \ \ \ \ \}}
+\DoxyCodeLine{00311\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ ((Selection\ ==\ 1))\ \{}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ day\_1-\/>SetText(Date);}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Date.ToString()\ ==\ FText::AsNumber(FDateTime::Now().GetDay()).ToString())}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ Monday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(sgc\_color);}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ SelectedGridRow\ =\ CalendarRow;}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ Monday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(g\_color);}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00322\ \ \ \ \ \}}
+\DoxyCodeLine{00323\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (Selection\ ==\ 2\ )\ \{}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ day\_2-\/>SetText(Date);}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Date.ToString()\ ==\ FText::AsNumber(FDateTime::Now().GetDay()).ToString())}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ Tuesday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(sgc\_color);}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ SelectedGridRow\ =\ CalendarRow;}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ Tuesday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(g\_color);}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00334\ \ \ \ \ \}}
+\DoxyCodeLine{00335\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (Selection\ ==\ 3)\ \{}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ day\_3-\/>SetText(Date);}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Date.ToString()\ ==\ FText::AsNumber(FDateTime::Now().GetDay()).ToString())}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ Wednesday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(sgc\_color);}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ SelectedGridRow\ =\ CalendarRow;}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ Wednesday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(g\_color);}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00346\ \ \ \ \ \}}
+\DoxyCodeLine{00347\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (Selection\ ==\ 4)\ \{}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ day\_4-\/>SetText(Date);}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Date.ToString()\ ==\ FText::AsNumber(FDateTime::Now().GetDay()).ToString())}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ Thursday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(sgc\_color);}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ SelectedGridRow\ =\ CalendarRow;}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ Thursday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(g\_color);}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00358\ \ \ \ \ \}}
+\DoxyCodeLine{00359\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (Selection\ ==\ 5)\ \{}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ day\_5-\/>SetText(Date);}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Date.ToString()\ ==\ FText::AsNumber(FDateTime::Now().GetDay()).ToString())}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ Friday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(sgc\_color);}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ SelectedGridRow\ =\ CalendarRow;}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ Friday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(g\_color);}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00370\ \ \ \ \ \}}
+\DoxyCodeLine{00371\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (Selection\ ==\ 6)\ \{}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ day\_6-\/>SetText(Date);}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Date.ToString()\ ==\ FText::AsNumber(FDateTime::Now().GetDay()).ToString())}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ Saturday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(sgc\_color);}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ SelectedGridRow\ =\ CalendarRow;}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ Saturday-\/>WidgetStyle.Normal.TintColor\ =\ FSlateColor(g\_color);}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00382\ \ \ \ \ \}}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00384\ \}}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00386\ }
+
+\end{DoxyCode}

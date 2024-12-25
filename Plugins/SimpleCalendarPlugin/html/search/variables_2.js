@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['minute_0',['minute',['../class_u_calendar_u_i_base.html#aae2c741ddfd4dfd23c54379fe3c8a496',1,'UCalendarUIBase']]],
-  ['month_1',['month',['../class_u_calendar_u_i_base.html#a3a174b5e9fd5c372db9fc56d6e5a41e4',1,'UCalendarUIBase']]]
+  ['emptygridcolor_0',['EmptyGridColor',['../struct_f_my_base_sructure.html#ab78f5c8f80b82c9ab5c28573c7581175',1,'FMyBaseSructure']]]
 ];

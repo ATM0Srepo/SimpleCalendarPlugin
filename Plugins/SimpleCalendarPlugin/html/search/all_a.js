@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['taskapi_5feventsetbrowserurl_5fparms_0',['TaskAPI_eventSetBrowserURL_Parms',['../struct_z___construct___u_function___u_task_a_p_i___set_browser_u_r_l___statics_1_1_task_a_p_i__event_set_browser_u_r_l___parms.html',1,'Z_Construct_UFunction_UTaskAPI_SetBrowserURL_Statics']]]
+  ['nativeconstruct_0',['NativeConstruct',['../class_u_calendar_item_base.html#a2e5e363c03c1d236d31e8f3c8c77a7d9',1,'UCalendarItemBase::NativeConstruct()'],['../class_u_calendar_u_i_base.html#a1e58af927352001447b95687fcd425a6',1,'UCalendarUIBase::NativeConstruct()']]]
 ];

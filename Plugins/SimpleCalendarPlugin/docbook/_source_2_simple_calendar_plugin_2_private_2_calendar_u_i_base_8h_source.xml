@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__source_2_simple_calendar_plugin_2_private_2_calendar_u_i_base_8h_source" xml:lang="en-US">
+<title>CalendarUIBase.h</title>
+<indexterm><primary>Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarUIBase.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;CoreMinimal.h&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;Blueprint/UserWidget.h&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;Components/EditableTextBox.h&quot;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&quot;TimerManager.h&quot;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&quot;Engine/World.h&quot;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&quot;CalendarUIBase.generated.h&quot;</emphasis>
+9 
+17 UCLASS()
+18 class&#32;<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>&#32;:&#32;public&#32;UUserWidget
+19 {
+20 &#32;&#32;&#32;&#32;GENERATED_BODY()
+21 
+22 <emphasis role="keyword">public</emphasis>:
+28 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;NativeConstruct()&#32;<emphasis role="keyword">override</emphasis>;
+29 
+34 &#32;&#32;&#32;&#32;UFUNCTION(BlueprintCallable,&#32;Category&#32;=&#32;<emphasis role="stringliteral">&quot;Calendar&#32;Functions&quot;</emphasis>)
+35 &#32;&#32;&#32;&#32;FDateTime&#32;GetTime();
+36 
+37 <emphasis role="keyword">protected</emphasis>:
+39 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>)
+40 &#32;&#32;&#32;&#32;class&#32;UEditableTextBox*&#32;year;
+41 
+43 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+44 &#32;&#32;&#32;&#32;class&#32;UTextBlock*&#32;month;
+45 
+47 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+48 &#32;&#32;&#32;&#32;class&#32;UEditableTextBox*&#32;hour;
+49 
+51 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+52 &#32;&#32;&#32;&#32;class&#32;UEditableTextBox*&#32;minute;
+53 
+55 &#32;&#32;&#32;&#32;UPROPERTY(meta&#32;=&#32;(BindWidget))
+56 &#32;&#32;&#32;&#32;class&#32;UButton*&#32;toggle_prev_month;
+57 
+59 &#32;&#32;&#32;&#32;UPROPERTY(meta&#32;=&#32;(BindWidget))
+60 &#32;&#32;&#32;&#32;class&#32;UButton*&#32;toggle_next_month;
+61 
+63 &#32;&#32;&#32;&#32;UPROPERTY(meta&#32;=&#32;(BindWidget))
+64 &#32;&#32;&#32;&#32;class&#32;UButton*&#32;MonthButton;
+65 
+67 &#32;&#32;&#32;&#32;UPROPERTY(meta&#32;=&#32;(BindWidget))
+68 &#32;&#32;&#32;&#32;class&#32;UButton*&#32;HourButton;
+69 
+71 &#32;&#32;&#32;&#32;UPROPERTY(meta&#32;=&#32;(BindWidget))
+72 &#32;&#32;&#32;&#32;class&#32;UButton*&#32;MinuteButton;
+73 
+75 &#32;&#32;&#32;&#32;UPROPERTY(meta&#32;=&#32;(BindWidget))
+76 &#32;&#32;&#32;&#32;class&#32;UButton*&#32;weekdays_background;
+77 
+79 &#32;&#32;&#32;&#32;UPROPERTY(meta&#32;=&#32;(BindWidget))
+80 &#32;&#32;&#32;&#32;class&#32;UButton*&#32;calendar_background;
+81 
+83 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+84 &#32;&#32;&#32;&#32;class&#32;UListView*&#32;ListViewCalendar;
+85 
+98 &#32;&#32;&#32;&#32;UFUNCTION(BlueprintCallable,&#32;Category&#32;=&#32;&quot;Calendar&#32;Functions&quot;)
+99 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;PreCalendarConfig(
+100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor&#32;SelectedGridColor&#32;=&#32;FLinearColor(1.0f,&#32;1.0f,&#32;1.0f,&#32;0.8f),
+101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor&#32;EmptyGridColor&#32;=&#32;FLinearColor(0.0f,&#32;0.0f,&#32;0.0f,&#32;0.0f),
+102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor&#32;GridColor&#32;=&#32;FLinearColor(0.45f,&#32;0.2f,&#32;0.1f,&#32;0.7f),
+103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor&#32;CalendarBackground&#32;=&#32;FLinearColor(0.0f,&#32;0.0f,&#32;0.0f,&#32;0.0f),
+104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor&#32;CalendarBackgroundBorder&#32;=&#32;FLinearColor(0.45f,&#32;0.2f,&#32;0.1f,&#32;0.7f),
+105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor&#32;WeekdayHeadingColor&#32;=&#32;FLinearColor(0.0f,&#32;0.0f,&#32;0.0f,&#32;1.0f)
+106 &#32;&#32;&#32;&#32;);
+107 
+116 &#32;&#32;&#32;&#32;UFUNCTION(BlueprintCallable,&#32;Category&#32;=&#32;&quot;Calendar&#32;Functions&quot;)
+117 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetCornerRadii(const&#32;FVector4&amp;&#32;CalendarBorder,&#32;const&#32;FVector4&amp;&#32;WeekdayHeaderRadii);
+118 
+122 &#32;&#32;&#32;&#32;UFUNCTION(BlueprintCallable,&#32;Category&#32;=&#32;&quot;Calendar&#32;Functions&quot;)
+123 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;CreateCalendar();
+124 
+132 &#32;&#32;&#32;&#32;UFUNCTION(BlueprintCallable,&#32;Category&#32;=&#32;&quot;Calendar&#32;Functions&quot;)
+133 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetYear(<emphasis role="keywordtype">int</emphasis>&#32;y);
+134 
+142 &#32;&#32;&#32;&#32;UFUNCTION(BlueprintCallable,&#32;Category&#32;=&#32;&quot;Calendar&#32;Functions&quot;)
+143 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetMonth(int32&#32;m);
+144 
+145 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Event&#32;handlers&#32;for&#32;year,&#32;month,&#32;hour,&#32;and&#32;minute&#32;changes</emphasis>
+146 &#32;&#32;&#32;&#32;UFUNCTION()
+147 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleOnYearChanged(const&#32;FText&amp;&#32;Text,&#32;ETextCommit::Type&#32;CommitMethod);
+148 
+149 &#32;&#32;&#32;&#32;UFUNCTION()
+150 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleMonthToggleButtonClick();
+151 
+152 &#32;&#32;&#32;&#32;UFUNCTION()
+153 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleOnHourCommitted(const&#32;FText&amp;&#32;Text,&#32;ETextCommit::Type&#32;CommitMethod);
+154 
+155 &#32;&#32;&#32;&#32;UFUNCTION()
+156 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleOnHourChanged(const&#32;FText&amp;&#32;Text);
+157 
+158 &#32;&#32;&#32;&#32;UFUNCTION()
+159 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleOnMinuteCommitted(const&#32;FText&amp;&#32;Text,&#32;ETextCommit::Type&#32;CommitMethod);
+160 
+161 &#32;&#32;&#32;&#32;UFUNCTION()
+162 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleOnMinuteChanged(const&#32;FText&amp;&#32;Text);
+163 
+167 &#32;&#32;&#32;&#32;UFUNCTION()
+168 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;ShowNextMonth();
+169 
+173 &#32;&#32;&#32;&#32;UFUNCTION()
+174 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;ShowPrevMonth();
+175 
+177 &#32;&#32;&#32;&#32;FTimerHandle&#32;TickTimerHandle;
+178 
+180 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitializeHour();
+181 
+183 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitializeMinute();
+184 
+186 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitializeYear(<emphasis role="keywordtype">int</emphasis>&#32;y);
+187 
+189 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitializeMonth(<emphasis role="keywordtype">int</emphasis>&#32;m);
+190 
+192 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;DefaultMinuteTickInterval&#32;=&#32;0.01f;
+193 
+194 private:
+196 &#32;&#32;&#32;&#32;FDateTime&#32;CurrentDateTime;
+197 
+199 &#32;&#32;&#32;&#32;int32&#32;year_now;
+200 
+202 &#32;&#32;&#32;&#32;int32&#32;month_now;
+203 
+205 &#32;&#32;&#32;&#32;FString&#32;hour_now;
+206 
+208 &#32;&#32;&#32;&#32;FString&#32;minute_now;
+209 
+211 &#32;&#32;&#32;&#32;int32&#32;td_hour&#32;=&#32;0;
+212 
+214 &#32;&#32;&#32;&#32;int32&#32;td_min&#32;=&#32;0;
+215 
+217 &#32;&#32;&#32;&#32;FTimespan&#32;hourDifference;
+218 
+220 &#32;&#32;&#32;&#32;FTimespan&#32;minuteDifference;
+221 
+223 &#32;&#32;&#32;&#32;FLinearColor&#32;color1;
+224 
+226 &#32;&#32;&#32;&#32;FLinearColor&#32;color2;
+227 
+229 &#32;&#32;&#32;&#32;FLinearColor&#32;color3;
+230 
+232 &#32;&#32;&#32;&#32;TMap&lt;FString,&#32;int32&gt;&#32;MonthMap2;
+233 };
+</programlisting></section>

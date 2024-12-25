@@ -10,5 +10,5 @@
         </itemizedlist>
 </simplesect>
 <para>
-The documentation for this struct was generated from the following files:</para>
-Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/TaskAPI.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/TaskAPI.gen.cpp</section>
+The documentation for this struct was generated from the following file:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/TaskAPI.gen.cpp</section>

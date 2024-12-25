@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__source_2_simple_calendar_plugin_2_private_2_calendar_item_base_8h_source" xml:lang="en-US">
+<title>CalendarItemBase.h</title>
+<indexterm><primary>Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarItemBase.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;CoreMinimal.h&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;CalendarRow.h&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;Blueprint/UserWidget.h&quot;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&quot;CalendarUIBase.h&quot;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&quot;CalendarItemBase.generated.h&quot;</emphasis>
+8 
+16 UCLASS()
+17 class&#32;<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>&#32;:&#32;public&#32;UUserWidget
+18 {
+19 &#32;&#32;&#32;&#32;GENERATED_BODY()
+20 
+21 <emphasis role="keyword">public</emphasis>:
+25 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;NativeConstruct()&#32;<emphasis role="keyword">override</emphasis>;
+26 
+30 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadOnly,&#32;Category&#32;=&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>)
+31 &#32;&#32;&#32;&#32;UTextBlock*&#32;DaySelected;
+32 
+33 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Functions&#32;to&#32;Handle&#32;Day&#32;Clicks</emphasis>
+34 
+38 &#32;&#32;&#32;&#32;UFUNCTION()
+39 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleSundayClick();
+40 
+44 &#32;&#32;&#32;&#32;UFUNCTION()
+45 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleMondayClick();
+46 
+50 &#32;&#32;&#32;&#32;UFUNCTION()
+51 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleTuesdayClick();
+52 
+56 &#32;&#32;&#32;&#32;UFUNCTION()
+57 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleWednesdayClick();
+58 
+62 &#32;&#32;&#32;&#32;UFUNCTION()
+63 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleThursdayClick();
+64 
+68 &#32;&#32;&#32;&#32;UFUNCTION()
+69 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleFridayClick();
+70 
+74 &#32;&#32;&#32;&#32;UFUNCTION()
+75 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleSaturdayClick();
+76 
+80 &#32;&#32;&#32;&#32;UFUNCTION(BlueprintImplementableEvent,&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Events&quot;)
+81 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDaySelected();
+82 
+88 &#32;&#32;&#32;&#32;UFUNCTION(BlueprintCallable,&#32;Category&#32;=&#32;&quot;Calendar&#32;Functions&quot;)
+89 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnItemAdded(UObject*&#32;ListItemObjectRef);
+90 
+92 &#32;&#32;&#32;&#32;FDateTime&#32;CurrentDateTime;
+93 
+95 &#32;&#32;&#32;&#32;int32&#32;Year;
+96 
+98 &#32;&#32;&#32;&#32;int32&#32;Month;
+99 
+101 &#32;&#32;&#32;&#32;int32&#32;FirstDayOfWeek;
+102 
+104 &#32;&#32;&#32;&#32;int32&#32;Offset;
+105 
+106 protected:
+108 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+109 &#32;&#32;&#32;&#32;class&#32;UButton*&#32;Sunday;
+110 
+112 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+113 &#32;&#32;&#32;&#32;class&#32;UButton*&#32;Monday;
+114 
+116 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+117 &#32;&#32;&#32;&#32;class&#32;UButton*&#32;Tuesday;
+118 
+120 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+121 &#32;&#32;&#32;&#32;class&#32;UButton*&#32;Wednesday;
+122 
+124 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+125 &#32;&#32;&#32;&#32;class&#32;UButton*&#32;Thursday;
+126 
+128 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+129 &#32;&#32;&#32;&#32;class&#32;UButton*&#32;Friday;
+130 
+132 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+133 &#32;&#32;&#32;&#32;class&#32;UButton*&#32;Saturday;
+134 
+136 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+137 &#32;&#32;&#32;&#32;class&#32;UTextBlock*&#32;day_0;
+138 
+140 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+141 &#32;&#32;&#32;&#32;class&#32;UTextBlock*&#32;day_1;
+142 
+144 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+145 &#32;&#32;&#32;&#32;class&#32;UTextBlock*&#32;day_2;
+146 
+148 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+149 &#32;&#32;&#32;&#32;class&#32;UTextBlock*&#32;day_3;
+150 
+152 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+153 &#32;&#32;&#32;&#32;class&#32;UTextBlock*&#32;day_4;
+154 
+156 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+157 &#32;&#32;&#32;&#32;class&#32;UTextBlock*&#32;day_5;
+158 
+160 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;&quot;Atm0s&#32;Calendar&#32;Variables&quot;)
+161 &#32;&#32;&#32;&#32;class&#32;UTextBlock*&#32;day_6;
+162 
+163 private:
+169 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;RowTimeHelper(int32&#32;RowIndex);
+170 
+177 &#32;&#32;&#32;&#32;int32&#32;CalculateOffset(int32&#32;Row);
+178 
+180 &#32;&#32;&#32;&#32;int32&#32;CalendarRow;
+181 
+183 &#32;&#32;&#32;&#32;int32&#32;SelectedGridRow;
+184 
+186 &#32;&#32;&#32;&#32;FLinearColor&#32;sgc_color;
+187 
+189 &#32;&#32;&#32;&#32;FLinearColor&#32;d_color;
+190 
+192 &#32;&#32;&#32;&#32;FLinearColor&#32;g_color;
+193 
+200 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetDayText(int32&#32;Selection,&#32;int32&amp;&#32;Count);
+201 
+208 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetCalendarItemHelper(int32&#32;Selection,&#32;FText&#32;Date);
+209 
+213 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleCalendarItemClick();
+214 
+218 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;EnableGrids();
+219 
+223 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;DisableGrids();
+224 
+236 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitializeCalendarRow(int32&#32;row,&#32;int32&#32;year,&#32;int32&#32;month,&#32;FLinearColor&#32;SelectedGridColor,&#32;FLinearColor&#32;EmptyGridColor,&#32;FLinearColor&#32;GridColor,&#32;<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>*&#32;InOwner);
+237 
+239 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>*&#32;Owner;
+240 
+242 &#32;&#32;&#32;&#32;FDateTime&#32;ClickedTime;
+243 };
+</programlisting></section>

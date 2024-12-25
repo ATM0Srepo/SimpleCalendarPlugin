@@ -12,59 +12,50 @@
 8 <emphasis role="preprocessor">#include&#32;&quot;TimerManager.h&quot;</emphasis>&#32;
 9 <emphasis role="preprocessor">#include&#32;&quot;Engine/World.h&quot;</emphasis>
 10 
-11 
-12 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarUIBase::NativeConstruct()
-13 {
-14 &#32;&#32;&#32;&#32;Super::NativeConstruct();
-15 &#32;&#32;&#32;&#32;MonthMap2&#32;=&#32;{
-16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{TEXT(<emphasis role="stringliteral">&quot;Jan&quot;</emphasis>),&#32;1},&#32;{TEXT(<emphasis role="stringliteral">&quot;Feb&quot;</emphasis>),&#32;2},&#32;{TEXT(<emphasis role="stringliteral">&quot;Mar&quot;</emphasis>),&#32;3},&#32;{TEXT(<emphasis role="stringliteral">&quot;Apr&quot;</emphasis>),&#32;4},
-17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{TEXT(<emphasis role="stringliteral">&quot;May&quot;</emphasis>),&#32;5},&#32;{TEXT(<emphasis role="stringliteral">&quot;Jun&quot;</emphasis>),&#32;6},&#32;{TEXT(<emphasis role="stringliteral">&quot;Jul&quot;</emphasis>),&#32;7},&#32;{TEXT(<emphasis role="stringliteral">&quot;Aug&quot;</emphasis>),&#32;8},
-18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{TEXT(<emphasis role="stringliteral">&quot;Sep&quot;</emphasis>),&#32;9},&#32;{TEXT(<emphasis role="stringliteral">&quot;Oct&quot;</emphasis>),&#32;10},&#32;{TEXT(<emphasis role="stringliteral">&quot;Nov&quot;</emphasis>),&#32;11},&#32;{TEXT(<emphasis role="stringliteral">&quot;Dec&quot;</emphasis>),&#32;12}
-19 &#32;&#32;&#32;&#32;};
-20 
-21 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;style</emphasis>
-22 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1ae1a2bb611d86bf021b6594a84e0b0083">PreCalendarConfig</link>(
-23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor(1.0f,&#32;1.0f,&#32;1.0f,&#32;0.8f),
-24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor(0.0f,&#32;0.0f,&#32;0.0f,&#32;1.0f),
-25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor(0.45f,&#32;0.2f,&#32;0.1f,&#32;0.7f)
-26 &#32;&#32;&#32;&#32;);
-27 
-28 &#32;&#32;&#32;&#32;toggle_prev_month-&gt;SetVisibility(ESlateVisibility::Collapsed);
-29 &#32;&#32;&#32;&#32;toggle_prev_month-&gt;OnClicked.AddDynamic(<emphasis role="keyword">this</emphasis>,&#32;&amp;UCalendarUIBase::ShowPrevMonth);
-30 &#32;&#32;&#32;&#32;toggle_next_month-&gt;SetVisibility(ESlateVisibility::Collapsed);
-31 &#32;&#32;&#32;&#32;toggle_next_month-&gt;OnClicked.AddDynamic(<emphasis role="keyword">this</emphasis>,&#32;&amp;UCalendarUIBase::ShowNextMonth);
-32 
-33 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;year</emphasis>
-34 &#32;&#32;&#32;&#32;InitializeYear(FDateTime::Now().GetYear());
-35 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a02dca1d5100c33f359a8b357670612f4">year</link>-&gt;OnTextCommitted.AddDynamic(<emphasis role="keyword">this</emphasis>,&#32;&amp;UCalendarUIBase::HandleOnYearChanged);
+14 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1a1e58af927352001447b95687fcd425a6">UCalendarUIBase::NativeConstruct</link>()
+15 {
+16 &#32;&#32;&#32;&#32;Super::NativeConstruct();
+17 &#32;&#32;&#32;&#32;MonthMap2&#32;=&#32;{
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{TEXT(<emphasis role="stringliteral">&quot;Jan&quot;</emphasis>),&#32;1},&#32;{TEXT(<emphasis role="stringliteral">&quot;Feb&quot;</emphasis>),&#32;2},&#32;{TEXT(<emphasis role="stringliteral">&quot;Mar&quot;</emphasis>),&#32;3},&#32;{TEXT(<emphasis role="stringliteral">&quot;Apr&quot;</emphasis>),&#32;4},
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{TEXT(<emphasis role="stringliteral">&quot;May&quot;</emphasis>),&#32;5},&#32;{TEXT(<emphasis role="stringliteral">&quot;Jun&quot;</emphasis>),&#32;6},&#32;{TEXT(<emphasis role="stringliteral">&quot;Jul&quot;</emphasis>),&#32;7},&#32;{TEXT(<emphasis role="stringliteral">&quot;Aug&quot;</emphasis>),&#32;8},
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{TEXT(<emphasis role="stringliteral">&quot;Sep&quot;</emphasis>),&#32;9},&#32;{TEXT(<emphasis role="stringliteral">&quot;Oct&quot;</emphasis>),&#32;10},&#32;{TEXT(<emphasis role="stringliteral">&quot;Nov&quot;</emphasis>),&#32;11},&#32;{TEXT(<emphasis role="stringliteral">&quot;Dec&quot;</emphasis>),&#32;12}
+21 &#32;&#32;&#32;&#32;};
+22 
+23 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1ae1a2bb611d86bf021b6594a84e0b0083">PreCalendarConfig</link>(
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor(1.0f,&#32;1.0f,&#32;1.0f,&#32;0.8f),
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor(0.0f,&#32;0.0f,&#32;0.0f,&#32;1.0f),
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor(0.45f,&#32;0.2f,&#32;0.1f,&#32;0.7f)
+27 &#32;&#32;&#32;&#32;);
+28 
+29 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a48c507302566eea8fed95e8a7d5d7983">toggle_prev_month</link>-&gt;SetVisibility(ESlateVisibility::Collapsed);
+30 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a48c507302566eea8fed95e8a7d5d7983">toggle_prev_month</link>-&gt;OnClicked.AddDynamic(<emphasis role="keyword">this</emphasis>,&#32;&amp;<link linkend="_class_u_calendar_u_i_base_1a70908db1ad03af94622e83f086574f19">UCalendarUIBase::ShowPrevMonth</link>);
+31 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a5a692f2c28fbca9c2718313eec70d1d7">toggle_next_month</link>-&gt;SetVisibility(ESlateVisibility::Collapsed);
+32 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a5a692f2c28fbca9c2718313eec70d1d7">toggle_next_month</link>-&gt;OnClicked.AddDynamic(<emphasis role="keyword">this</emphasis>,&#32;&amp;<link linkend="_class_u_calendar_u_i_base_1aaabd8f8b87a5bd74c2428bff88ca9eda">UCalendarUIBase::ShowNextMonth</link>);
+33 
+34 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1af20668b08bbd9c1faf012d43c09cf375">InitializeYear</link>(FDateTime::Now().GetYear());
+35 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a02dca1d5100c33f359a8b357670612f4">year</link>-&gt;OnTextCommitted.AddDynamic(<emphasis role="keyword">this</emphasis>,&#32;&amp;<link linkend="_class_u_calendar_u_i_base_1ac89681dc011ade93852f9ed478503b46">UCalendarUIBase::HandleOnYearChanged</link>);
 36 
-37 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;month</emphasis>
-38 &#32;&#32;&#32;&#32;InitializeMonth(FDateTime::Now().GetMonth());
-39 &#32;&#32;&#32;&#32;MonthButton-&gt;OnClicked.AddDynamic(<emphasis role="keyword">this</emphasis>,&#32;&amp;UCalendarUIBase::HandleMonthToggleButtonClick);
-40 
-41 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;hour&#32;and&#32;minute</emphasis>
-42 &#32;&#32;&#32;&#32;hourDifference&#32;=&#32;FDateTime::Now()&#32;-&#32;FDateTime::Now();
-43 &#32;&#32;&#32;&#32;minuteDifference&#32;=&#32;FDateTime::Now()&#32;-&#32;FDateTime::Now();
-44 &#32;&#32;&#32;&#32;InitializeHour();
-45 &#32;&#32;&#32;&#32;GetWorld()-&gt;GetTimerManager().SetTimer(TickTimerHandle,&#32;<emphasis role="keyword">this</emphasis>,&#32;&amp;UCalendarUIBase::InitializeMinute,&#32;DefaultMinuteTickInterval,&#32;<emphasis role="keyword">true</emphasis>);
-46 &#32;&#32;&#32;&#32;<emphasis role="comment">//hour-&gt;OnTextCommitted.AddDynamic(this,&#32;&amp;UCalendarUIBase::HandleOnHourCommitted);</emphasis>
-47 &#32;&#32;&#32;&#32;<emphasis role="comment">//hour-&gt;OnTextChanged.AddDynamic(this,&#32;&amp;UCalendarUIBase::HandleOnHourChanged);</emphasis>
-48 &#32;&#32;&#32;&#32;<emphasis role="comment">//minute-&gt;OnTextCommitted.AddDynamic(this,&#32;&amp;UCalendarUIBase::HandleOnMinuteCommitted);</emphasis>
-49 &#32;&#32;&#32;&#32;<emphasis role="comment">//minute-&gt;OnTextChanged.AddDynamic(this,&#32;&amp;UCalendarUIBase::HandleOnMinuteChanged);</emphasis>
-50 }
-51 
-52 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarUIBase::InitializeHour()
-53 {
-54 &#32;&#32;&#32;&#32;hour_now&#32;=&#32;FString::FormatAsNumber((FDateTime::Now()&#32;-&#32;hourDifference).GetHour());
-55 
-56 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(hour_now.Len()&#32;&lt;&#32;2)&#32;{
-57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hour_now&#32;=&#32;<emphasis role="stringliteral">&quot;0&quot;</emphasis>&#32;+&#32;hour_now;
-58 &#32;&#32;&#32;&#32;}
+37 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a0a185b91f2f826a535e5b03e57266149">InitializeMonth</link>(FDateTime::Now().GetMonth());
+38 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a8d166abd11adf560f1d3b8b1a48d3df8">MonthButton</link>-&gt;OnClicked.AddDynamic(<emphasis role="keyword">this</emphasis>,&#32;&amp;<link linkend="_class_u_calendar_u_i_base_1a6ec447a30d5ea1cfd6a36dfc5ec00583">UCalendarUIBase::HandleMonthToggleButtonClick</link>);
+39 
+40 &#32;&#32;&#32;&#32;hourDifference&#32;=&#32;FDateTime::Now()&#32;-&#32;FDateTime::Now();
+41 &#32;&#32;&#32;&#32;minuteDifference&#32;=&#32;FDateTime::Now()&#32;-&#32;FDateTime::Now();
+42 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1ac963cdd07a261492b68710883c1f5cc9">InitializeHour</link>();
+43 &#32;&#32;&#32;&#32;GetWorld()-&gt;GetTimerManager().SetTimer(<link linkend="_class_u_calendar_u_i_base_1a00f1bbb4c462c529a3d633c90a22534c">TickTimerHandle</link>,&#32;<emphasis role="keyword">this</emphasis>,&#32;&amp;<link linkend="_class_u_calendar_u_i_base_1a76eee495d3d41ed988f0ea24859012b2">UCalendarUIBase::InitializeMinute</link>,&#32;<link linkend="_class_u_calendar_u_i_base_1a49b0b02cef6baf80fd5c1408999a3d9d">DefaultMinuteTickInterval</link>,&#32;<emphasis role="keyword">true</emphasis>);
+44 }
+45 
+49 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1ac963cdd07a261492b68710883c1f5cc9">UCalendarUIBase::InitializeHour</link>()
+50 {
+51 &#32;&#32;&#32;&#32;hour_now&#32;=&#32;FString::FormatAsNumber((FDateTime::Now()&#32;-&#32;hourDifference).GetHour());
+52 
+53 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(hour_now.Len()&#32;&lt;&#32;2)&#32;{
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hour_now&#32;=&#32;<emphasis role="stringliteral">&quot;0&quot;</emphasis>&#32;+&#32;hour_now;
+55 &#32;&#32;&#32;&#32;}
+56 
+57 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1ade010f768f21cf37892f5cc37742c164">hour</link>-&gt;SetText(FText::FromString(hour_now));
+58 }
 59 
-60 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1ade010f768f21cf37892f5cc37742c164">hour</link>-&gt;SetText(FText::FromString(hour_now));
-61 }
-62 
-63 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarUIBase::InitializeMinute()
+63 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1a76eee495d3d41ed988f0ea24859012b2">UCalendarUIBase::InitializeMinute</link>()
 64 {
 65 &#32;&#32;&#32;&#32;minute_now&#32;=&#32;FString::FormatAsNumber((FDateTime::Now()&#32;-&#32;minuteDifference).GetMinute());
 66 
@@ -73,183 +64,176 @@
 69 &#32;&#32;&#32;&#32;}
 70 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1aae2c741ddfd4dfd23c54379fe3c8a496">minute</link>-&gt;SetText(FText::FromString(minute_now));
 71 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(minute_now&#32;==&#32;<emphasis role="stringliteral">&quot;00&quot;</emphasis>)&#32;{
-72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InitializeHour();
+72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1ac963cdd07a261492b68710883c1f5cc9">InitializeHour</link>();
 73 &#32;&#32;&#32;&#32;}
 74 }
 75 
-76 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarUIBase::InitializeYear(<emphasis role="keywordtype">int</emphasis>&#32;y)
-77 {
-78 &#32;&#32;&#32;&#32;year_now&#32;=&#32;y;
-79 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a02dca1d5100c33f359a8b357670612f4">year</link>-&gt;SetText(FText::FromString(FString::FormatAsNumber(y).Replace(TEXT(<emphasis role="stringliteral">&quot;,&quot;</emphasis>),&#32;TEXT(<emphasis role="stringliteral">&quot;&quot;</emphasis>))));
-80 }
-81 
-82 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarUIBase::InitializeMonth(<emphasis role="keywordtype">int</emphasis>&#32;m)
-83 {
-84 &#32;&#32;&#32;&#32;TMap&lt;int32,&#32;FString&gt;&#32;MonthMap&#32;=&#32;{
-85 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{1,&#32;TEXT(<emphasis role="stringliteral">&quot;Jan&quot;</emphasis>)},&#32;{2,&#32;TEXT(<emphasis role="stringliteral">&quot;Feb&quot;</emphasis>)},&#32;{3,&#32;TEXT(<emphasis role="stringliteral">&quot;Mar&quot;</emphasis>)},&#32;{4,&#32;TEXT(<emphasis role="stringliteral">&quot;Apr&quot;</emphasis>)},
-86 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{5,&#32;TEXT(<emphasis role="stringliteral">&quot;May&quot;</emphasis>)},&#32;{6,&#32;TEXT(<emphasis role="stringliteral">&quot;Jun&quot;</emphasis>)},&#32;{7,&#32;TEXT(<emphasis role="stringliteral">&quot;Jul&quot;</emphasis>)},&#32;{8,&#32;TEXT(<emphasis role="stringliteral">&quot;Aug&quot;</emphasis>)},
-87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{9,&#32;TEXT(<emphasis role="stringliteral">&quot;Sep&quot;</emphasis>)},&#32;{10,&#32;TEXT(<emphasis role="stringliteral">&quot;Oct&quot;</emphasis>)},&#32;{11,&#32;TEXT(<emphasis role="stringliteral">&quot;Nov&quot;</emphasis>)},&#32;{12,&#32;TEXT(<emphasis role="stringliteral">&quot;Dec&quot;</emphasis>)}
-88 &#32;&#32;&#32;&#32;};
-89 &#32;&#32;&#32;&#32;month_now&#32;=&#32;m;
-90 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a3a174b5e9fd5c372db9fc56d6e5a41e4">month</link>-&gt;SetText(FText::FromString(*MonthMap.Find(m)));
-91 }
-92 
-93 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1a16365e3ed853935d5bd5b926f2a5e400">UCalendarUIBase::SetCornerRadii</link>(<emphasis role="keyword">const</emphasis>&#32;FVector4&amp;&#32;CalendarBorder,&#32;<emphasis role="keyword">const</emphasis>&#32;FVector4&amp;&#32;WeekdayHeaderRadii)
-94 {
-95 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Modify&#32;the&#32;corner&#32;radii&#32;of&#32;the&#32;button&apos;s&#32;style&#32;directly</emphasis>
-96 &#32;&#32;&#32;&#32;FButtonStyle&#32;CalendarStyle&#32;=&#32;calendar_background-&gt;WidgetStyle;
-97 &#32;&#32;&#32;&#32;CalendarStyle.Normal.OutlineSettings.CornerRadii&#32;=&#32;CalendarBorder;
-98 &#32;&#32;&#32;&#32;CalendarStyle.Hovered.OutlineSettings.CornerRadii&#32;=&#32;CalendarBorder;
-99 &#32;&#32;&#32;&#32;CalendarStyle.Pressed.OutlineSettings.CornerRadii&#32;=&#32;CalendarBorder;
-100 &#32;&#32;&#32;&#32;calendar_background-&gt;SetStyle(CalendarStyle);
-101 
-102 &#32;&#32;&#32;&#32;FButtonStyle&#32;WeekdayStyle&#32;=&#32;weekdays_background-&gt;WidgetStyle;
-103 &#32;&#32;&#32;&#32;WeekdayStyle.Normal.OutlineSettings.CornerRadii&#32;=&#32;WeekdayHeaderRadii;
-104 &#32;&#32;&#32;&#32;WeekdayStyle.Hovered.OutlineSettings.CornerRadii&#32;=&#32;WeekdayHeaderRadii;
-105 &#32;&#32;&#32;&#32;WeekdayStyle.Pressed.OutlineSettings.CornerRadii&#32;=&#32;WeekdayHeaderRadii;
-106 &#32;&#32;&#32;&#32;weekdays_background-&gt;SetStyle(WeekdayStyle);
-107 }
-108 
-109 FDateTime&#32;<link linkend="_class_u_calendar_u_i_base_1a0949b977c36bc9f85fab70bd1658db22">UCalendarUIBase::GetTime</link>()
-110 {
-111 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;FDateTime(year_now,&#32;month_now,&#32;FDateTime::Now().GetDay(),&#32;FCString::Atoi(*hour_now),&#32;FCString::Atoi(*minute_now),&#32;0,&#32;0);
-112 }
-113 
-114 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarUIBase::HandleOnYearChanged(<emphasis role="keyword">const</emphasis>&#32;FText&amp;&#32;Text,&#32;ETextCommit::Type&#32;CommitMethod)
-115 {
-116 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(CommitMethod&#32;==&#32;ETextCommit::OnEnter)&#32;{
-117 
-118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;year_now&#32;=&#32;FCString::Atoi(*Text.ToString());
-119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ListViewCalendar-&gt;ClearListItems();
-120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a11312e51d4b570c9594b442ec9566a1a">CreateCalendar</link>();
-121 &#32;&#32;&#32;&#32;}
-122 }
-123 
-124 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarUIBase::HandleMonthToggleButtonClick()
-125 {
-126 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(toggle_prev_month-&gt;IsVisible())&#32;{
-127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;toggle_prev_month-&gt;SetVisibility(ESlateVisibility::Collapsed);
-128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;toggle_next_month-&gt;SetVisibility(ESlateVisibility::Collapsed);
-129 &#32;&#32;&#32;&#32;}
-130 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
-131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;toggle_prev_month-&gt;SetVisibility(ESlateVisibility::Visible);
-132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;toggle_next_month-&gt;SetVisibility(ESlateVisibility::Visible);
-133 &#32;&#32;&#32;&#32;}
-134 
-135 }
-136 
-137 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarUIBase::HandleOnHourCommitted(<emphasis role="keyword">const</emphasis>&#32;FText&amp;&#32;Text,&#32;ETextCommit::Type&#32;CommitMethod)
+80 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1af20668b08bbd9c1faf012d43c09cf375">UCalendarUIBase::InitializeYear</link>(<emphasis role="keywordtype">int</emphasis>&#32;y)
+81 {
+82 &#32;&#32;&#32;&#32;year_now&#32;=&#32;y;
+83 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a02dca1d5100c33f359a8b357670612f4">year</link>-&gt;SetText(FText::FromString(FString::FormatAsNumber(y).Replace(TEXT(<emphasis role="stringliteral">&quot;,&quot;</emphasis>),&#32;TEXT(<emphasis role="stringliteral">&quot;&quot;</emphasis>))));
+84 }
+85 
+90 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1a0a185b91f2f826a535e5b03e57266149">UCalendarUIBase::InitializeMonth</link>(<emphasis role="keywordtype">int</emphasis>&#32;m)
+91 {
+92 &#32;&#32;&#32;&#32;TMap&lt;int32,&#32;FString&gt;&#32;MonthMap&#32;=&#32;{
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{1,&#32;TEXT(<emphasis role="stringliteral">&quot;Jan&quot;</emphasis>)},&#32;{2,&#32;TEXT(<emphasis role="stringliteral">&quot;Feb&quot;</emphasis>)},&#32;{3,&#32;TEXT(<emphasis role="stringliteral">&quot;Mar&quot;</emphasis>)},&#32;{4,&#32;TEXT(<emphasis role="stringliteral">&quot;Apr&quot;</emphasis>)},
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{5,&#32;TEXT(<emphasis role="stringliteral">&quot;May&quot;</emphasis>)},&#32;{6,&#32;TEXT(<emphasis role="stringliteral">&quot;Jun&quot;</emphasis>)},&#32;{7,&#32;TEXT(<emphasis role="stringliteral">&quot;Jul&quot;</emphasis>)},&#32;{8,&#32;TEXT(<emphasis role="stringliteral">&quot;Aug&quot;</emphasis>)},
+95 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{9,&#32;TEXT(<emphasis role="stringliteral">&quot;Sep&quot;</emphasis>)},&#32;{10,&#32;TEXT(<emphasis role="stringliteral">&quot;Oct&quot;</emphasis>)},&#32;{11,&#32;TEXT(<emphasis role="stringliteral">&quot;Nov&quot;</emphasis>)},&#32;{12,&#32;TEXT(<emphasis role="stringliteral">&quot;Dec&quot;</emphasis>)}
+96 &#32;&#32;&#32;&#32;};
+97 &#32;&#32;&#32;&#32;month_now&#32;=&#32;m;
+98 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a3a174b5e9fd5c372db9fc56d6e5a41e4">month</link>-&gt;SetText(FText::FromString(*MonthMap.Find(m)));
+99 }
+100 
+107 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1a16365e3ed853935d5bd5b926f2a5e400">UCalendarUIBase::SetCornerRadii</link>(<emphasis role="keyword">const</emphasis>&#32;FVector4&amp;&#32;CalendarBorder,&#32;<emphasis role="keyword">const</emphasis>&#32;FVector4&amp;&#32;WeekdayHeaderRadii)
+108 {
+109 &#32;&#32;&#32;&#32;FButtonStyle&#32;CalendarStyle&#32;=&#32;<link linkend="_class_u_calendar_u_i_base_1a26f4d36b170dc86db5dec24425315c09">calendar_background</link>-&gt;WidgetStyle;
+110 &#32;&#32;&#32;&#32;CalendarStyle.Normal.OutlineSettings.CornerRadii&#32;=&#32;CalendarBorder;
+111 &#32;&#32;&#32;&#32;CalendarStyle.Hovered.OutlineSettings.CornerRadii&#32;=&#32;CalendarBorder;
+112 &#32;&#32;&#32;&#32;CalendarStyle.Pressed.OutlineSettings.CornerRadii&#32;=&#32;CalendarBorder;
+113 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a26f4d36b170dc86db5dec24425315c09">calendar_background</link>-&gt;SetStyle(CalendarStyle);
+114 
+115 &#32;&#32;&#32;&#32;FButtonStyle&#32;WeekdayStyle&#32;=&#32;<link linkend="_class_u_calendar_u_i_base_1a3dabcd7a7aa98f743a48659b9affb5da">weekdays_background</link>-&gt;WidgetStyle;
+116 &#32;&#32;&#32;&#32;WeekdayStyle.Normal.OutlineSettings.CornerRadii&#32;=&#32;WeekdayHeaderRadii;
+117 &#32;&#32;&#32;&#32;WeekdayStyle.Hovered.OutlineSettings.CornerRadii&#32;=&#32;WeekdayHeaderRadii;
+118 &#32;&#32;&#32;&#32;WeekdayStyle.Pressed.OutlineSettings.CornerRadii&#32;=&#32;WeekdayHeaderRadii;
+119 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a3dabcd7a7aa98f743a48659b9affb5da">weekdays_background</link>-&gt;SetStyle(WeekdayStyle);
+120 }
+121 
+126 FDateTime&#32;<link linkend="_class_u_calendar_u_i_base_1a0949b977c36bc9f85fab70bd1658db22">UCalendarUIBase::GetTime</link>()
+127 {
+128 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;FDateTime(year_now,&#32;month_now,&#32;FDateTime::Now().GetDay(),&#32;FCString::Atoi(*hour_now),&#32;FCString::Atoi(*minute_now),&#32;0,&#32;0);
+129 }
+130 
+137 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1ac89681dc011ade93852f9ed478503b46">UCalendarUIBase::HandleOnYearChanged</link>(<emphasis role="keyword">const</emphasis>&#32;FText&amp;&#32;Text,&#32;ETextCommit::Type&#32;CommitMethod)
 138 {
 139 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(CommitMethod&#32;==&#32;ETextCommit::OnEnter)&#32;{
-140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hour_now&#32;=&#32;Text.ToString();
-141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(hour_now.Len()&#32;&lt;=&#32;2)&#32;{
-142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FDateTime&#32;new_hour&#32;=&#32;FDateTime(FDateTime::Now().GetYear(),&#32;FDateTime::Now().GetMonth(),&#32;FDateTime::Now().GetDay(),&#32;FCString::Atoi(*hour_now),&#32;0,&#32;0,&#32;0);
-143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hourDifference&#32;=&#32;FDateTime::Now()&#32;-&#32;new_hour;
-144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetWorld()-&gt;GetTimerManager().SetTimer(TickTimerHandle,&#32;<emphasis role="keyword">this</emphasis>,&#32;&amp;UCalendarUIBase::InitializeMinute,&#32;DefaultMinuteTickInterval,&#32;<emphasis role="keyword">true</emphasis>);
-146 &#32;&#32;&#32;&#32;}
-147 }
-148 
-149 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarUIBase::HandleOnHourChanged(<emphasis role="keyword">const</emphasis>&#32;FText&amp;&#32;Text)
+140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;year_now&#32;=&#32;FCString::Atoi(*Text.ToString());
+141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a3e817349a70c2facd1f0a5cade0b16d9">ListViewCalendar</link>-&gt;ClearListItems();
+142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a11312e51d4b570c9594b442ec9566a1a">CreateCalendar</link>();
+143 &#32;&#32;&#32;&#32;}
+144 }
+145 
+149 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1a6ec447a30d5ea1cfd6a36dfc5ec00583">UCalendarUIBase::HandleMonthToggleButtonClick</link>()
 150 {
-151 &#32;&#32;&#32;&#32;GetWorld()-&gt;GetTimerManager().ClearTimer(TickTimerHandle);
-152 }
-153 
-154 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarUIBase::HandleOnMinuteCommitted(<emphasis role="keyword">const</emphasis>&#32;FText&amp;&#32;Text,&#32;ETextCommit::Type&#32;CommitMethod)
-155 {
-156 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(CommitMethod&#32;==&#32;ETextCommit::OnEnter)&#32;{
-157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;minute_now&#32;=&#32;Text.ToString();
-158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(minute_now&#32;==&#32;<emphasis role="stringliteral">&quot;60&quot;</emphasis>)&#32;{
-159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FDateTime&#32;new_minute&#32;=&#32;FDateTime(FDateTime::Now().GetYear(),&#32;FDateTime::Now().GetMonth(),&#32;FDateTime::Now().GetDay(),&#32;1,&#32;0,&#32;0,&#32;0);
-160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;minuteDifference&#32;=&#32;FDateTime::Now()&#32;-&#32;new_minute;
-161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(minute_now.Len()&#32;&lt;=&#32;2)&#32;{
-163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FDateTime&#32;new_minute&#32;=&#32;FDateTime(FDateTime::Now().GetYear(),&#32;FDateTime::Now().GetMonth(),&#32;FDateTime::Now().GetDay(),&#32;0,&#32;FCString::Atoi(*minute_now),&#32;0,&#32;0);
-164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;minuteDifference&#32;=&#32;FDateTime::Now()&#32;-&#32;new_minute;
-165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetWorld()-&gt;GetTimerManager().SetTimer(TickTimerHandle,&#32;<emphasis role="keyword">this</emphasis>,&#32;&amp;UCalendarUIBase::InitializeMinute,&#32;DefaultMinuteTickInterval,&#32;<emphasis role="keyword">true</emphasis>);
-167 &#32;&#32;&#32;&#32;}
-168 }
-169 
-170 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarUIBase::HandleOnMinuteChanged(<emphasis role="keyword">const</emphasis>&#32;FText&amp;&#32;Text)
-171 {
-172 &#32;&#32;&#32;&#32;GetWorld()-&gt;GetTimerManager().ClearTimer(TickTimerHandle);
-173 }
-174 
-175 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarUIBase::ShowNextMonth()
-176 {
-177 &#32;&#32;&#32;&#32;FText&#32;m&#32;=&#32;<link linkend="_class_u_calendar_u_i_base_1a3a174b5e9fd5c372db9fc56d6e5a41e4">month</link>-&gt;GetText();
-178 &#32;&#32;&#32;&#32;int32&#32;m2&#32;=&#32;*MonthMap2.Find(m.ToString());
-179 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m2&#32;&lt;&#32;12)&#32;{
-180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m2&#32;+=&#32;1;
-181 &#32;&#32;&#32;&#32;}
-182 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
-183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m2&#32;=&#32;1;
-184 &#32;&#32;&#32;&#32;}
-185 &#32;&#32;&#32;&#32;InitializeMonth(m2);
-186 &#32;&#32;&#32;&#32;ListViewCalendar-&gt;ClearListItems();
-187 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a11312e51d4b570c9594b442ec9566a1a">CreateCalendar</link>();
-188 }
-189 
-190 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarUIBase::ShowPrevMonth()
-191 {
-192 &#32;&#32;&#32;&#32;FText&#32;m&#32;=&#32;<link linkend="_class_u_calendar_u_i_base_1a3a174b5e9fd5c372db9fc56d6e5a41e4">month</link>-&gt;GetText();
-193 &#32;&#32;&#32;&#32;int32&#32;m2&#32;=&#32;*MonthMap2.Find(m.ToString());
-194 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m2&#32;&gt;&#32;1)&#32;{
-195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m2&#32;-=&#32;1;
-196 &#32;&#32;&#32;&#32;}
-197 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
-198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m2&#32;=&#32;12;
-199 &#32;&#32;&#32;&#32;}
-200 &#32;&#32;&#32;&#32;InitializeMonth(m2);
-201 &#32;&#32;&#32;&#32;ListViewCalendar-&gt;ClearListItems();
-202 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a11312e51d4b570c9594b442ec9566a1a">CreateCalendar</link>();
-203 }
-204 
-205 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1ae1a2bb611d86bf021b6594a84e0b0083">UCalendarUIBase::PreCalendarConfig</link>(FLinearColor&#32;SelectedGridColor,&#32;FLinearColor&#32;EmptyGridColor,&#32;FLinearColor&#32;GridColor,&#32;FLinearColor&#32;CalendarBackgroundColor,&#32;FLinearColor&#32;CalendarBackgroundBorderColor,&#32;FLinearColor&#32;WeekdayHeadingColor)
-206 {
-207 &#32;&#32;&#32;&#32;color1&#32;=&#32;SelectedGridColor;
-208 &#32;&#32;&#32;&#32;color2&#32;=&#32;EmptyGridColor;
-209 &#32;&#32;&#32;&#32;color3&#32;=&#32;GridColor;
-210 
-211 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Modify&#32;the&#32;style&#32;of&#32;the&#32;calendar&#32;background&#32;button</emphasis>
-212 &#32;&#32;&#32;&#32;FButtonStyle&#32;CalendarStyle&#32;=&#32;calendar_background-&gt;WidgetStyle;
-213 &#32;&#32;&#32;&#32;CalendarStyle.Normal.TintColor&#32;=&#32;FSlateColor(CalendarBackgroundColor);
-214 &#32;&#32;&#32;&#32;CalendarStyle.Hovered.TintColor&#32;=&#32;FSlateColor(CalendarBackgroundColor);
-215 &#32;&#32;&#32;&#32;CalendarStyle.Pressed.TintColor&#32;=&#32;FSlateColor(CalendarBackgroundColor);
-216 &#32;&#32;&#32;&#32;CalendarStyle.Normal.OutlineSettings.Color&#32;=&#32;FSlateColor(CalendarBackgroundBorderColor);
-217 &#32;&#32;&#32;&#32;CalendarStyle.Hovered.OutlineSettings.Color&#32;=&#32;FSlateColor(CalendarBackgroundBorderColor);
-218 &#32;&#32;&#32;&#32;CalendarStyle.Pressed.OutlineSettings.Color&#32;=&#32;FSlateColor(CalendarBackgroundBorderColor);
-219 &#32;&#32;&#32;&#32;calendar_background-&gt;SetStyle(CalendarStyle);
-220 
-221 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Modify&#32;the&#32;style&#32;of&#32;the&#32;weekdays&#32;background&#32;button</emphasis>
-222 &#32;&#32;&#32;&#32;FButtonStyle&#32;WeekdayStyle&#32;=&#32;weekdays_background-&gt;WidgetStyle;
-223 &#32;&#32;&#32;&#32;WeekdayStyle.Normal.TintColor&#32;=&#32;FSlateColor(WeekdayHeadingColor);
-224 &#32;&#32;&#32;&#32;WeekdayStyle.Hovered.TintColor&#32;=&#32;FSlateColor(WeekdayHeadingColor);
-225 &#32;&#32;&#32;&#32;WeekdayStyle.Pressed.TintColor&#32;=&#32;FSlateColor(WeekdayHeadingColor);
-226 &#32;&#32;&#32;&#32;weekdays_background-&gt;SetStyle(WeekdayStyle);
-227 }
-228 
-229 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1a11312e51d4b570c9594b442ec9566a1a">UCalendarUIBase::CreateCalendar</link>()
-230 {
-231 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(int32&#32;i&#32;=&#32;0;&#32;i&#32;&lt;=&#32;5;&#32;++i)&#32;{
-232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_row">UCalendarRow</link>*&#32;CalendarRowInstance&#32;=&#32;NewObject&lt;UCalendarRow&gt;(<emphasis role="keyword">this</emphasis>,&#32;UCalendarRow::StaticClass());
-233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(CalendarRowInstance&#32;!=&#32;<emphasis role="keyword">nullptr</emphasis>)&#32;{
-234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalendarRowInstance-&gt;Init(i,&#32;year_now,&#32;month_now,&#32;color1,&#32;color2,&#32;color3,&#32;<emphasis role="keyword">this</emphasis>);
-235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ListViewCalendar-&gt;AddItem(CalendarRowInstance);
-236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-237 &#32;&#32;&#32;&#32;}
-238 }
-239 
-240 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1a1b09e1b357642378fdc3dc4e6d186183">UCalendarUIBase::SetYear</link>(<emphasis role="keywordtype">int</emphasis>&#32;y)
-241 {
-242 &#32;&#32;&#32;&#32;InitializeYear(y);
+151 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_u_calendar_u_i_base_1a48c507302566eea8fed95e8a7d5d7983">toggle_prev_month</link>-&gt;IsVisible())&#32;{
+152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a48c507302566eea8fed95e8a7d5d7983">toggle_prev_month</link>-&gt;SetVisibility(ESlateVisibility::Collapsed);
+153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a5a692f2c28fbca9c2718313eec70d1d7">toggle_next_month</link>-&gt;SetVisibility(ESlateVisibility::Collapsed);
+154 &#32;&#32;&#32;&#32;}
+155 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a48c507302566eea8fed95e8a7d5d7983">toggle_prev_month</link>-&gt;SetVisibility(ESlateVisibility::Visible);
+157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a5a692f2c28fbca9c2718313eec70d1d7">toggle_next_month</link>-&gt;SetVisibility(ESlateVisibility::Visible);
+158 &#32;&#32;&#32;&#32;}
+159 }
+160 
+171 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1ae1a2bb611d86bf021b6594a84e0b0083">UCalendarUIBase::PreCalendarConfig</link>(FLinearColor&#32;SelectedGridColor,&#32;FLinearColor&#32;EmptyGridColor,&#32;FLinearColor&#32;GridColor,&#32;FLinearColor&#32;CalendarBackgroundColor,&#32;FLinearColor&#32;CalendarBackgroundBorderColor,&#32;FLinearColor&#32;WeekdayHeadingColor)
+172 {
+173 &#32;&#32;&#32;&#32;color1&#32;=&#32;SelectedGridColor;
+174 &#32;&#32;&#32;&#32;color2&#32;=&#32;EmptyGridColor;
+175 &#32;&#32;&#32;&#32;color3&#32;=&#32;GridColor;
+176 
+177 &#32;&#32;&#32;&#32;FButtonStyle&#32;CalendarStyle&#32;=&#32;<link linkend="_class_u_calendar_u_i_base_1a26f4d36b170dc86db5dec24425315c09">calendar_background</link>-&gt;WidgetStyle;
+178 &#32;&#32;&#32;&#32;CalendarStyle.Normal.TintColor&#32;=&#32;FSlateColor(CalendarBackgroundColor);
+179 &#32;&#32;&#32;&#32;CalendarStyle.Hovered.TintColor&#32;=&#32;FSlateColor(CalendarBackgroundColor);
+180 &#32;&#32;&#32;&#32;CalendarStyle.Pressed.TintColor&#32;=&#32;FSlateColor(CalendarBackgroundColor);
+181 &#32;&#32;&#32;&#32;CalendarStyle.Normal.OutlineSettings.Color&#32;=&#32;FSlateColor(CalendarBackgroundBorderColor);
+182 &#32;&#32;&#32;&#32;CalendarStyle.Hovered.OutlineSettings.Color&#32;=&#32;FSlateColor(CalendarBackgroundBorderColor);
+183 &#32;&#32;&#32;&#32;CalendarStyle.Pressed.OutlineSettings.Color&#32;=&#32;FSlateColor(CalendarBackgroundBorderColor);
+184 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a26f4d36b170dc86db5dec24425315c09">calendar_background</link>-&gt;SetStyle(CalendarStyle);
+185 
+186 &#32;&#32;&#32;&#32;FButtonStyle&#32;WeekdayStyle&#32;=&#32;<link linkend="_class_u_calendar_u_i_base_1a3dabcd7a7aa98f743a48659b9affb5da">weekdays_background</link>-&gt;WidgetStyle;
+187 &#32;&#32;&#32;&#32;WeekdayStyle.Normal.TintColor&#32;=&#32;FSlateColor(WeekdayHeadingColor);
+188 &#32;&#32;&#32;&#32;WeekdayStyle.Hovered.TintColor&#32;=&#32;FSlateColor(WeekdayHeadingColor);
+189 &#32;&#32;&#32;&#32;WeekdayStyle.Pressed.TintColor&#32;=&#32;FSlateColor(WeekdayHeadingColor);
+190 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a3dabcd7a7aa98f743a48659b9affb5da">weekdays_background</link>-&gt;SetStyle(WeekdayStyle);
+191 }
+192 
+196 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1a11312e51d4b570c9594b442ec9566a1a">UCalendarUIBase::CreateCalendar</link>()
+197 {
+198 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(int32&#32;i&#32;=&#32;0;&#32;i&#32;&lt;=&#32;5;&#32;++i)&#32;{
+199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_row">UCalendarRow</link>*&#32;CalendarRowInstance&#32;=&#32;NewObject&lt;UCalendarRow&gt;(<emphasis role="keyword">this</emphasis>,&#32;UCalendarRow::StaticClass());
+200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(CalendarRowInstance&#32;!=&#32;<emphasis role="keyword">nullptr</emphasis>)&#32;{
+201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalendarRowInstance-&gt;<link linkend="_class_u_calendar_row_1a120b529bd6e963cde26937a84fc8ebbe">Init</link>(i,&#32;year_now,&#32;month_now,&#32;color1,&#32;color2,&#32;color3,&#32;<emphasis role="keyword">this</emphasis>);
+202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a3e817349a70c2facd1f0a5cade0b16d9">ListViewCalendar</link>-&gt;AddItem(CalendarRowInstance);
+203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+204 &#32;&#32;&#32;&#32;}
+205 }
+206 
+211 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1a1b09e1b357642378fdc3dc4e6d186183">UCalendarUIBase::SetYear</link>(<emphasis role="keywordtype">int</emphasis>&#32;y)
+212 {
+213 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1af20668b08bbd9c1faf012d43c09cf375">InitializeYear</link>(y);
+214 }
+215 
+220 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1af0682c27359998782d29358d53bac2a0">UCalendarUIBase::SetMonth</link>(int32&#32;m)
+221 {
+222 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a0a185b91f2f826a535e5b03e57266149">InitializeMonth</link>(m);
+223 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a3e817349a70c2facd1f0a5cade0b16d9">ListViewCalendar</link>-&gt;ClearListItems();
+224 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a11312e51d4b570c9594b442ec9566a1a">CreateCalendar</link>();
+225 }
+226 
+233 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1a3b2917fd71339eac0cfdd50f62a679b7">UCalendarUIBase::HandleOnHourCommitted</link>(<emphasis role="keyword">const</emphasis>&#32;FText&amp;&#32;Text,&#32;ETextCommit::Type&#32;CommitMethod)
+234 {
+235 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(CommitMethod&#32;==&#32;ETextCommit::OnEnter)&#32;{
+236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hour_now&#32;=&#32;Text.ToString();
+237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(hour_now.Len()&#32;&lt;=&#32;2)&#32;{
+238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FDateTime&#32;new_hour&#32;=&#32;FDateTime(FDateTime::Now().GetYear(),&#32;FDateTime::Now().GetMonth(),&#32;FDateTime::Now().GetDay(),&#32;FCString::Atoi(*hour_now),&#32;0,&#32;0,&#32;0);
+239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hourDifference&#32;=&#32;FDateTime::Now()&#32;-&#32;new_hour;
+240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetWorld()-&gt;GetTimerManager().SetTimer(<link linkend="_class_u_calendar_u_i_base_1a00f1bbb4c462c529a3d633c90a22534c">TickTimerHandle</link>,&#32;<emphasis role="keyword">this</emphasis>,&#32;&amp;<link linkend="_class_u_calendar_u_i_base_1a76eee495d3d41ed988f0ea24859012b2">UCalendarUIBase::InitializeMinute</link>,&#32;<link linkend="_class_u_calendar_u_i_base_1a49b0b02cef6baf80fd5c1408999a3d9d">DefaultMinuteTickInterval</link>,&#32;<emphasis role="keyword">true</emphasis>);
+242 &#32;&#32;&#32;&#32;}
 243 }
-244 
-245 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1af0682c27359998782d29358d53bac2a0">UCalendarUIBase::SetMonth</link>(int32&#32;m)
-246 {
-247 &#32;&#32;&#32;&#32;InitializeMonth(m);
-248 &#32;&#32;&#32;&#32;ListViewCalendar-&gt;ClearListItems();
-249 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a11312e51d4b570c9594b442ec9566a1a">CreateCalendar</link>();
-250 }
+249 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1adbc121a4e1f92087805b0ebe4b12547a">UCalendarUIBase::HandleOnHourChanged</link>(<emphasis role="keyword">const</emphasis>&#32;FText&amp;&#32;Text)
+250 {
+251 &#32;&#32;&#32;&#32;GetWorld()-&gt;GetTimerManager().ClearTimer(<link linkend="_class_u_calendar_u_i_base_1a00f1bbb4c462c529a3d633c90a22534c">TickTimerHandle</link>);
+252 }
+259 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1aba90f4a23ad0120fc4ee510b91d59678">UCalendarUIBase::HandleOnMinuteCommitted</link>(<emphasis role="keyword">const</emphasis>&#32;FText&amp;&#32;Text,&#32;ETextCommit::Type&#32;CommitMethod)
+260 {
+261 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(CommitMethod&#32;==&#32;ETextCommit::OnEnter)&#32;{
+262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;minute_now&#32;=&#32;Text.ToString();
+263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(minute_now&#32;==&#32;<emphasis role="stringliteral">&quot;60&quot;</emphasis>)&#32;{
+264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FDateTime&#32;new_minute&#32;=&#32;FDateTime(FDateTime::Now().GetYear(),&#32;FDateTime::Now().GetMonth(),&#32;FDateTime::Now().GetDay(),&#32;1,&#32;0,&#32;0,&#32;0);
+265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;minuteDifference&#32;=&#32;FDateTime::Now()&#32;-&#32;new_minute;
+266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(minute_now.Len()&#32;&lt;=&#32;2)&#32;{
+268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FDateTime&#32;new_minute&#32;=&#32;FDateTime(FDateTime::Now().GetYear(),&#32;FDateTime::Now().GetMonth(),&#32;FDateTime::Now().GetDay(),&#32;0,&#32;FCString::Atoi(*minute_now),&#32;0,&#32;0);
+269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;minuteDifference&#32;=&#32;FDateTime::Now()&#32;-&#32;new_minute;
+270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetWorld()-&gt;GetTimerManager().SetTimer(<link linkend="_class_u_calendar_u_i_base_1a00f1bbb4c462c529a3d633c90a22534c">TickTimerHandle</link>,&#32;<emphasis role="keyword">this</emphasis>,&#32;&amp;<link linkend="_class_u_calendar_u_i_base_1a76eee495d3d41ed988f0ea24859012b2">UCalendarUIBase::InitializeMinute</link>,&#32;<link linkend="_class_u_calendar_u_i_base_1a49b0b02cef6baf80fd5c1408999a3d9d">DefaultMinuteTickInterval</link>,&#32;<emphasis role="keyword">true</emphasis>);
+272 &#32;&#32;&#32;&#32;}
+273 }
+274 
+280 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1a2fd0e81a9e6ef6e5166d5300ccfea751">UCalendarUIBase::HandleOnMinuteChanged</link>(<emphasis role="keyword">const</emphasis>&#32;FText&amp;&#32;Text)
+281 {
+282 &#32;&#32;&#32;&#32;GetWorld()-&gt;GetTimerManager().ClearTimer(<link linkend="_class_u_calendar_u_i_base_1a00f1bbb4c462c529a3d633c90a22534c">TickTimerHandle</link>);
+283 }
+284 
+288 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1aaabd8f8b87a5bd74c2428bff88ca9eda">UCalendarUIBase::ShowNextMonth</link>()
+289 {
+290 &#32;&#32;&#32;&#32;FText&#32;m&#32;=&#32;<link linkend="_class_u_calendar_u_i_base_1a3a174b5e9fd5c372db9fc56d6e5a41e4">month</link>-&gt;GetText();
+291 &#32;&#32;&#32;&#32;int32&#32;m2&#32;=&#32;*MonthMap2.Find(m.ToString());
+292 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m2&#32;&lt;&#32;12)&#32;{
+293 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m2&#32;+=&#32;1;
+294 &#32;&#32;&#32;&#32;}
+295 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+296 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m2&#32;=&#32;1;
+297 &#32;&#32;&#32;&#32;}
+298 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a0a185b91f2f826a535e5b03e57266149">InitializeMonth</link>(m2);
+299 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a3e817349a70c2facd1f0a5cade0b16d9">ListViewCalendar</link>-&gt;ClearListItems();
+300 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a11312e51d4b570c9594b442ec9566a1a">CreateCalendar</link>();
+301 }
+302 
+306 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_u_i_base_1a70908db1ad03af94622e83f086574f19">UCalendarUIBase::ShowPrevMonth</link>()
+307 {
+308 &#32;&#32;&#32;&#32;FText&#32;m&#32;=&#32;<link linkend="_class_u_calendar_u_i_base_1a3a174b5e9fd5c372db9fc56d6e5a41e4">month</link>-&gt;GetText();
+309 &#32;&#32;&#32;&#32;int32&#32;m2&#32;=&#32;*MonthMap2.Find(m.ToString());
+310 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m2&#32;&gt;&#32;1)&#32;{
+311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m2&#32;-=&#32;1;
+312 &#32;&#32;&#32;&#32;}
+313 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m2&#32;=&#32;12;
+315 &#32;&#32;&#32;&#32;}
+316 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a0a185b91f2f826a535e5b03e57266149">InitializeMonth</link>(m2);
+317 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a3e817349a70c2facd1f0a5cade0b16d9">ListViewCalendar</link>-&gt;ClearListItems();
+318 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base_1a11312e51d4b570c9594b442ec9566a1a">CreateCalendar</link>();
+319 }
 </programlisting></section>

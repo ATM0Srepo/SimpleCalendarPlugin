@@ -1,0 +1,207 @@
+\doxysection{Calendar\+UIBase.\+cpp}
+\hypertarget{_calendar_u_i_base_8cpp_source}{}\label{_calendar_u_i_base_8cpp_source}\index{Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarUIBase.cpp@{Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarUIBase.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}CalendarUIBase.h"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Misc/DateTime.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Components/Button.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Components/TextBlock.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Containers/Map.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}CalendarRow.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Components/ListView.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}TimerManager.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Engine/World.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_calendar_u_i_base_a1e58af927352001447b95687fcd425a6}{UCalendarUIBase::NativeConstruct}}()}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ Super::NativeConstruct();}
+\DoxyCodeLine{00017\ \ \ \ \ MonthMap2\ =\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \{TEXT(\textcolor{stringliteral}{"{}Jan"{}}),\ 1\},\ \{TEXT(\textcolor{stringliteral}{"{}Feb"{}}),\ 2\},\ \{TEXT(\textcolor{stringliteral}{"{}Mar"{}}),\ 3\},\ \{TEXT(\textcolor{stringliteral}{"{}Apr"{}}),\ 4\},}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \{TEXT(\textcolor{stringliteral}{"{}May"{}}),\ 5\},\ \{TEXT(\textcolor{stringliteral}{"{}Jun"{}}),\ 6\},\ \{TEXT(\textcolor{stringliteral}{"{}Jul"{}}),\ 7\},\ \{TEXT(\textcolor{stringliteral}{"{}Aug"{}}),\ 8\},}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \{TEXT(\textcolor{stringliteral}{"{}Sep"{}}),\ 9\},\ \{TEXT(\textcolor{stringliteral}{"{}Oct"{}}),\ 10\},\ \{TEXT(\textcolor{stringliteral}{"{}Nov"{}}),\ 11\},\ \{TEXT(\textcolor{stringliteral}{"{}Dec"{}}),\ 12\}}
+\DoxyCodeLine{00021\ \ \ \ \ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_ae1a2bb611d86bf021b6594a84e0b0083}{PreCalendarConfig}}(}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ FLinearColor(1.0f,\ 1.0f,\ 1.0f,\ 0.8f),}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ FLinearColor(0.0f,\ 0.0f,\ 0.0f,\ 1.0f),}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ FLinearColor(0.45f,\ 0.2f,\ 0.1f,\ 0.7f)}
+\DoxyCodeLine{00027\ \ \ \ \ );}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a48c507302566eea8fed95e8a7d5d7983}{toggle\_prev\_month}}-\/>SetVisibility(ESlateVisibility::Collapsed);}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a48c507302566eea8fed95e8a7d5d7983}{toggle\_prev\_month}}-\/>OnClicked.AddDynamic(\textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_u_calendar_u_i_base_a70908db1ad03af94622e83f086574f19}{UCalendarUIBase::ShowPrevMonth}});}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a5a692f2c28fbca9c2718313eec70d1d7}{toggle\_next\_month}}-\/>SetVisibility(ESlateVisibility::Collapsed);}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a5a692f2c28fbca9c2718313eec70d1d7}{toggle\_next\_month}}-\/>OnClicked.AddDynamic(\textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_u_calendar_u_i_base_aaabd8f8b87a5bd74c2428bff88ca9eda}{UCalendarUIBase::ShowNextMonth}});}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_af20668b08bbd9c1faf012d43c09cf375}{InitializeYear}}(FDateTime::Now().GetYear());}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a02dca1d5100c33f359a8b357670612f4}{year}}-\/>OnTextCommitted.AddDynamic(\textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_u_calendar_u_i_base_ac89681dc011ade93852f9ed478503b46}{UCalendarUIBase::HandleOnYearChanged}});}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a0a185b91f2f826a535e5b03e57266149}{InitializeMonth}}(FDateTime::Now().GetMonth());}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a8d166abd11adf560f1d3b8b1a48d3df8}{MonthButton}}-\/>OnClicked.AddDynamic(\textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_u_calendar_u_i_base_a6ec447a30d5ea1cfd6a36dfc5ec00583}{UCalendarUIBase::HandleMonthToggleButtonClick}});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ hourDifference\ =\ FDateTime::Now()\ -\/\ FDateTime::Now();}
+\DoxyCodeLine{00041\ \ \ \ \ minuteDifference\ =\ FDateTime::Now()\ -\/\ FDateTime::Now();}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_ac963cdd07a261492b68710883c1f5cc9}{InitializeHour}}();}
+\DoxyCodeLine{00043\ \ \ \ \ GetWorld()-\/>GetTimerManager().SetTimer(\mbox{\hyperlink{class_u_calendar_u_i_base_a00f1bbb4c462c529a3d633c90a22534c}{TickTimerHandle}},\ \textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_u_calendar_u_i_base_a76eee495d3d41ed988f0ea24859012b2}{UCalendarUIBase::InitializeMinute}},\ \mbox{\hyperlink{class_u_calendar_u_i_base_a49b0b02cef6baf80fd5c1408999a3d9d}{DefaultMinuteTickInterval}},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00044\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_calendar_u_i_base_ac963cdd07a261492b68710883c1f5cc9}{UCalendarUIBase::InitializeHour}}()}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ hour\_now\ =\ FString::FormatAsNumber((FDateTime::Now()\ -\/\ hourDifference).GetHour());}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{if}\ (hour\_now.Len()\ <\ 2)}
+\DoxyCodeLine{00053\ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ hour\_now\ =\ \textcolor{stringliteral}{"{}0"{}}\ +\ hour\_now;}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_ade010f768f21cf37892f5cc37742c164}{hour}}-\/>SetText(FText::FromString(hour\_now));}
+\DoxyCodeLine{00057\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_calendar_u_i_base_a76eee495d3d41ed988f0ea24859012b2}{UCalendarUIBase::InitializeMinute}}()}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ minute\_now\ =\ FString::FormatAsNumber((FDateTime::Now()\ -\/\ minuteDifference).GetMinute());}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{if}\ (minute\_now.Len()\ <\ 2)}
+\DoxyCodeLine{00066\ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ minute\_now\ =\ \textcolor{stringliteral}{"{}0"{}}\ +\ minute\_now;}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_aae2c741ddfd4dfd23c54379fe3c8a496}{minute}}-\/>SetText(FText::FromString(minute\_now));}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{if}\ (minute\_now\ ==\ \textcolor{stringliteral}{"{}00"{}})}
+\DoxyCodeLine{00071\ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_ac963cdd07a261492b68710883c1f5cc9}{InitializeHour}}();}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_calendar_u_i_base_af20668b08bbd9c1faf012d43c09cf375}{UCalendarUIBase::InitializeYear}}(\textcolor{keywordtype}{int}\ y)}
+\DoxyCodeLine{00081\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ year\_now\ =\ y;}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a02dca1d5100c33f359a8b357670612f4}{year}}-\/>SetText(FText::FromString(FString::FormatAsNumber(y).Replace(TEXT(\textcolor{stringliteral}{"{},"{}}),\ TEXT(\textcolor{stringliteral}{"{}"{}}))));}
+\DoxyCodeLine{00084\ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_calendar_u_i_base_a0a185b91f2f826a535e5b03e57266149}{UCalendarUIBase::InitializeMonth}}(\textcolor{keywordtype}{int}\ m)}
+\DoxyCodeLine{00091\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ TMap<int32,\ FString>\ MonthMap\ =\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \{1,\ TEXT(\textcolor{stringliteral}{"{}Jan"{}})\},\ \{2,\ TEXT(\textcolor{stringliteral}{"{}Feb"{}})\},\ \{3,\ TEXT(\textcolor{stringliteral}{"{}Mar"{}})\},\ \{4,\ TEXT(\textcolor{stringliteral}{"{}Apr"{}})\},}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \{5,\ TEXT(\textcolor{stringliteral}{"{}May"{}})\},\ \{6,\ TEXT(\textcolor{stringliteral}{"{}Jun"{}})\},\ \{7,\ TEXT(\textcolor{stringliteral}{"{}Jul"{}})\},\ \{8,\ TEXT(\textcolor{stringliteral}{"{}Aug"{}})\},}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \{9,\ TEXT(\textcolor{stringliteral}{"{}Sep"{}})\},\ \{10,\ TEXT(\textcolor{stringliteral}{"{}Oct"{}})\},\ \{11,\ TEXT(\textcolor{stringliteral}{"{}Nov"{}})\},\ \{12,\ TEXT(\textcolor{stringliteral}{"{}Dec"{}})\}}
+\DoxyCodeLine{00096\ \ \ \ \ \};}
+\DoxyCodeLine{00097\ \ \ \ \ month\_now\ =\ m;}
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a3a174b5e9fd5c372db9fc56d6e5a41e4}{month}}-\/>SetText(FText::FromString(*MonthMap.Find(m)));}
+\DoxyCodeLine{00099\ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00107\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_calendar_u_i_base_a16365e3ed853935d5bd5b926f2a5e400}{UCalendarUIBase::SetCornerRadii}}(\textcolor{keyword}{const}\ FVector4\&\ CalendarBorder,\ \textcolor{keyword}{const}\ FVector4\&\ WeekdayHeaderRadii)}
+\DoxyCodeLine{00108\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ FButtonStyle\ CalendarStyle\ =\ \mbox{\hyperlink{class_u_calendar_u_i_base_a26f4d36b170dc86db5dec24425315c09}{calendar\_background}}-\/>WidgetStyle;}
+\DoxyCodeLine{00110\ \ \ \ \ CalendarStyle.Normal.OutlineSettings.CornerRadii\ =\ CalendarBorder;}
+\DoxyCodeLine{00111\ \ \ \ \ CalendarStyle.Hovered.OutlineSettings.CornerRadii\ =\ CalendarBorder;}
+\DoxyCodeLine{00112\ \ \ \ \ CalendarStyle.Pressed.OutlineSettings.CornerRadii\ =\ CalendarBorder;}
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a26f4d36b170dc86db5dec24425315c09}{calendar\_background}}-\/>SetStyle(CalendarStyle);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ FButtonStyle\ WeekdayStyle\ =\ \mbox{\hyperlink{class_u_calendar_u_i_base_a3dabcd7a7aa98f743a48659b9affb5da}{weekdays\_background}}-\/>WidgetStyle;}
+\DoxyCodeLine{00116\ \ \ \ \ WeekdayStyle.Normal.OutlineSettings.CornerRadii\ =\ WeekdayHeaderRadii;}
+\DoxyCodeLine{00117\ \ \ \ \ WeekdayStyle.Hovered.OutlineSettings.CornerRadii\ =\ WeekdayHeaderRadii;}
+\DoxyCodeLine{00118\ \ \ \ \ WeekdayStyle.Pressed.OutlineSettings.CornerRadii\ =\ WeekdayHeaderRadii;}
+\DoxyCodeLine{00119\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a3dabcd7a7aa98f743a48659b9affb5da}{weekdays\_background}}-\/>SetStyle(WeekdayStyle);}
+\DoxyCodeLine{00120\ \}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00126\ FDateTime\ \mbox{\hyperlink{class_u_calendar_u_i_base_a0949b977c36bc9f85fab70bd1658db22}{UCalendarUIBase::GetTime}}()}
+\DoxyCodeLine{00127\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordflow}{return}\ FDateTime(year\_now,\ month\_now,\ FDateTime::Now().GetDay(),\ FCString::Atoi(*hour\_now),\ FCString::Atoi(*minute\_now),\ 0,\ 0);}
+\DoxyCodeLine{00129\ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00137\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_calendar_u_i_base_ac89681dc011ade93852f9ed478503b46}{UCalendarUIBase::HandleOnYearChanged}}(\textcolor{keyword}{const}\ FText\&\ Text,\ ETextCommit::Type\ CommitMethod)}
+\DoxyCodeLine{00138\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordflow}{if}\ (CommitMethod\ ==\ ETextCommit::OnEnter)}
+\DoxyCodeLine{00140\ \ \ \ \ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ year\_now\ =\ FCString::Atoi(*Text.ToString());}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a3e817349a70c2facd1f0a5cade0b16d9}{ListViewCalendar}}-\/>ClearListItems();}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a11312e51d4b570c9594b442ec9566a1a}{CreateCalendar}}();}
+\DoxyCodeLine{00144\ \ \ \ \ \}}
+\DoxyCodeLine{00145\ \}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00150\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_calendar_u_i_base_a6ec447a30d5ea1cfd6a36dfc5ec00583}{UCalendarUIBase::HandleMonthToggleButtonClick}}()}
+\DoxyCodeLine{00151\ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_calendar_u_i_base_a48c507302566eea8fed95e8a7d5d7983}{toggle\_prev\_month}}-\/>IsVisible())}
+\DoxyCodeLine{00153\ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a48c507302566eea8fed95e8a7d5d7983}{toggle\_prev\_month}}-\/>SetVisibility(ESlateVisibility::Collapsed);}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a5a692f2c28fbca9c2718313eec70d1d7}{toggle\_next\_month}}-\/>SetVisibility(ESlateVisibility::Collapsed);}
+\DoxyCodeLine{00156\ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00158\ \ \ \ \ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a48c507302566eea8fed95e8a7d5d7983}{toggle\_prev\_month}}-\/>SetVisibility(ESlateVisibility::Visible);}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a5a692f2c28fbca9c2718313eec70d1d7}{toggle\_next\_month}}-\/>SetVisibility(ESlateVisibility::Visible);}
+\DoxyCodeLine{00161\ \ \ \ \ \}}
+\DoxyCodeLine{00162\ \}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00170\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_calendar_u_i_base_a3b2917fd71339eac0cfdd50f62a679b7}{UCalendarUIBase::HandleOnHourCommitted}}(\textcolor{keyword}{const}\ FText\&\ Text,\ ETextCommit::Type\ CommitMethod)}
+\DoxyCodeLine{00171\ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{if}\ (CommitMethod\ ==\ ETextCommit::OnEnter)}
+\DoxyCodeLine{00173\ \ \ \ \ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ hour\_now\ =\ Text.ToString();}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hour\_now.Len()\ <=\ 2)}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ FDateTime\ new\_hour\ =\ FDateTime(FDateTime::Now().GetYear(),\ FDateTime::Now().GetMonth(),\ FDateTime::Now().GetDay(),\ FCString::Atoi(*hour\_now),\ 0,\ 0,\ 0);}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ hourDifference\ =\ FDateTime::Now()\ -\/\ new\_hour;}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ GetWorld()-\/>GetTimerManager().SetTimer(\mbox{\hyperlink{class_u_calendar_u_i_base_a00f1bbb4c462c529a3d633c90a22534c}{TickTimerHandle}},\ \textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_u_calendar_u_i_base_a76eee495d3d41ed988f0ea24859012b2}{UCalendarUIBase::InitializeMinute}},\ \mbox{\hyperlink{class_u_calendar_u_i_base_a49b0b02cef6baf80fd5c1408999a3d9d}{DefaultMinuteTickInterval}},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00181\ \ \ \ \ \}}
+\DoxyCodeLine{00182\ \}}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00190\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_calendar_u_i_base_aba90f4a23ad0120fc4ee510b91d59678}{UCalendarUIBase::HandleOnMinuteCommitted}}(\textcolor{keyword}{const}\ FText\&\ Text,\ ETextCommit::Type\ CommitMethod)}
+\DoxyCodeLine{00191\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordflow}{if}\ (CommitMethod\ ==\ ETextCommit::OnEnter)}
+\DoxyCodeLine{00193\ \ \ \ \ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ minute\_now\ =\ Text.ToString();}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (minute\_now.Len()\ <=\ 2)}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ FDateTime\ new\_minute\ =\ FDateTime(FDateTime::Now().GetYear(),\ FDateTime::Now().GetMonth(),\ FDateTime::Now().GetDay(),\ 0,\ FCString::Atoi(*minute\_now),\ 0,\ 0);}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ minuteDifference\ =\ FDateTime::Now()\ -\/\ new\_minute;}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ GetWorld()-\/>GetTimerManager().SetTimer(\mbox{\hyperlink{class_u_calendar_u_i_base_a00f1bbb4c462c529a3d633c90a22534c}{TickTimerHandle}},\ \textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_u_calendar_u_i_base_a76eee495d3d41ed988f0ea24859012b2}{UCalendarUIBase::InitializeMinute}},\ \mbox{\hyperlink{class_u_calendar_u_i_base_a49b0b02cef6baf80fd5c1408999a3d9d}{DefaultMinuteTickInterval}},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00201\ \ \ \ \ \}}
+\DoxyCodeLine{00202\ \}}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00214\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_calendar_u_i_base_ae1a2bb611d86bf021b6594a84e0b0083}{UCalendarUIBase::PreCalendarConfig}}(FLinearColor\ SelectedGridColor,\ FLinearColor\ EmptyGridColor,\ FLinearColor\ GridColor,\ FLinearColor\ CalendarBackgroundColor,\ FLinearColor\ CalendarBackgroundBorderColor,\ FLinearColor\ WeekdayHeadingColor)}
+\DoxyCodeLine{00215\ \{}
+\DoxyCodeLine{00216\ \ \ \ \ color1\ =\ SelectedGridColor;}
+\DoxyCodeLine{00217\ \ \ \ \ color2\ =\ EmptyGridColor;}
+\DoxyCodeLine{00218\ \ \ \ \ color3\ =\ GridColor;}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \ \ \ \ FButtonStyle\ CalendarStyle\ =\ \mbox{\hyperlink{class_u_calendar_u_i_base_a26f4d36b170dc86db5dec24425315c09}{calendar\_background}}-\/>WidgetStyle;}
+\DoxyCodeLine{00221\ \ \ \ \ CalendarStyle.Normal.TintColor\ =\ FSlateColor(CalendarBackgroundColor);}
+\DoxyCodeLine{00222\ \ \ \ \ CalendarStyle.Hovered.TintColor\ =\ FSlateColor(CalendarBackgroundColor);}
+\DoxyCodeLine{00223\ \ \ \ \ CalendarStyle.Pressed.TintColor\ =\ FSlateColor(CalendarBackgroundColor);}
+\DoxyCodeLine{00224\ \ \ \ \ CalendarStyle.Normal.OutlineSettings.Color\ =\ FSlateColor(CalendarBackgroundBorderColor);}
+\DoxyCodeLine{00225\ \ \ \ \ CalendarStyle.Hovered.OutlineSettings.Color\ =\ FSlateColor(CalendarBackgroundBorderColor);}
+\DoxyCodeLine{00226\ \ \ \ \ CalendarStyle.Pressed.OutlineSettings.Color\ =\ FSlateColor(CalendarBackgroundBorderColor);}
+\DoxyCodeLine{00227\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a26f4d36b170dc86db5dec24425315c09}{calendar\_background}}-\/>SetStyle(CalendarStyle);}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ FButtonStyle\ WeekdayStyle\ =\ \mbox{\hyperlink{class_u_calendar_u_i_base_a3dabcd7a7aa98f743a48659b9affb5da}{weekdays\_background}}-\/>WidgetStyle;}
+\DoxyCodeLine{00230\ \ \ \ \ WeekdayStyle.Normal.TintColor\ =\ FSlateColor(WeekdayHeadingColor);}
+\DoxyCodeLine{00231\ \ \ \ \ WeekdayStyle.Hovered.TintColor\ =\ FSlateColor(WeekdayHeadingColor);}
+\DoxyCodeLine{00232\ \ \ \ \ WeekdayStyle.Pressed.TintColor\ =\ FSlateColor(WeekdayHeadingColor);}
+\DoxyCodeLine{00233\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a3dabcd7a7aa98f743a48659b9affb5da}{weekdays\_background}}-\/>SetStyle(WeekdayStyle);}
+\DoxyCodeLine{00234\ \}}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00239\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_calendar_u_i_base_a11312e51d4b570c9594b442ec9566a1a}{UCalendarUIBase::CreateCalendar}}()}
+\DoxyCodeLine{00240\ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordflow}{for}\ (int32\ i\ =\ 0;\ i\ <=\ 5;\ ++i)}
+\DoxyCodeLine{00242\ \ \ \ \ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_calendar_row}{UCalendarRow}}*\ CalendarRowInstance\ =\ NewObject<UCalendarRow>(\textcolor{keyword}{this},\ UCalendarRow::StaticClass());}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (CalendarRowInstance\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ CalendarRowInstance-\/>Init(i,\ year\_now,\ month\_now,\ color1,\ color2,\ color3,\ \textcolor{keyword}{this});}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a3e817349a70c2facd1f0a5cade0b16d9}{ListViewCalendar}}-\/>AddItem(CalendarRowInstance);}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00249\ \ \ \ \ \}}
+\DoxyCodeLine{00250\ \}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00256\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_calendar_u_i_base_a1b09e1b357642378fdc3dc4e6d186183}{UCalendarUIBase::SetYear}}(\textcolor{keywordtype}{int}\ y)}
+\DoxyCodeLine{00257\ \{}
+\DoxyCodeLine{00258\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_af20668b08bbd9c1faf012d43c09cf375}{InitializeYear}}(y);}
+\DoxyCodeLine{00259\ \}}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00265\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_calendar_u_i_base_af0682c27359998782d29358d53bac2a0}{UCalendarUIBase::SetMonth}}(int32\ m)}
+\DoxyCodeLine{00266\ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a0a185b91f2f826a535e5b03e57266149}{InitializeMonth}}(m);}
+\DoxyCodeLine{00268\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a3e817349a70c2facd1f0a5cade0b16d9}{ListViewCalendar}}-\/>ClearListItems();}
+\DoxyCodeLine{00269\ \ \ \ \ \mbox{\hyperlink{class_u_calendar_u_i_base_a11312e51d4b570c9594b442ec9566a1a}{CreateCalendar}}();}
+\DoxyCodeLine{00270\ \}}
+
+\end{DoxyCode}

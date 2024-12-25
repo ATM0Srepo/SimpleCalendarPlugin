@@ -2,6 +2,14 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_u_task_a_p_i" xml:lang="en-US">
 <title>UTaskAPI Class Reference</title>
 <indexterm><primary>UTaskAPI</primary></indexterm>
+<para>
+
+<para>A widget class that manages interactions with a web browser. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;TaskAPI.h&gt;</computeroutput>
+</para>
 <para>Inheritance diagram for UTaskAPI:    <informalfigure>
         <mediaobject>
             <imageobject>
@@ -11,19 +19,37 @@
     </informalfigure>
 </para>
 <simplesect>
-    <title>Public Member Functions    </title>
-        <itemizedlist>
-            <listitem><para><anchor xml:id="_class_u_task_a_p_i_1a7f7f75a3a0752ecc8e16ea5406770368"/>void <emphasis role="strong">SetBrowserURL</emphasis> (const FString &amp;Endpoint)</para>
-</listitem>
-        </itemizedlist>
-</simplesect>
-<simplesect>
     <title>Public Attributes    </title>
         <itemizedlist>
-            <listitem><para><anchor xml:id="_class_u_task_a_p_i_1a9d2aee49da7db406319d58e4dba8ff6b"/>UWebBrowser * <emphasis role="strong">WebBrowserWidget</emphasis></para>
+            <listitem><para>UWebBrowser * <link linkend="_class_u_task_a_p_i_1a9d2aee49da7db406319d58e4dba8ff6b">WebBrowserWidget</link></para>
+
+<para>A pointer to the web browser widget used for rendering web content. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A widget class that manages interactions with a web browser. </para>
+
+
+
+<para>This class provides functionality to update the URL of a web browser widget embedded in the Unreal Engine User Interface. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_u_task_a_p_i_1a9d2aee49da7db406319d58e4dba8ff6b"/><section>
+    <title>WebBrowserWidget</title>
+<indexterm><primary>WebBrowserWidget</primary><secondary>UTaskAPI</secondary></indexterm>
+<indexterm><primary>UTaskAPI</primary><secondary>WebBrowserWidget</secondary></indexterm>
+<para><computeroutput>UWebBrowser* UTaskAPI::WebBrowserWidget</computeroutput></para><para>
+
+<para>A pointer to the web browser widget used for rendering web content. </para>
+</para>
+
+<para>The widget can be bound in the editor and configured to display web pages. </para>
+</section>
 <para>
-The documentation for this class was generated from the following files:</para>
-Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Public/TaskAPI.hPlugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/TaskAPI.cpp</section>
+The documentation for this class was generated from the following file:</para>
+Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Public/TaskAPI.h</section>
+</section>
