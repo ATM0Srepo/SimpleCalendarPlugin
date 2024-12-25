@@ -1,0 +1,391 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__calendar_item_base_8cpp_source" xml:lang="en-US">
+<title>CalendarItemBase.cpp</title>
+<indexterm><primary>Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarItemBase.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#include&#32;&quot;CalendarItemBase.h&quot;</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&quot;Misc/DateTime.h&quot;</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&quot;Containers/Map.h&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;Components/Button.h&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;Components/TextBlock.h&quot;</emphasis>
+6 
+7 
+8 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarItemBase::NativeConstruct()
+9 {
+10 &#32;&#32;&#32;&#32;Super::NativeConstruct();
+11 &#32;&#32;&#32;&#32;HandleCalendarItemClick();
+12 }
+13 
+14 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarItemBase::HandleCalendarItemClick()
+15 {
+16 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;click&#32;on&#32;calendar&#32;events</emphasis>
+17 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Sunday)
+18 &#32;&#32;&#32;&#32;{
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Sunday-&gt;OnClicked.AddDynamic(<emphasis role="keyword">this</emphasis>,&#32;&amp;UCalendarItemBase::HandleSundayClick);
+20 &#32;&#32;&#32;&#32;}
+21 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Monday)
+22 &#32;&#32;&#32;&#32;{
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Monday-&gt;OnClicked.AddDynamic(<emphasis role="keyword">this</emphasis>,&#32;&amp;UCalendarItemBase::HandleMondayClick);
+24 &#32;&#32;&#32;&#32;}
+25 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Tuesday)
+26 &#32;&#32;&#32;&#32;{
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Tuesday-&gt;OnClicked.AddDynamic(<emphasis role="keyword">this</emphasis>,&#32;&amp;UCalendarItemBase::HandleTuesdayClick);
+28 &#32;&#32;&#32;&#32;}
+29 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Wednesday)
+30 &#32;&#32;&#32;&#32;{
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Wednesday-&gt;OnClicked.AddDynamic(<emphasis role="keyword">this</emphasis>,&#32;&amp;UCalendarItemBase::HandleWednesdayClick);
+32 &#32;&#32;&#32;&#32;}
+33 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Thursday)
+34 &#32;&#32;&#32;&#32;{
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Thursday-&gt;OnClicked.AddDynamic(<emphasis role="keyword">this</emphasis>,&#32;&amp;UCalendarItemBase::HandleThursdayClick);
+36 &#32;&#32;&#32;&#32;}
+37 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Friday)
+38 &#32;&#32;&#32;&#32;{
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Friday-&gt;OnClicked.AddDynamic(<emphasis role="keyword">this</emphasis>,&#32;&amp;UCalendarItemBase::HandleFridayClick);
+40 &#32;&#32;&#32;&#32;}
+41 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Saturday)
+42 &#32;&#32;&#32;&#32;{
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Saturday-&gt;OnClicked.AddDynamic(<emphasis role="keyword">this</emphasis>,&#32;&amp;UCalendarItemBase::HandleSaturdayClick);
+44 &#32;&#32;&#32;&#32;}
+45 }
+46 
+47 
+48 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarItemBase::HandleSundayClick()
+49 {
+50 &#32;&#32;&#32;<link linkend="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1">DaySelected</link>&#32;=&#32;day_0;
+51 &#32;&#32;&#32;ClickedTime&#32;=&#32;Owner-&gt;<link linkend="_class_u_calendar_u_i_base_1a0949b977c36bc9f85fab70bd1658db22">GetTime</link>();
+52 
+53 &#32;&#32;&#32;FString&#32;DayText&#32;=&#32;<link linkend="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1">DaySelected</link>-&gt;GetText().ToString();
+54 &#32;&#32;&#32;int32&#32;DayValue&#32;=&#32;FCString::Atoi(*DayText);
+55 
+56 &#32;&#32;&#32;ClickedTime&#32;=&#32;FDateTime(ClickedTime.GetYear(),&#32;ClickedTime.GetMonth(),&#32;DayValue,&#32;ClickedTime.GetHour(),&#32;ClickedTime.GetMinute(),&#32;ClickedTime.GetSecond());
+57 
+58 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_item_base_1af64e9515cc04e43f581550c928f4a05e">OnDaySelected</link>();
+59 }
+60 
+61 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarItemBase::HandleMondayClick()
+62 {
+63 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1">DaySelected</link>&#32;=&#32;day_1;
+64 &#32;&#32;&#32;&#32;ClickedTime&#32;=&#32;Owner-&gt;<link linkend="_class_u_calendar_u_i_base_1a0949b977c36bc9f85fab70bd1658db22">GetTime</link>();
+65 
+66 &#32;&#32;&#32;&#32;FString&#32;DayText&#32;=&#32;<link linkend="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1">DaySelected</link>-&gt;GetText().ToString();
+67 &#32;&#32;&#32;&#32;int32&#32;DayValue&#32;=&#32;FCString::Atoi(*DayText);
+68 
+69 &#32;&#32;&#32;&#32;ClickedTime&#32;=&#32;FDateTime(ClickedTime.GetYear(),&#32;ClickedTime.GetMonth(),&#32;DayValue,&#32;ClickedTime.GetHour(),&#32;ClickedTime.GetMinute(),&#32;ClickedTime.GetSecond());
+70 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_item_base_1af64e9515cc04e43f581550c928f4a05e">OnDaySelected</link>();
+71 }
+72 
+73 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarItemBase::HandleTuesdayClick()
+74 {
+75 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1">DaySelected</link>&#32;=&#32;day_2;
+76 &#32;&#32;&#32;&#32;ClickedTime&#32;=&#32;Owner-&gt;<link linkend="_class_u_calendar_u_i_base_1a0949b977c36bc9f85fab70bd1658db22">GetTime</link>();
+77 
+78 &#32;&#32;&#32;&#32;FString&#32;DayText&#32;=&#32;<link linkend="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1">DaySelected</link>-&gt;GetText().ToString();
+79 &#32;&#32;&#32;&#32;int32&#32;DayValue&#32;=&#32;FCString::Atoi(*DayText);
+80 
+81 &#32;&#32;&#32;&#32;ClickedTime&#32;=&#32;FDateTime(ClickedTime.GetYear(),&#32;ClickedTime.GetMonth(),&#32;DayValue,&#32;ClickedTime.GetHour(),&#32;ClickedTime.GetMinute(),&#32;ClickedTime.GetSecond());
+82 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_item_base_1af64e9515cc04e43f581550c928f4a05e">OnDaySelected</link>();
+83 }
+84 
+85 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarItemBase::HandleWednesdayClick()
+86 {
+87 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1">DaySelected</link>&#32;=&#32;day_3;
+88 &#32;&#32;&#32;&#32;ClickedTime&#32;=&#32;Owner-&gt;<link linkend="_class_u_calendar_u_i_base_1a0949b977c36bc9f85fab70bd1658db22">GetTime</link>();
+89 
+90 &#32;&#32;&#32;&#32;FString&#32;DayText&#32;=&#32;<link linkend="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1">DaySelected</link>-&gt;GetText().ToString();
+91 &#32;&#32;&#32;&#32;int32&#32;DayValue&#32;=&#32;FCString::Atoi(*DayText);
+92 
+93 &#32;&#32;&#32;&#32;ClickedTime&#32;=&#32;FDateTime(ClickedTime.GetYear(),&#32;ClickedTime.GetMonth(),&#32;DayValue,&#32;ClickedTime.GetHour(),&#32;ClickedTime.GetMinute(),&#32;ClickedTime.GetSecond());
+94 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_item_base_1af64e9515cc04e43f581550c928f4a05e">OnDaySelected</link>();
+95 }
+96 
+97 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarItemBase::HandleThursdayClick()
+98 {
+99 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1">DaySelected</link>&#32;=&#32;day_4;
+100 &#32;&#32;&#32;&#32;ClickedTime&#32;=&#32;Owner-&gt;<link linkend="_class_u_calendar_u_i_base_1a0949b977c36bc9f85fab70bd1658db22">GetTime</link>();
+101 
+102 &#32;&#32;&#32;&#32;FString&#32;DayText&#32;=&#32;<link linkend="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1">DaySelected</link>-&gt;GetText().ToString();
+103 &#32;&#32;&#32;&#32;int32&#32;DayValue&#32;=&#32;FCString::Atoi(*DayText);
+104 
+105 &#32;&#32;&#32;&#32;ClickedTime&#32;=&#32;FDateTime(ClickedTime.GetYear(),&#32;ClickedTime.GetMonth(),&#32;DayValue,&#32;ClickedTime.GetHour(),&#32;ClickedTime.GetMinute(),&#32;ClickedTime.GetSecond());
+106 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_item_base_1af64e9515cc04e43f581550c928f4a05e">OnDaySelected</link>();
+107 }
+108 
+109 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarItemBase::HandleFridayClick()
+110 {
+111 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1">DaySelected</link>&#32;=&#32;day_5;
+112 &#32;&#32;&#32;&#32;ClickedTime&#32;=&#32;Owner-&gt;<link linkend="_class_u_calendar_u_i_base_1a0949b977c36bc9f85fab70bd1658db22">GetTime</link>();
+113 
+114 &#32;&#32;&#32;&#32;FString&#32;DayText&#32;=&#32;<link linkend="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1">DaySelected</link>-&gt;GetText().ToString();
+115 &#32;&#32;&#32;&#32;int32&#32;DayValue&#32;=&#32;FCString::Atoi(*DayText);
+116 
+117 &#32;&#32;&#32;&#32;ClickedTime&#32;=&#32;FDateTime(ClickedTime.GetYear(),&#32;ClickedTime.GetMonth(),&#32;DayValue,&#32;ClickedTime.GetHour(),&#32;ClickedTime.GetMinute(),&#32;ClickedTime.GetSecond());
+118 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_item_base_1af64e9515cc04e43f581550c928f4a05e">OnDaySelected</link>();
+119 }
+120 
+121 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarItemBase::HandleSaturdayClick()
+122 {
+123 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1">DaySelected</link>&#32;=&#32;day_6;
+124 &#32;&#32;&#32;&#32;ClickedTime&#32;=&#32;Owner-&gt;<link linkend="_class_u_calendar_u_i_base_1a0949b977c36bc9f85fab70bd1658db22">GetTime</link>();
+125 
+126 &#32;&#32;&#32;&#32;FString&#32;DayText&#32;=&#32;<link linkend="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1">DaySelected</link>-&gt;GetText().ToString();
+127 &#32;&#32;&#32;&#32;int32&#32;DayValue&#32;=&#32;FCString::Atoi(*DayText);
+128 
+129 &#32;&#32;&#32;&#32;ClickedTime&#32;=&#32;FDateTime(ClickedTime.GetYear(),&#32;ClickedTime.GetMonth(),&#32;DayValue,&#32;ClickedTime.GetHour(),&#32;ClickedTime.GetMinute(),&#32;ClickedTime.GetSecond());
+130 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_item_base_1af64e9515cc04e43f581550c928f4a05e">OnDaySelected</link>();
+131 }
+132 
+133 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarItemBase::EnableGrids()
+134 {
+135 &#32;&#32;&#32;&#32;Sunday-&gt;SetIsEnabled(<emphasis role="keyword">true</emphasis>);
+136 &#32;&#32;&#32;&#32;Monday-&gt;SetIsEnabled(<emphasis role="keyword">true</emphasis>);
+137 &#32;&#32;&#32;&#32;Tuesday-&gt;SetIsEnabled(<emphasis role="keyword">true</emphasis>);
+138 &#32;&#32;&#32;&#32;Wednesday-&gt;SetIsEnabled(<emphasis role="keyword">true</emphasis>);
+139 &#32;&#32;&#32;&#32;Thursday-&gt;SetIsEnabled(<emphasis role="keyword">true</emphasis>);
+140 &#32;&#32;&#32;&#32;Friday-&gt;SetIsEnabled(<emphasis role="keyword">true</emphasis>);
+141 &#32;&#32;&#32;&#32;Saturday-&gt;SetIsEnabled(<emphasis role="keyword">true</emphasis>);
+142 }
+143 
+144 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarItemBase::DisableGrids()
+145 {
+146 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((day_0-&gt;GetText()).IsEmptyOrWhitespace())
+147 &#32;&#32;&#32;&#32;{
+148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Sunday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(d_color);
+149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Sunday-&gt;WidgetStyle.Hovered.TintColor&#32;=&#32;FSlateColor(d_color);
+150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Sunday-&gt;WidgetStyle.Pressed.TintColor&#32;=&#32;FSlateColor(d_color);
+151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Sunday-&gt;WidgetStyle.Disabled.TintColor&#32;=&#32;FSlateColor(d_color);
+152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Sunday-&gt;SetIsEnabled(<emphasis role="keyword">false</emphasis>);
+153 &#32;&#32;&#32;&#32;}
+154 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((day_1-&gt;GetText()).IsEmptyOrWhitespace())
+155 &#32;&#32;&#32;&#32;{
+156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Monday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(d_color);
+157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Monday-&gt;WidgetStyle.Hovered.TintColor&#32;=&#32;FSlateColor(d_color);
+158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Monday-&gt;WidgetStyle.Pressed.TintColor&#32;=&#32;FSlateColor(d_color);
+159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Monday-&gt;WidgetStyle.Disabled.TintColor&#32;=&#32;FSlateColor(d_color);
+160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Monday-&gt;SetIsEnabled(<emphasis role="keyword">false</emphasis>);
+161 
+162 &#32;&#32;&#32;&#32;}
+163 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((day_2-&gt;GetText()).IsEmptyOrWhitespace())
+164 &#32;&#32;&#32;&#32;{
+165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Tuesday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(d_color);
+166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Tuesday-&gt;WidgetStyle.Hovered.TintColor&#32;=&#32;FSlateColor(d_color);
+167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Tuesday-&gt;WidgetStyle.Pressed.TintColor&#32;=&#32;FSlateColor(d_color);
+168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Tuesday-&gt;WidgetStyle.Disabled.TintColor&#32;=&#32;FSlateColor(d_color);
+169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Tuesday-&gt;SetIsEnabled(<emphasis role="keyword">false</emphasis>);
+170 
+171 &#32;&#32;&#32;&#32;}
+172 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((day_3-&gt;GetText()).IsEmptyOrWhitespace())
+173 &#32;&#32;&#32;&#32;{
+174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Wednesday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(d_color);
+175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Wednesday-&gt;WidgetStyle.Hovered.TintColor&#32;=&#32;FSlateColor(d_color);
+176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Wednesday-&gt;WidgetStyle.Pressed.TintColor&#32;=&#32;FSlateColor(d_color);
+177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Wednesday-&gt;WidgetStyle.Disabled.TintColor&#32;=&#32;FSlateColor(d_color);
+178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Wednesday-&gt;SetIsEnabled(<emphasis role="keyword">false</emphasis>);
+179 
+180 &#32;&#32;&#32;&#32;}
+181 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((day_4-&gt;GetText()).IsEmptyOrWhitespace())
+182 &#32;&#32;&#32;&#32;{
+183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Thursday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(d_color);
+184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Thursday-&gt;WidgetStyle.Hovered.TintColor&#32;=&#32;FSlateColor(d_color);
+185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Thursday-&gt;WidgetStyle.Pressed.TintColor&#32;=&#32;FSlateColor(d_color);
+186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Thursday-&gt;WidgetStyle.Disabled.TintColor&#32;=&#32;FSlateColor(d_color);
+187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Thursday-&gt;SetIsEnabled(<emphasis role="keyword">false</emphasis>);
+188 
+189 &#32;&#32;&#32;&#32;}
+190 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((day_5-&gt;GetText()).IsEmptyOrWhitespace())
+191 &#32;&#32;&#32;&#32;{
+192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Friday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(d_color);
+193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Friday-&gt;WidgetStyle.Hovered.TintColor&#32;=&#32;FSlateColor(d_color);
+194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Friday-&gt;WidgetStyle.Pressed.TintColor&#32;=&#32;FSlateColor(d_color);
+195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Friday-&gt;WidgetStyle.Disabled.TintColor&#32;=&#32;FSlateColor(d_color);
+196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Friday-&gt;SetIsEnabled(<emphasis role="keyword">false</emphasis>);
+197 
+198 &#32;&#32;&#32;&#32;}
+199 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((day_6-&gt;GetText()).IsEmptyOrWhitespace())
+200 &#32;&#32;&#32;&#32;{
+201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Saturday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(d_color);
+202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Saturday-&gt;WidgetStyle.Hovered.TintColor&#32;=&#32;FSlateColor(d_color);
+203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Saturday-&gt;WidgetStyle.Pressed.TintColor&#32;=&#32;FSlateColor(d_color);
+204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Saturday-&gt;WidgetStyle.Disabled.TintColor&#32;=&#32;FSlateColor(d_color);
+205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Saturday-&gt;SetIsEnabled(<emphasis role="keyword">false</emphasis>);
+206 
+207 &#32;&#32;&#32;&#32;}
+208 }
+209 
+210 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarItemBase::OnItemAdded(UObject*&#32;ListItemObjectRef)
+211 {
+212 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(ListItemObjectRef)
+213 &#32;&#32;&#32;&#32;{
+214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_row">UCalendarRow</link>*&#32;CalendarRowInstance&#32;=&#32;Cast&lt;UCalendarRow&gt;(ListItemObjectRef);
+215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(CalendarRowInstance)
+216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InitializeCalendarRow(CalendarRowInstance-&gt;structure.Row,&#32;
+218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalendarRowInstance-&gt;structure.Year,&#32;
+219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalendarRowInstance-&gt;structure.Month,&#32;
+220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalendarRowInstance-&gt;structure.SelectedGridColor,&#32;
+221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalendarRowInstance-&gt;structure.EmptyGridColor,&#32;
+222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalendarRowInstance-&gt;structure.GridColor,
+223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalendarRowInstance-&gt;Owner);
+224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+225 &#32;&#32;&#32;&#32;}
+226 }
+227 
+228 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarItemBase::InitializeCalendarRow(int32&#32;RowIndex,&#32;int32&#32;year,&#32;int32&#32;month,&#32;FLinearColor&#32;SelectedGridColor,&#32;FLinearColor&#32;EmptyGridColor,&#32;FLinearColor&#32;GridColor,&#32;<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>*&#32;InOwner)
+229 {
+230 &#32;&#32;&#32;&#32;EnableGrids();
+231 &#32;&#32;&#32;&#32;CalendarRow&#32;=&#32;RowIndex;
+232 &#32;&#32;&#32;&#32;sgc_color&#32;=&#32;SelectedGridColor;
+233 &#32;&#32;&#32;&#32;d_color&#32;=&#32;EmptyGridColor;
+234 &#32;&#32;&#32;&#32;g_color&#32;=&#32;GridColor;
+235 &#32;&#32;&#32;&#32;Year&#32;=&#32;year;
+236 &#32;&#32;&#32;&#32;Month&#32;=&#32;month;
+237 &#32;&#32;&#32;&#32;int32&#32;Day&#32;=&#32;FDateTime::Now().GetDay();
+238 &#32;&#32;&#32;&#32;CurrentDateTime&#32;=&#32;FDateTime(Year,&#32;Month,&#32;Day);
+239 &#32;&#32;&#32;&#32;RowTimeHelper(RowIndex);
+240 &#32;&#32;&#32;&#32;Owner&#32;=&#32;InOwner;
+241 }
+242 
+243 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarItemBase::RowTimeHelper(int32&#32;RowIndex)
+244 {
+245 &#32;&#32;&#32;&#32;FDateTime&#32;FirstDayOfMonth(Year,&#32;Month,&#32;1);
+246 &#32;&#32;&#32;&#32;FirstDayOfWeek&#32;=&#32;<emphasis role="keyword">static_cast&lt;</emphasis>int32<emphasis role="keyword">&gt;</emphasis>(FirstDayOfMonth.GetDayOfWeek());
+247 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(FirstDayOfWeek&#32;==&#32;6)&#32;{
+248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FirstDayOfWeek&#32;=&#32;0;
+249 &#32;&#32;&#32;&#32;}
+250 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FirstDayOfWeek&#32;+=&#32;1;
+252 &#32;&#32;&#32;&#32;}
+253 &#32;&#32;&#32;&#32;Offset&#32;=&#32;CalculateOffset(RowIndex);
+254 &#32;&#32;&#32;&#32;int32&#32;Count&#32;=&#32;1;
+255 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(int32&#32;DayIndex&#32;=&#32;0;&#32;DayIndex&#32;&lt;=&#32;6;&#32;DayIndex++)
+256 &#32;&#32;&#32;&#32;{
+257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!((RowIndex&#32;==&#32;0)&#32;&amp;&amp;&#32;(FirstDayOfWeek&#32;&gt;&#32;DayIndex)))
+258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetDayText(DayIndex,&#32;Count);
+260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetCalendarItemHelper(DayIndex,&#32;FText::FromString(TEXT(<emphasis role="stringliteral">&quot;&quot;</emphasis>)));
+263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+264 &#32;&#32;&#32;&#32;}
+265 
+266 &#32;&#32;&#32;&#32;DisableGrids();
+267 }
+268 
+269 int32&#32;UCalendarItemBase::CalculateOffset(int32&#32;RowIndex)
+270 {
+271 &#32;&#32;&#32;&#32;int32&#32;CalculatedOffset&#32;=&#32;0;
+272 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(RowIndex&#32;!=&#32;0)
+273 &#32;&#32;&#32;&#32;{
+274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalculatedOffset&#32;=&#32;RowIndex&#32;*&#32;7&#32;-&#32;FirstDayOfWeek;
+275 &#32;&#32;&#32;&#32;}
+276 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;CalculatedOffset;
+277 }
+278 
+279 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarItemBase::SetDayText(int32&#32;DayIndex,&#32;int32&amp;&#32;Count)
+280 {
+281 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;IsWithinMonth&#32;=&#32;(Offset&#32;+&#32;Count)&#32;&lt;=&#32;CurrentDateTime.DaysInMonth(Year,&#32;Month);
+282 &#32;&#32;&#32;&#32;int32&#32;Date&#32;=&#32;Offset&#32;+&#32;Count;
+283 
+284 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(IsWithinMonth&#32;&amp;&amp;&#32;!(Date&#32;==&#32;0))
+285 &#32;&#32;&#32;&#32;{
+286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetCalendarItemHelper(DayIndex,&#32;FText::AsNumber(Date));
+287 &#32;&#32;&#32;&#32;}
+288 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetCalendarItemHelper(DayIndex,&#32;FText::FromString(TEXT(<emphasis role="stringliteral">&quot;&quot;</emphasis>)));
+290 &#32;&#32;&#32;&#32;}
+291 &#32;&#32;&#32;&#32;Count&#32;+=&#32;1;
+292 }
+293 
+294 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarItemBase::SetCalendarItemHelper(int32&#32;Selection,&#32;FText&#32;Date)
+295 {
+296 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Colors</emphasis>
+297 &#32;&#32;&#32;&#32;FLinearColor&#32;GridColor(0.45f,&#32;0.2f,&#32;0.1f,&#32;0.7f);
+298 
+299 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Selection&#32;==&#32;0)&#32;{
+300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;day_0-&gt;SetText(Date);
+301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Date.ToString()&#32;==&#32;FText::AsNumber(FDateTime::Now().GetDay()).ToString())
+302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Sunday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(sgc_color);
+304 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SelectedGridRow&#32;=&#32;CalendarRow;
+305 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Sunday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(g_color);
+309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+310 &#32;&#32;&#32;&#32;}
+311 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;((Selection&#32;==&#32;1))&#32;{
+312 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;day_1-&gt;SetText(Date);
+313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Date.ToString()&#32;==&#32;FText::AsNumber(FDateTime::Now().GetDay()).ToString())
+314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+315 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Monday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(sgc_color);
+316 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SelectedGridRow&#32;=&#32;CalendarRow;
+317 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Monday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(g_color);
+321 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+322 &#32;&#32;&#32;&#32;}
+323 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Selection&#32;==&#32;2&#32;)&#32;{
+324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;day_2-&gt;SetText(Date);
+325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Date.ToString()&#32;==&#32;FText::AsNumber(FDateTime::Now().GetDay()).ToString())
+326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+327 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Tuesday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(sgc_color);
+328 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SelectedGridRow&#32;=&#32;CalendarRow;
+329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Tuesday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(g_color);
+333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+334 &#32;&#32;&#32;&#32;}
+335 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Selection&#32;==&#32;3)&#32;{
+336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;day_3-&gt;SetText(Date);
+337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Date.ToString()&#32;==&#32;FText::AsNumber(FDateTime::Now().GetDay()).ToString())
+338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Wednesday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(sgc_color);
+340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SelectedGridRow&#32;=&#32;CalendarRow;
+341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+343 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Wednesday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(g_color);
+345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+346 &#32;&#32;&#32;&#32;}
+347 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Selection&#32;==&#32;4)&#32;{
+348 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;day_4-&gt;SetText(Date);
+349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Date.ToString()&#32;==&#32;FText::AsNumber(FDateTime::Now().GetDay()).ToString())
+350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+351 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Thursday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(sgc_color);
+352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SelectedGridRow&#32;=&#32;CalendarRow;
+353 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+355 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+356 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Thursday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(g_color);
+357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+358 &#32;&#32;&#32;&#32;}
+359 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Selection&#32;==&#32;5)&#32;{
+360 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;day_5-&gt;SetText(Date);
+361 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Date.ToString()&#32;==&#32;FText::AsNumber(FDateTime::Now().GetDay()).ToString())
+362 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+363 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Friday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(sgc_color);
+364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SelectedGridRow&#32;=&#32;CalendarRow;
+365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+367 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+368 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Friday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(g_color);
+369 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+370 &#32;&#32;&#32;&#32;}
+371 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Selection&#32;==&#32;6)&#32;{
+372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;day_6-&gt;SetText(Date);
+373 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Date.ToString()&#32;==&#32;FText::AsNumber(FDateTime::Now().GetDay()).ToString())
+374 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+375 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Saturday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(sgc_color);
+376 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SelectedGridRow&#32;=&#32;CalendarRow;
+377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+378 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+380 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Saturday-&gt;WidgetStyle.Normal.TintColor&#32;=&#32;FSlateColor(g_color);
+381 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+382 &#32;&#32;&#32;&#32;}
+383 
+384 }
+385 
+386 
+</programlisting></section>

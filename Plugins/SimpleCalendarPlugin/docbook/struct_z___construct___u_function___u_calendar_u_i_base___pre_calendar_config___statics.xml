@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics" xml:lang="en-US">
+<title>Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics Struct Reference</title>
+<indexterm><primary>Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311">CalendarUIBase_eventPreCalendarConfig_Parms</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1ae38ecf4ae4bff51b4b3b9d327473041c"/>static const UECodeGen_Private::FStructPropertyParams <emphasis role="strong">NewProp_SelectedGridColor</emphasis> = { &quot;SelectedGridColor&quot;, nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311">CalendarUIBase_eventPreCalendarConfig_Parms</link>, SelectedGridColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(0, nullptr) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1a3940e2ed4b8a8f94553f5ec24828151a"/>static const UECodeGen_Private::FStructPropertyParams <emphasis role="strong">NewProp_EmptyGridColor</emphasis> = { &quot;EmptyGridColor&quot;, nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311">CalendarUIBase_eventPreCalendarConfig_Parms</link>, EmptyGridColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(0, nullptr) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1ad29b5d11b6fc26fcfda0c17b5060fec4"/>static const UECodeGen_Private::FStructPropertyParams <emphasis role="strong">NewProp_GridColor</emphasis> = { &quot;GridColor&quot;, nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311">CalendarUIBase_eventPreCalendarConfig_Parms</link>, GridColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(0, nullptr) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1a8581df0922f4b3f1c1aa1e493e8dd5d0"/>static const UECodeGen_Private::FStructPropertyParams <emphasis role="strong">NewProp_CalendarBackground</emphasis> = { &quot;CalendarBackground&quot;, nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311">CalendarUIBase_eventPreCalendarConfig_Parms</link>, CalendarBackground), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(0, nullptr) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1a766079ce01b71fa62bcf02cf665c0c40"/>static const UECodeGen_Private::FStructPropertyParams <emphasis role="strong">NewProp_CalendarBackgroundBorder</emphasis> = { &quot;CalendarBackgroundBorder&quot;, nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311">CalendarUIBase_eventPreCalendarConfig_Parms</link>, CalendarBackgroundBorder), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(0, nullptr) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1a1a727954cd5710a4263621082cf67c11"/>static const UECodeGen_Private::FStructPropertyParams <emphasis role="strong">NewProp_WeekdayHeadingColor</emphasis> = { &quot;WeekdayHeadingColor&quot;, nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311">CalendarUIBase_eventPreCalendarConfig_Parms</link>, WeekdayHeadingColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(0, nullptr) }</para>
+</listitem>
+            <listitem><para>static const UECodeGen_Private::FPropertyParamsBase *const <link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1a65739582154d8eac46e287a1bf8b26de">PropPointers</link> []</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1af2d21f8241b56ac389b3b14819a8beec"/>static const UECodeGen_Private::FFunctionParams <emphasis role="strong">FuncParams</emphasis> = { (UObject*(*)())Z_Construct_UClass_UCalendarUIBase, nullptr, &quot;PreCalendarConfig&quot;, nullptr, nullptr, Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics::PropPointers), sizeof(<link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311">Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics::CalendarUIBase_eventPreCalendarConfig_Parms</link>), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04880401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics::Function_MetaDataParams) }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1a65739582154d8eac46e287a1bf8b26de"/><section>
+    <title>PropPointers</title>
+<indexterm><primary>PropPointers</primary><secondary>Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics</primary><secondary>PropPointers</secondary></indexterm>
+<para><computeroutput>const UECodeGen_Private::FPropertyParamsBase *const Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics::PropPointers<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics::NewProp_SelectedGridColor,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics::NewProp_EmptyGridColor,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics::NewProp_GridColor,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics::NewProp_CalendarBackground,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics::NewProp_CalendarBackgroundBorder,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics::NewProp_WeekdayHeadingColor,
+}
+</programlisting></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cpp</section>
+</section>

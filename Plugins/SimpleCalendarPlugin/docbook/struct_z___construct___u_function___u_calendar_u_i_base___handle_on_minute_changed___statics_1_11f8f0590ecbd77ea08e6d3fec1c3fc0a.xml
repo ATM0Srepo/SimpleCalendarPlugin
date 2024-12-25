@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_minute_changed___statics_1_11f8f0590ecbd77ea08e6d3fec1c3fc0a" xml:lang="en-US">
+<title>Z_Construct_UFunction_UCalendarUIBase_HandleOnMinuteChanged_Statics::CalendarUIBase_eventHandleOnMinuteChanged_Parms Struct Reference</title>
+<indexterm><primary>Z_Construct_UFunction_UCalendarUIBase_HandleOnMinuteChanged_Statics::CalendarUIBase_eventHandleOnMinuteChanged_Parms</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_minute_changed___statics_1_11f8f0590ecbd77ea08e6d3fec1c3fc0a_1a95717d4e5828fcfc210b1b5e0a345b66"/>FText <emphasis role="strong">Text</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cpp</section>

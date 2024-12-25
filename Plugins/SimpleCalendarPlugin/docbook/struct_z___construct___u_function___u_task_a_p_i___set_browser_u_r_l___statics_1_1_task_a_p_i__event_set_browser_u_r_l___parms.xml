@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_function___u_task_a_p_i___set_browser_u_r_l___statics_1_1_task_a_p_i__event_set_browser_u_r_l___parms" xml:lang="en-US">
+<title>Z_Construct_UFunction_UTaskAPI_SetBrowserURL_Statics::TaskAPI_eventSetBrowserURL_Parms Struct Reference</title>
+<indexterm><primary>Z_Construct_UFunction_UTaskAPI_SetBrowserURL_Statics::TaskAPI_eventSetBrowserURL_Parms</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_task_a_p_i___set_browser_u_r_l___statics_1_1_task_a_p_i__event_set_browser_u_r_l___parms_1a326243020588531418714d28d1b07107"/>FString <emphasis role="strong">Endpoint</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/TaskAPI.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/TaskAPI.gen.cpp</section>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_u_calendar_row" xml:lang="en-US">
+<title>UCalendarRow Class Reference</title>
+<indexterm><primary>UCalendarRow</primary></indexterm>
+<para>Inheritance diagram for UCalendarRow:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_u_calendar_row.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_u_calendar_row_1a120b529bd6e963cde26937a84fc8ebbe"/>void <emphasis role="strong">Init</emphasis> (int32 RowValue, int32 year, int32 month, FLinearColor color1, FLinearColor color2, FLinearColor color3, <link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link> *InOwner)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_u_calendar_row_1ac877eba41da23e2c3009e1836256f6d7"/><link linkend="_struct_f_my_base_sructure">FMyBaseSructure</link> <emphasis role="strong">structure</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_row_1a0c389bb5ebb05235a1566990b49d0e8b"/><link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link> * <emphasis role="strong">Owner</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarRow.hPlugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarRow.cpp</section>

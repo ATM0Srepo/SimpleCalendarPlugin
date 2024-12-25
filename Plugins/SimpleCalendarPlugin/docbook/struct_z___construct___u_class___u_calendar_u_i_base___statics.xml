@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics" xml:lang="en-US">
+<title>Z_Construct_UClass_UCalendarUIBase_Statics Struct Reference</title>
+<indexterm><primary>Z_Construct_UClass_UCalendarUIBase_Statics</primary></indexterm>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1a214e94346921d8007e0293c2738b18ad"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_year</emphasis> = { &quot;year&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>, year), Z_Construct_UClass_UEditableTextBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_year_MetaData), NewProp_year_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1aa808508c28083b353984acf09e93a21c"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_month</emphasis> = { &quot;month&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>, month), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_month_MetaData), NewProp_month_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1a34038d60f6ec56fcaa6f91557761311d"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_hour</emphasis> = { &quot;hour&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>, hour), Z_Construct_UClass_UEditableTextBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_hour_MetaData), NewProp_hour_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1aed043209a86ec75db002cee026b96f1f"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_minute</emphasis> = { &quot;minute&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>, minute), Z_Construct_UClass_UEditableTextBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_minute_MetaData), NewProp_minute_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1aa06eb652bcdad173c929f65965eb7a10"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_toggle_prev_month</emphasis> = { &quot;toggle_prev_month&quot;, nullptr, (EPropertyFlags)0x0020080000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>, toggle_prev_month), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_toggle_prev_month_MetaData), NewProp_toggle_prev_month_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1a3aa07ab04374ccdb5aebcf4a32bb76d2"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_toggle_next_month</emphasis> = { &quot;toggle_next_month&quot;, nullptr, (EPropertyFlags)0x0020080000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>, toggle_next_month), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_toggle_next_month_MetaData), NewProp_toggle_next_month_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1a165126a80afaba841ef92d68b18a3a18"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_MonthButton</emphasis> = { &quot;MonthButton&quot;, nullptr, (EPropertyFlags)0x0020080000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>, MonthButton), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MonthButton_MetaData), NewProp_MonthButton_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1a0eb0bc330a4de6cab9a605c5747dcc09"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_HourButton</emphasis> = { &quot;HourButton&quot;, nullptr, (EPropertyFlags)0x0020080000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>, HourButton), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HourButton_MetaData), NewProp_HourButton_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1accf075fa4af539c9a2e9102a73c4235f"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_MinuteButton</emphasis> = { &quot;MinuteButton&quot;, nullptr, (EPropertyFlags)0x0020080000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>, MinuteButton), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MinuteButton_MetaData), NewProp_MinuteButton_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1abbadd6bebd9b7652ddc4fa435628df39"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_weekdays_background</emphasis> = { &quot;weekdays_background&quot;, nullptr, (EPropertyFlags)0x0020080000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>, weekdays_background), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_weekdays_background_MetaData), NewProp_weekdays_background_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1abbadaa9866c9ef5c222895d3c075d68c"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_calendar_background</emphasis> = { &quot;calendar_background&quot;, nullptr, (EPropertyFlags)0x0020080000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>, calendar_background), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_calendar_background_MetaData), NewProp_calendar_background_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1acb290cedb75e70fb9cef08257d127989"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_ListViewCalendar</emphasis> = { &quot;ListViewCalendar&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>, ListViewCalendar), Z_Construct_UClass_UListView_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ListViewCalendar_MetaData), NewProp_ListViewCalendar_MetaData) }</para>
+</listitem>
+            <listitem><para>static const UECodeGen_Private::FPropertyParamsBase *const <link linkend="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1a86d278578ebbb7f32c8da87ccd5c5f38">PropPointers</link> []</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1a10e41c70b1f1a620febaf72769992aaf"/>static UObject *(*const <emphasis role="strong">DependentSingletons</emphasis> [])()</para>
+</listitem>
+            <listitem><para>static constexpr FClassFunctionLinkInfo <link linkend="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1ae5af16b675bf48f7f17df7636f2a5865">FuncInfo</link> []</para>
+</listitem>
+            <listitem><para>static constexpr FCppClassTypeInfoStatic <link linkend="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1ae3efe44192b9991db393f30a2dc132da">StaticCppClassTypeInfo</link></para>
+</listitem>
+            <listitem><para>static const UECodeGen_Private::FClassParams <link linkend="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1a827a735b5798a09afc2d2325dd751df2">ClassParams</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1a827a735b5798a09afc2d2325dd751df2"/><section>
+    <title>ClassParams</title>
+<indexterm><primary>ClassParams</primary><secondary>Z_Construct_UClass_UCalendarUIBase_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UClass_UCalendarUIBase_Statics</primary><secondary>ClassParams</secondary></indexterm>
+<para><computeroutput>const UECodeGen_Private::FClassParams Z_Construct_UClass_UCalendarUIBase_Statics::ClassParams<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;&amp;UCalendarUIBase::StaticClass,
+&#32;&#32;&#32;&#32;<emphasis role="keyword">nullptr</emphasis>,
+&#32;&#32;&#32;&#32;&amp;StaticCppClassTypeInfo,
+&#32;&#32;&#32;&#32;DependentSingletons,
+&#32;&#32;&#32;&#32;FuncInfo,
+&#32;&#32;&#32;&#32;Z_Construct_UClass_UCalendarUIBase_Statics::PropPointers,
+&#32;&#32;&#32;&#32;<emphasis role="keyword">nullptr</emphasis>,
+&#32;&#32;&#32;&#32;UE_ARRAY_COUNT(DependentSingletons),
+&#32;&#32;&#32;&#32;UE_ARRAY_COUNT(FuncInfo),
+&#32;&#32;&#32;&#32;UE_ARRAY_COUNT(Z_Construct_UClass_UCalendarUIBase_Statics::PropPointers),
+&#32;&#32;&#32;&#32;0,
+&#32;&#32;&#32;&#32;0x00A010A0u,
+
+}
+</programlisting></section>
+<anchor xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1ae5af16b675bf48f7f17df7636f2a5865"/><section>
+    <title>FuncInfo</title>
+<indexterm><primary>FuncInfo</primary><secondary>Z_Construct_UClass_UCalendarUIBase_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UClass_UCalendarUIBase_Statics</primary><secondary>FuncInfo</secondary></indexterm>
+<para><computeroutput>static constexpr FClassFunctionLinkInfo Z_Construct_UClass_UCalendarUIBase_Statics::FuncInfo<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarUIBase_CreateCalendar,&#32;<emphasis role="stringliteral">&quot;CreateCalendar&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarUIBase_GetTime,&#32;<emphasis role="stringliteral">&quot;GetTime&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarUIBase_HandleMonthToggleButtonClick,&#32;<emphasis role="stringliteral">&quot;HandleMonthToggleButtonClick&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarUIBase_HandleOnHourChanged,&#32;<emphasis role="stringliteral">&quot;HandleOnHourChanged&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarUIBase_HandleOnHourCommitted,&#32;<emphasis role="stringliteral">&quot;HandleOnHourCommitted&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarUIBase_HandleOnMinuteChanged,&#32;<emphasis role="stringliteral">&quot;HandleOnMinuteChanged&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarUIBase_HandleOnMinuteCommitted,&#32;<emphasis role="stringliteral">&quot;HandleOnMinuteCommitted&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarUIBase_HandleOnYearChanged,&#32;<emphasis role="stringliteral">&quot;HandleOnYearChanged&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig,&#32;<emphasis role="stringliteral">&quot;PreCalendarConfig&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarUIBase_SetCornerRadii,&#32;<emphasis role="stringliteral">&quot;SetCornerRadii&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarUIBase_SetMonth,&#32;<emphasis role="stringliteral">&quot;SetMonth&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarUIBase_SetYear,&#32;<emphasis role="stringliteral">&quot;SetYear&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarUIBase_ShowNextMonth,&#32;<emphasis role="stringliteral">&quot;ShowNextMonth&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarUIBase_ShowPrevMonth,&#32;<emphasis role="stringliteral">&quot;ShowPrevMonth&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;}
+</programlisting></section>
+<anchor xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1a86d278578ebbb7f32c8da87ccd5c5f38"/><section>
+    <title>PropPointers</title>
+<indexterm><primary>PropPointers</primary><secondary>Z_Construct_UClass_UCalendarUIBase_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UClass_UCalendarUIBase_Statics</primary><secondary>PropPointers</secondary></indexterm>
+<para><computeroutput>const UECodeGen_Private::FPropertyParamsBase *const Z_Construct_UClass_UCalendarUIBase_Statics::PropPointers<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarUIBase_Statics::NewProp_year,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarUIBase_Statics::NewProp_month,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarUIBase_Statics::NewProp_hour,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarUIBase_Statics::NewProp_minute,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarUIBase_Statics::NewProp_toggle_prev_month,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarUIBase_Statics::NewProp_toggle_next_month,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarUIBase_Statics::NewProp_MonthButton,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarUIBase_Statics::NewProp_HourButton,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarUIBase_Statics::NewProp_MinuteButton,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarUIBase_Statics::NewProp_weekdays_background,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarUIBase_Statics::NewProp_calendar_background,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarUIBase_Statics::NewProp_ListViewCalendar,
+}
+</programlisting></section>
+<anchor xml:id="_struct_z___construct___u_class___u_calendar_u_i_base___statics_1ae3efe44192b9991db393f30a2dc132da"/><section>
+    <title>StaticCppClassTypeInfo</title>
+<indexterm><primary>StaticCppClassTypeInfo</primary><secondary>Z_Construct_UClass_UCalendarUIBase_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UClass_UCalendarUIBase_Statics</primary><secondary>StaticCppClassTypeInfo</secondary></indexterm>
+<para><computeroutput>static constexpr FCppClassTypeInfoStatic Z_Construct_UClass_UCalendarUIBase_Statics::StaticCppClassTypeInfo<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TCppClassTypeTraits&lt;UCalendarUIBase&gt;::IsAbstract,
+&#32;&#32;&#32;&#32;}
+</programlisting></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cpp</section>
+</section>

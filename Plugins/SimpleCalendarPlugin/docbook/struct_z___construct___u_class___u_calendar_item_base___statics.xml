@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics" xml:lang="en-US">
+<title>Z_Construct_UClass_UCalendarItemBase_Statics Struct Reference</title>
+<indexterm><primary>Z_Construct_UClass_UCalendarItemBase_Statics</primary></indexterm>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1aedb6bea8657b1b4b676b7b4a42021e73"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_DaySelected</emphasis> = { &quot;DaySelected&quot;, nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>, DaySelected), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DaySelected_MetaData), NewProp_DaySelected_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1aa8ccc393c86fb5ac95610520e88c69aa"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_Sunday</emphasis> = { &quot;Sunday&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>, Sunday), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Sunday_MetaData), NewProp_Sunday_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1a28376b50d548e1fefd3780503b96ae52"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_Monday</emphasis> = { &quot;Monday&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>, Monday), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Monday_MetaData), NewProp_Monday_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1a50ef3187905b6e73f0d0b8e5e15e7186"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_Tuesday</emphasis> = { &quot;Tuesday&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>, Tuesday), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Tuesday_MetaData), NewProp_Tuesday_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1ad2e3c6d4ac366c67e051ce6a5c4c1979"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_Wednesday</emphasis> = { &quot;Wednesday&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>, Wednesday), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Wednesday_MetaData), NewProp_Wednesday_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1a49ef6f078bcd21a277cbe7ee65c0cd41"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_Thursday</emphasis> = { &quot;Thursday&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>, Thursday), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Thursday_MetaData), NewProp_Thursday_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1aeae472eb4c55045c53f95fa6cdb11f6d"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_Friday</emphasis> = { &quot;Friday&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>, Friday), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Friday_MetaData), NewProp_Friday_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1ad329af79c5ba05e2766065c637bee479"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_Saturday</emphasis> = { &quot;Saturday&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>, Saturday), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Saturday_MetaData), NewProp_Saturday_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1aaad69f7c77489715942f83557f88a612"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_day_0</emphasis> = { &quot;day_0&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>, day_0), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_day_0_MetaData), NewProp_day_0_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1a12e33c91583d339da2c8c9397575066d"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_day_1</emphasis> = { &quot;day_1&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>, day_1), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_day_1_MetaData), NewProp_day_1_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1a2dbc381c614f7b92a4f6b552edde73a6"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_day_2</emphasis> = { &quot;day_2&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>, day_2), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_day_2_MetaData), NewProp_day_2_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1adf17049272debadf4e702cddb824db13"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_day_3</emphasis> = { &quot;day_3&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>, day_3), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_day_3_MetaData), NewProp_day_3_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1a50a13e538101f9c3835cf5cf2fe87bc8"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_day_4</emphasis> = { &quot;day_4&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>, day_4), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_day_4_MetaData), NewProp_day_4_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1a4198c94accb1588d4046ea98f91f18af"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_day_5</emphasis> = { &quot;day_5&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>, day_5), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_day_5_MetaData), NewProp_day_5_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1a0980b58e81a7286090fc285e7a8b8e90"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_day_6</emphasis> = { &quot;day_6&quot;, nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>, day_6), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_day_6_MetaData), NewProp_day_6_MetaData) }</para>
+</listitem>
+            <listitem><para>static const UECodeGen_Private::FPropertyParamsBase *const <link linkend="_struct_z___construct___u_class___u_calendar_item_base___statics_1acb19c70a5ba6ec813cc0b7ac35c76bde">PropPointers</link> []</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1a539b7763fa66d0c74933d833285cece9"/>static UObject *(*const <emphasis role="strong">DependentSingletons</emphasis> [])()</para>
+</listitem>
+            <listitem><para>static constexpr FClassFunctionLinkInfo <link linkend="_struct_z___construct___u_class___u_calendar_item_base___statics_1ac427b5c5b237bb524c804fe4d3f197b7">FuncInfo</link> []</para>
+</listitem>
+            <listitem><para>static constexpr FCppClassTypeInfoStatic <link linkend="_struct_z___construct___u_class___u_calendar_item_base___statics_1aeb2bc2c0c2081808150256f7edf48dd8">StaticCppClassTypeInfo</link></para>
+</listitem>
+            <listitem><para>static const UECodeGen_Private::FClassParams <link linkend="_struct_z___construct___u_class___u_calendar_item_base___statics_1aa0e773f0054324793ca06682de7b023c">ClassParams</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1aa0e773f0054324793ca06682de7b023c"/><section>
+    <title>ClassParams</title>
+<indexterm><primary>ClassParams</primary><secondary>Z_Construct_UClass_UCalendarItemBase_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UClass_UCalendarItemBase_Statics</primary><secondary>ClassParams</secondary></indexterm>
+<para><computeroutput>const UECodeGen_Private::FClassParams Z_Construct_UClass_UCalendarItemBase_Statics::ClassParams<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;&amp;UCalendarItemBase::StaticClass,
+&#32;&#32;&#32;&#32;<emphasis role="keyword">nullptr</emphasis>,
+&#32;&#32;&#32;&#32;&amp;StaticCppClassTypeInfo,
+&#32;&#32;&#32;&#32;DependentSingletons,
+&#32;&#32;&#32;&#32;FuncInfo,
+&#32;&#32;&#32;&#32;Z_Construct_UClass_UCalendarItemBase_Statics::PropPointers,
+&#32;&#32;&#32;&#32;<emphasis role="keyword">nullptr</emphasis>,
+&#32;&#32;&#32;&#32;UE_ARRAY_COUNT(DependentSingletons),
+&#32;&#32;&#32;&#32;UE_ARRAY_COUNT(FuncInfo),
+&#32;&#32;&#32;&#32;UE_ARRAY_COUNT(Z_Construct_UClass_UCalendarItemBase_Statics::PropPointers),
+&#32;&#32;&#32;&#32;0,
+&#32;&#32;&#32;&#32;0x00A010A0u,
+
+}
+</programlisting></section>
+<anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1ac427b5c5b237bb524c804fe4d3f197b7"/><section>
+    <title>FuncInfo</title>
+<indexterm><primary>FuncInfo</primary><secondary>Z_Construct_UClass_UCalendarItemBase_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UClass_UCalendarItemBase_Statics</primary><secondary>FuncInfo</secondary></indexterm>
+<para><computeroutput>static constexpr FClassFunctionLinkInfo Z_Construct_UClass_UCalendarItemBase_Statics::FuncInfo<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_HandleFridayClick,&#32;<emphasis role="stringliteral">&quot;HandleFridayClick&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_HandleMondayClick,&#32;<emphasis role="stringliteral">&quot;HandleMondayClick&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_HandleSaturdayClick,&#32;<emphasis role="stringliteral">&quot;HandleSaturdayClick&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_HandleSundayClick,&#32;<emphasis role="stringliteral">&quot;HandleSundayClick&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_HandleThursdayClick,&#32;<emphasis role="stringliteral">&quot;HandleThursdayClick&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_HandleTuesdayClick,&#32;<emphasis role="stringliteral">&quot;HandleTuesdayClick&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_HandleWednesdayClick,&#32;<emphasis role="stringliteral">&quot;HandleWednesdayClick&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_OnDaySelected,&#32;<emphasis role="stringliteral">&quot;OnDaySelected&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_OnItemAdded,&#32;<emphasis role="stringliteral">&quot;OnItemAdded&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;}
+</programlisting></section>
+<anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1acb19c70a5ba6ec813cc0b7ac35c76bde"/><section>
+    <title>PropPointers</title>
+<indexterm><primary>PropPointers</primary><secondary>Z_Construct_UClass_UCalendarItemBase_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UClass_UCalendarItemBase_Statics</primary><secondary>PropPointers</secondary></indexterm>
+<para><computeroutput>const UECodeGen_Private::FPropertyParamsBase *const Z_Construct_UClass_UCalendarItemBase_Statics::PropPointers<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_DaySelected,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Sunday,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Monday,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Tuesday,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Wednesday,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Thursday,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Friday,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Saturday,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_0,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_1,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_2,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_3,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_4,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_5,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_6,
+}
+</programlisting></section>
+<anchor xml:id="_struct_z___construct___u_class___u_calendar_item_base___statics_1aeb2bc2c0c2081808150256f7edf48dd8"/><section>
+    <title>StaticCppClassTypeInfo</title>
+<indexterm><primary>StaticCppClassTypeInfo</primary><secondary>Z_Construct_UClass_UCalendarItemBase_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UClass_UCalendarItemBase_Statics</primary><secondary>StaticCppClassTypeInfo</secondary></indexterm>
+<para><computeroutput>static constexpr FCppClassTypeInfoStatic Z_Construct_UClass_UCalendarItemBase_Statics::StaticCppClassTypeInfo<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TCppClassTypeTraits&lt;UCalendarItemBase&gt;::IsAbstract,
+&#32;&#32;&#32;&#32;}
+</programlisting></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarItemBase.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarItemBase.gen.cpp</section>
+</section>

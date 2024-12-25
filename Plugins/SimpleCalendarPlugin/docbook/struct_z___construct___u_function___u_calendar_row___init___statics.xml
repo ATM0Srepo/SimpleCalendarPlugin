@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics" xml:lang="en-US">
+<title>Z_Construct_UFunction_UCalendarRow_Init_Statics Struct Reference</title>
+<indexterm><primary>Z_Construct_UFunction_UCalendarRow_Init_Statics</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_z___construct___u_function___u_calendar_row___init___statics_1_1_calendar_row__event_init___parms">CalendarRow_eventInit_Parms</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics_1ac1c7eafe1846ce832e3acc714d22dd5e"/>static const UECodeGen_Private::FIntPropertyParams <emphasis role="strong">NewProp_RowValue</emphasis> = { &quot;RowValue&quot;, nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_row___init___statics_1_1_calendar_row__event_init___parms">CalendarRow_eventInit_Parms</link>, RowValue), METADATA_PARAMS(0, nullptr) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics_1a0b21bf719245b388e1a9dc9321f7b7c7"/>static const UECodeGen_Private::FIntPropertyParams <emphasis role="strong">NewProp_year</emphasis> = { &quot;year&quot;, nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_row___init___statics_1_1_calendar_row__event_init___parms">CalendarRow_eventInit_Parms</link>, year), METADATA_PARAMS(0, nullptr) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics_1a9cf51c02987ee137af26d2b949102daf"/>static const UECodeGen_Private::FIntPropertyParams <emphasis role="strong">NewProp_month</emphasis> = { &quot;month&quot;, nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_row___init___statics_1_1_calendar_row__event_init___parms">CalendarRow_eventInit_Parms</link>, month), METADATA_PARAMS(0, nullptr) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics_1aab376e5cee58ac8c5a9178735286c290"/>static const UECodeGen_Private::FStructPropertyParams <emphasis role="strong">NewProp_color1</emphasis> = { &quot;color1&quot;, nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_row___init___statics_1_1_calendar_row__event_init___parms">CalendarRow_eventInit_Parms</link>, color1), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(0, nullptr) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics_1a76a7ca9520ac4eac560536dc26fa3d46"/>static const UECodeGen_Private::FStructPropertyParams <emphasis role="strong">NewProp_color2</emphasis> = { &quot;color2&quot;, nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_row___init___statics_1_1_calendar_row__event_init___parms">CalendarRow_eventInit_Parms</link>, color2), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(0, nullptr) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics_1a69bd9df11e0149e9637ab823b8209216"/>static const UECodeGen_Private::FStructPropertyParams <emphasis role="strong">NewProp_color3</emphasis> = { &quot;color3&quot;, nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_row___init___statics_1_1_calendar_row__event_init___parms">CalendarRow_eventInit_Parms</link>, color3), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(0, nullptr) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics_1a045f4f1ff920ce45fb8cf31c8cd8355f"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_InOwner</emphasis> = { &quot;InOwner&quot;, nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_row___init___statics_1_1_calendar_row__event_init___parms">CalendarRow_eventInit_Parms</link>, InOwner), Z_Construct_UClass_UCalendarUIBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InOwner_MetaData), NewProp_InOwner_MetaData) }</para>
+</listitem>
+            <listitem><para>static const UECodeGen_Private::FPropertyParamsBase *const <link linkend="_struct_z___construct___u_function___u_calendar_row___init___statics_1ac7a44f185baef67b342521a2a32ae5b3">PropPointers</link> []</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics_1a8142707cd7979bb0fa886fa49a740082"/>static const UECodeGen_Private::FFunctionParams <emphasis role="strong">FuncParams</emphasis> = { (UObject*(*)())Z_Construct_UClass_UCalendarRow, nullptr, &quot;Init&quot;, nullptr, nullptr, Z_Construct_UFunction_UCalendarRow_Init_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarRow_Init_Statics::PropPointers), sizeof(<link linkend="_struct_z___construct___u_function___u_calendar_row___init___statics_1_1_calendar_row__event_init___parms">Z_Construct_UFunction_UCalendarRow_Init_Statics::CalendarRow_eventInit_Parms</link>), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarRow_Init_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCalendarRow_Init_Statics::Function_MetaDataParams) }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics_1ac7a44f185baef67b342521a2a32ae5b3"/><section>
+    <title>PropPointers</title>
+<indexterm><primary>PropPointers</primary><secondary>Z_Construct_UFunction_UCalendarRow_Init_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UFunction_UCalendarRow_Init_Statics</primary><secondary>PropPointers</secondary></indexterm>
+<para><computeroutput>const UECodeGen_Private::FPropertyParamsBase *const Z_Construct_UFunction_UCalendarRow_Init_Statics::PropPointers<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarRow_Init_Statics::NewProp_RowValue,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarRow_Init_Statics::NewProp_year,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarRow_Init_Statics::NewProp_month,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarRow_Init_Statics::NewProp_color1,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarRow_Init_Statics::NewProp_color2,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarRow_Init_Statics::NewProp_color3,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarRow_Init_Statics::NewProp_InOwner,
+}
+</programlisting></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarRow.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarRow.gen.cpp</section>
+</section>

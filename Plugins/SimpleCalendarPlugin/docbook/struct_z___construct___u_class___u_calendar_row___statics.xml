@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_class___u_calendar_row___statics" xml:lang="en-US">
+<title>Z_Construct_UClass_UCalendarRow_Statics Struct Reference</title>
+<indexterm><primary>Z_Construct_UClass_UCalendarRow_Statics</primary></indexterm>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_row___statics_1afba027d4ad079ec9c63dcf4fa216b18a"/>static const UECodeGen_Private::FStructPropertyParams <emphasis role="strong">NewProp_structure</emphasis> = { &quot;structure&quot;, nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_row">UCalendarRow</link>, structure), Z_Construct_UScriptStruct_FMyBaseSructure, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_structure_MetaData), NewProp_structure_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_row___statics_1a64545d2d6dbfade4af84beac48fc0e98"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_Owner</emphasis> = { &quot;Owner&quot;, nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_calendar_row">UCalendarRow</link>, Owner), Z_Construct_UClass_UCalendarUIBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Owner_MetaData), NewProp_Owner_MetaData) }</para>
+</listitem>
+            <listitem><para>static const UECodeGen_Private::FPropertyParamsBase *const <link linkend="_struct_z___construct___u_class___u_calendar_row___statics_1a92eb5a32a4030e35f72d34fbc606d03a">PropPointers</link> []</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_calendar_row___statics_1aada5b4ae559adcaefc41304e82e80e88"/>static UObject *(*const <emphasis role="strong">DependentSingletons</emphasis> [])()</para>
+</listitem>
+            <listitem><para>static constexpr FClassFunctionLinkInfo <link linkend="_struct_z___construct___u_class___u_calendar_row___statics_1ae185bdac438f21d21f04249692ad3f17">FuncInfo</link> []</para>
+</listitem>
+            <listitem><para>static constexpr FCppClassTypeInfoStatic <link linkend="_struct_z___construct___u_class___u_calendar_row___statics_1a8760b97820ca0d4b0daa262922c2084e">StaticCppClassTypeInfo</link></para>
+</listitem>
+            <listitem><para>static const UECodeGen_Private::FClassParams <link linkend="_struct_z___construct___u_class___u_calendar_row___statics_1a5a7d8f844d65c8960e6b2eba29dd8166">ClassParams</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_z___construct___u_class___u_calendar_row___statics_1a5a7d8f844d65c8960e6b2eba29dd8166"/><section>
+    <title>ClassParams</title>
+<indexterm><primary>ClassParams</primary><secondary>Z_Construct_UClass_UCalendarRow_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UClass_UCalendarRow_Statics</primary><secondary>ClassParams</secondary></indexterm>
+<para><computeroutput>const UECodeGen_Private::FClassParams Z_Construct_UClass_UCalendarRow_Statics::ClassParams<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;&amp;UCalendarRow::StaticClass,
+&#32;&#32;&#32;&#32;<emphasis role="keyword">nullptr</emphasis>,
+&#32;&#32;&#32;&#32;&amp;StaticCppClassTypeInfo,
+&#32;&#32;&#32;&#32;DependentSingletons,
+&#32;&#32;&#32;&#32;FuncInfo,
+&#32;&#32;&#32;&#32;Z_Construct_UClass_UCalendarRow_Statics::PropPointers,
+&#32;&#32;&#32;&#32;<emphasis role="keyword">nullptr</emphasis>,
+&#32;&#32;&#32;&#32;UE_ARRAY_COUNT(DependentSingletons),
+&#32;&#32;&#32;&#32;UE_ARRAY_COUNT(FuncInfo),
+&#32;&#32;&#32;&#32;UE_ARRAY_COUNT(Z_Construct_UClass_UCalendarRow_Statics::PropPointers),
+&#32;&#32;&#32;&#32;0,
+&#32;&#32;&#32;&#32;0x008000A0u,
+
+}
+</programlisting></section>
+<anchor xml:id="_struct_z___construct___u_class___u_calendar_row___statics_1ae185bdac438f21d21f04249692ad3f17"/><section>
+    <title>FuncInfo</title>
+<indexterm><primary>FuncInfo</primary><secondary>Z_Construct_UClass_UCalendarRow_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UClass_UCalendarRow_Statics</primary><secondary>FuncInfo</secondary></indexterm>
+<para><computeroutput>static constexpr FClassFunctionLinkInfo Z_Construct_UClass_UCalendarRow_Statics::FuncInfo<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarRow_Init,&#32;<emphasis role="stringliteral">&quot;Init&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;}
+</programlisting></section>
+<anchor xml:id="_struct_z___construct___u_class___u_calendar_row___statics_1a92eb5a32a4030e35f72d34fbc606d03a"/><section>
+    <title>PropPointers</title>
+<indexterm><primary>PropPointers</primary><secondary>Z_Construct_UClass_UCalendarRow_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UClass_UCalendarRow_Statics</primary><secondary>PropPointers</secondary></indexterm>
+<para><computeroutput>const UECodeGen_Private::FPropertyParamsBase *const Z_Construct_UClass_UCalendarRow_Statics::PropPointers<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarRow_Statics::NewProp_structure,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarRow_Statics::NewProp_Owner,
+}
+</programlisting></section>
+<anchor xml:id="_struct_z___construct___u_class___u_calendar_row___statics_1a8760b97820ca0d4b0daa262922c2084e"/><section>
+    <title>StaticCppClassTypeInfo</title>
+<indexterm><primary>StaticCppClassTypeInfo</primary><secondary>Z_Construct_UClass_UCalendarRow_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UClass_UCalendarRow_Statics</primary><secondary>StaticCppClassTypeInfo</secondary></indexterm>
+<para><computeroutput>static constexpr FCppClassTypeInfoStatic Z_Construct_UClass_UCalendarRow_Statics::StaticCppClassTypeInfo<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TCppClassTypeTraits&lt;UCalendarRow&gt;::IsAbstract,
+&#32;&#32;&#32;&#32;}
+</programlisting></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarRow.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarRow.gen.cpp</section>
+</section>

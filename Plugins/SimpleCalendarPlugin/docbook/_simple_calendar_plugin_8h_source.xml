@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__simple_calendar_plugin_8h_source" xml:lang="en-US">
+<title>SimpleCalendarPlugin.h</title>
+<indexterm><primary>Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Public/SimpleCalendarPlugin.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Copyright&#32;Epic&#32;Games,&#32;Inc.&#32;All&#32;Rights&#32;Reserved.</emphasis>
+2 
+3 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+4 
+5 <emphasis role="preprocessor">#include&#32;&quot;CoreMinimal.h&quot;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&quot;Modules/ModuleManager.h&quot;</emphasis>
+7 
+8 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_f_simple_calendar_plugin_module">FSimpleCalendarPluginModule</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;IModuleInterface
+9 {
+10 <emphasis role="keyword">public</emphasis>:
+11 
+13 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_f_simple_calendar_plugin_module_1a7d10f4631b1001a17f6b86e281579b54">StartupModule</link>()&#32;<emphasis role="keyword">override</emphasis>;
+14 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;ShutdownModule()&#32;<emphasis role="keyword">override</emphasis>;
+15 };
+</programlisting></section>

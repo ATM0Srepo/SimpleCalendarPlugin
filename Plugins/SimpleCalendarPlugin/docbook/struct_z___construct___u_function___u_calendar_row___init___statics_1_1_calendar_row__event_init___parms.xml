@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics_1_1_calendar_row__event_init___parms" xml:lang="en-US">
+<title>Z_Construct_UFunction_UCalendarRow_Init_Statics::CalendarRow_eventInit_Parms Struct Reference</title>
+<indexterm><primary>Z_Construct_UFunction_UCalendarRow_Init_Statics::CalendarRow_eventInit_Parms</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics_1_1_calendar_row__event_init___parms_1a72447f7d504720a539faff110de50c91"/>int32 <emphasis role="strong">RowValue</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics_1_1_calendar_row__event_init___parms_1a1e497a18e4fe6e9cfa9eee583e47bf94"/>int32 <emphasis role="strong">year</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics_1_1_calendar_row__event_init___parms_1a2ef45e7d26a807450c9d3a6b14d569fe"/>int32 <emphasis role="strong">month</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics_1_1_calendar_row__event_init___parms_1a418e334f7032b93d7ada7717170a5997"/>FLinearColor <emphasis role="strong">color1</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics_1_1_calendar_row__event_init___parms_1a4090ed297a41249d63dd8f812f49cdb7"/>FLinearColor <emphasis role="strong">color2</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics_1_1_calendar_row__event_init___parms_1a9915f840e7e6bf7e0396f7ff76ea6ec8"/>FLinearColor <emphasis role="strong">color3</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_row___init___statics_1_1_calendar_row__event_init___parms_1a96795007a3eec006ec0332a5e0809af6"/><link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link> * <emphasis role="strong">InOwner</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarRow.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarRow.gen.cpp</section>

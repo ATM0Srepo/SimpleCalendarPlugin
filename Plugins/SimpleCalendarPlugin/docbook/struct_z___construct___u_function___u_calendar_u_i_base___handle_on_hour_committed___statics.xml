@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_committed___statics" xml:lang="en-US">
+<title>Z_Construct_UFunction_UCalendarUIBase_HandleOnHourCommitted_Statics Struct Reference</title>
+<indexterm><primary>Z_Construct_UFunction_UCalendarUIBase_HandleOnHourCommitted_Statics</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_committed___statics_1_1ce0b7c7f19a60c29d1677a79cbb6e177">CalendarUIBase_eventHandleOnHourCommitted_Parms</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_committed___statics_1a9f0da7e1c7e2ae3af8cda0cc5a0e071b"/>static const UECodeGen_Private::FTextPropertyParams <emphasis role="strong">NewProp_Text</emphasis> = { &quot;Text&quot;, nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_committed___statics_1_1ce0b7c7f19a60c29d1677a79cbb6e177">CalendarUIBase_eventHandleOnHourCommitted_Parms</link>, Text), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Text_MetaData), NewProp_Text_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_committed___statics_1a2f6ed7d14104c4d101027c086dba86c1"/>static const UECodeGen_Private::FBytePropertyParams <emphasis role="strong">NewProp_CommitMethod</emphasis> = { &quot;CommitMethod&quot;, nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_committed___statics_1_1ce0b7c7f19a60c29d1677a79cbb6e177">CalendarUIBase_eventHandleOnHourCommitted_Parms</link>, CommitMethod), Z_Construct_UEnum_SlateCore_ETextCommit, METADATA_PARAMS(0, nullptr) }</para>
+</listitem>
+            <listitem><para>static const UECodeGen_Private::FPropertyParamsBase *const <link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_committed___statics_1ac291fa92ace190b0569b6faf8d6cd7e7">PropPointers</link> []</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_committed___statics_1a08661158cf42c49b8ba3f0bd2fbab8c1"/>static const UECodeGen_Private::FFunctionParams <emphasis role="strong">FuncParams</emphasis> = { (UObject*(*)())Z_Construct_UClass_UCalendarUIBase, nullptr, &quot;HandleOnHourCommitted&quot;, nullptr, nullptr, Z_Construct_UFunction_UCalendarUIBase_HandleOnHourCommitted_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarUIBase_HandleOnHourCommitted_Statics::PropPointers), sizeof(<link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_committed___statics_1_1ce0b7c7f19a60c29d1677a79cbb6e177">Z_Construct_UFunction_UCalendarUIBase_HandleOnHourCommitted_Statics::CalendarUIBase_eventHandleOnHourCommitted_Parms</link>), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarUIBase_HandleOnHourCommitted_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCalendarUIBase_HandleOnHourCommitted_Statics::Function_MetaDataParams) }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_committed___statics_1ac291fa92ace190b0569b6faf8d6cd7e7"/><section>
+    <title>PropPointers</title>
+<indexterm><primary>PropPointers</primary><secondary>Z_Construct_UFunction_UCalendarUIBase_HandleOnHourCommitted_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UFunction_UCalendarUIBase_HandleOnHourCommitted_Statics</primary><secondary>PropPointers</secondary></indexterm>
+<para><computeroutput>const UECodeGen_Private::FPropertyParamsBase *const Z_Construct_UFunction_UCalendarUIBase_HandleOnHourCommitted_Statics::PropPointers<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarUIBase_HandleOnHourCommitted_Statics::NewProp_Text,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarUIBase_HandleOnHourCommitted_Statics::NewProp_CommitMethod,
+}
+</programlisting></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cpp</section>
+</section>

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ditor_2_development_2_slate_2_shared_p_c_h_8_slate_8_cpp20_8h_source" xml:lang="en-US">
+<title>SharedPCH.Slate.Cpp20.h</title>
+<indexterm><primary>Intermediate/Build/Win64/x64/atm0sCalendarEditor/Development/Slate/SharedPCH.Slate.Cpp20.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;PCH&#32;for&#32;Runtime/Slate/Public/SlateSharedPCH.h</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&quot;C:/Users/atm0s/Documents/Unreal&#32;Projects/atm0sCalendar/Intermediate/Build/Win64/x64/atm0sCalendarEditor/Development/Slate/SharedDefinitions.Slate.Cpp20.h&quot;</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&quot;Runtime/Slate/Public/SlateSharedPCH.h&quot;</emphasis>
+</programlisting></section>

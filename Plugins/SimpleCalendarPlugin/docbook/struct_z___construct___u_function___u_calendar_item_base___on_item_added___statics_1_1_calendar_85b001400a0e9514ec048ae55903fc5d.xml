@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_function___u_calendar_item_base___on_item_added___statics_1_1_calendar_85b001400a0e9514ec048ae55903fc5d" xml:lang="en-US">
+<title>Z_Construct_UFunction_UCalendarItemBase_OnItemAdded_Statics::CalendarItemBase_eventOnItemAdded_Parms Struct Reference</title>
+<indexterm><primary>Z_Construct_UFunction_UCalendarItemBase_OnItemAdded_Statics::CalendarItemBase_eventOnItemAdded_Parms</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_item_base___on_item_added___statics_1_1_calendar_85b001400a0e9514ec048ae55903fc5d_1a3a706445be270fc4261ce8865862cb71"/>UObject * <emphasis role="strong">ListItemObjectRef</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarItemBase.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarItemBase.gen.cpp</section>

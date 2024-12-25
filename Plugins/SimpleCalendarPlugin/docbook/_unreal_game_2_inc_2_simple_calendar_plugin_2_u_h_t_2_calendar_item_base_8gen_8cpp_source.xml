@@ -1,0 +1,556 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__unreal_game_2_inc_2_simple_calendar_plugin_2_u_h_t_2_calendar_item_base_8gen_8cpp_source" xml:lang="en-US">
+<title>CalendarItemBase.gen.cpp</title>
+<indexterm><primary>Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarItemBase.gen.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Copyright&#32;Epic&#32;Games,&#32;Inc.&#32;All&#32;Rights&#32;Reserved.</emphasis>
+2 <emphasis role="comment">/*===========================================================================</emphasis>
+3 <emphasis role="comment">&#32;&#32;&#32;&#32;Generated&#32;code&#32;exported&#32;from&#32;UnrealHeaderTool.</emphasis>
+4 <emphasis role="comment">&#32;&#32;&#32;&#32;DO&#32;NOT&#32;modify&#32;this&#32;manually!&#32;Edit&#32;the&#32;corresponding&#32;.h&#32;files&#32;instead!</emphasis>
+5 <emphasis role="comment">===========================================================================*/</emphasis>
+6 
+7 <emphasis role="preprocessor">#include&#32;&quot;UObject/GeneratedCppIncludes.h&quot;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&quot;SimpleCalendarPlugin/Private/CalendarItemBase.h&quot;</emphasis>
+9 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+10 <emphasis role="keywordtype">void</emphasis>&#32;EmptyLinkFunctionForGeneratedCodeCalendarItemBase()&#32;{}
+11 
+12 <emphasis role="comment">//&#32;Begin&#32;Cross&#32;Module&#32;References</emphasis>
+13 COREUOBJECT_API&#32;UClass*&#32;Z_Construct_UClass_UObject_NoRegister();
+14 SIMPLECALENDARPLUGIN_API&#32;UClass*&#32;Z_Construct_UClass_UCalendarItemBase();
+15 SIMPLECALENDARPLUGIN_API&#32;UClass*&#32;Z_Construct_UClass_UCalendarItemBase_NoRegister();
+16 UMG_API&#32;UClass*&#32;Z_Construct_UClass_UButton_NoRegister();
+17 UMG_API&#32;UClass*&#32;Z_Construct_UClass_UTextBlock_NoRegister();
+18 UMG_API&#32;UClass*&#32;Z_Construct_UClass_UUserWidget();
+19 UPackage*&#32;Z_Construct_UPackage__Script_SimpleCalendarPlugin();
+20 <emphasis role="comment">//&#32;End&#32;Cross&#32;Module&#32;References</emphasis>
+21 
+22 <emphasis role="comment">//&#32;Begin&#32;Class&#32;UCalendarItemBase&#32;Function&#32;HandleFridayClick</emphasis>
+23 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_z___construct___u_function___u_calendar_item_base___handle_friday_click___statics">Z_Construct_UFunction_UCalendarItemBase_HandleFridayClick_Statics</link>
+24 {
+25 <emphasis role="preprocessor">#if&#32;WITH_METADATA</emphasis>
+26 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;Function_MetaDataParams[]&#32;=&#32;{
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+28 &#32;&#32;&#32;&#32;};
+29 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;WITH_METADATA</emphasis>
+30 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;FuncParams;
+31 };
+32 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;Z_Construct_UFunction_UCalendarItemBase_HandleFridayClick_Statics::FuncParams&#32;=&#32;{&#32;(UObject*(*)())Z_Construct_UClass_UCalendarItemBase,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="stringliteral">&quot;HandleFridayClick&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;0,&#32;0,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;(EFunctionFlags)0x00020401,&#32;0,&#32;0,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarItemBase_HandleFridayClick_Statics::Function_MetaDataParams),&#32;Z_Construct_UFunction_UCalendarItemBase_HandleFridayClick_Statics::Function_MetaDataParams)&#32;};
+33 UFunction*&#32;Z_Construct_UFunction_UCalendarItemBase_HandleFridayClick()
+34 {
+35 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;UFunction*&#32;ReturnFunction&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+36 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!ReturnFunction)
+37 &#32;&#32;&#32;&#32;{
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UECodeGen_Private::ConstructUFunction(&amp;ReturnFunction,&#32;Z_Construct_UFunction_UCalendarItemBase_HandleFridayClick_Statics::FuncParams);
+39 &#32;&#32;&#32;&#32;}
+40 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ReturnFunction;
+41 }
+42 DEFINE_FUNCTION(UCalendarItemBase::execHandleFridayClick)
+43 {
+44 &#32;&#32;&#32;&#32;P_FINISH;
+45 &#32;&#32;&#32;&#32;P_NATIVE_BEGIN;
+46 &#32;&#32;&#32;&#32;P_THIS-&gt;HandleFridayClick();
+47 &#32;&#32;&#32;&#32;P_NATIVE_END;
+48 }
+49 <emphasis role="comment">//&#32;End&#32;Class&#32;UCalendarItemBase&#32;Function&#32;HandleFridayClick</emphasis>
+50 
+51 <emphasis role="comment">//&#32;Begin&#32;Class&#32;UCalendarItemBase&#32;Function&#32;HandleMondayClick</emphasis>
+52 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_z___construct___u_function___u_calendar_item_base___handle_monday_click___statics">Z_Construct_UFunction_UCalendarItemBase_HandleMondayClick_Statics</link>
+53 {
+54 <emphasis role="preprocessor">#if&#32;WITH_METADATA</emphasis>
+55 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;Function_MetaDataParams[]&#32;=&#32;{
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+57 &#32;&#32;&#32;&#32;};
+58 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;WITH_METADATA</emphasis>
+59 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;FuncParams;
+60 };
+61 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;Z_Construct_UFunction_UCalendarItemBase_HandleMondayClick_Statics::FuncParams&#32;=&#32;{&#32;(UObject*(*)())Z_Construct_UClass_UCalendarItemBase,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="stringliteral">&quot;HandleMondayClick&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;0,&#32;0,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;(EFunctionFlags)0x00020401,&#32;0,&#32;0,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarItemBase_HandleMondayClick_Statics::Function_MetaDataParams),&#32;Z_Construct_UFunction_UCalendarItemBase_HandleMondayClick_Statics::Function_MetaDataParams)&#32;};
+62 UFunction*&#32;Z_Construct_UFunction_UCalendarItemBase_HandleMondayClick()
+63 {
+64 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;UFunction*&#32;ReturnFunction&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+65 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!ReturnFunction)
+66 &#32;&#32;&#32;&#32;{
+67 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UECodeGen_Private::ConstructUFunction(&amp;ReturnFunction,&#32;Z_Construct_UFunction_UCalendarItemBase_HandleMondayClick_Statics::FuncParams);
+68 &#32;&#32;&#32;&#32;}
+69 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ReturnFunction;
+70 }
+71 DEFINE_FUNCTION(UCalendarItemBase::execHandleMondayClick)
+72 {
+73 &#32;&#32;&#32;&#32;P_FINISH;
+74 &#32;&#32;&#32;&#32;P_NATIVE_BEGIN;
+75 &#32;&#32;&#32;&#32;P_THIS-&gt;HandleMondayClick();
+76 &#32;&#32;&#32;&#32;P_NATIVE_END;
+77 }
+78 <emphasis role="comment">//&#32;End&#32;Class&#32;UCalendarItemBase&#32;Function&#32;HandleMondayClick</emphasis>
+79 
+80 <emphasis role="comment">//&#32;Begin&#32;Class&#32;UCalendarItemBase&#32;Function&#32;HandleSaturdayClick</emphasis>
+81 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_z___construct___u_function___u_calendar_item_base___handle_saturday_click___statics">Z_Construct_UFunction_UCalendarItemBase_HandleSaturdayClick_Statics</link>
+82 {
+83 <emphasis role="preprocessor">#if&#32;WITH_METADATA</emphasis>
+84 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;Function_MetaDataParams[]&#32;=&#32;{
+85 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+86 &#32;&#32;&#32;&#32;};
+87 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;WITH_METADATA</emphasis>
+88 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;FuncParams;
+89 };
+90 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;Z_Construct_UFunction_UCalendarItemBase_HandleSaturdayClick_Statics::FuncParams&#32;=&#32;{&#32;(UObject*(*)())Z_Construct_UClass_UCalendarItemBase,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="stringliteral">&quot;HandleSaturdayClick&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;0,&#32;0,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;(EFunctionFlags)0x00020401,&#32;0,&#32;0,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarItemBase_HandleSaturdayClick_Statics::Function_MetaDataParams),&#32;Z_Construct_UFunction_UCalendarItemBase_HandleSaturdayClick_Statics::Function_MetaDataParams)&#32;};
+91 UFunction*&#32;Z_Construct_UFunction_UCalendarItemBase_HandleSaturdayClick()
+92 {
+93 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;UFunction*&#32;ReturnFunction&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+94 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!ReturnFunction)
+95 &#32;&#32;&#32;&#32;{
+96 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UECodeGen_Private::ConstructUFunction(&amp;ReturnFunction,&#32;Z_Construct_UFunction_UCalendarItemBase_HandleSaturdayClick_Statics::FuncParams);
+97 &#32;&#32;&#32;&#32;}
+98 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ReturnFunction;
+99 }
+100 DEFINE_FUNCTION(UCalendarItemBase::execHandleSaturdayClick)
+101 {
+102 &#32;&#32;&#32;&#32;P_FINISH;
+103 &#32;&#32;&#32;&#32;P_NATIVE_BEGIN;
+104 &#32;&#32;&#32;&#32;P_THIS-&gt;HandleSaturdayClick();
+105 &#32;&#32;&#32;&#32;P_NATIVE_END;
+106 }
+107 <emphasis role="comment">//&#32;End&#32;Class&#32;UCalendarItemBase&#32;Function&#32;HandleSaturdayClick</emphasis>
+108 
+109 <emphasis role="comment">//&#32;Begin&#32;Class&#32;UCalendarItemBase&#32;Function&#32;HandleSundayClick</emphasis>
+110 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_z___construct___u_function___u_calendar_item_base___handle_sunday_click___statics">Z_Construct_UFunction_UCalendarItemBase_HandleSundayClick_Statics</link>
+111 {
+112 <emphasis role="preprocessor">#if&#32;WITH_METADATA</emphasis>
+113 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;Function_MetaDataParams[]&#32;=&#32;{
+114 <emphasis role="preprocessor">#if&#32;!UE_BUILD_SHIPPING</emphasis>
+115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Comment&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;//&#32;Functions&#32;to&#32;Handle&#32;Day&#32;Clicks\n&quot;</emphasis>&#32;},
+116 <emphasis role="preprocessor">#endif</emphasis>
+117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+118 <emphasis role="preprocessor">#if&#32;!UE_BUILD_SHIPPING</emphasis>
+119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ToolTip&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Functions&#32;to&#32;Handle&#32;Day&#32;Clicks&quot;</emphasis>&#32;},
+120 <emphasis role="preprocessor">#endif</emphasis>
+121 &#32;&#32;&#32;&#32;};
+122 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;WITH_METADATA</emphasis>
+123 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;FuncParams;
+124 };
+125 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;Z_Construct_UFunction_UCalendarItemBase_HandleSundayClick_Statics::FuncParams&#32;=&#32;{&#32;(UObject*(*)())Z_Construct_UClass_UCalendarItemBase,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="stringliteral">&quot;HandleSundayClick&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;0,&#32;0,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;(EFunctionFlags)0x00020401,&#32;0,&#32;0,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarItemBase_HandleSundayClick_Statics::Function_MetaDataParams),&#32;Z_Construct_UFunction_UCalendarItemBase_HandleSundayClick_Statics::Function_MetaDataParams)&#32;};
+126 UFunction*&#32;Z_Construct_UFunction_UCalendarItemBase_HandleSundayClick()
+127 {
+128 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;UFunction*&#32;ReturnFunction&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+129 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!ReturnFunction)
+130 &#32;&#32;&#32;&#32;{
+131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UECodeGen_Private::ConstructUFunction(&amp;ReturnFunction,&#32;Z_Construct_UFunction_UCalendarItemBase_HandleSundayClick_Statics::FuncParams);
+132 &#32;&#32;&#32;&#32;}
+133 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ReturnFunction;
+134 }
+135 DEFINE_FUNCTION(UCalendarItemBase::execHandleSundayClick)
+136 {
+137 &#32;&#32;&#32;&#32;P_FINISH;
+138 &#32;&#32;&#32;&#32;P_NATIVE_BEGIN;
+139 &#32;&#32;&#32;&#32;P_THIS-&gt;HandleSundayClick();
+140 &#32;&#32;&#32;&#32;P_NATIVE_END;
+141 }
+142 <emphasis role="comment">//&#32;End&#32;Class&#32;UCalendarItemBase&#32;Function&#32;HandleSundayClick</emphasis>
+143 
+144 <emphasis role="comment">//&#32;Begin&#32;Class&#32;UCalendarItemBase&#32;Function&#32;HandleThursdayClick</emphasis>
+145 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_z___construct___u_function___u_calendar_item_base___handle_thursday_click___statics">Z_Construct_UFunction_UCalendarItemBase_HandleThursdayClick_Statics</link>
+146 {
+147 <emphasis role="preprocessor">#if&#32;WITH_METADATA</emphasis>
+148 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;Function_MetaDataParams[]&#32;=&#32;{
+149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+150 &#32;&#32;&#32;&#32;};
+151 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;WITH_METADATA</emphasis>
+152 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;FuncParams;
+153 };
+154 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;Z_Construct_UFunction_UCalendarItemBase_HandleThursdayClick_Statics::FuncParams&#32;=&#32;{&#32;(UObject*(*)())Z_Construct_UClass_UCalendarItemBase,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="stringliteral">&quot;HandleThursdayClick&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;0,&#32;0,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;(EFunctionFlags)0x00020401,&#32;0,&#32;0,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarItemBase_HandleThursdayClick_Statics::Function_MetaDataParams),&#32;Z_Construct_UFunction_UCalendarItemBase_HandleThursdayClick_Statics::Function_MetaDataParams)&#32;};
+155 UFunction*&#32;Z_Construct_UFunction_UCalendarItemBase_HandleThursdayClick()
+156 {
+157 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;UFunction*&#32;ReturnFunction&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+158 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!ReturnFunction)
+159 &#32;&#32;&#32;&#32;{
+160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UECodeGen_Private::ConstructUFunction(&amp;ReturnFunction,&#32;Z_Construct_UFunction_UCalendarItemBase_HandleThursdayClick_Statics::FuncParams);
+161 &#32;&#32;&#32;&#32;}
+162 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ReturnFunction;
+163 }
+164 DEFINE_FUNCTION(UCalendarItemBase::execHandleThursdayClick)
+165 {
+166 &#32;&#32;&#32;&#32;P_FINISH;
+167 &#32;&#32;&#32;&#32;P_NATIVE_BEGIN;
+168 &#32;&#32;&#32;&#32;P_THIS-&gt;HandleThursdayClick();
+169 &#32;&#32;&#32;&#32;P_NATIVE_END;
+170 }
+171 <emphasis role="comment">//&#32;End&#32;Class&#32;UCalendarItemBase&#32;Function&#32;HandleThursdayClick</emphasis>
+172 
+173 <emphasis role="comment">//&#32;Begin&#32;Class&#32;UCalendarItemBase&#32;Function&#32;HandleTuesdayClick</emphasis>
+174 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_z___construct___u_function___u_calendar_item_base___handle_tuesday_click___statics">Z_Construct_UFunction_UCalendarItemBase_HandleTuesdayClick_Statics</link>
+175 {
+176 <emphasis role="preprocessor">#if&#32;WITH_METADATA</emphasis>
+177 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;Function_MetaDataParams[]&#32;=&#32;{
+178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+179 &#32;&#32;&#32;&#32;};
+180 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;WITH_METADATA</emphasis>
+181 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;FuncParams;
+182 };
+183 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;Z_Construct_UFunction_UCalendarItemBase_HandleTuesdayClick_Statics::FuncParams&#32;=&#32;{&#32;(UObject*(*)())Z_Construct_UClass_UCalendarItemBase,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="stringliteral">&quot;HandleTuesdayClick&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;0,&#32;0,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;(EFunctionFlags)0x00020401,&#32;0,&#32;0,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarItemBase_HandleTuesdayClick_Statics::Function_MetaDataParams),&#32;Z_Construct_UFunction_UCalendarItemBase_HandleTuesdayClick_Statics::Function_MetaDataParams)&#32;};
+184 UFunction*&#32;Z_Construct_UFunction_UCalendarItemBase_HandleTuesdayClick()
+185 {
+186 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;UFunction*&#32;ReturnFunction&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+187 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!ReturnFunction)
+188 &#32;&#32;&#32;&#32;{
+189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UECodeGen_Private::ConstructUFunction(&amp;ReturnFunction,&#32;Z_Construct_UFunction_UCalendarItemBase_HandleTuesdayClick_Statics::FuncParams);
+190 &#32;&#32;&#32;&#32;}
+191 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ReturnFunction;
+192 }
+193 DEFINE_FUNCTION(UCalendarItemBase::execHandleTuesdayClick)
+194 {
+195 &#32;&#32;&#32;&#32;P_FINISH;
+196 &#32;&#32;&#32;&#32;P_NATIVE_BEGIN;
+197 &#32;&#32;&#32;&#32;P_THIS-&gt;HandleTuesdayClick();
+198 &#32;&#32;&#32;&#32;P_NATIVE_END;
+199 }
+200 <emphasis role="comment">//&#32;End&#32;Class&#32;UCalendarItemBase&#32;Function&#32;HandleTuesdayClick</emphasis>
+201 
+202 <emphasis role="comment">//&#32;Begin&#32;Class&#32;UCalendarItemBase&#32;Function&#32;HandleWednesdayClick</emphasis>
+203 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_z___construct___u_function___u_calendar_item_base___handle_wednesday_click___statics">Z_Construct_UFunction_UCalendarItemBase_HandleWednesdayClick_Statics</link>
+204 {
+205 <emphasis role="preprocessor">#if&#32;WITH_METADATA</emphasis>
+206 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;Function_MetaDataParams[]&#32;=&#32;{
+207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+208 &#32;&#32;&#32;&#32;};
+209 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;WITH_METADATA</emphasis>
+210 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;FuncParams;
+211 };
+212 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;Z_Construct_UFunction_UCalendarItemBase_HandleWednesdayClick_Statics::FuncParams&#32;=&#32;{&#32;(UObject*(*)())Z_Construct_UClass_UCalendarItemBase,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="stringliteral">&quot;HandleWednesdayClick&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;0,&#32;0,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;(EFunctionFlags)0x00020401,&#32;0,&#32;0,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarItemBase_HandleWednesdayClick_Statics::Function_MetaDataParams),&#32;Z_Construct_UFunction_UCalendarItemBase_HandleWednesdayClick_Statics::Function_MetaDataParams)&#32;};
+213 UFunction*&#32;Z_Construct_UFunction_UCalendarItemBase_HandleWednesdayClick()
+214 {
+215 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;UFunction*&#32;ReturnFunction&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+216 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!ReturnFunction)
+217 &#32;&#32;&#32;&#32;{
+218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UECodeGen_Private::ConstructUFunction(&amp;ReturnFunction,&#32;Z_Construct_UFunction_UCalendarItemBase_HandleWednesdayClick_Statics::FuncParams);
+219 &#32;&#32;&#32;&#32;}
+220 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ReturnFunction;
+221 }
+222 DEFINE_FUNCTION(UCalendarItemBase::execHandleWednesdayClick)
+223 {
+224 &#32;&#32;&#32;&#32;P_FINISH;
+225 &#32;&#32;&#32;&#32;P_NATIVE_BEGIN;
+226 &#32;&#32;&#32;&#32;P_THIS-&gt;HandleWednesdayClick();
+227 &#32;&#32;&#32;&#32;P_NATIVE_END;
+228 }
+229 <emphasis role="comment">//&#32;End&#32;Class&#32;UCalendarItemBase&#32;Function&#32;HandleWednesdayClick</emphasis>
+230 
+231 <emphasis role="comment">//&#32;Begin&#32;Class&#32;UCalendarItemBase&#32;Function&#32;OnDaySelected</emphasis>
+232 <emphasis role="keyword">static</emphasis>&#32;FName&#32;NAME_UCalendarItemBase_OnDaySelected&#32;=&#32;FName(TEXT(<emphasis role="stringliteral">&quot;OnDaySelected&quot;</emphasis>));
+233 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_u_calendar_item_base_1af64e9515cc04e43f581550c928f4a05e">UCalendarItemBase::OnDaySelected</link>()
+234 {
+235 &#32;&#32;&#32;&#32;ProcessEvent(FindFunctionChecked(NAME_UCalendarItemBase_OnDaySelected),NULL);
+236 }
+237 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_z___construct___u_function___u_calendar_item_base___on_day_selected___statics">Z_Construct_UFunction_UCalendarItemBase_OnDaySelected_Statics</link>
+238 {
+239 <emphasis role="preprocessor">#if&#32;WITH_METADATA</emphasis>
+240 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;Function_MetaDataParams[]&#32;=&#32;{
+241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Category&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Events&quot;</emphasis>&#32;},
+242 <emphasis role="preprocessor">#if&#32;!UE_BUILD_SHIPPING</emphasis>
+243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Comment&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;/**&#32;Overridable&#32;event&#32;\n&#32;&#32;&#32;&#32;*&#32;OnDaySelected&#32;is&#32;triggered&#32;when&#32;a&#32;calendar&#32;item&#32;is&#32;clicked\n&#32;&#32;&#32;&#32;*/&quot;</emphasis>&#32;},
+244 <emphasis role="preprocessor">#endif</emphasis>
+245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+246 <emphasis role="preprocessor">#if&#32;!UE_BUILD_SHIPPING</emphasis>
+247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ToolTip&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Overridable&#32;event\nOnDaySelected&#32;is&#32;triggered&#32;when&#32;a&#32;calendar&#32;item&#32;is&#32;clicked&quot;</emphasis>&#32;},
+248 <emphasis role="preprocessor">#endif</emphasis>
+249 &#32;&#32;&#32;&#32;};
+250 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;WITH_METADATA</emphasis>
+251 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;FuncParams;
+252 };
+253 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;Z_Construct_UFunction_UCalendarItemBase_OnDaySelected_Statics::FuncParams&#32;=&#32;{&#32;(UObject*(*)())Z_Construct_UClass_UCalendarItemBase,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="stringliteral">&quot;OnDaySelected&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;0,&#32;0,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;(EFunctionFlags)0x08020800,&#32;0,&#32;0,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarItemBase_OnDaySelected_Statics::Function_MetaDataParams),&#32;Z_Construct_UFunction_UCalendarItemBase_OnDaySelected_Statics::Function_MetaDataParams)&#32;};
+254 UFunction*&#32;Z_Construct_UFunction_UCalendarItemBase_OnDaySelected()
+255 {
+256 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;UFunction*&#32;ReturnFunction&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+257 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!ReturnFunction)
+258 &#32;&#32;&#32;&#32;{
+259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UECodeGen_Private::ConstructUFunction(&amp;ReturnFunction,&#32;Z_Construct_UFunction_UCalendarItemBase_OnDaySelected_Statics::FuncParams);
+260 &#32;&#32;&#32;&#32;}
+261 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ReturnFunction;
+262 }
+263 <emphasis role="comment">//&#32;End&#32;Class&#32;UCalendarItemBase&#32;Function&#32;OnDaySelected</emphasis>
+264 
+265 <emphasis role="comment">//&#32;Begin&#32;Class&#32;UCalendarItemBase&#32;Function&#32;OnItemAdded</emphasis>
+266 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_z___construct___u_function___u_calendar_item_base___on_item_added___statics">Z_Construct_UFunction_UCalendarItemBase_OnItemAdded_Statics</link>
+267 {
+268 &#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_z___construct___u_function___u_calendar_item_base___on_item_added___statics_1_1_calendar_85b001400a0e9514ec048ae55903fc5d">CalendarItemBase_eventOnItemAdded_Parms</link>
+269 &#32;&#32;&#32;&#32;{
+270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UObject*&#32;ListItemObjectRef;
+271 &#32;&#32;&#32;&#32;};
+272 <emphasis role="preprocessor">#if&#32;WITH_METADATA</emphasis>
+273 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;Function_MetaDataParams[]&#32;=&#32;{
+274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Category&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Calendar&#32;Functions&quot;</emphasis>&#32;},
+275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+276 &#32;&#32;&#32;&#32;};
+277 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;WITH_METADATA</emphasis>
+278 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;NewProp_ListItemObjectRef;
+279 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*&#32;<emphasis role="keyword">const</emphasis>&#32;PropPointers[];
+280 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;FuncParams;
+281 };
+282 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;Z_Construct_UFunction_UCalendarItemBase_OnItemAdded_Statics::NewProp_ListItemObjectRef&#32;=&#32;{&#32;<emphasis role="stringliteral">&quot;ListItemObjectRef&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;(EPropertyFlags)0x0010000000000080,&#32;UECodeGen_Private::EPropertyGenFlags::Object,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;1,&#32;STRUCT_OFFSET(CalendarItemBase_eventOnItemAdded_Parms,&#32;ListItemObjectRef),&#32;Z_Construct_UClass_UObject_NoRegister,&#32;METADATA_PARAMS(0,&#32;<emphasis role="keyword">nullptr</emphasis>)&#32;};
+283 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*&#32;<emphasis role="keyword">const</emphasis>&#32;Z_Construct_UFunction_UCalendarItemBase_OnItemAdded_Statics::PropPointers[]&#32;=&#32;{
+284 &#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarItemBase_OnItemAdded_Statics::NewProp_ListItemObjectRef,
+285 };
+286 <emphasis role="keyword">static_assert</emphasis>(UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarItemBase_OnItemAdded_Statics::PropPointers)&#32;&lt;&#32;2048);
+287 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FFunctionParams&#32;Z_Construct_UFunction_UCalendarItemBase_OnItemAdded_Statics::FuncParams&#32;=&#32;{&#32;(UObject*(*)())Z_Construct_UClass_UCalendarItemBase,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="stringliteral">&quot;OnItemAdded&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;Z_Construct_UFunction_UCalendarItemBase_OnItemAdded_Statics::PropPointers,&#32;UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarItemBase_OnItemAdded_Statics::PropPointers),&#32;<emphasis role="keyword">sizeof</emphasis>(<link linkend="_struct_z___construct___u_function___u_calendar_item_base___on_item_added___statics_1_1_calendar_85b001400a0e9514ec048ae55903fc5d">Z_Construct_UFunction_UCalendarItemBase_OnItemAdded_Statics::CalendarItemBase_eventOnItemAdded_Parms</link>),&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;(EFunctionFlags)0x04020401,&#32;0,&#32;0,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarItemBase_OnItemAdded_Statics::Function_MetaDataParams),&#32;Z_Construct_UFunction_UCalendarItemBase_OnItemAdded_Statics::Function_MetaDataParams)&#32;};
+288 <emphasis role="keyword">static_assert</emphasis>(<emphasis role="keyword">sizeof</emphasis>(<link linkend="_struct_z___construct___u_function___u_calendar_item_base___on_item_added___statics_1_1_calendar_85b001400a0e9514ec048ae55903fc5d">Z_Construct_UFunction_UCalendarItemBase_OnItemAdded_Statics::CalendarItemBase_eventOnItemAdded_Parms</link>)&#32;&lt;&#32;MAX_uint16);
+289 UFunction*&#32;Z_Construct_UFunction_UCalendarItemBase_OnItemAdded()
+290 {
+291 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;UFunction*&#32;ReturnFunction&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+292 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!ReturnFunction)
+293 &#32;&#32;&#32;&#32;{
+294 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UECodeGen_Private::ConstructUFunction(&amp;ReturnFunction,&#32;Z_Construct_UFunction_UCalendarItemBase_OnItemAdded_Statics::FuncParams);
+295 &#32;&#32;&#32;&#32;}
+296 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ReturnFunction;
+297 }
+298 DEFINE_FUNCTION(UCalendarItemBase::execOnItemAdded)
+299 {
+300 &#32;&#32;&#32;&#32;P_GET_OBJECT(UObject,Z_Param_ListItemObjectRef);
+301 &#32;&#32;&#32;&#32;P_FINISH;
+302 &#32;&#32;&#32;&#32;P_NATIVE_BEGIN;
+303 &#32;&#32;&#32;&#32;P_THIS-&gt;OnItemAdded(Z_Param_ListItemObjectRef);
+304 &#32;&#32;&#32;&#32;P_NATIVE_END;
+305 }
+306 <emphasis role="comment">//&#32;End&#32;Class&#32;UCalendarItemBase&#32;Function&#32;OnItemAdded</emphasis>
+307 
+308 <emphasis role="comment">//&#32;Begin&#32;Class&#32;UCalendarItemBase</emphasis>
+309 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarItemBase::StaticRegisterNativesUCalendarItemBase()
+310 {
+311 &#32;&#32;&#32;&#32;UClass*&#32;Class&#32;=&#32;UCalendarItemBase::StaticClass();
+312 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;FNameNativePtrPair&#32;Funcs[]&#32;=&#32;{
+313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;HandleFridayClick&quot;</emphasis>,&#32;&amp;UCalendarItemBase::execHandleFridayClick&#32;},
+314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;HandleMondayClick&quot;</emphasis>,&#32;&amp;UCalendarItemBase::execHandleMondayClick&#32;},
+315 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;HandleSaturdayClick&quot;</emphasis>,&#32;&amp;UCalendarItemBase::execHandleSaturdayClick&#32;},
+316 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;HandleSundayClick&quot;</emphasis>,&#32;&amp;UCalendarItemBase::execHandleSundayClick&#32;},
+317 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;HandleThursdayClick&quot;</emphasis>,&#32;&amp;UCalendarItemBase::execHandleThursdayClick&#32;},
+318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;HandleTuesdayClick&quot;</emphasis>,&#32;&amp;UCalendarItemBase::execHandleTuesdayClick&#32;},
+319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;HandleWednesdayClick&quot;</emphasis>,&#32;&amp;UCalendarItemBase::execHandleWednesdayClick&#32;},
+320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;OnItemAdded&quot;</emphasis>,&#32;&amp;UCalendarItemBase::execOnItemAdded&#32;},
+321 &#32;&#32;&#32;&#32;};
+322 &#32;&#32;&#32;&#32;FNativeFunctionRegistrar::RegisterFunctions(Class,&#32;Funcs,&#32;UE_ARRAY_COUNT(Funcs));
+323 }
+324 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>);
+325 UClass*&#32;Z_Construct_UClass_UCalendarItemBase_NoRegister()
+326 {
+327 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;UCalendarItemBase::StaticClass();
+328 }
+329 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_z___construct___u_class___u_calendar_item_base___statics">Z_Construct_UClass_UCalendarItemBase_Statics</link>
+330 {
+331 <emphasis role="preprocessor">#if&#32;WITH_METADATA</emphasis>
+332 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;Class_MetaDataParams[]&#32;=&#32;{
+333 <emphasis role="preprocessor">#if&#32;!UE_BUILD_SHIPPING</emphasis>
+334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Comment&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;/**\n&#32;*&#32;\n&#32;*/&quot;</emphasis>&#32;},
+335 <emphasis role="preprocessor">#endif</emphasis>
+336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;IncludePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;CalendarItemBase.h&quot;</emphasis>&#32;},
+337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+338 &#32;&#32;&#32;&#32;};
+339 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;NewProp_DaySelected_MetaData[]&#32;=&#32;{
+340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Category&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>&#32;},
+341 <emphasis role="preprocessor">#if&#32;!UE_BUILD_SHIPPING</emphasis>
+342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Comment&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;/**&#32;The&#32;current&#32;selection&#32;of&#32;the&#32;day&#32;of&#32;week&#32;on&#32;Calendar&#32;(eg.&#32;\&quot;Sunday\&quot;,&#32;\&quot;Monday\&quot;,&#32;etc&#32;*/&quot;</emphasis>&#32;},
+343 <emphasis role="preprocessor">#endif</emphasis>
+344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;EditInline&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;true&quot;</emphasis>&#32;},
+345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+346 <emphasis role="preprocessor">#if&#32;!UE_BUILD_SHIPPING</emphasis>
+347 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ToolTip&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;The&#32;current&#32;selection&#32;of&#32;the&#32;day&#32;of&#32;week&#32;on&#32;Calendar&#32;(eg.&#32;\&quot;Sunday\&quot;,&#32;\&quot;Monday\&quot;,&#32;etc&quot;</emphasis>&#32;},
+348 <emphasis role="preprocessor">#endif</emphasis>
+349 &#32;&#32;&#32;&#32;};
+350 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;NewProp_Sunday_MetaData[]&#32;=&#32;{
+351 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;BindWidget&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>&#32;},
+352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Category&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>&#32;},
+353 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;EditInline&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;true&quot;</emphasis>&#32;},
+354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+355 &#32;&#32;&#32;&#32;};
+356 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;NewProp_Monday_MetaData[]&#32;=&#32;{
+357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;BindWidget&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>&#32;},
+358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Category&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>&#32;},
+359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;EditInline&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;true&quot;</emphasis>&#32;},
+360 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+361 &#32;&#32;&#32;&#32;};
+362 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;NewProp_Tuesday_MetaData[]&#32;=&#32;{
+363 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;BindWidget&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>&#32;},
+364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Category&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>&#32;},
+365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;EditInline&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;true&quot;</emphasis>&#32;},
+366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+367 &#32;&#32;&#32;&#32;};
+368 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;NewProp_Wednesday_MetaData[]&#32;=&#32;{
+369 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;BindWidget&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>&#32;},
+370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Category&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>&#32;},
+371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;EditInline&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;true&quot;</emphasis>&#32;},
+372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+373 &#32;&#32;&#32;&#32;};
+374 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;NewProp_Thursday_MetaData[]&#32;=&#32;{
+375 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;BindWidget&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>&#32;},
+376 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Category&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>&#32;},
+377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;EditInline&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;true&quot;</emphasis>&#32;},
+378 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+379 &#32;&#32;&#32;&#32;};
+380 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;NewProp_Friday_MetaData[]&#32;=&#32;{
+381 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;BindWidget&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>&#32;},
+382 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Category&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>&#32;},
+383 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;EditInline&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;true&quot;</emphasis>&#32;},
+384 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+385 &#32;&#32;&#32;&#32;};
+386 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;NewProp_Saturday_MetaData[]&#32;=&#32;{
+387 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;BindWidget&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>&#32;},
+388 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Category&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>&#32;},
+389 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;EditInline&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;true&quot;</emphasis>&#32;},
+390 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+391 &#32;&#32;&#32;&#32;};
+392 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;NewProp_day_0_MetaData[]&#32;=&#32;{
+393 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;BindWidget&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>&#32;},
+394 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Category&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>&#32;},
+395 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;EditInline&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;true&quot;</emphasis>&#32;},
+396 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+397 &#32;&#32;&#32;&#32;};
+398 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;NewProp_day_1_MetaData[]&#32;=&#32;{
+399 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;BindWidget&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>&#32;},
+400 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Category&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>&#32;},
+401 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;EditInline&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;true&quot;</emphasis>&#32;},
+402 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+403 &#32;&#32;&#32;&#32;};
+404 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;NewProp_day_2_MetaData[]&#32;=&#32;{
+405 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;BindWidget&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>&#32;},
+406 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Category&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>&#32;},
+407 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;EditInline&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;true&quot;</emphasis>&#32;},
+408 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+409 &#32;&#32;&#32;&#32;};
+410 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;NewProp_day_3_MetaData[]&#32;=&#32;{
+411 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;BindWidget&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>&#32;},
+412 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Category&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>&#32;},
+413 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;EditInline&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;true&quot;</emphasis>&#32;},
+414 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+415 &#32;&#32;&#32;&#32;};
+416 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;NewProp_day_4_MetaData[]&#32;=&#32;{
+417 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;BindWidget&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>&#32;},
+418 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Category&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>&#32;},
+419 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;EditInline&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;true&quot;</emphasis>&#32;},
+420 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+421 &#32;&#32;&#32;&#32;};
+422 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;NewProp_day_5_MetaData[]&#32;=&#32;{
+423 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;BindWidget&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>&#32;},
+424 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Category&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>&#32;},
+425 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;EditInline&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;true&quot;</emphasis>&#32;},
+426 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+427 &#32;&#32;&#32;&#32;};
+428 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;UECodeGen_Private::FMetaDataPairParam&#32;NewProp_day_6_MetaData[]&#32;=&#32;{
+429 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;BindWidget&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>&#32;},
+430 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;Category&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>&#32;},
+431 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;EditInline&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;true&quot;</emphasis>&#32;},
+432 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="stringliteral">&quot;ModuleRelativePath&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Private/CalendarItemBase.h&quot;</emphasis>&#32;},
+433 &#32;&#32;&#32;&#32;};
+434 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;WITH_METADATA</emphasis>
+435 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;NewProp_DaySelected;
+436 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;NewProp_Sunday;
+437 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;NewProp_Monday;
+438 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;NewProp_Tuesday;
+439 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;NewProp_Wednesday;
+440 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;NewProp_Thursday;
+441 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;NewProp_Friday;
+442 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;NewProp_Saturday;
+443 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;NewProp_day_0;
+444 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;NewProp_day_1;
+445 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;NewProp_day_2;
+446 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;NewProp_day_3;
+447 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;NewProp_day_4;
+448 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;NewProp_day_5;
+449 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;NewProp_day_6;
+450 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*&#32;<emphasis role="keyword">const</emphasis>&#32;PropPointers[];
+451 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;UObject*&#32;(*<emphasis role="keyword">const</emphasis>&#32;DependentSingletons[])();
+452 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;FClassFunctionLinkInfo&#32;FuncInfo[]&#32;=&#32;{
+453 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_HandleFridayClick,&#32;<emphasis role="stringliteral">&quot;HandleFridayClick&quot;</emphasis>&#32;},&#32;<emphasis role="comment">//&#32;189625260</emphasis>
+454 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_HandleMondayClick,&#32;<emphasis role="stringliteral">&quot;HandleMondayClick&quot;</emphasis>&#32;},&#32;<emphasis role="comment">//&#32;1149929677</emphasis>
+455 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_HandleSaturdayClick,&#32;<emphasis role="stringliteral">&quot;HandleSaturdayClick&quot;</emphasis>&#32;},&#32;<emphasis role="comment">//&#32;3180006606</emphasis>
+456 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_HandleSundayClick,&#32;<emphasis role="stringliteral">&quot;HandleSundayClick&quot;</emphasis>&#32;},&#32;<emphasis role="comment">//&#32;3927009473</emphasis>
+457 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_HandleThursdayClick,&#32;<emphasis role="stringliteral">&quot;HandleThursdayClick&quot;</emphasis>&#32;},&#32;<emphasis role="comment">//&#32;2611759435</emphasis>
+458 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_HandleTuesdayClick,&#32;<emphasis role="stringliteral">&quot;HandleTuesdayClick&quot;</emphasis>&#32;},&#32;<emphasis role="comment">//&#32;3196911857</emphasis>
+459 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_HandleWednesdayClick,&#32;<emphasis role="stringliteral">&quot;HandleWednesdayClick&quot;</emphasis>&#32;},&#32;<emphasis role="comment">//&#32;3954702491</emphasis>
+460 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_OnDaySelected,&#32;<emphasis role="stringliteral">&quot;OnDaySelected&quot;</emphasis>&#32;},&#32;<emphasis role="comment">//&#32;2203890597</emphasis>
+461 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UCalendarItemBase_OnItemAdded,&#32;<emphasis role="stringliteral">&quot;OnItemAdded&quot;</emphasis>&#32;},&#32;<emphasis role="comment">//&#32;2582755337</emphasis>
+462 &#32;&#32;&#32;&#32;};
+463 &#32;&#32;&#32;&#32;<emphasis role="keyword">static_assert</emphasis>(UE_ARRAY_COUNT(FuncInfo)&#32;&lt;&#32;2048);
+464 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;FCppClassTypeInfoStatic&#32;StaticCppClassTypeInfo&#32;=&#32;{
+465 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TCppClassTypeTraits&lt;UCalendarItemBase&gt;::IsAbstract,
+466 &#32;&#32;&#32;&#32;};
+467 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FClassParams&#32;ClassParams;
+468 };
+469 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_DaySelected&#32;=&#32;{&#32;<emphasis role="stringliteral">&quot;DaySelected&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;(EPropertyFlags)0x001000000008001c,&#32;UECodeGen_Private::EPropertyGenFlags::Object,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;1,&#32;STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>,&#32;DaySelected),&#32;Z_Construct_UClass_UTextBlock_NoRegister,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DaySelected_MetaData),&#32;NewProp_DaySelected_MetaData)&#32;};
+470 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Sunday&#32;=&#32;{&#32;<emphasis role="stringliteral">&quot;Sunday&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;(EPropertyFlags)0x002008000008000c,&#32;UECodeGen_Private::EPropertyGenFlags::Object,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;1,&#32;STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>,&#32;Sunday),&#32;Z_Construct_UClass_UButton_NoRegister,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Sunday_MetaData),&#32;NewProp_Sunday_MetaData)&#32;};
+471 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Monday&#32;=&#32;{&#32;<emphasis role="stringliteral">&quot;Monday&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;(EPropertyFlags)0x002008000008000c,&#32;UECodeGen_Private::EPropertyGenFlags::Object,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;1,&#32;STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>,&#32;Monday),&#32;Z_Construct_UClass_UButton_NoRegister,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Monday_MetaData),&#32;NewProp_Monday_MetaData)&#32;};
+472 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Tuesday&#32;=&#32;{&#32;<emphasis role="stringliteral">&quot;Tuesday&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;(EPropertyFlags)0x002008000008000c,&#32;UECodeGen_Private::EPropertyGenFlags::Object,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;1,&#32;STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>,&#32;Tuesday),&#32;Z_Construct_UClass_UButton_NoRegister,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Tuesday_MetaData),&#32;NewProp_Tuesday_MetaData)&#32;};
+473 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Wednesday&#32;=&#32;{&#32;<emphasis role="stringliteral">&quot;Wednesday&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;(EPropertyFlags)0x002008000008000c,&#32;UECodeGen_Private::EPropertyGenFlags::Object,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;1,&#32;STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>,&#32;Wednesday),&#32;Z_Construct_UClass_UButton_NoRegister,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Wednesday_MetaData),&#32;NewProp_Wednesday_MetaData)&#32;};
+474 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Thursday&#32;=&#32;{&#32;<emphasis role="stringliteral">&quot;Thursday&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;(EPropertyFlags)0x002008000008000c,&#32;UECodeGen_Private::EPropertyGenFlags::Object,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;1,&#32;STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>,&#32;Thursday),&#32;Z_Construct_UClass_UButton_NoRegister,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Thursday_MetaData),&#32;NewProp_Thursday_MetaData)&#32;};
+475 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Friday&#32;=&#32;{&#32;<emphasis role="stringliteral">&quot;Friday&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;(EPropertyFlags)0x002008000008000c,&#32;UECodeGen_Private::EPropertyGenFlags::Object,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;1,&#32;STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>,&#32;Friday),&#32;Z_Construct_UClass_UButton_NoRegister,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Friday_MetaData),&#32;NewProp_Friday_MetaData)&#32;};
+476 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Saturday&#32;=&#32;{&#32;<emphasis role="stringliteral">&quot;Saturday&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;(EPropertyFlags)0x002008000008000c,&#32;UECodeGen_Private::EPropertyGenFlags::Object,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;1,&#32;STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>,&#32;Saturday),&#32;Z_Construct_UClass_UButton_NoRegister,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Saturday_MetaData),&#32;NewProp_Saturday_MetaData)&#32;};
+477 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_0&#32;=&#32;{&#32;<emphasis role="stringliteral">&quot;day_0&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;(EPropertyFlags)0x002008000008000c,&#32;UECodeGen_Private::EPropertyGenFlags::Object,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;1,&#32;STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>,&#32;day_0),&#32;Z_Construct_UClass_UTextBlock_NoRegister,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_day_0_MetaData),&#32;NewProp_day_0_MetaData)&#32;};
+478 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_1&#32;=&#32;{&#32;<emphasis role="stringliteral">&quot;day_1&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;(EPropertyFlags)0x002008000008000c,&#32;UECodeGen_Private::EPropertyGenFlags::Object,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;1,&#32;STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>,&#32;day_1),&#32;Z_Construct_UClass_UTextBlock_NoRegister,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_day_1_MetaData),&#32;NewProp_day_1_MetaData)&#32;};
+479 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_2&#32;=&#32;{&#32;<emphasis role="stringliteral">&quot;day_2&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;(EPropertyFlags)0x002008000008000c,&#32;UECodeGen_Private::EPropertyGenFlags::Object,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;1,&#32;STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>,&#32;day_2),&#32;Z_Construct_UClass_UTextBlock_NoRegister,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_day_2_MetaData),&#32;NewProp_day_2_MetaData)&#32;};
+480 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_3&#32;=&#32;{&#32;<emphasis role="stringliteral">&quot;day_3&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;(EPropertyFlags)0x002008000008000c,&#32;UECodeGen_Private::EPropertyGenFlags::Object,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;1,&#32;STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>,&#32;day_3),&#32;Z_Construct_UClass_UTextBlock_NoRegister,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_day_3_MetaData),&#32;NewProp_day_3_MetaData)&#32;};
+481 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_4&#32;=&#32;{&#32;<emphasis role="stringliteral">&quot;day_4&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;(EPropertyFlags)0x002008000008000c,&#32;UECodeGen_Private::EPropertyGenFlags::Object,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;1,&#32;STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>,&#32;day_4),&#32;Z_Construct_UClass_UTextBlock_NoRegister,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_day_4_MetaData),&#32;NewProp_day_4_MetaData)&#32;};
+482 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_5&#32;=&#32;{&#32;<emphasis role="stringliteral">&quot;day_5&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;(EPropertyFlags)0x002008000008000c,&#32;UECodeGen_Private::EPropertyGenFlags::Object,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;1,&#32;STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>,&#32;day_5),&#32;Z_Construct_UClass_UTextBlock_NoRegister,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_day_5_MetaData),&#32;NewProp_day_5_MetaData)&#32;};
+483 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FObjectPropertyParams&#32;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_6&#32;=&#32;{&#32;<emphasis role="stringliteral">&quot;day_6&quot;</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;(EPropertyFlags)0x002008000008000c,&#32;UECodeGen_Private::EPropertyGenFlags::Object,&#32;RF_Public|RF_Transient|RF_MarkAsNative,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;1,&#32;STRUCT_OFFSET(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>,&#32;day_6),&#32;Z_Construct_UClass_UTextBlock_NoRegister,&#32;METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_day_6_MetaData),&#32;NewProp_day_6_MetaData)&#32;};
+484 <emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*&#32;<emphasis role="keyword">const</emphasis>&#32;Z_Construct_UClass_UCalendarItemBase_Statics::PropPointers[]&#32;=&#32;{
+485 &#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_DaySelected,
+486 &#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Sunday,
+487 &#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Monday,
+488 &#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Tuesday,
+489 &#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Wednesday,
+490 &#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Thursday,
+491 &#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Friday,
+492 &#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_Saturday,
+493 &#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_0,
+494 &#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_1,
+495 &#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_2,
+496 &#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_3,
+497 &#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_4,
+498 &#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_5,
+499 &#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UCalendarItemBase_Statics::NewProp_day_6,
+500 };
+501 <emphasis role="keyword">static_assert</emphasis>(UE_ARRAY_COUNT(Z_Construct_UClass_UCalendarItemBase_Statics::PropPointers)&#32;&lt;&#32;2048);
+502 UObject*&#32;(*<emphasis role="keyword">const</emphasis>&#32;Z_Construct_UClass_UCalendarItemBase_Statics::DependentSingletons[])()&#32;=&#32;{
+503 &#32;&#32;&#32;&#32;(UObject*&#32;(*)())Z_Construct_UClass_UUserWidget,
+504 &#32;&#32;&#32;&#32;(UObject*&#32;(*)())Z_Construct_UPackage__Script_SimpleCalendarPlugin,
+505 };
+506 static_assert(UE_ARRAY_COUNT(<link linkend="_struct_z___construct___u_class___u_calendar_item_base___statics">Z_Construct_UClass_UCalendarItemBase_Statics</link>::DependentSingletons)&#32;&lt;&#32;16);
+507 const&#32;UECodeGen_Private::FClassParams&#32;<link linkend="_struct_z___construct___u_class___u_calendar_item_base___statics">Z_Construct_UClass_UCalendarItemBase_Statics</link>::ClassParams&#32;=&#32;{
+508 &#32;&#32;&#32;&#32;&amp;UCalendarItemBase::StaticClass,
+509 &#32;&#32;&#32;&#32;<emphasis role="keyword">nullptr</emphasis>,
+510 &#32;&#32;&#32;&#32;&amp;StaticCppClassTypeInfo,
+511 &#32;&#32;&#32;&#32;DependentSingletons,
+512 &#32;&#32;&#32;&#32;FuncInfo,
+513 &#32;&#32;&#32;&#32;Z_Construct_UClass_UCalendarItemBase_Statics::PropPointers,
+514 &#32;&#32;&#32;&#32;<emphasis role="keyword">nullptr</emphasis>,
+515 &#32;&#32;&#32;&#32;UE_ARRAY_COUNT(DependentSingletons),
+516 &#32;&#32;&#32;&#32;UE_ARRAY_COUNT(FuncInfo),
+517 &#32;&#32;&#32;&#32;UE_ARRAY_COUNT(Z_Construct_UClass_UCalendarItemBase_Statics::PropPointers),
+518 &#32;&#32;&#32;&#32;0,
+519 &#32;&#32;&#32;&#32;0x00A010A0u,
+520 &#32;&#32;&#32;&#32;METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCalendarItemBase_Statics::Class_MetaDataParams),&#32;Z_Construct_UClass_UCalendarItemBase_Statics::Class_MetaDataParams)
+521 };
+522 UClass*&#32;Z_Construct_UClass_UCalendarItemBase()
+523 {
+524 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!Z_Registration_Info_UClass_UCalendarItemBase.OuterSingleton)
+525 &#32;&#32;&#32;&#32;{
+526 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UECodeGen_Private::ConstructUClass(Z_Registration_Info_UClass_UCalendarItemBase.OuterSingleton,&#32;Z_Construct_UClass_UCalendarItemBase_Statics::ClassParams);
+527 &#32;&#32;&#32;&#32;}
+528 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;Z_Registration_Info_UClass_UCalendarItemBase.OuterSingleton;
+529 }
+530 <emphasis role="keyword">template</emphasis>&lt;&gt;&#32;SIMPLECALENDARPLUGIN_API&#32;UClass*&#32;StaticClass&lt;UCalendarItemBase&gt;()
+531 {
+532 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;UCalendarItemBase::StaticClass();
+533 }
+534 UCalendarItemBase::UCalendarItemBase(<emphasis role="keyword">const</emphasis>&#32;FObjectInitializer&amp;&#32;ObjectInitializer)&#32;:&#32;Super(ObjectInitializer)&#32;{}
+535 DEFINE_VTABLE_PTR_HELPER_CTOR(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>);
+536 UCalendarItemBase::~UCalendarItemBase()&#32;{}
+537 <emphasis role="comment">//&#32;End&#32;Class&#32;UCalendarItemBase</emphasis>
+538 
+539 <emphasis role="comment">//&#32;Begin&#32;Registration</emphasis>
+540 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_z___compiled_in_defer_file___f_i_d___users__atm0s___documents___unreal___projects__atm0s_d2b5fd72ce6ffaccb8188ecac41eaa23">Z_CompiledInDeferFile_FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarItemBase_h_Statics</link>
+541 {
+542 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;FClassRegisterCompiledInInfo&#32;ClassInfo[]&#32;=&#32;{
+543 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;Z_Construct_UClass_UCalendarItemBase,&#32;UCalendarItemBase::StaticClass,&#32;TEXT(<emphasis role="stringliteral">&quot;UCalendarItemBase&quot;</emphasis>),&#32;&amp;Z_Registration_Info_UClass_UCalendarItemBase,&#32;CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo,&#32;<emphasis role="keyword">sizeof</emphasis>(<link linkend="_class_u_calendar_item_base">UCalendarItemBase</link>),&#32;575971845U)&#32;},
+544 &#32;&#32;&#32;&#32;};
+545 };
+546 <emphasis role="keyword">static</emphasis>&#32;FRegisterCompiledInInfo&#32;Z_CompiledInDeferFile_FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarItemBase_h_1120925069(TEXT(<emphasis role="stringliteral">&quot;/Script/SimpleCalendarPlugin&quot;</emphasis>),
+547 &#32;&#32;&#32;&#32;Z_CompiledInDeferFile_FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarItemBase_h_Statics::ClassInfo,&#32;UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarItemBase_h_Statics::ClassInfo),
+548 &#32;&#32;&#32;&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;0,
+549 &#32;&#32;&#32;&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;0);
+550 <emphasis role="comment">//&#32;End&#32;Registration</emphasis>
+551 PRAGMA_ENABLE_DEPRECATION_WARNINGS
+</programlisting></section>

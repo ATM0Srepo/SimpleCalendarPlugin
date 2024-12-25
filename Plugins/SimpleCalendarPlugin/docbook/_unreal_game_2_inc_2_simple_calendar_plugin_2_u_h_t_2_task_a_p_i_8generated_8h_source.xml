@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__unreal_game_2_inc_2_simple_calendar_plugin_2_u_h_t_2_task_a_p_i_8generated_8h_source" xml:lang="en-US">
+<title>TaskAPI.generated.h</title>
+<indexterm><primary>Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/TaskAPI.generated.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Copyright&#32;Epic&#32;Games,&#32;Inc.&#32;All&#32;Rights&#32;Reserved.</emphasis>
+2 <emphasis role="comment">/*===========================================================================</emphasis>
+3 <emphasis role="comment">&#32;&#32;&#32;&#32;Generated&#32;code&#32;exported&#32;from&#32;UnrealHeaderTool.</emphasis>
+4 <emphasis role="comment">&#32;&#32;&#32;&#32;DO&#32;NOT&#32;modify&#32;this&#32;manually!&#32;Edit&#32;the&#32;corresponding&#32;.h&#32;files&#32;instead!</emphasis>
+5 <emphasis role="comment">===========================================================================*/</emphasis>
+6 
+7 <emphasis role="comment">//&#32;IWYU&#32;pragma:&#32;private,&#32;include&#32;&quot;TaskAPI.h&quot;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&quot;UObject/ObjectMacros.h&quot;</emphasis>
+9 <emphasis role="preprocessor">#include&#32;&quot;UObject/ScriptMacros.h&quot;</emphasis>
+10 
+11 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+12 <emphasis role="preprocessor">#ifdef&#32;SIMPLECALENDARPLUGIN_TaskAPI_generated_h</emphasis>
+13 <emphasis role="preprocessor">#error&#32;&quot;TaskAPI.generated.h&#32;already&#32;included,&#32;missing&#32;&apos;#pragma&#32;once&apos;&#32;in&#32;TaskAPI.h&quot;</emphasis>
+14 <emphasis role="preprocessor">#endif</emphasis>
+15 <emphasis role="preprocessor">#define&#32;SIMPLECALENDARPLUGIN_TaskAPI_generated_h</emphasis>
+16 
+17 <emphasis role="preprocessor">#define&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Public_TaskAPI_h_16_RPC_WRAPPERS_NO_PURE_DECLS&#32;\</emphasis>
+18 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;DECLARE_FUNCTION(execSetBrowserURL);</emphasis>
+19 
+20 
+21 <emphasis role="preprocessor">#define&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Public_TaskAPI_h_16_INCLASS_NO_PURE_DECLS&#32;\</emphasis>
+22 <emphasis role="preprocessor">private:&#32;\</emphasis>
+23 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;static&#32;void&#32;StaticRegisterNativesUTaskAPI();&#32;\</emphasis>
+24 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;friend&#32;struct&#32;Z_Construct_UClass_UTaskAPI_Statics;&#32;\</emphasis>
+25 <emphasis role="preprocessor">public:&#32;\</emphasis>
+26 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;DECLARE_CLASS(UTaskAPI,&#32;UUserWidget,&#32;COMPILED_IN_FLAGS(0),&#32;CASTCLASS_None,&#32;TEXT(&quot;/Script/SimpleCalendarPlugin&quot;),&#32;NO_API)&#32;\</emphasis>
+27 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;DECLARE_SERIALIZER(UTaskAPI)</emphasis>
+28 
+29 
+30 <emphasis role="preprocessor">#define&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Public_TaskAPI_h_16_ENHANCED_CONSTRUCTORS&#32;\</emphasis>
+31 <emphasis role="preprocessor">&#32;\</emphasis>
+32 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;NO_API&#32;UTaskAPI(const&#32;FObjectInitializer&amp;&#32;ObjectInitializer&#32;=&#32;FObjectInitializer::Get());&#32;\</emphasis>
+33 <emphasis role="preprocessor">private:&#32;\</emphasis>
+34 <emphasis role="preprocessor">&#32;\</emphasis>
+35 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;UTaskAPI(UTaskAPI&amp;&amp;);&#32;\</emphasis>
+36 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;UTaskAPI(const&#32;UTaskAPI&amp;);&#32;\</emphasis>
+37 <emphasis role="preprocessor">public:&#32;\</emphasis>
+38 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API,&#32;UTaskAPI);&#32;\</emphasis>
+39 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UTaskAPI);&#32;\</emphasis>
+40 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UTaskAPI)&#32;\</emphasis>
+41 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;NO_API&#32;virtual&#32;~UTaskAPI();</emphasis>
+42 
+43 
+44 <emphasis role="preprocessor">#define&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Public_TaskAPI_h_13_PROLOG</emphasis>
+45 <emphasis role="preprocessor">#define&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Public_TaskAPI_h_16_GENERATED_BODY&#32;\</emphasis>
+46 <emphasis role="preprocessor">PRAGMA_DISABLE_DEPRECATION_WARNINGS&#32;\</emphasis>
+47 <emphasis role="preprocessor">public:&#32;\</emphasis>
+48 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Public_TaskAPI_h_16_RPC_WRAPPERS_NO_PURE_DECLS&#32;\</emphasis>
+49 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Public_TaskAPI_h_16_INCLASS_NO_PURE_DECLS&#32;\</emphasis>
+50 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Public_TaskAPI_h_16_ENHANCED_CONSTRUCTORS&#32;\</emphasis>
+51 <emphasis role="preprocessor">private:&#32;\</emphasis>
+52 <emphasis role="preprocessor">PRAGMA_ENABLE_DEPRECATION_WARNINGS</emphasis>
+53 
+54 
+55 <emphasis role="keyword">template</emphasis>&lt;&gt;&#32;SIMPLECALENDARPLUGIN_API&#32;UClass*&#32;StaticClass&lt;class&#32;UTaskAPI&gt;();
+56 
+57 <emphasis role="preprocessor">#undef&#32;CURRENT_FILE_ID</emphasis>
+58 <emphasis role="preprocessor">#define&#32;CURRENT_FILE_ID&#32;FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Public_TaskAPI_h</emphasis>
+59 
+60 
+61 PRAGMA_ENABLE_DEPRECATION_WARNINGS
+</programlisting></section>

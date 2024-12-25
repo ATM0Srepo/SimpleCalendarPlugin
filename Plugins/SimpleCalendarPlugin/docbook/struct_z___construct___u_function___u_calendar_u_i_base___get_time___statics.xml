@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___get_time___statics" xml:lang="en-US">
+<title>Z_Construct_UFunction_UCalendarUIBase_GetTime_Statics Struct Reference</title>
+<indexterm><primary>Z_Construct_UFunction_UCalendarUIBase_GetTime_Statics</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___get_time___statics_1_1_calendar_u_i_base__event_get_time___parms">CalendarUIBase_eventGetTime_Parms</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___get_time___statics_1a80609608373001cb02d8945beae45fe1"/>static const UECodeGen_Private::FStructPropertyParams <emphasis role="strong">NewProp_ReturnValue</emphasis> = { &quot;ReturnValue&quot;, nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___get_time___statics_1_1_calendar_u_i_base__event_get_time___parms">CalendarUIBase_eventGetTime_Parms</link>, ReturnValue), Z_Construct_UScriptStruct_FDateTime, METADATA_PARAMS(0, nullptr) }</para>
+</listitem>
+            <listitem><para>static const UECodeGen_Private::FPropertyParamsBase *const <link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___get_time___statics_1ae1b4e767e4a6dbb7235de99d636795ca">PropPointers</link> []</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___get_time___statics_1a3be684ae3de967313176b743506fb81f"/>static const UECodeGen_Private::FFunctionParams <emphasis role="strong">FuncParams</emphasis> = { (UObject*(*)())Z_Construct_UClass_UCalendarUIBase, nullptr, &quot;GetTime&quot;, nullptr, nullptr, Z_Construct_UFunction_UCalendarUIBase_GetTime_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarUIBase_GetTime_Statics::PropPointers), sizeof(<link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___get_time___statics_1_1_calendar_u_i_base__event_get_time___parms">Z_Construct_UFunction_UCalendarUIBase_GetTime_Statics::CalendarUIBase_eventGetTime_Parms</link>), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarUIBase_GetTime_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCalendarUIBase_GetTime_Statics::Function_MetaDataParams) }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___get_time___statics_1ae1b4e767e4a6dbb7235de99d636795ca"/><section>
+    <title>PropPointers</title>
+<indexterm><primary>PropPointers</primary><secondary>Z_Construct_UFunction_UCalendarUIBase_GetTime_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UFunction_UCalendarUIBase_GetTime_Statics</primary><secondary>PropPointers</secondary></indexterm>
+<para><computeroutput>const UECodeGen_Private::FPropertyParamsBase *const Z_Construct_UFunction_UCalendarUIBase_GetTime_Statics::PropPointers<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarUIBase_GetTime_Statics::NewProp_ReturnValue,
+}
+</programlisting></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cpp</section>
+</section>

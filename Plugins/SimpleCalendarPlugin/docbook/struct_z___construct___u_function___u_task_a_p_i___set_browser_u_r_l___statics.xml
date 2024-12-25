@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_function___u_task_a_p_i___set_browser_u_r_l___statics" xml:lang="en-US">
+<title>Z_Construct_UFunction_UTaskAPI_SetBrowserURL_Statics Struct Reference</title>
+<indexterm><primary>Z_Construct_UFunction_UTaskAPI_SetBrowserURL_Statics</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_z___construct___u_function___u_task_a_p_i___set_browser_u_r_l___statics_1_1_task_a_p_i__event_set_browser_u_r_l___parms">TaskAPI_eventSetBrowserURL_Parms</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_task_a_p_i___set_browser_u_r_l___statics_1a505e536c6edb7a6803ae2cd2cddf2cf1"/>static const UECodeGen_Private::FStrPropertyParams <emphasis role="strong">NewProp_Endpoint</emphasis> = { &quot;Endpoint&quot;, nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_task_a_p_i___set_browser_u_r_l___statics_1_1_task_a_p_i__event_set_browser_u_r_l___parms">TaskAPI_eventSetBrowserURL_Parms</link>, Endpoint), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Endpoint_MetaData), NewProp_Endpoint_MetaData) }</para>
+</listitem>
+            <listitem><para>static const UECodeGen_Private::FPropertyParamsBase *const <link linkend="_struct_z___construct___u_function___u_task_a_p_i___set_browser_u_r_l___statics_1a765fd0c6c069a31a738c171258f4a7f1">PropPointers</link> []</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_task_a_p_i___set_browser_u_r_l___statics_1a6a122a2d0695a7fef64836af109666c8"/>static const UECodeGen_Private::FFunctionParams <emphasis role="strong">FuncParams</emphasis> = { (UObject*(*)())Z_Construct_UClass_UTaskAPI, nullptr, &quot;SetBrowserURL&quot;, nullptr, nullptr, Z_Construct_UFunction_UTaskAPI_SetBrowserURL_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UTaskAPI_SetBrowserURL_Statics::PropPointers), sizeof(<link linkend="_struct_z___construct___u_function___u_task_a_p_i___set_browser_u_r_l___statics_1_1_task_a_p_i__event_set_browser_u_r_l___parms">Z_Construct_UFunction_UTaskAPI_SetBrowserURL_Statics::TaskAPI_eventSetBrowserURL_Parms</link>), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UTaskAPI_SetBrowserURL_Statics::Function_MetaDataParams), Z_Construct_UFunction_UTaskAPI_SetBrowserURL_Statics::Function_MetaDataParams) }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_z___construct___u_function___u_task_a_p_i___set_browser_u_r_l___statics_1a765fd0c6c069a31a738c171258f4a7f1"/><section>
+    <title>PropPointers</title>
+<indexterm><primary>PropPointers</primary><secondary>Z_Construct_UFunction_UTaskAPI_SetBrowserURL_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UFunction_UTaskAPI_SetBrowserURL_Statics</primary><secondary>PropPointers</secondary></indexterm>
+<para><computeroutput>const UECodeGen_Private::FPropertyParamsBase *const Z_Construct_UFunction_UTaskAPI_SetBrowserURL_Statics::PropPointers<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UTaskAPI_SetBrowserURL_Statics::NewProp_Endpoint,
+}
+</programlisting></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/TaskAPI.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/TaskAPI.gen.cpp</section>
+</section>

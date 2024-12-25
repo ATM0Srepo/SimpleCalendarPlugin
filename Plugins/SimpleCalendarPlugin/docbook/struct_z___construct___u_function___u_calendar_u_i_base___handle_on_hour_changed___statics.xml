@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_changed___statics" xml:lang="en-US">
+<title>Z_Construct_UFunction_UCalendarUIBase_HandleOnHourChanged_Statics Struct Reference</title>
+<indexterm><primary>Z_Construct_UFunction_UCalendarUIBase_HandleOnHourChanged_Statics</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_changed___statics_1_1_c8a889d393e0c467abb4b1986346a0fec">CalendarUIBase_eventHandleOnHourChanged_Parms</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_changed___statics_1a00266a650a62469ebbf1e9bda19ca98f"/>static const UECodeGen_Private::FTextPropertyParams <emphasis role="strong">NewProp_Text</emphasis> = { &quot;Text&quot;, nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_changed___statics_1_1_c8a889d393e0c467abb4b1986346a0fec">CalendarUIBase_eventHandleOnHourChanged_Parms</link>, Text), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Text_MetaData), NewProp_Text_MetaData) }</para>
+</listitem>
+            <listitem><para>static const UECodeGen_Private::FPropertyParamsBase *const <link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_changed___statics_1aed9a5eea96c53fc7ce8e66ef8984ec72">PropPointers</link> []</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_changed___statics_1aac92f77ea8a3d128da20cfeef3589b05"/>static const UECodeGen_Private::FFunctionParams <emphasis role="strong">FuncParams</emphasis> = { (UObject*(*)())Z_Construct_UClass_UCalendarUIBase, nullptr, &quot;HandleOnHourChanged&quot;, nullptr, nullptr, Z_Construct_UFunction_UCalendarUIBase_HandleOnHourChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarUIBase_HandleOnHourChanged_Statics::PropPointers), sizeof(<link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_changed___statics_1_1_c8a889d393e0c467abb4b1986346a0fec">Z_Construct_UFunction_UCalendarUIBase_HandleOnHourChanged_Statics::CalendarUIBase_eventHandleOnHourChanged_Parms</link>), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarUIBase_HandleOnHourChanged_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCalendarUIBase_HandleOnHourChanged_Statics::Function_MetaDataParams) }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_changed___statics_1aed9a5eea96c53fc7ce8e66ef8984ec72"/><section>
+    <title>PropPointers</title>
+<indexterm><primary>PropPointers</primary><secondary>Z_Construct_UFunction_UCalendarUIBase_HandleOnHourChanged_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UFunction_UCalendarUIBase_HandleOnHourChanged_Statics</primary><secondary>PropPointers</secondary></indexterm>
+<para><computeroutput>const UECodeGen_Private::FPropertyParamsBase *const Z_Construct_UFunction_UCalendarUIBase_HandleOnHourChanged_Statics::PropPointers<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarUIBase_HandleOnHourChanged_Statics::NewProp_Text,
+}
+</programlisting></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cpp</section>
+</section>

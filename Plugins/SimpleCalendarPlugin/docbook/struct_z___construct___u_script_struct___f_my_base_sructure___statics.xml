@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_script_struct___f_my_base_sructure___statics" xml:lang="en-US">
+<title>Z_Construct_UScriptStruct_FMyBaseSructure_Statics Struct Reference</title>
+<indexterm><primary>Z_Construct_UScriptStruct_FMyBaseSructure_Statics</primary></indexterm>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_script_struct___f_my_base_sructure___statics_1a29bed486f3101b7bba3eca3e9ea5d385"/>static void * <emphasis role="strong">NewStructOps</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_script_struct___f_my_base_sructure___statics_1a29bed486f3101b7bba3eca3e9ea5d385"/>static void * <emphasis role="strong">NewStructOps</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_script_struct___f_my_base_sructure___statics_1a1147ec3a189882f745459b8946093209"/>static const UECodeGen_Private::FIntPropertyParams <emphasis role="strong">NewProp_Row</emphasis> = { &quot;Row&quot;, nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_f_my_base_sructure">FMyBaseSructure</link>, Row), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Row_MetaData), NewProp_Row_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_script_struct___f_my_base_sructure___statics_1a5ed28642f2977f4d3a541785c263e327"/>static const UECodeGen_Private::FIntPropertyParams <emphasis role="strong">NewProp_Year</emphasis> = { &quot;Year&quot;, nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_f_my_base_sructure">FMyBaseSructure</link>, Year), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Year_MetaData), NewProp_Year_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_script_struct___f_my_base_sructure___statics_1a5c0294045f68b979602f312fe502879e"/>static const UECodeGen_Private::FIntPropertyParams <emphasis role="strong">NewProp_Month</emphasis> = { &quot;Month&quot;, nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_f_my_base_sructure">FMyBaseSructure</link>, Month), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Month_MetaData), NewProp_Month_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_script_struct___f_my_base_sructure___statics_1aedead3f787a3015533d98feebc2182f5"/>static const UECodeGen_Private::FStructPropertyParams <emphasis role="strong">NewProp_SelectedGridColor</emphasis> = { &quot;SelectedGridColor&quot;, nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_f_my_base_sructure">FMyBaseSructure</link>, SelectedGridColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SelectedGridColor_MetaData), NewProp_SelectedGridColor_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_script_struct___f_my_base_sructure___statics_1acbe789088730ee6bee73f0d6ffbe0af1"/>static const UECodeGen_Private::FStructPropertyParams <emphasis role="strong">NewProp_EmptyGridColor</emphasis> = { &quot;EmptyGridColor&quot;, nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_f_my_base_sructure">FMyBaseSructure</link>, EmptyGridColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EmptyGridColor_MetaData), NewProp_EmptyGridColor_MetaData) }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_script_struct___f_my_base_sructure___statics_1abf7cd688c3ac15ffcefea996837672ee"/>static const UECodeGen_Private::FStructPropertyParams <emphasis role="strong">NewProp_GridColor</emphasis> = { &quot;GridColor&quot;, nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_f_my_base_sructure">FMyBaseSructure</link>, GridColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GridColor_MetaData), NewProp_GridColor_MetaData) }</para>
+</listitem>
+            <listitem><para>static const UECodeGen_Private::FPropertyParamsBase *const <link linkend="_struct_z___construct___u_script_struct___f_my_base_sructure___statics_1ae3ee93acca7e48fae744c78f2a220212">PropPointers</link> []</para>
+</listitem>
+            <listitem><para>static const UECodeGen_Private::FStructParams <link linkend="_struct_z___construct___u_script_struct___f_my_base_sructure___statics_1ad7accdb61058019c43c967d6450eeb0f">StructParams</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_z___construct___u_script_struct___f_my_base_sructure___statics_1ae3ee93acca7e48fae744c78f2a220212"/><section>
+    <title>PropPointers</title>
+<indexterm><primary>PropPointers</primary><secondary>Z_Construct_UScriptStruct_FMyBaseSructure_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UScriptStruct_FMyBaseSructure_Statics</primary><secondary>PropPointers</secondary></indexterm>
+<para><computeroutput>const UECodeGen_Private::FPropertyParamsBase *const Z_Construct_UScriptStruct_FMyBaseSructure_Statics::PropPointers<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UScriptStruct_FMyBaseSructure_Statics::NewProp_Row,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UScriptStruct_FMyBaseSructure_Statics::NewProp_Year,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UScriptStruct_FMyBaseSructure_Statics::NewProp_Month,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UScriptStruct_FMyBaseSructure_Statics::NewProp_SelectedGridColor,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UScriptStruct_FMyBaseSructure_Statics::NewProp_EmptyGridColor,
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UScriptStruct_FMyBaseSructure_Statics::NewProp_GridColor,
+}
+</programlisting></section>
+<anchor xml:id="_struct_z___construct___u_script_struct___f_my_base_sructure___statics_1ad7accdb61058019c43c967d6450eeb0f"/><section>
+    <title>StructParams</title>
+<indexterm><primary>StructParams</primary><secondary>Z_Construct_UScriptStruct_FMyBaseSructure_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UScriptStruct_FMyBaseSructure_Statics</primary><secondary>StructParams</secondary></indexterm>
+<para><computeroutput>const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMyBaseSructure_Statics::StructParams<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;(UObject*&#32;(*)())Z_Construct_UPackage__Script_SimpleCalendarPlugin,
+&#32;&#32;&#32;&#32;<emphasis role="keyword">nullptr</emphasis>,
+&#32;&#32;&#32;&#32;&amp;NewStructOps,
+&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;MyBaseSructure&quot;</emphasis>,
+&#32;&#32;&#32;&#32;Z_Construct_UScriptStruct_FMyBaseSructure_Statics::PropPointers,
+&#32;&#32;&#32;&#32;UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMyBaseSructure_Statics::PropPointers),
+&#32;&#32;&#32;&#32;<emphasis role="keyword">sizeof</emphasis>(<link linkend="_struct_f_my_base_sructure">FMyBaseSructure</link>),
+&#32;&#32;&#32;&#32;<emphasis role="keyword">alignof</emphasis>(<link linkend="_struct_f_my_base_sructure">FMyBaseSructure</link>),
+&#32;&#32;&#32;&#32;RF_Public|RF_Transient|RF_MarkAsNative,
+&#32;&#32;&#32;&#32;EStructFlags(0x00000001),
+
+}
+</programlisting></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarRow.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarRow.gen.cpp</section>
+</section>

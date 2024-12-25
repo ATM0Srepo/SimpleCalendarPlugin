@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___set_month___statics_1_1_calendar_u_i_base__event_set_month___parms" xml:lang="en-US">
+<title>Z_Construct_UFunction_UCalendarUIBase_SetMonth_Statics::CalendarUIBase_eventSetMonth_Parms Struct Reference</title>
+<indexterm><primary>Z_Construct_UFunction_UCalendarUIBase_SetMonth_Statics::CalendarUIBase_eventSetMonth_Parms</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___set_month___statics_1_1_calendar_u_i_base__event_set_month___parms_1a3d56268934f63654c6aad511d32965a7"/>int32 <emphasis role="strong">m</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cpp</section>

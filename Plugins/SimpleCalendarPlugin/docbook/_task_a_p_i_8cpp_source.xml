@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__task_a_p_i_8cpp_source" xml:lang="en-US">
+<title>TaskAPI.cpp</title>
+<indexterm><primary>Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/TaskAPI.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Fill&#32;out&#32;your&#32;copyright&#32;notice&#32;in&#32;the&#32;Description&#32;page&#32;of&#32;Project&#32;Settings.</emphasis>
+2 
+3 
+4 <emphasis role="preprocessor">#include&#32;&quot;TaskAPI.h&quot;</emphasis>
+5 
+6 <emphasis role="keywordtype">void</emphasis>&#32;UTaskAPI::SetBrowserURL(<emphasis role="keyword">const</emphasis>&#32;FString&amp;&#32;Endpoint)
+7 {
+8 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(WebBrowserWidget)
+9 &#32;&#32;&#32;&#32;{
+10 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;WebBrowserWidget-&gt;LoadURL(TEXT(<emphasis role="stringliteral">&quot;http://127.0.0.1:5000/&quot;</emphasis>)&#32;+&#32;Endpoint);
+11 &#32;&#32;&#32;&#32;}
+12 }
+</programlisting></section>

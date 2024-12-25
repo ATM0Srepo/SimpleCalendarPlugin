@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___compiled_in_defer_file___f_i_d___users__atm0s___documents___unreal___projects__atm0s_ba3b32290d13eb056c7a1d5a312ed8b5" xml:lang="en-US">
+<title>Z_CompiledInDeferFile_FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarRow_h_Statics Struct Reference</title>
+<indexterm><primary>Z_CompiledInDeferFile_FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarRow_h_Statics</primary></indexterm>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static constexpr FStructRegisterCompiledInInfo <link linkend="_struct_z___compiled_in_defer_file___f_i_d___users__atm0s___documents___unreal___projects__atm0s_ba3b32290d13eb056c7a1d5a312ed8b5_1a46bb414d16cc15dacf92e5aaad29820e">ScriptStructInfo</link> []</para>
+</listitem>
+            <listitem><para>static constexpr FClassRegisterCompiledInInfo <link linkend="_struct_z___compiled_in_defer_file___f_i_d___users__atm0s___documents___unreal___projects__atm0s_ba3b32290d13eb056c7a1d5a312ed8b5_1a299b479d2441124a57cd861e4468366b">ClassInfo</link> []</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_z___compiled_in_defer_file___f_i_d___users__atm0s___documents___unreal___projects__atm0s_ba3b32290d13eb056c7a1d5a312ed8b5_1a299b479d2441124a57cd861e4468366b"/><section>
+    <title>ClassInfo</title>
+<indexterm><primary>ClassInfo</primary><secondary>Z_CompiledInDeferFile_FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarRow_h_Statics</secondary></indexterm>
+<indexterm><primary>Z_CompiledInDeferFile_FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarRow_h_Statics</primary><secondary>ClassInfo</secondary></indexterm>
+<para><computeroutput>static constexpr FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarRow_h_Statics::ClassInfo<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;Z_Construct_UClass_UCalendarRow,&#32;UCalendarRow::StaticClass,&#32;TEXT(<emphasis role="stringliteral">&quot;UCalendarRow&quot;</emphasis>),&#32;&amp;Z_Registration_Info_UClass_UCalendarRow,&#32;CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo,&#32;<emphasis role="keyword">sizeof</emphasis>(<link linkend="_class_u_calendar_row">UCalendarRow</link>),&#32;2972655092U)&#32;},
+&#32;&#32;&#32;&#32;}
+</programlisting></section>
+<anchor xml:id="_struct_z___compiled_in_defer_file___f_i_d___users__atm0s___documents___unreal___projects__atm0s_ba3b32290d13eb056c7a1d5a312ed8b5_1a46bb414d16cc15dacf92e5aaad29820e"/><section>
+    <title>ScriptStructInfo</title>
+<indexterm><primary>ScriptStructInfo</primary><secondary>Z_CompiledInDeferFile_FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarRow_h_Statics</secondary></indexterm>
+<indexterm><primary>Z_CompiledInDeferFile_FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarRow_h_Statics</primary><secondary>ScriptStructInfo</secondary></indexterm>
+<para><computeroutput>static constexpr FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_atm0s_Documents_Unreal_Projects_atm0sCalendar_Plugins_SimpleCalendarPlugin_Source_SimpleCalendarPlugin_Private_CalendarRow_h_Statics::ScriptStructInfo<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;FMyBaseSructure::StaticStruct,&#32;Z_Construct_UScriptStruct_FMyBaseSructure_Statics::NewStructOps,&#32;TEXT(<emphasis role="stringliteral">&quot;MyBaseSructure&quot;</emphasis>),&#32;&amp;Z_Registration_Info_UScriptStruct_MyBaseSructure,&#32;CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo,&#32;<emphasis role="keyword">sizeof</emphasis>(<link linkend="_struct_f_my_base_sructure">FMyBaseSructure</link>),&#32;346137711U)&#32;},
+&#32;&#32;&#32;&#32;}
+</programlisting></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarRow.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarRow.gen.cpp</section>
+</section>

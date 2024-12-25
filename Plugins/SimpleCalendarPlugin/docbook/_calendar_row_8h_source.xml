@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__calendar_row_8h_source" xml:lang="en-US">
+<title>CalendarRow.h</title>
+<indexterm><primary>Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarRow.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Fill&#32;out&#32;your&#32;copyright&#32;notice&#32;in&#32;the&#32;Description&#32;page&#32;of&#32;Project&#32;Settings.</emphasis>
+2 
+3 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+4 
+5 <emphasis role="preprocessor">#include&#32;&quot;CoreMinimal.h&quot;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&quot;UObject/NoExportTypes.h&quot;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&quot;CalendarUIBase.h&quot;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&quot;CalendarRow.generated.h&quot;</emphasis>
+9 
+10 USTRUCT(BlueprintType)
+11 struct&#32;<link linkend="_struct_f_my_base_sructure">FMyBaseSructure</link>
+12 {
+13 &#32;&#32;&#32;&#32;GENERATED_BODY()
+14 
+15 &#32;&#32;&#32;&#32;UPROPERTY(EditAnywhere,&#32;BlueprintReadWrite,&#32;Category&#32;=&#32;<emphasis role="stringliteral">&quot;Calendar&#32;Properties&quot;</emphasis>)
+16 &#32;&#32;&#32;&#32;int32&#32;Row;
+17 
+18 &#32;&#32;&#32;&#32;UPROPERTY(EditAnywhere,&#32;BlueprintReadWrite,&#32;Category&#32;=&#32;<emphasis role="stringliteral">&quot;Calendar&#32;Properties&quot;</emphasis>)
+19 &#32;&#32;&#32;&#32;int32&#32;Year;
+20 
+21 &#32;&#32;&#32;&#32;UPROPERTY(EditAnywhere,&#32;BlueprintReadWrite,&#32;Category&#32;=&#32;<emphasis role="stringliteral">&quot;Calendar&#32;Properties&quot;</emphasis>)
+22 &#32;&#32;&#32;&#32;int32&#32;Month;
+23 
+24 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadOnly,&#32;Category&#32;=&#32;<emphasis role="stringliteral">&quot;Calendar&#32;Properties&quot;</emphasis>)
+25 &#32;&#32;&#32;&#32;FLinearColor&#32;SelectedGridColor;
+26 
+27 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadOnly,&#32;Category&#32;=&#32;<emphasis role="stringliteral">&quot;Calendar&#32;Properties&quot;</emphasis>)
+28 &#32;&#32;&#32;&#32;FLinearColor&#32;EmptyGridColor;
+29 
+30 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadOnly,&#32;Category&#32;=&#32;<emphasis role="stringliteral">&quot;Calendar&#32;Properties&quot;</emphasis>)
+31 &#32;&#32;&#32;&#32;FLinearColor&#32;GridColor;
+32 };
+33 
+34 UCLASS(BlueprintType)
+35 class&#32;<link linkend="_class_u_calendar_row">UCalendarRow</link>&#32;:&#32;public&#32;UObject
+36 {
+37 &#32;&#32;&#32;&#32;GENERATED_BODY()
+38 
+39 <emphasis role="keyword">public</emphasis>:
+40 &#32;&#32;&#32;&#32;UFUNCTION(BlueprintCallable,&#32;Category&#32;=&#32;<emphasis role="stringliteral">&quot;Calendar&#32;Functions&quot;</emphasis>)
+41 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;Init(int32&#32;RowValue,&#32;
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;int32&#32;year,&#32;
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;int32&#32;month,&#32;&#32;
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor&#32;color1,
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor&#32;color2,
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor&#32;color3,
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>*&#32;InOwner
+48 &#32;&#32;&#32;&#32;);
+49 
+50 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadWrite,&#32;Category&#32;=&#32;<emphasis role="stringliteral">&quot;Atm0s&#32;Calendar&#32;Variables&quot;</emphasis>)
+51 &#32;&#32;&#32;&#32;<link linkend="_struct_f_my_base_sructure">FMyBaseSructure</link>&#32;structure;
+52 
+53 &#32;&#32;&#32;&#32;UPROPERTY(BlueprintReadOnly,&#32;Category&#32;=&#32;<emphasis role="stringliteral">&quot;Owner&quot;</emphasis>)
+54 &#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>*&#32;Owner;
+55 
+56 };
+57 
+</programlisting></section>

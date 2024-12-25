@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__unreal_editor_2_development_2atm0s_calendar_2_definitions_8atm0s_calendar_8h_source" xml:lang="en-US">
+<title>Definitions.atm0sCalendar.h</title>
+<indexterm><primary>Intermediate/Build/Win64/x64/UnrealEditor/Development/atm0sCalendar/Definitions.atm0sCalendar.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Generated&#32;by&#32;UnrealBuildTool&#32;(UEBuildModuleCPP.cs)&#32;:&#32;Shared&#32;PCH&#32;Definitions&#32;for&#32;atm0sCalendar</emphasis>
+2 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&quot;C:/Users/atm0s/Documents/Unreal&#32;Projects/atm0sCalendar/Intermediate/Build/Win64/x64/atm0sCalendarEditor/Development/UnrealEd/SharedDefinitions.UnrealEd.Project.NoValFmtStr.ValApi.Cpp20.InclOrderOldest.h&quot;</emphasis>
+4 <emphasis role="preprocessor">#undef&#32;ATM0SCALENDAR_API</emphasis>
+5 <emphasis role="preprocessor">#define&#32;UE_IS_ENGINE_MODULE&#32;0</emphasis>
+6 <emphasis role="preprocessor">#define&#32;DEPRECATED_FORGAME&#32;DEPRECATED</emphasis>
+7 <emphasis role="preprocessor">#define&#32;UE_DEPRECATED_FORGAME&#32;UE_DEPRECATED</emphasis>
+8 <emphasis role="preprocessor">#define&#32;UE_VALIDATE_FORMAT_STRINGS&#32;0</emphasis>
+9 <emphasis role="preprocessor">#define&#32;UE_VALIDATE_INTERNAL_API&#32;1</emphasis>
+10 <emphasis role="preprocessor">#define&#32;UE_ENABLE_INCLUDE_ORDER_DEPRECATED_IN_5_2&#32;0</emphasis>
+11 <emphasis role="preprocessor">#define&#32;UE_ENABLE_INCLUDE_ORDER_DEPRECATED_IN_5_3&#32;1</emphasis>
+12 <emphasis role="preprocessor">#define&#32;UE_ENABLE_INCLUDE_ORDER_DEPRECATED_IN_5_4&#32;1</emphasis>
+13 <emphasis role="preprocessor">#define&#32;UE_PROJECT_NAME&#32;atm0sCalendar</emphasis>
+14 <emphasis role="preprocessor">#define&#32;UE_TARGET_NAME&#32;atm0sCalendarEditor</emphasis>
+15 <emphasis role="preprocessor">#define&#32;UE_MODULE_NAME&#32;&quot;atm0sCalendar&quot;</emphasis>
+16 <emphasis role="preprocessor">#define&#32;UE_PLUGIN_NAME&#32;&quot;&quot;</emphasis>
+17 <emphasis role="preprocessor">#define&#32;IMPLEMENT_ENCRYPTION_KEY_REGISTRATION()&#32;</emphasis>
+18 <emphasis role="preprocessor">#define&#32;IMPLEMENT_SIGNING_KEY_REGISTRATION()&#32;</emphasis>
+19 <emphasis role="preprocessor">#define&#32;ATM0SCALENDAR_API&#32;DLLEXPORT</emphasis>
+</programlisting></section>

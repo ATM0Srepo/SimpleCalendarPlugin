@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_function___u_calendar_item_base___handle_thursday_click___statics" xml:lang="en-US">
+<title>Z_Construct_UFunction_UCalendarItemBase_HandleThursdayClick_Statics Struct Reference</title>
+<indexterm><primary>Z_Construct_UFunction_UCalendarItemBase_HandleThursdayClick_Statics</primary></indexterm>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_item_base___handle_thursday_click___statics_1a0bd1edb2ee234ed1ff5817dbdaf424c1"/>static const UECodeGen_Private::FFunctionParams <emphasis role="strong">FuncParams</emphasis> = { (UObject*(*)())Z_Construct_UClass_UCalendarItemBase, nullptr, &quot;HandleThursdayClick&quot;, nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarItemBase_HandleThursdayClick_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCalendarItemBase_HandleThursdayClick_Statics::Function_MetaDataParams) }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarItemBase.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarItemBase.gen.cpp</section>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__calendar_row_8cpp_source" xml:lang="en-US">
+<title>CalendarRow.cpp</title>
+<indexterm><primary>Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarRow.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Fill&#32;out&#32;your&#32;copyright&#32;notice&#32;in&#32;the&#32;Description&#32;page&#32;of&#32;Project&#32;Settings.</emphasis>
+2 
+3 
+4 <emphasis role="preprocessor">#include&#32;&quot;CalendarRow.h&quot;</emphasis>
+5 
+6 <emphasis role="keywordtype">void</emphasis>&#32;UCalendarRow::Init(
+7 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;int32&#32;RowValue,&#32;
+8 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;int32&#32;year,&#32;int32&#32;month,&#32;
+9 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor&#32;color1,
+10 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor&#32;color2,
+11 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FLinearColor&#32;color3,
+12 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_u_calendar_u_i_base">UCalendarUIBase</link>*&#32;InOwner)
+13 {
+14 &#32;&#32;&#32;&#32;structure.Row&#32;=&#32;RowValue;
+15 &#32;&#32;&#32;&#32;structure.Year&#32;=&#32;year;
+16 &#32;&#32;&#32;&#32;structure.Month&#32;=&#32;month;
+17 &#32;&#32;&#32;&#32;structure.SelectedGridColor&#32;=&#32;color1;
+18 &#32;&#32;&#32;&#32;structure.EmptyGridColor&#32;=&#32;color2;
+19 &#32;&#32;&#32;&#32;structure.GridColor&#32;=&#32;color3;
+20 &#32;&#32;&#32;&#32;Owner&#32;=&#32;InOwner;
+21 }
+</programlisting></section>

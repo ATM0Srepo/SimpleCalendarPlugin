@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_u_task_a_p_i" xml:lang="en-US">
+<title>UTaskAPI Class Reference</title>
+<indexterm><primary>UTaskAPI</primary></indexterm>
+<para>Inheritance diagram for UTaskAPI:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_u_task_a_p_i.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_u_task_a_p_i_1a7f7f75a3a0752ecc8e16ea5406770368"/>void <emphasis role="strong">SetBrowserURL</emphasis> (const FString &amp;Endpoint)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_u_task_a_p_i_1a9d2aee49da7db406319d58e4dba8ff6b"/>UWebBrowser * <emphasis role="strong">WebBrowserWidget</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Public/TaskAPI.hPlugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/TaskAPI.cpp</section>

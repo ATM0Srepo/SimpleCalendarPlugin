@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_atm0s_calendar_8h_source" xml:lang="en-US">
+<title>atm0sCalendar.h</title>
+<indexterm><primary>Source/atm0sCalendar/atm0sCalendar.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Fill&#32;out&#32;your&#32;copyright&#32;notice&#32;in&#32;the&#32;Description&#32;page&#32;of&#32;Project&#32;Settings.</emphasis>
+2 
+3 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+4 
+5 <emphasis role="preprocessor">#include&#32;&quot;CoreMinimal.h&quot;</emphasis>
+6 
+</programlisting></section>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classatm0s_calendar_target" xml:lang="en-US">
+<title>atm0sCalendarTarget Class Reference</title>
+<indexterm><primary>atm0sCalendarTarget</primary></indexterm>
+<para>Inheritance diagram for atm0sCalendarTarget:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classatm0s_calendar_target.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classatm0s_calendar_target_1aae13385ced0234480c0eed39aa6820b2"/><emphasis role="strong">atm0sCalendarTarget</emphasis> (TargetInfo Target)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+Source/atm0sCalendar.Target.cs</section>

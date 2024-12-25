@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_u_calendar_item_base" xml:lang="en-US">
+<title>UCalendarItemBase Class Reference</title>
+<indexterm><primary>UCalendarItemBase</primary></indexterm>
+<para>Inheritance diagram for UCalendarItemBase:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_u_calendar_item_base.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a2e5e363c03c1d236d31e8f3c8c77a7d9"/>virtual void <emphasis role="strong">NativeConstruct</emphasis> () override</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a7e38a0ae2b37b890c7eb9afa3b70cad1"/>void <emphasis role="strong">HandleSundayClick</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1aaaf340062ca07df32ad0f6b8d2894e48"/>void <emphasis role="strong">HandleMondayClick</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a8d704e73b2d673ec1b535f1bdd976955"/>void <emphasis role="strong">HandleTuesdayClick</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a2a49ac513c1295746b2bcd9fd2d9f55c"/>void <emphasis role="strong">HandleWednesdayClick</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a6366c06e4147d5058ddd67b292dfb5cd"/>void <emphasis role="strong">HandleThursdayClick</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1aeec69fb35b9cbc68970234d8f8ff5eb1"/>void <emphasis role="strong">HandleFridayClick</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a2269523095c1a9b62d9de1b451b0f61a"/>void <emphasis role="strong">HandleSaturdayClick</emphasis> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_u_calendar_item_base_1af64e9515cc04e43f581550c928f4a05e">OnDaySelected</link> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a1bd9503bf38d2ebe5688350c66e4027a"/>void <emphasis role="strong">OnItemAdded</emphasis> (UObject *ListItemObjectRef)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>UTextBlock * <link linkend="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1">DaySelected</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1add4bbf263d92569a5c2cba4ba7aa3e96"/>FDateTime <emphasis role="strong">CurrentDateTime</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1ae2e79b4f9d65468adebde9089418723e"/>int32 <emphasis role="strong">Year</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1acb07bcb5ab3626343126d95354bc9bc1"/>int32 <emphasis role="strong">Month</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a386cf185aa65d24707151d6250c6b6f5"/>int32 <emphasis role="strong">FirstDayOfWeek</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1af0b086b55b338f74d0f6b56997b8c3e8"/>int32 <emphasis role="strong">Offset</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1aeb3c7e30b61d0f309f420983d6ecf713"/>class UButton * <emphasis role="strong">Sunday</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a106794cbe31501255173a7b319143bf3"/>class UButton * <emphasis role="strong">Monday</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a6c50c0182c98c960db7ec7f3c704a1d5"/>class UButton * <emphasis role="strong">Tuesday</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1ab5c23e8f8d1f1d5acbfd3883d5586a8b"/>class UButton * <emphasis role="strong">Wednesday</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a11065e413f4dd6ad3546cfae2e3126b6"/>class UButton * <emphasis role="strong">Thursday</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a69289647f1b394b5f4402f21c7c20eaa"/>class UButton * <emphasis role="strong">Friday</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a28db8bd64cc05be54005e47e3479bd7d"/>class UButton * <emphasis role="strong">Saturday</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a3a221e5ffbff8d466b0092009b263f62"/>class UTextBlock * <emphasis role="strong">day_0</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1ae4ff832ef13e388b3b2949574017601c"/>class UTextBlock * <emphasis role="strong">day_1</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a98d8fcac9d7dee19c3e05e002bb790bb"/>class UTextBlock * <emphasis role="strong">day_2</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a3ed4f3d7e26947a8a0cefc150ed6df4a"/>class UTextBlock * <emphasis role="strong">day_3</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a67fe58fba4bb1040ec06223308676c51"/>class UTextBlock * <emphasis role="strong">day_4</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a3234a419d933f9ee937d4055870ece2b"/>class UTextBlock * <emphasis role="strong">day_5</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_calendar_item_base_1a90e2edf57f809814281d116f6ef847d2"/>class UTextBlock * <emphasis role="strong">day_6</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_u_calendar_item_base_1af64e9515cc04e43f581550c928f4a05e"/><section>
+    <title>OnDaySelected()</title>
+<indexterm><primary>OnDaySelected</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>OnDaySelected</secondary></indexterm>
+<para><computeroutput>void UCalendarItemBase::OnDaySelected ( )</computeroutput></para>
+<para>Overridable event OnDaySelected is triggered when a calendar item is clicked </para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_u_calendar_item_base_1a34e33d39907baaadc67ea70e0c73d9e1"/><section>
+    <title>DaySelected</title>
+<indexterm><primary>DaySelected</primary><secondary>UCalendarItemBase</secondary></indexterm>
+<indexterm><primary>UCalendarItemBase</primary><secondary>DaySelected</secondary></indexterm>
+<para><computeroutput>UTextBlock* UCalendarItemBase::DaySelected</computeroutput></para>
+<para>The current selection of the day of week on Calendar (eg. &quot;Sunday&quot;, &quot;Monday&quot;, etc </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarItemBase.hPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarItemBase.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarItemBase.gen.cppPlugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/CalendarItemBase.cpp</section>
+</section>

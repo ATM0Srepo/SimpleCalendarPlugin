@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__unreal_editor_2_inc_2_simple_calendar_plugin_2_u_h_t_2_simple_calendar_plugin_classes_8h_source" xml:lang="en-US">
+<title>SimpleCalendarPluginClasses.h</title>
+<indexterm><primary>Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/SimpleCalendarPluginClasses.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Copyright&#32;Epic&#32;Games,&#32;Inc.&#32;All&#32;Rights&#32;Reserved.</emphasis>
+2 <emphasis role="comment">/*===========================================================================</emphasis>
+3 <emphasis role="comment">&#32;&#32;&#32;&#32;Generated&#32;code&#32;exported&#32;from&#32;UnrealHeaderTool.</emphasis>
+4 <emphasis role="comment">&#32;&#32;&#32;&#32;DO&#32;NOT&#32;modify&#32;this&#32;manually!&#32;Edit&#32;the&#32;corresponding&#32;.h&#32;files&#32;instead!</emphasis>
+5 <emphasis role="comment">===========================================================================*/</emphasis>
+6 
+7 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+8 
+9 
+10 
+</programlisting></section>

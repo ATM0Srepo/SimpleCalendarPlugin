@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311" xml:lang="en-US">
+<title>Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics::CalendarUIBase_eventPreCalendarConfig_Parms Struct Reference</title>
+<indexterm><primary>Z_Construct_UFunction_UCalendarUIBase_PreCalendarConfig_Statics::CalendarUIBase_eventPreCalendarConfig_Parms</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311_1ac31dbacc9b4825c7354fe696e51d52d0"/>FLinearColor <emphasis role="strong">SelectedGridColor</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311_1a4e62d41e6ec8ccad31855e62b0135917"/>FLinearColor <emphasis role="strong">EmptyGridColor</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311_1a92607898f6ab44e41a06d45a4f4ab004"/>FLinearColor <emphasis role="strong">GridColor</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311_1a24190b5eab0fb34eb0974d5a570d895d"/>FLinearColor <emphasis role="strong">CalendarBackground</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311_1a3d3f872e11b63fde00e5d10c97d630e2"/>FLinearColor <emphasis role="strong">CalendarBackgroundBorder</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___pre_calendar_config___statics_1_1_cale5333a1bdfeb6a841d7abcfc51e201311_1ad4c0a1934837ee66be9e0ce9b0bcbadd"/>FLinearColor <emphasis role="strong">WeekdayHeadingColor</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cpp</section>

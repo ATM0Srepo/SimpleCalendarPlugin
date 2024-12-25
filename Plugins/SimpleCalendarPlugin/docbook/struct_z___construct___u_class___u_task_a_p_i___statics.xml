@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_class___u_task_a_p_i___statics" xml:lang="en-US">
+<title>Z_Construct_UClass_UTaskAPI_Statics Struct Reference</title>
+<indexterm><primary>Z_Construct_UClass_UTaskAPI_Statics</primary></indexterm>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_task_a_p_i___statics_1aa1d686d4a6982366234f3a8de1ac3b04"/>static const UECodeGen_Private::FObjectPropertyParams <emphasis role="strong">NewProp_WebBrowserWidget</emphasis> = { &quot;WebBrowserWidget&quot;, nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_class_u_task_a_p_i">UTaskAPI</link>, WebBrowserWidget), Z_Construct_UClass_UWebBrowser_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WebBrowserWidget_MetaData), NewProp_WebBrowserWidget_MetaData) }</para>
+</listitem>
+            <listitem><para>static const UECodeGen_Private::FPropertyParamsBase *const <link linkend="_struct_z___construct___u_class___u_task_a_p_i___statics_1a96f8aefb7942ab41588165a15d014495">PropPointers</link> []</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_class___u_task_a_p_i___statics_1a2225ac37f38b38e28fdd90e8ca7e4fc3"/>static UObject *(*const <emphasis role="strong">DependentSingletons</emphasis> [])()</para>
+</listitem>
+            <listitem><para>static constexpr FClassFunctionLinkInfo <link linkend="_struct_z___construct___u_class___u_task_a_p_i___statics_1a2317e4b1a9908cd9bf93aee534ee6671">FuncInfo</link> []</para>
+</listitem>
+            <listitem><para>static constexpr FCppClassTypeInfoStatic <link linkend="_struct_z___construct___u_class___u_task_a_p_i___statics_1a26b9b90db7b4c2d3691cf33b2d1a5761">StaticCppClassTypeInfo</link></para>
+</listitem>
+            <listitem><para>static const UECodeGen_Private::FClassParams <link linkend="_struct_z___construct___u_class___u_task_a_p_i___statics_1aeee06cb53d2f661d7d9ccfa9fec6483c">ClassParams</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_z___construct___u_class___u_task_a_p_i___statics_1aeee06cb53d2f661d7d9ccfa9fec6483c"/><section>
+    <title>ClassParams</title>
+<indexterm><primary>ClassParams</primary><secondary>Z_Construct_UClass_UTaskAPI_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UClass_UTaskAPI_Statics</primary><secondary>ClassParams</secondary></indexterm>
+<para><computeroutput>const UECodeGen_Private::FClassParams Z_Construct_UClass_UTaskAPI_Statics::ClassParams<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;&amp;UTaskAPI::StaticClass,
+&#32;&#32;&#32;&#32;<emphasis role="keyword">nullptr</emphasis>,
+&#32;&#32;&#32;&#32;&amp;StaticCppClassTypeInfo,
+&#32;&#32;&#32;&#32;DependentSingletons,
+&#32;&#32;&#32;&#32;FuncInfo,
+&#32;&#32;&#32;&#32;Z_Construct_UClass_UTaskAPI_Statics::PropPointers,
+&#32;&#32;&#32;&#32;<emphasis role="keyword">nullptr</emphasis>,
+&#32;&#32;&#32;&#32;UE_ARRAY_COUNT(DependentSingletons),
+&#32;&#32;&#32;&#32;UE_ARRAY_COUNT(FuncInfo),
+&#32;&#32;&#32;&#32;UE_ARRAY_COUNT(Z_Construct_UClass_UTaskAPI_Statics::PropPointers),
+&#32;&#32;&#32;&#32;0,
+&#32;&#32;&#32;&#32;0x00A010A0u,
+
+}
+</programlisting></section>
+<anchor xml:id="_struct_z___construct___u_class___u_task_a_p_i___statics_1a2317e4b1a9908cd9bf93aee534ee6671"/><section>
+    <title>FuncInfo</title>
+<indexterm><primary>FuncInfo</primary><secondary>Z_Construct_UClass_UTaskAPI_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UClass_UTaskAPI_Statics</primary><secondary>FuncInfo</secondary></indexterm>
+<para><computeroutput>static constexpr FClassFunctionLinkInfo Z_Construct_UClass_UTaskAPI_Statics::FuncInfo<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&amp;Z_Construct_UFunction_UTaskAPI_SetBrowserURL,&#32;<emphasis role="stringliteral">&quot;SetBrowserURL&quot;</emphasis>&#32;},&#32;
+&#32;&#32;&#32;&#32;}
+</programlisting></section>
+<anchor xml:id="_struct_z___construct___u_class___u_task_a_p_i___statics_1a96f8aefb7942ab41588165a15d014495"/><section>
+    <title>PropPointers</title>
+<indexterm><primary>PropPointers</primary><secondary>Z_Construct_UClass_UTaskAPI_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UClass_UTaskAPI_Statics</primary><secondary>PropPointers</secondary></indexterm>
+<para><computeroutput>const UECodeGen_Private::FPropertyParamsBase *const Z_Construct_UClass_UTaskAPI_Statics::PropPointers<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UClass_UTaskAPI_Statics::NewProp_WebBrowserWidget,
+}
+</programlisting></section>
+<anchor xml:id="_struct_z___construct___u_class___u_task_a_p_i___statics_1a26b9b90db7b4c2d3691cf33b2d1a5761"/><section>
+    <title>StaticCppClassTypeInfo</title>
+<indexterm><primary>StaticCppClassTypeInfo</primary><secondary>Z_Construct_UClass_UTaskAPI_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UClass_UTaskAPI_Statics</primary><secondary>StaticCppClassTypeInfo</secondary></indexterm>
+<para><computeroutput>static constexpr FCppClassTypeInfoStatic Z_Construct_UClass_UTaskAPI_Statics::StaticCppClassTypeInfo<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TCppClassTypeTraits&lt;UTaskAPI&gt;::IsAbstract,
+&#32;&#32;&#32;&#32;}
+</programlisting></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/TaskAPI.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/TaskAPI.gen.cpp</section>
+</section>

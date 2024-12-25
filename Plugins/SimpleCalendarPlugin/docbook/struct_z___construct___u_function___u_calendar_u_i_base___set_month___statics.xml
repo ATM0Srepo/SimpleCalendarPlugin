@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___set_month___statics" xml:lang="en-US">
+<title>Z_Construct_UFunction_UCalendarUIBase_SetMonth_Statics Struct Reference</title>
+<indexterm><primary>Z_Construct_UFunction_UCalendarUIBase_SetMonth_Statics</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___set_month___statics_1_1_calendar_u_i_base__event_set_month___parms">CalendarUIBase_eventSetMonth_Parms</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___set_month___statics_1a39a8dc0ae7cf9f0c90c9e726b596b1d6"/>static const UECodeGen_Private::FIntPropertyParams <emphasis role="strong">NewProp_m</emphasis> = { &quot;m&quot;, nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(<link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___set_month___statics_1_1_calendar_u_i_base__event_set_month___parms">CalendarUIBase_eventSetMonth_Parms</link>, m), METADATA_PARAMS(0, nullptr) }</para>
+</listitem>
+            <listitem><para>static const UECodeGen_Private::FPropertyParamsBase *const <link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___set_month___statics_1a2915393c557ad65647429051dc42b3a1">PropPointers</link> []</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___set_month___statics_1ade758bcb317989e6de504898e035e089"/>static const UECodeGen_Private::FFunctionParams <emphasis role="strong">FuncParams</emphasis> = { (UObject*(*)())Z_Construct_UClass_UCalendarUIBase, nullptr, &quot;SetMonth&quot;, nullptr, nullptr, Z_Construct_UFunction_UCalendarUIBase_SetMonth_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarUIBase_SetMonth_Statics::PropPointers), sizeof(<link linkend="_struct_z___construct___u_function___u_calendar_u_i_base___set_month___statics_1_1_calendar_u_i_base__event_set_month___parms">Z_Construct_UFunction_UCalendarUIBase_SetMonth_Statics::CalendarUIBase_eventSetMonth_Parms</link>), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCalendarUIBase_SetMonth_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCalendarUIBase_SetMonth_Statics::Function_MetaDataParams) }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___set_month___statics_1a2915393c557ad65647429051dc42b3a1"/><section>
+    <title>PropPointers</title>
+<indexterm><primary>PropPointers</primary><secondary>Z_Construct_UFunction_UCalendarUIBase_SetMonth_Statics</secondary></indexterm>
+<indexterm><primary>Z_Construct_UFunction_UCalendarUIBase_SetMonth_Statics</primary><secondary>PropPointers</secondary></indexterm>
+<para><computeroutput>const UECodeGen_Private::FPropertyParamsBase *const Z_Construct_UFunction_UCalendarUIBase_SetMonth_Statics::PropPointers<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;(<emphasis role="keyword">const</emphasis>&#32;UECodeGen_Private::FPropertyParamsBase*)&amp;Z_Construct_UFunction_UCalendarUIBase_SetMonth_Statics::NewProp_m,
+}
+</programlisting></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cpp</section>
+</section>

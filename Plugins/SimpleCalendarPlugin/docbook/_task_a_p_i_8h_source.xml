@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__task_a_p_i_8h_source" xml:lang="en-US">
+<title>TaskAPI.h</title>
+<indexterm><primary>Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Public/TaskAPI.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Fill&#32;out&#32;your&#32;copyright&#32;notice&#32;in&#32;the&#32;Description&#32;page&#32;of&#32;Project&#32;Settings.</emphasis>
+2 
+3 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+4 
+5 <emphasis role="preprocessor">#include&#32;&quot;CoreMinimal.h&quot;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&quot;Blueprint/UserWidget.h&quot;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&quot;WebBrowser.h&quot;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&quot;TaskAPI.generated.h&quot;</emphasis>
+9 
+13 UCLASS()
+14 class&#32;<link linkend="_class_u_task_a_p_i">UTaskAPI</link>&#32;:&#32;public&#32;UUserWidget
+15 {
+16 &#32;&#32;&#32;&#32;GENERATED_BODY()
+17 
+18 <emphasis role="keyword">public</emphasis>:
+19 &#32;&#32;&#32;&#32;UFUNCTION(BlueprintCallable,&#32;Category&#32;=&#32;<emphasis role="stringliteral">&quot;TaskAPI&quot;</emphasis>)
+20 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetBrowserURL(<emphasis role="keyword">const</emphasis>&#32;FString&amp;&#32;Endpoint);
+21 
+22 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Pointer&#32;to&#32;the&#32;Web&#32;Browser&#32;widget</emphasis>
+23 &#32;&#32;&#32;&#32;UPROPERTY(EditAnywhere,&#32;BlueprintReadWrite,&#32;meta&#32;=&#32;(BindWidget),&#32;Category&#32;=&#32;<emphasis role="stringliteral">&quot;Calendar&#32;Properties&quot;</emphasis>)
+24 &#32;&#32;&#32;&#32;UWebBrowser*&#32;WebBrowserWidget;
+25 &#32;&#32;&#32;&#32;
+26 };
+</programlisting></section>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_simple_calendar_plugin" xml:lang="en-US">
+<title>SimpleCalendarPlugin Class Reference</title>
+<indexterm><primary>SimpleCalendarPlugin</primary></indexterm>
+<para>Inheritance diagram for SimpleCalendarPlugin:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_simple_calendar_plugin.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_simple_calendar_plugin_1aa876dbbc64b3990009c4d2ff50801b0e"/><emphasis role="strong">SimpleCalendarPlugin</emphasis> (ReadOnlyTargetRules Target)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/SimpleCalendarPlugin.Build.cs</section>

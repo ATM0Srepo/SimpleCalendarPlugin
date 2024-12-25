@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_f_simple_calendar_plugin_module" xml:lang="en-US">
+<title>FSimpleCalendarPluginModule Class Reference</title>
+<indexterm><primary>FSimpleCalendarPluginModule</primary></indexterm>
+<para>Inheritance diagram for FSimpleCalendarPluginModule:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_f_simple_calendar_plugin_module.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_f_simple_calendar_plugin_module_1a7d10f4631b1001a17f6b86e281579b54">StartupModule</link> () override</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_f_simple_calendar_plugin_module_1ae080616e419085e4cdc16076551a8756"/>virtual void <emphasis role="strong">ShutdownModule</emphasis> () override</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_f_simple_calendar_plugin_module_1a7d10f4631b1001a17f6b86e281579b54"/><section>
+    <title>StartupModule()</title>
+<indexterm><primary>StartupModule</primary><secondary>FSimpleCalendarPluginModule</secondary></indexterm>
+<indexterm><primary>FSimpleCalendarPluginModule</primary><secondary>StartupModule</secondary></indexterm>
+<para><computeroutput>void FSimpleCalendarPluginModule::StartupModule ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>IModuleInterface implementation </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Public/SimpleCalendarPlugin.hPlugins/SimpleCalendarPlugin/Source/SimpleCalendarPlugin/Private/SimpleCalendarPlugin.cpp</section>
+</section>

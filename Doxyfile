@@ -68,7 +68,8 @@ PROJECT_LOGO           =
 # entered, it will be relative to the location where doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = "C:/Users/Shalini Roy/Documents/Unreal Projects/atm0sCalendar/Plugins/SimpleCalendarPlugin"
+#OUTPUT_DIRECTORY       = "C:/Users/Shalini Roy/Documents/Unreal Projects/atm0sCalendar/Plugins/SimpleCalendarPlugin"
+OUTPUT_DIRECTORY       = "C:/Users/atm0s/Documents/Unreal Projects/atm0sCalendar/Plugins/SimpleCalendarPlugin"
 
 # If the CREATE_SUBDIRS tag is set to YES then doxygen will create up to 4096
 # sub-directories (in 2 levels) under the output directory of each output format
@@ -943,7 +944,8 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = "C:/Users/Shalini Roy/Documents/Unreal Projects/atm0sCalendar"
+# INPUT                  = "C:/Users/Shalini Roy/Documents/Unreal Projects/atm0sCalendar"
+INPUT                  = "C:/Users/atm0s/Documents/Unreal Projects/atm0sCalendar"
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses

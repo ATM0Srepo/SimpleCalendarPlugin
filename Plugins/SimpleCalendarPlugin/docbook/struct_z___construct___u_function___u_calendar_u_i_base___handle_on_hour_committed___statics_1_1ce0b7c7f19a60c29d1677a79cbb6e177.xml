@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_committed___statics_1_1ce0b7c7f19a60c29d1677a79cbb6e177" xml:lang="en-US">
+<title>Z_Construct_UFunction_UCalendarUIBase_HandleOnHourCommitted_Statics::CalendarUIBase_eventHandleOnHourCommitted_Parms Struct Reference</title>
+<indexterm><primary>Z_Construct_UFunction_UCalendarUIBase_HandleOnHourCommitted_Statics::CalendarUIBase_eventHandleOnHourCommitted_Parms</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_committed___statics_1_1ce0b7c7f19a60c29d1677a79cbb6e177_1ad44450e69d3969f863be333387ad1f24"/>FText <emphasis role="strong">Text</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_z___construct___u_function___u_calendar_u_i_base___handle_on_hour_committed___statics_1_1ce0b7c7f19a60c29d1677a79cbb6e177_1affb9340fff20a8164f13610fe480b516"/>TEnumAsByte&lt; ETextCommit::Type &gt; <emphasis role="strong">CommitMethod</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Plugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cppPlugins/SimpleCalendarPlugin/Intermediate/Build/Win64/UnrealGame/Inc/SimpleCalendarPlugin/UHT/CalendarUIBase.gen.cpp</section>
