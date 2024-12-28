@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
 #include "WebBrowser.h"
-#include "TaskAPI.generated.h"
+#include "TaskApi.generated.h"
 
 /**
  * @class UTaskAPI
@@ -15,7 +15,7 @@
  * embedded in the Unreal Engine User Interface.
  */
 UCLASS()
-class UTaskAPI : public UUserWidget
+class UTaskApi : public UUserWidget
 {
     GENERATED_BODY()
 
