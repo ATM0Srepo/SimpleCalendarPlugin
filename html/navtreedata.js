@@ -31,7 +31,8 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -42,7 +43,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_calendar_row_8h_source.html"
+"_calendar_item_base_8cpp_source.html",
+"struct_z___construct___u_function___u_calendar_u_i_base___handle_on_minute_changed___statics.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

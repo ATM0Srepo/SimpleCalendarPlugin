@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['startupmodule_0',['StartupModule',['../class_f_simple_calendar_plugin_module.html#a7d10f4631b1001a17f6b86e281579b54',1,'FSimpleCalendarPluginModule']]]
+  ['createcalendar_0',['CreateCalendar',['../class_u_calendar_u_i_base.html#a11312e51d4b570c9594b442ec9566a1a',1,'UCalendarUIBase']]]
 ];
